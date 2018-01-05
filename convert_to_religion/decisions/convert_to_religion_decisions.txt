@@ -1,0 +1,5049 @@
+# VANILLA VERSION
+
+# Credit to the EU4WIKI site.
+# Credit to the CK2WIKI site for Holy Site info, which was flawed so I have to -
+# Credit CK2 province conversion table and CK2 province temple info, from CK2 files.
+# Credit to Refumee from Steam and his mod Holy Sites
+
+country_decisions = {
+	
+	############################################################
+	###############           HELLENIC           ###############
+	############################################################
+	
+	convert_to_hellenic_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 118 # Roma
+				owns_core_province = 146 # Athens
+				owns_core_province = 358 # Alexandria
+				owns_core_province = 148 # Thessaloniki
+				owns_core_province = 2296 # Biga
+			}
+			NOT = { religion = hellenic_pagan }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = ROM # Roman Empire
+						tag = BYZ # Byzantine Empire
+						tag = GRE # Greece
+						culture_group = byzantine
+						culture_group = latin
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 118
+								province_id = 146
+								province_id = 358
+								province_id = 148
+								province_id = 2296
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 118
+								province_id = 146
+								province_id = 358
+								province_id = 148
+								province_id = 2296
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = hellenic_pagan
+			capital_scope = { change_religion = hellenic_pagan }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = ROM # Roman Empire
+						tag = BYZ # Byzantine Empire
+						tag = GRE # Greece
+						culture_group = byzantine
+						culture_group = latin
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 118
+							province_id = 146
+							province_id = 358
+							province_id = 148
+							province_id = 2296
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = hellenic_pagan
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = ROM # Roman Empire
+						tag = BYZ # Byzantine Empire
+						tag = GRE # Greece
+						culture_group = byzantine
+						culture_group = latin
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 118
+							province_id = 146
+							province_id = 358
+							province_id = 148
+							province_id = 2296
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = hellenic_pagan
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############          ZOROASTRIAN         ###############
+	############################################################
+	
+	# Need to update after Cradle of Civilization patch
+	
+	convert_to_zoroastrian_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 430 # Bushehr
+				owns_core_province = 434 # Kohistan
+				owns_core_province = 450 # Balkh
+				owns_core_province = 2211 # Ardalan
+				owns_core_province = 2236 # Bojnord
+			}
+			NOT = { religion = zoroastrian }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = PER # Persia
+						tag = KHO # Khorasan
+						tag = BAL # Baluchistan
+						tag = AFG # Afghanistan
+						tag = TIM # Timurid
+						culture_group = iranian
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 430
+								province_id = 434
+								province_id = 450
+								province_id = 2211
+								province_id = 2236
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 430
+								province_id = 434
+								province_id = 450
+								province_id = 2211
+								province_id = 2236
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = zoroastrian
+			capital_scope = { change_religion = zoroastrian }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = PER # Persia
+						tag = KHO # Khorasan
+						tag = BAL # Baluchistan
+						tag = AFG # Afghanistan
+						tag = TIM # Timurid
+						culture_group = iranian
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 430
+							province_id = 434
+							province_id = 450
+							province_id = 2211
+							province_id = 2236
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = zoroastrian
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = PER # Persia
+						tag = KHO # Khorasan
+						tag = BAL # Baluchistan
+						tag = AFG # Afghanistan
+						tag = TIM # Timurid
+						culture_group = iranian
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 430
+							province_id = 434
+							province_id = 450
+							province_id = 2211
+							province_id = 2236
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = zoroastrian
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############           TOTEMISM           ###############
+	############################################################
+	
+	# WORK-IN-PROGRESS
+	
+	# Culture_group = 
+	# Country_tag(s)
+	# tag = 
+	# province_id = 
+	# province_id = 
+	# province_id = 
+	# province_id = 
+	# province_id = 
+	
+	# convert_to_totemism_decision = {
+		# major = yes
+		# potential = {
+			# OR = {
+				# owns_core_province = 
+				# owns_core_province = 
+				# owns_core_province = 
+				# owns_core_province = 
+				# owns_core_province = 
+			# }
+			# NOT = { religion = totemism }
+			# NOT = { tag = PAP } # The Papal State
+			# NOT = { tag = HLR } # Holy Roman Empire
+		# }
+		# allow =  {
+			# is_at_war = no 
+			# is_subject = false
+			# stability = 1
+			# OR = {
+				# AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					# calc_true_if = {
+						# tag = 
+						# culture_group = 
+						# amount = 1
+					# }
+					# calc_true_if = {
+						# all_owned_province = {
+							# OR = {
+								# province_id = 
+								# province_id = 
+								# province_id = 
+								# province_id = 
+								# province_id = 
+							# }
+							# is_core = ROOT
+							# OR = {
+								# has_building = temple
+								# has_building = cathedral
+							# }
+						# }
+						# amount = 3
+					# }
+				# }
+				# AND = { # Else you need all 5 Holy Sites
+					# calc_true_if = {
+						# all_owned_province = {
+							# OR = {
+								# province_id = 
+								# province_id = 
+								# province_id = 
+								# province_id = 
+								# province_id = 
+							# }
+							# is_core = ROOT
+							# OR = {
+								# has_building = temple
+								# has_building = cathedral
+							# }
+						# }
+						# amount = 5
+					# }
+				# }
+			# }
+		# }
+		# effect = {
+			# change_religion = totemism
+			# capital_scope = { change_religion = totemism }
+			# if = {
+				# limit = {
+					# calc_true_if = {
+						# tag = 
+						# culture_group = 
+						# amount = 1
+					# }
+				# }
+				# every_owned_province = {
+					# limit = {
+						# OR = {
+							# province_id = 
+							# province_id = 
+							# province_id = 
+							# province_id = 
+							# province_id = 
+						# }
+						# OR = {
+							# has_building = temple
+							# has_building = cathedral
+						# }
+					# }
+					# change_religion = totemism
+				# }
+				# add_stability = -2
+			# }
+			# if = {
+				# limit = {
+					# NOT = {
+						# tag = 
+						# culture_group = 
+					# }
+				# }
+				# every_owned_province = {
+					# limit = {
+						# OR = {
+							# province_id = 
+							# province_id = 
+							# province_id = 
+							# province_id = 
+							# province_id = 
+						# }
+						# OR = {
+							# has_building = temple
+							# has_building = cathedral
+						# }
+					# }
+					# change_religion = totemism
+				# }
+				# add_stability = -4
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 0
+		# }
+	# }
+	
+	############################################################
+	###############             MAYAN            ###############
+	############################################################
+	
+	### For only 3 Holy Sites with them being from the 3 different religions ###
+	# province_id = 809 # Lima [Inca] (Sacred Site of Pachacamac)
+	# province_id = 846 # Yucatan [Mayan] (Chichén Itzá)
+	# province_id = 2644 # Cholula [Aztec] (Great Pyramid of Cholula)
+	
+	### For 5 Holy Sites with 2 (of the above sites) being from the other religions ###
+	# province_id = 842 # Peten (Tikal)
+	# province_id = 2632 # Xicallanco (Palenque)
+	
+	### For 5 Holy Sites with all being in the mayan religion area ### (these 2 with Yucatan means that 3 provences is right besides eachother, would probably be too much)
+	# province_id = 2652 # Ecab (Coba) (maybe switch with BELIZE)
+	# province_id = 2633 # Mani (Uxmal)
+	
+	### This didn't seem to fit, but could be used to maybe spread out the sites a little ###
+	# province_id = 843 # Belize (Caracol) (maybe switch with ECAB)
+	
+	convert_to_mayan_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 842 # Peten
+				owns_core_province = 843 # Belize
+				owns_core_province = 846 # Yucatan
+				owns_core_province = 2632 # Xicallanco
+				owns_core_province = 2633 # Mani
+			}
+			NOT = { religion = mesoamerican_religion }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = XIU # Xiu
+						tag = ITZ # Itza
+						tag = MAY # Maya
+						tag = COC # Cocomes
+						tag = KIC # Kiche
+						culture_group = maya
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 842
+								province_id = 843
+								province_id = 846
+								province_id = 2632
+								province_id = 2633
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 842
+								province_id = 843
+								province_id = 846
+								province_id = 2632
+								province_id = 2633
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = mesoamerican_religion
+			capital_scope = { change_religion = mesoamerican_religion }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = XIU # Xiu
+						tag = ITZ # Itza
+						tag = MAY # Maya
+						tag = COC # Cocomes
+						tag = KIC # Kiche
+						culture_group = maya
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 842
+							province_id = 843
+							province_id = 846
+							province_id = 2632
+							province_id = 2633
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = mesoamerican_religion
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = XIU # Xiu
+						tag = ITZ # Itza
+						tag = MAY # Maya
+						tag = COC # Cocomes
+						tag = KIC # Kiche
+						culture_group = maya
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 842
+							province_id = 843
+							province_id = 846
+							province_id = 2632
+							province_id = 2633
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = mesoamerican_religion
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############            NAHUATL           ###############
+	############################################################
+	
+	### For only 3 Holy Sites with them being from the 3 different religions ###
+	# province_id = 809 # Lima [Inca] (Sacred Site of Pachacamac)
+	# province_id = 846 # Yucatan [Mayan] (Chichén Itzá)
+	# province_id = 2644 # Cholula [Aztec] (Great Pyramid of Cholula)
+	
+	### For 5 Holy Sites with 2 (of the above sites) being from the other religions ### (these sites all lie pretty close to eachother)
+	# province_id = 2626 # Tulucan (Calixtlahuaca)
+	# province_id = 2647 # Cuetlaxtlan (Coatepec - The Sacred Mountain of the Aztecs)
+	
+	### For 5 Holy Sites with all being in the nahuatl religion area ### (if these are also included, then they all pretty much lie right next to eachother)
+	# province_id = 852 # Mexico (Teotihuacán/Tenochtitlan)
+	# province_id = 854 # Sayultecas (Huachimontones/Los Guachimontones)
+	
+	### This didn't seem to fit, but could be used to maybe spread out the sites a little ###
+	# province_id = (844 # Zapotec (Monte Alban)*Although it's a Mayan site*)
+	
+	convert_to_nahuatl_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 852 # Mexico
+				owns_core_province = 854 # Sayultecas
+				owns_core_province = 2626 # Tulucan
+				owns_core_province = 2644 # Cholula
+				owns_core_province = 2647 # Cuetlaxtlan
+			}
+			NOT = { religion = nahuatl }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = AZT # Aztec
+						tag = TAR # Tarascan
+						tag = TOT # Totonac
+						tag = ZAP # Zapotec
+						tag = MIX # Mixtec
+						tag = TLA # Tlapanec
+						culture_group = central_american
+						culture_group = otomanguean
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 852
+								province_id = 854
+								province_id = 2626
+								province_id = 2644
+								province_id = 2647
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 852
+								province_id = 854
+								province_id = 2626
+								province_id = 2644
+								province_id = 2647
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = nahuatl
+			capital_scope = { change_religion = nahuatl }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = AZT # Aztec
+						tag = TAR # Tarascan
+						tag = TOT # Totonac
+						tag = ZAP # Zapotec
+						tag = MIX # Mixtec
+						tag = TLA # Tlapanec
+						culture_group = central_american
+						culture_group = otomanguean
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 852
+							province_id = 854
+							province_id = 2626
+							province_id = 2644
+							province_id = 2647
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = nahuatl
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = AZT # Aztec
+						tag = TAR # Tarascan
+						tag = TOT # Totonac
+						tag = ZAP # Zapotec
+						tag = MIX # Mixtec
+						tag = TLA # Tlapanec
+						culture_group = central_american
+						culture_group = otomanguean
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 852
+							province_id = 854
+							province_id = 2626
+							province_id = 2644
+							province_id = 2647
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = nahuatl
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############             INTI             ###############
+	############################################################
+	
+	### For only 3 Holy Sites with them being from the 3 different religions ###
+	# province_id = 809 # Lima [Inca] (Sacred Site of Pachacamac)
+	# province_id = 846 # Yucatan [Mayan] (Chichén Itzá)
+	# province_id = 2644 # Cholula [Aztec] (Great Pyramid of Cholula)
+	
+	### For 5 Holy Sites with 2 (of the above sites) being from the other religions ###
+	# province_id = 808 # Cuzco (Coricancha and/or Machu Picchu)
+	# province_id = 804 # Puno (Isla del Sol - Lake Titicaca)
+	
+	### For 5 Holy Sites with all being in the nahuatl religion area ###
+	# province_id = 812 # Chanchan (Chan Chan)
+	# province_id = 806 # Nazca (Nazca Lines)
+	
+	### Else there is also this ### (this will border Lima and Chanchan, so they won't be as spread out)
+	# province_id = 2827 # Huaraz (Chavín de Huántar)
+	
+	convert_to_inti_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 804 # Puno
+				owns_core_province = 806 # Nazca
+				owns_core_province = 808 # Cuzco
+				owns_core_province = 809 # Lima
+				owns_core_province = 812 # Chanchan
+			}
+			NOT = { religion = inti }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = CSU # Cusco
+						tag = CRA # Charca
+						tag = CCQ # Calchaqui
+						tag = CHM # Chimu
+						tag = CLA # Colla
+						tag = PCJ # Pacajes
+						tag = WKA # Wanka
+						tag = ICM # Ichma
+						tag = HJA # Huyla
+						tag = CJA # Cajamarca
+						tag = MCA # Muisca
+						tag = QTO # Quito
+						tag = CYA # Chachapoya
+						culture_group = andean_group
+						culture_group = chibchan
+						culture_group = maranon
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 804
+								province_id = 806
+								province_id = 808
+								province_id = 809
+								province_id = 812
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 804
+								province_id = 806
+								province_id = 808
+								province_id = 809
+								province_id = 812
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = inti
+			capital_scope = { change_religion = inti }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = CSU # Cusco
+						tag = CRA # Charca
+						tag = CCQ # Calchaqui
+						tag = CHM # Chimu
+						tag = CLA # Colla
+						tag = PCJ # Pacajes
+						tag = WKA # Wanka
+						tag = ICM # Ichma
+						tag = HJA # Huyla
+						tag = CJA # Cajamarca
+						tag = MCA # Muisca
+						tag = QTO # Quito
+						tag = CYA # Chachapoya
+						culture_group = andean_group
+						culture_group = chibchan
+						culture_group = maranon
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 804
+							province_id = 806
+							province_id = 808
+							province_id = 809
+							province_id = 812
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = inti
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = CSU # Cusco
+						tag = CRA # Charca
+						tag = CCQ # Calchaqui
+						tag = CHM # Chimu
+						tag = CLA # Colla
+						tag = PCJ # Pacajes
+						tag = WKA # Wanka
+						tag = ICM # Ichma
+						tag = HJA # Huyla
+						tag = CJA # Cajamarca
+						tag = MCA # Muisca
+						tag = QTO # Quito
+						tag = CYA # Chachapoya
+						culture_group = andean_group
+						culture_group = chibchan
+						culture_group = maranon
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 804
+							province_id = 806
+							province_id = 808
+							province_id = 809
+							province_id = 812
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = inti
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############            ROMUVA            ###############
+	############################################################
+	
+	convert_to_romuva_decision = { 
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 38 # Riga
+				owns_core_province = 47 # Stralsund
+				owns_core_province = 269 # Podlasia
+				owns_core_province = 297 # Bryansk
+				owns_core_province = 1859 # Chelmno (Culm, Torun)
+			}
+			NOT = { religion = baltic_pagan_reformed }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = EST # Estonia
+						tag = LVA # Livonia
+						tag = LIT # Lithuania
+						tag = PRU # Prussia
+						primary_culture = prussian
+						culture_group = baltic
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 38
+								province_id = 47
+								province_id = 269
+								province_id = 297
+								province_id = 1859
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 38
+								province_id = 47
+								province_id = 269
+								province_id = 297
+								province_id = 1859
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = baltic_pagan_reformed
+			capital_scope = { change_religion = baltic_pagan_reformed }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = EST # Estonia
+						tag = LVA # Livonia
+						tag = LIT # Lithuania
+						tag = PRU # Prussia
+						primary_culture = prussian
+						culture_group = baltic
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 38
+							province_id = 47
+							province_id = 269
+							province_id = 297
+							province_id = 1859
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = baltic_pagan_reformed
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = EST # Estonia
+						tag = LVA # Livonia
+						tag = LIT # Lithuania
+						tag = PRU # Prussia
+						primary_culture = prussian
+						culture_group = baltic
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 38
+							province_id = 47
+							province_id = 269
+							province_id = 297
+							province_id = 1859
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = baltic_pagan_reformed
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############            SLAVIC            ###############
+	############################################################
+	
+	convert_to_slavic_decision = { 
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 47 # Stralsund
+				owns_core_province = 256 # Plock
+				owns_core_province = 268 # Moldavia
+				owns_core_province = 280 # Kiev
+				owns_core_province = 310 # Novgorod
+			}
+			NOT = { religion = slavic_pagan_reformed }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = BOH # Bohemia
+						tag = POL # Poland
+						tag = SIL # Silesia
+						tag = MOS # Muscowy
+						tag = RUS # Russia
+						tag = NOV # Novgorod
+						tag = RYA # Ryazan
+						tag = PLT # Polotsk
+						tag = KIE # Kiev
+						tag = SLO # Slovakia
+						culture_group = west_slavic
+						culture_group = east_slavic
+						primary_culture = slovak
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 47
+								province_id = 256
+								province_id = 268
+								province_id = 280
+								province_id = 310
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 47
+								province_id = 256
+								province_id = 268
+								province_id = 280
+								province_id = 310
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = slavic_pagan_reformed
+			capital_scope = { change_religion = slavic_pagan_reformed }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = BOH # Bohemia
+						tag = POL # Poland
+						tag = SIL # Silesia
+						tag = MOS # Muscowy
+						tag = RUS # Russia
+						tag = NOV # Novgorod
+						tag = RYA # Ryazan
+						tag = PLT # Polotsk
+						tag = KIE # Kiev
+						tag = SLO # Slovakia
+						culture_group = west_slavic
+						culture_group = east_slavic
+						primary_culture = slovak
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 47
+							province_id = 256
+							province_id = 268
+							province_id = 280
+							province_id = 310
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = slavic_pagan_reformed
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = BOH # Bohemia
+						tag = POL # Poland
+						tag = SIL # Silesia
+						tag = MOS # Muscowy
+						tag = RUS # Russia
+						tag = NOV # Novgorod
+						tag = RYA # Ryazan
+						tag = PLT # Polotsk
+						tag = KIE # Kiev
+						tag = SLO # Slovakia
+						culture_group = west_slavic
+						culture_group = east_slavic
+						primary_culture = slovak
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 47
+							province_id = 256
+							province_id = 268
+							province_id = 280
+							province_id = 310
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = slavic_pagan_reformed
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############          SUOMENUSKO          ###############
+	############################################################
+	
+	convert_to_suomenusko_decision = { 
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 30 # Viborg
+				owns_core_province = 35 # Ösel
+				owns_core_province = 301 # Ryazan
+				owns_core_province = 305 # Perm
+				owns_core_province = 310 # Novgorod
+			}
+			NOT = { religion = finnish_pagan_reformed }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = FIN # Finland
+						tag = SMI # Sapmi
+						tag = PRM # Perm
+						tag = KRL # Karelia
+						tag = EST # Estonia
+						tag = LVA # Livonia
+						primary_culture = finnish
+						primary_culture = sapmi
+						culture_group = finno_ugric
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 30
+								province_id = 35
+								province_id = 301
+								province_id = 305
+								province_id = 310
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 30
+								province_id = 35
+								province_id = 301
+								province_id = 305
+								province_id = 310
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = finnish_pagan_reformed
+			capital_scope = { change_religion = finnish_pagan_reformed }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = FIN # Finland
+						tag = SMI # Sami
+						tag = PRM # Perm
+						tag = KRL # Karelia
+						tag = EST # Estonia
+						tag = LVA # Livonia
+						primary_culture = finnish
+						primary_culture = sapmi
+						culture_group = finno_ugric
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 30
+							province_id = 35
+							province_id = 301
+							province_id = 305
+							province_id = 310
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = finnish_pagan_reformed
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = FIN # Finland
+						tag = SMI # Sami
+						tag = PRM # Perm
+						tag = KRL # Karelia
+						tag = EST # Estonia
+						tag = LVA # Livonia
+						primary_culture = finnish
+						primary_culture = sapmi
+						culture_group = finno_ugric
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 30
+							province_id = 35
+							province_id = 301
+							province_id = 305
+							province_id = 310
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = finnish_pagan_reformed
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############             NORSE            ###############
+	############################################################
+	
+	convert_to_norse_decision = { 
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 1	# Uppland
+				owns_core_province = 12	# Sjaelland
+				owns_core_province = 20	# Trondelag
+				owns_core_province = 96	# Zeeland
+				owns_core_province = 2972 # Paderborn
+			}
+			NOT = { religion = norse_pagan_reformed }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = DAN # Denmark
+						tag = SWE # Sweden
+						tag = NOR # Norway
+						tag = ICE # Iceland
+						tag = SCA # Scandinavia
+						primary_culture = danish
+						primary_culture = swedish
+						primary_culture = norwegian
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 1
+								province_id = 12
+								province_id = 20
+								province_id = 96
+								province_id = 2972
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 1
+								province_id = 12
+								province_id = 20
+								province_id = 96
+								province_id = 2972
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = norse_pagan_reformed
+			capital_scope = { change_religion = norse_pagan_reformed }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = DAN # Denmark
+						tag = SWE # Sweden
+						tag = NOR # Norway
+						tag = ICE # Iceland
+						tag = SCA # Scandinavia
+						primary_culture = danish
+						primary_culture = swedish
+						primary_culture = norwegian
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 1
+							province_id = 12
+							province_id = 20
+							province_id = 96
+							province_id = 2972
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = norse_pagan_reformed
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = DAN # Denmark
+						tag = SWE # Sweden
+						tag = NOR # Norway
+						tag = ICE # Iceland
+						tag = SCA # Scandinavia
+						primary_culture = danish
+						primary_culture = swedish
+						primary_culture = norwegian
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 1
+							province_id = 12
+							province_id = 20
+							province_id = 96
+							province_id = 2972
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = norse_pagan_reformed
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############            TENGRI            ###############
+	############################################################
+	
+	convert_to_tengri_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 284 # Crimea
+				owns_core_province = 464 # Astrakhan
+				owns_core_province = 716 # Tannu Uriankhai
+				owns_core_province = 1076 # Kurgan
+				owns_core_province = 1970 # Syghnak
+			}
+			NOT = { religion = tengri_pagan_reformed }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = KHA # Mongolia
+						tag = CHH # Chahar
+						tag = KLK # Khalkha
+						tag = ZUN # Zunghar
+						tag = SHY # Uzbek
+						tag = KHI # Khiva
+						tag = KAS # Yarkand
+						tag = KZH # Kazakh
+						tag = CHG # Chagatai
+						tag = AST # Astrakhan
+						tag = BSH # Bashkiria
+						tag = CRI # Crimea
+						tag = KAZ # Kazan
+						tag = GOL # Great Horde
+						tag = GLH # Golden Horde
+						tag = NOG # Nogai
+						tag = QAS # Qasim
+						tag = SIB # Sibir
+						tag = HOD # Hodyntsy
+						tag = BRT # Buryatia
+						tag = KMC # Kamchadals
+						tag = CHV # Chavchuveny
+						tag = CHU # Chukchi
+						tag = MCH # Manchu
+						culture_group = altaic
+						culture_group = tartar
+						culture_group = evenks
+						primary_culture = kamchatkan
+						primary_culture = manchu
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 284
+								province_id = 464
+								province_id = 716
+								province_id = 1076
+								province_id = 1970
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 284
+								province_id = 464
+								province_id = 716
+								province_id = 1076
+								province_id = 1970
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = tengri_pagan_reformed
+			capital_scope = { change_religion = tengri_pagan_reformed }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = KHA # Mongolia
+						tag = CHH # Chahar
+						tag = KLK # Khalkha
+						tag = ZUN # Zunghar
+						tag = SHY # Uzbek
+						tag = KHI # Khiva
+						tag = KAS # Yarkand
+						tag = KZH # Kazakh
+						tag = CHG # Chagatai
+						tag = AST # Astrakhan
+						tag = BSH # Bashkiria
+						tag = CRI # Crimea
+						tag = KAZ # Kazan
+						tag = GOL # Great Horde
+						tag = GLH # Golden Horde
+						tag = NOG # Nogai
+						tag = QAS # Qasim
+						tag = SIB # Sibir
+						tag = HOD # Hodyntsy
+						tag = BRT # Buryatia
+						tag = KMC # Kamchadals
+						tag = CHV # Chavchuveny
+						tag = CHU # Chukchi
+						tag = MCH # Manchu
+						culture_group = altaic
+						culture_group = tartar
+						culture_group = evenks
+						primary_culture = kamchatkan
+						primary_culture = manchu
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 284
+							province_id = 464
+							province_id = 716
+							province_id = 1076
+							province_id = 1970
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = tengri_pagan_reformed
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = KHA # Mongolia
+						tag = CHH # Chahar
+						tag = KLK # Khalkha
+						tag = ZUN # Zunghar
+						tag = SHY # Uzbek
+						tag = KHI # Khiva
+						tag = KAS # Yarkand
+						tag = KZH # Kazakh
+						tag = CHG # Chagatai
+						tag = AST # Astrakhan
+						tag = BSH # Bashkiria
+						tag = CRI # Crimea
+						tag = KAZ # Kazan
+						tag = GOL # Great Horde
+						tag = GLH # Golden Horde
+						tag = NOG # Nogai
+						tag = QAS # Qasim
+						tag = SIB # Sibir
+						tag = HOD # Hodyntsy
+						tag = BRT # Buryatia
+						tag = KMC # Kamchadals
+						tag = CHV # Chavchuveny
+						tag = CHU # Chukchi
+						tag = MCH # Manchu
+						culture_group = altaic
+						culture_group = tartar
+						culture_group = evenks
+						primary_culture = kamchatkan
+						primary_culture = manchu
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 284
+							province_id = 464
+							province_id = 716
+							province_id = 1076
+							province_id = 1970
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = tengri_pagan_reformed
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############           FETISHIST          ###############
+	############################################################
+	
+	convert_to_fetishist_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 344 # Marrakech
+				owns_core_province = 1132 # Timbuktu
+				owns_core_province = 2249 # Sibiridugu
+				owns_core_province = 2454 # Kairouan (El Kef)
+				owns_core_province = 2463 # Maaskar
+			}
+			NOT = { religion = shamanism }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = { # Countries commented out because of length
+						# tag = MOR # Morocco
+						# tag = TUN # Tunisia
+						# tag = ALG # Algeria
+						# tag = TLC # Tlemcen
+						# tag = FZA # Fezzan
+						# tag = GHD # Ghadames
+						# tag = TGT # Touggourt
+						# tag = MZB # Mzab
+						# tag = HAU # Hausa
+						# tag = KBO # Kanem Bornu
+						# tag = YAO # Yao
+						# tag = AIR # Air
+						# tag = JOL # Jolof
+						# tag = FUL # Fulo
+						# tag = TMB # Timbuktu
+						# tag = KTS # Katsina
+						# tag = KAN # Kano
+						# tag = ZZZ # Zazzau
+						# tag = OYO # Oyo
+						# tag = ASH # Ashanti
+						# tag = NUP # Nupe
+						# tag = DAH # Dahomey
+						# tag = MSI # Mossi
+						# tag = DGB # Dagbon
+						# tag = BON # Bonoman
+						# tag = BEN # Benin
+						# tag = MAL # Mali
+						# tag = SON # Songhai
+						# tag = ZAF # Zafunu
+						# tag = SOF # Sofala
+						# tag = JNN # Jenne
+						# tag = KNG # Kong
+						# tag = # Too many culture countries to list
+						culture_group = maghrebi
+						culture_group = sahelian
+						culture_group = west_african
+						culture_group = mande
+						culture_group = kongo_group
+						culture_group = great_lakes_group
+						culture_group = african
+						culture_group = southern_african
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 344
+								province_id = 1132
+								province_id = 2249
+								province_id = 2454
+								province_id = 2463
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 344
+								province_id = 1132
+								province_id = 2249
+								province_id = 2454
+								province_id = 2463
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = shamanism
+			capital_scope = { change_religion = shamanism }
+			if = {
+				limit = {
+					calc_true_if = {
+						culture_group = maghrebi
+						culture_group = sahelian
+						culture_group = west_african
+						culture_group = mande
+						culture_group = kongo_group
+						culture_group = great_lakes_group
+						culture_group = african
+						culture_group = southern_african
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 344
+							province_id = 1132
+							province_id = 2249
+							province_id = 2454
+							province_id = 2463
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = shamanism
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						culture_group = maghrebi
+						culture_group = sahelian
+						culture_group = west_african
+						culture_group = mande
+						culture_group = kongo_group
+						culture_group = great_lakes_group
+						culture_group = african
+						culture_group = southern_african
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 344
+							province_id = 1132
+							province_id = 2249
+							province_id = 2454
+							province_id = 2463
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = shamanism
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############            ANIMISM           ###############
+	############################################################
+	
+	# WORK-IN-PROGRESS
+	
+	# Culture_group = none
+	# Country_tag(s)
+	# tag = (maybe RYU # Ryukyu)
+	# province_id = (1988 # Rapa Nui)
+	# province_id = (maybe 1015 # Okinawa [Ryukyu])
+	# province_id = 
+	# province_id = 
+	# province_id = 
+	
+	# convert_to_animism_decision = {
+		# major = yes
+		# potential = {
+			# OR = {
+				# owns_core_province = 
+				# owns_core_province = 
+				# owns_core_province = 
+				# owns_core_province = 
+				# owns_core_province = 
+			# }
+			# NOT = { religion = animism }
+			# NOT = { tag = PAP } # The Papal State
+			# NOT = { tag = HLR } # Holy Roman Empire
+		# }
+		# allow =  {
+			# is_at_war = no 
+			# is_subject = false
+			# stability = 1
+			# OR = {
+				# AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					# calc_true_if = {
+						# tag = 
+						# culture_group = 
+						# amount = 1
+					# }
+					# calc_true_if = {
+						# all_owned_province = {
+							# OR = {
+								# province_id = 
+								# province_id = 
+								# province_id = 
+								# province_id = 
+								# province_id = 
+							# }
+							# is_core = ROOT
+							# OR = {
+								# has_building = temple
+								# has_building = cathedral
+							# }
+						# }
+						# amount = 3
+					# }
+				# }
+				# AND = { # Else you need all 5 Holy Sites
+					# calc_true_if = {
+						# all_owned_province = {
+							# OR = {
+								# province_id = 
+								# province_id = 
+								# province_id = 
+								# province_id = 
+								# province_id = 
+							# }
+							# is_core = ROOT
+							# OR = {
+								# has_building = temple
+								# has_building = cathedral
+							# }
+						# }
+						# amount = 5
+					# }
+				# }
+			# }
+		# }
+		# effect = {
+			# change_religion = animism
+			# capital_scope = { change_religion = animism }
+			# if = {
+				# limit = {
+					# calc_true_if = {
+						# tag = 
+						# culture_group = 
+						# amount = 1
+					# }
+				# }
+				# every_owned_province = {
+					# limit = {
+						# OR = {
+							# province_id = 
+							# province_id = 
+							# province_id = 
+							# province_id = 
+							# province_id = 
+						# }
+						# OR = {
+							# has_building = temple
+							# has_building = cathedral
+						# }
+					# }
+					# change_religion = animism
+				# }
+				# add_stability = -2
+			# }
+			# if = {
+				# limit = {
+					# NOT = {
+						# tag = 
+						# culture_group = 
+					# }
+				# }
+				# every_owned_province = {
+					# limit = {
+						# OR = {
+							# province_id = 
+							# province_id = 
+							# province_id = 
+							# province_id = 
+							# province_id = 
+						# }
+						# OR = {
+							# has_building = temple
+							# has_building = cathedral
+						# }
+					# }
+					# change_religion = animism
+				# }
+				# add_stability = -4
+			# }
+		# }
+		# ai_will_do = {
+			# factor = 0
+		# }
+	# }
+	
+	############################################################
+	###############           CATHOLIC           ###############
+	############################################################
+	
+	convert_to_catholic_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 85 # Köln
+				owns_core_province = 118 # Roma
+				owns_core_province = 206 # Galicia
+				owns_core_province = 235 # Kent
+				owns_core_province = 379 # Jerusalem
+			}
+			NOT = { religion = catholic }
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			# I don't know if the Papal State can lose catholic religion or what happens if they do. The papal State should in theory cease to exist. Holy Roman Empire can become Protestant in the reformation war.
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = PAP # The Papal State
+						tag = HLR # Holy Roman Empire
+						tag = KNI # The Knights
+						tag = LIV # The Livonian Order
+						tag = TEU # The Teutonic Order
+						culture_group = latin
+						culture_group = iberian
+						culture_group = french
+						culture_group = british
+						culture_group = germanic
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 85
+								province_id = 118
+								province_id = 206
+								province_id = 235
+								province_id = 379
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 85
+								province_id = 118
+								province_id = 206
+								province_id = 235
+								province_id = 379
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = catholic
+			capital_scope = { change_religion = catholic }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = PAP # The Papal State
+						tag = HLR # Holy Roman Empire
+						tag = KNI # The Knights
+						tag = LIV # The Livonian Order
+						tag = TEU # The Teutonic Order
+						culture_group = latin
+						culture_group = iberian
+						culture_group = french
+						culture_group = british
+						culture_group = germanic
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 85
+							province_id = 118
+							province_id = 206
+							province_id = 235
+							province_id = 379
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = catholic
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = PAP # The Papal State
+						tag = HLR # Holy Roman Empire
+						tag = KNI # The Knights
+						tag = LIV # The Livonian Order
+						tag = TEU # The Teutonic Order
+						culture_group = latin
+						culture_group = iberian
+						culture_group = french
+						culture_group = british
+						culture_group = germanic
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 85
+							province_id = 118
+							province_id = 206
+							province_id = 235
+							province_id = 379
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = catholic
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############           ORTHODOX           ###############
+	############################################################
+	
+	convert_to_orthodox_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 148 # Macedonia
+				owns_core_province = 151 # Constantinople
+				owns_core_province = 318 # Sugla
+				owns_core_province = 379 # Jerusalem
+				owns_core_province = 2313 # Antioch
+			}
+			NOT = { religion = orthodox }
+			NOT = { tag = PAP } # The Papal State
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = GEO # Georgia
+						tag = CIR # Circassia
+						tag = ARM # Armenia
+						tag = BYZ # Byzantine Empire
+						tag = GRE # Greece
+						tag = CRT # Crete
+						tag = TRE # Trebizond
+						tag = FEO # Theodoro
+						tag = SER # Serbia
+						tag = BUL # Bulgaria
+						tag = TRA # Transylvania
+						tag = WAL # Wallachia
+						tag = MOS # Muscowy
+						tag = RUS # Russia
+						tag = NOV # Novgorod
+						tag = RYA # Ryazan
+						tag = PLT # Polotsk
+						tag = KIE # Kiev
+						culture_group = caucasian
+						culture_group = byzantine
+						culture_group = south_slavic
+						culture_group = carpathian
+						culture_group = east_slavic
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 148
+								province_id = 151
+								province_id = 318
+								province_id = 379
+								province_id = 2313
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 148
+								province_id = 151
+								province_id = 318
+								province_id = 379
+								province_id = 2313
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = orthodox
+			capital_scope = { change_religion = orthodox }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = GEO # Georgia
+						tag = CIR # Circassia
+						tag = ARM # Armenia
+						tag = BYZ # Byzantine Empire
+						tag = GRE # Greece
+						tag = CRT # Crete
+						tag = TRE # Trebizond
+						tag = FEO # Theodoro
+						tag = SER # Serbia
+						tag = BUL # Bulgaria
+						tag = TRA # Transylvania
+						tag = WAL # Wallachia
+						tag = MOS # Muscowy
+						tag = RUS # Russia
+						tag = NOV # Novgorod
+						tag = RYA # Ryazan
+						tag = PLT # Polotsk
+						tag = KIE # Kiev
+						culture_group = caucasian
+						culture_group = byzantine
+						culture_group = south_slavic
+						culture_group = carpathian
+						culture_group = east_slavic
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 148
+							province_id = 151
+							province_id = 318
+							province_id = 379
+							province_id = 2313
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = orthodox
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = GEO # Georgia
+						tag = CIR # Circassia
+						tag = ARM # Armenia
+						tag = BYZ # Byzantine Empire
+						tag = GRE # Greece
+						tag = CRT # Crete
+						tag = TRE # Trebizond
+						tag = FEO # Theodoro
+						tag = SER # Serbia
+						tag = BUL # Bulgaria
+						tag = TRA # Transylvania
+						tag = WAL # Wallachia
+						tag = MOS # Muscowy
+						tag = RUS # Russia
+						tag = NOV # Novgorod
+						tag = RYA # Ryazan
+						tag = PLT # Polotsk
+						tag = KIE # Kiev
+						culture_group = caucasian
+						culture_group = byzantine
+						culture_group = south_slavic
+						culture_group = carpathian
+						culture_group = east_slavic
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 148
+							province_id = 151
+							province_id = 318
+							province_id = 379
+							province_id = 2313
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = orthodox
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############         MONOPHYSITE          ###############
+	############################################################
+	
+	# Miaphysite is basically Coptic in EU4, but since EU4 Coptic already has a Holy site mechanic and those differ from the CK2 Holy sites. I choose to make this Monophysite.
+	
+	convert_to_monophysite_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 358 # Alexandria
+				owns_core_province = 379 # Jerusalem
+				owns_core_province = 1227 # Tigre (Aksum)
+				owns_core_province = 2322 # Wadi Halfa (maybe change it to 1234 # Qasr Ibrim)
+				owns_core_province = 2313 # Antioch
+			}
+			NOT = { religion = monophysite }
+			NOT = { tag = PAP } # The Papal State
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = ALO # Alodia
+						tag = MAK # Makuria
+						tag = MED # Medri Bahri
+						tag = ENA # Eneara
+						tag = KAF # Kaffa
+						tag = DAM # Damot
+						tag = ETH # Ethiopia
+						tag = ARM # Armenia
+						primary_culture = nubian
+						primary_culture = tigray
+						primary_culture = sidamo
+						primary_culture = amhara
+						primary_culture = armenian
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 358
+								province_id = 379
+								province_id = 1227
+								province_id = 2322
+								province_id = 2313
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 358
+								province_id = 379
+								province_id = 1227
+								province_id = 2322
+								province_id = 2313
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = monophysite
+			capital_scope = { change_religion = monophysite }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = ALO # Alodia
+						tag = MAK # Makuria
+						tag = MED # Medri Bahri
+						tag = ENA # Eneara
+						tag = KAF # Kaffa
+						tag = DAM # Damot
+						tag = ETH # Ethiopia
+						tag = ARM # Armenia
+						primary_culture = nubian
+						primary_culture = tigray
+						primary_culture = sidamo
+						primary_culture = amhara
+						primary_culture = armenian
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 358
+							province_id = 379
+							province_id = 1227
+							province_id = 2322
+							province_id = 2313
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = monophysite
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = ALO # Alodia
+						tag = MAK # Makuria
+						tag = MED # Medri Bahri
+						tag = ENA # Eneara
+						tag = KAF # Kaffa
+						tag = DAM # Damot
+						tag = ETH # Ethiopia
+						tag = ARM # Armenia
+						primary_culture = nubian
+						primary_culture = tigray
+						primary_culture = sidamo
+						primary_culture = amhara
+						primary_culture = armenian
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 358
+							province_id = 379
+							province_id = 1227
+							province_id = 2322
+							province_id = 2313
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = monophysite
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############            COPTIC            ###############
+	############################################################
+	
+	# Holy sites location for Coptic based on the ingame Coptic Holy site system.
+	
+	convert_to_coptic_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 358 # Alexandria
+				owns_core_province = 419 # Yerevan (Armenia)
+				owns_core_province = 1227 # Tigre (Aksum)
+				owns_core_province = 1234 # Qasr Ibrim
+				owns_core_province = 2313 # Antioch
+			}
+			NOT = { religion = coptic }
+			NOT = { tag = PAP } # The Papal State
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = ALO # Alodia
+						tag = MAK # Makuria
+						tag = MED # Medri Bahri
+						tag = ENA # Eneara
+						tag = KAF # Kaffa
+						tag = DAM # Damot
+						tag = ETH # Ethiopia
+						tag = ARM # Armenia
+						culture = nubian
+						culture = tigray
+						culture = sidamo
+						culture = amhara
+						culture = armenian
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 358
+								province_id = 419
+								province_id = 1227
+								province_id = 1234
+								province_id = 2313
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 358
+								province_id = 419
+								province_id = 1227
+								province_id = 1234
+								province_id = 2313
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = coptic
+			capital_scope = { change_religion = coptic }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = ALO # Alodia
+						tag = MAK # Makuria
+						tag = MED # Medri Bahri
+						tag = ENA # Eneara
+						tag = KAF # Kaffa
+						tag = DAM # Damot
+						tag = ETH # Ethiopia
+						tag = ARM # Armenia
+						culture = nubian
+						culture = tigray
+						culture = sidamo
+						culture = amhara
+						culture = armenian
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 358
+							province_id = 419
+							province_id = 1227
+							province_id = 1234
+							province_id = 2313
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = coptic
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = ALO # Alodia
+						tag = MAK # Makuria
+						tag = MED # Medri Bahri
+						tag = ENA # Eneara
+						tag = KAF # Kaffa
+						tag = DAM # Damot
+						tag = ETH # Ethiopia
+						tag = ARM # Armenia
+						culture = nubian
+						culture = tigray
+						culture = sidamo
+						culture = amhara
+						culture = armenian
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 358
+							province_id = 419
+							province_id = 1227
+							province_id = 1234
+							province_id = 2313
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = coptic
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############           NESTORIAN          ###############
+	############################################################
+	
+	# Not any countries or cultures to connect to, going by the default Vanilla game. Research needed.
+	
+	convert_to_nestorian_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 358 # Alexandria
+				owns_core_province = 379 # Jerusalem
+				owns_core_province = 410 # Baghdad (Iraq-i-Arab)
+				owns_core_province = 428 # Rey
+				owns_core_province = 2313 # Antioch
+			}
+			NOT = { religion = nestorian }
+			NOT = { tag = PAP } # The Papal State
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			# OR = {
+				# AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					# calc_true_if = {
+						# tag = 
+						# culture_group = 
+						# amount = 1
+					# }
+					# calc_true_if = {
+						# all_owned_province = {
+							# OR = {
+								# province_id = 358
+								# province_id = 379
+								# province_id = 410
+								# province_id = 428
+								# province_id = 2313
+							# }
+							# is_core = ROOT
+							# OR = {
+								# has_building = temple
+								# has_building = cathedral
+							# }
+						# }
+						# amount = 3
+					# }
+				# }
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 358
+								province_id = 379
+								province_id = 410
+								province_id = 428
+								province_id = 2313
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			# }
+		}
+		effect = {
+			change_religion = nestorian
+			capital_scope = { change_religion = nestorian }
+			# if = {
+				# limit = {
+					# calc_true_if = {
+						# tag = 
+						# culture_group = 
+						# amount = 1
+					# }
+				# }
+				# every_owned_province = {
+					# limit = {
+						# OR = {
+							# province_id = 358
+							# province_id = 379
+							# province_id = 410
+							# province_id = 428
+							# province_id = 2313
+						# }
+						# OR = {
+							# has_building = temple
+							# has_building = cathedral
+						# }
+					# }
+					# change_religion = nestorian
+				# }
+				# add_stability = -2
+			# }
+			# if = {
+				# limit = {
+					# NOT = {
+						# tag = 
+						# culture_group = 
+					# }
+				# }
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 358
+							province_id = 379
+							province_id = 410
+							province_id = 428
+							province_id = 2313
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = nestorian
+				}
+				add_stability = -4
+			# }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############          PROTESTANT          ###############
+	############################################################
+	
+	# Provinces taken from Refumee's mod 'Holy Sites'.
+	# Not any countries or cultures to connect to, going by the default Vanilla game, since it has to "spawn" first.
+	# Made an event that sets province flags on provinces where Centers of Reformations spawns, which allows me to target those, because they are variable in each game.
+	
+	convert_to_protestant_decision = {
+		major = yes
+		potential = {
+			any_owned_province = {
+				religion = protestant
+				has_province_flag = protestant_CoR_flag
+			}
+			# OR = {
+				# owns_core_province = 1 # Uppland
+				# owns_core_province = 12 # Sjaelland
+				# owns_core_province = 59 # Wittenberg
+				# owns_core_province = 236 # London
+				# owns_core_province = 266 # Prague
+			# }
+			NOT = { religion = protestant }
+			NOT = { tag = PAP } # The Papal State
+			is_religion_enabled = protestant
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			# OR = {
+				# AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					# calc_true_if = {
+						# Just going to use the countries that contains the provinces listed
+						# tag = SWE # Sweden
+						# tag = DAN # Denmark
+						# tag = SAX # Saxony
+						# tag = ENG # England
+						# tag = BOH # Bohemia
+						# culture_group = 
+						# amount = 1
+					# }
+					calc_true_if = {
+						all_owned_province = {
+							has_province_modifier = protestant_CoR_province
+							# has_province_flag = protestant_CoR_flag
+							# OR = {
+								# province_id = 1
+								# province_id = 12
+								# province_id = 59
+								# province_id = 236
+								# province_id = 266
+							# }
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				# }
+				# AND = { # Else you need all 5 Holy Sites
+					# calc_true_if = {
+						# all_owned_province = {
+							# OR = {
+								# province_id = 1
+								# province_id = 12
+								# province_id = 59
+								# province_id = 236
+								# province_id = 266
+							# }
+							# is_core = ROOT
+							# OR = {
+								# has_building = temple
+								# has_building = cathedral
+							# }
+						# }
+						# amount = 5
+					# }
+				# }
+			# }
+		}
+		effect = {
+			change_religion = protestant
+			capital_scope = { change_religion = protestant }
+			# if = {
+				# limit = {
+					# calc_true_if = {
+						# tag = SWE # Sweden
+						# tag = DAN # Denmark
+						# tag = SAX # Saxony
+						# tag = ENG # England
+						# tag = BOH # Bohemia
+						# culture_group = 
+						# amount = 1
+					# }
+				# }
+				# every_owned_province = {
+					# limit = {
+						# OR = {
+							# province_id = 1
+							# province_id = 12
+							# province_id = 59
+							# province_id = 236
+							# province_id = 266
+						# }
+						# OR = {
+							# has_building = temple
+							# has_building = cathedral
+						# }
+					# }
+					# change_religion = protestant
+				# }
+				# add_stability = -2
+			# }
+			# if = {
+				# limit = {
+					# NOT = {
+						# tag = SWE # Sweden
+						# tag = DAN # Denmark
+						# tag = SAX # Saxony
+						# tag = ENG # England
+						# tag = BOH # Bohemia
+						# culture_group = 
+					# }
+				# }
+				every_owned_province = {
+					limit = {
+						has_province_modifier = protestant_CoR_province
+						# has_province_flag = protestant_CoR_flag
+						# OR = {
+							# province_id = 1
+							# province_id = 12
+							# province_id = 59
+							# province_id = 236
+							# province_id = 266
+						# }
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = protestant
+				}
+				add_stability = -4
+			# }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############           REFORMED           ###############
+	############################################################
+	
+	# Provinces taken from Refumee's mod 'Holy Sites'.
+	# Not any countries or cultures to connect to, going by the default Vanilla game, since it has to "spawn" first.
+	# Made an event that sets province flags on provinces where Centers of Reformations spawns, which allows me to target those, because they are variable in each game.
+	
+	convert_to_reformed_decision = {
+		major = yes
+		potential = {
+			any_province = {
+				religion = reformed
+				has_province_flag = reformed_CoR_flag
+			}
+			# OR = {
+				# owns_core_province = 77 # Heidelberg
+				# owns_core_province = 100 # Friesland
+				# owns_core_province = 248 # Lothian
+				# owns_core_province = 1867 # Freiburg
+				# owns_core_province = 1951 # Hunyad
+			# }
+			NOT = { religion = reformed }
+			NOT = { tag = PAP } # The Papal State
+			is_religion_enabled = reformed
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			# OR = {
+				# AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					# calc_true_if = {
+						# Just going to use the countries that contains the provinces listed
+						# tag = PAL # The Palatinate
+						# tag = FRI # Friesland
+						# tag = SCO # Scotland
+						# tag = SAV # Savoy
+						# tag = HUN # Hungary
+						# culture_group = 
+						# amount = 1
+					# }
+					calc_true_if = {
+						all_owned_province = {
+							has_province_modifier = reformed_CoR_province
+							# has_province_flag = reformed_CoR_flag
+							# OR = {
+								# province_id = 77
+								# province_id = 100
+								# province_id = 248
+								# province_id = 1867
+								# province_id = 1951
+							# }
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				# }
+				# AND = { # Else you need all 5 Holy Sites
+					# calc_true_if = {
+						# all_owned_province = {
+							# OR = {
+								# province_id = 77
+								# province_id = 100
+								# province_id = 248
+								# province_id = 1867
+								# province_id = 1951
+							# }
+							# is_core = ROOT
+							# OR = {
+								# has_building = temple
+								# has_building = cathedral
+							# }
+						# }
+						# amount = 5
+					# }
+				# }
+			# }
+		}
+		effect = {
+			change_religion = reformed
+			capital_scope = { change_religion = reformed }
+			# if = {
+				# limit = {
+					# calc_true_if = {
+						# tag = PAL # The Palatinate
+						# tag = FRI # Friesland
+						# tag = SCO # Scotland
+						# tag = SAV # Savoy
+						# tag = HUN # Hungary
+						# culture_group = 
+						# amount = 1
+					# }
+				# }
+				# every_owned_province = {
+					# limit = {
+						# OR = {
+							# province_id = 77
+							# province_id = 100
+							# province_id = 248
+							# province_id = 1867
+							# province_id = 1951
+						# }
+						# OR = {
+							# has_building = temple
+							# has_building = cathedral
+						# }
+					# }
+					# change_religion = reformed
+				# }
+				# add_stability = -2
+			# }
+			# if = {
+				# limit = {
+					# NOT = {
+						# tag = PAL # The Palatinate
+						# tag = FRI # Friesland
+						# tag = SCO # Scotland
+						# tag = SAV # Savoy
+						# tag = HUN # Hungary
+						# culture_group = 
+					# }
+				# }
+				every_owned_province = {
+					limit = {
+						has_province_modifier = reformed_CoR_province
+						# has_province_flag = reformed_CoR_flag
+						# OR = {
+							# province_id = 77
+							# province_id = 100
+							# province_id = 248
+							# province_id = 1867
+							# province_id = 1951
+						# }
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = reformed
+				}
+				add_stability = -4
+			# }
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############             SUNNI            ###############
+	############################################################
+	
+	convert_to_sunni_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 225 # Cordoba
+				owns_core_province = 379 # Jerusalem
+				owns_core_province = 384 # Medina
+				owns_core_province = 385 # Mecca
+				owns_core_province = 410 # Baghdad (Iraq-i-Arab)
+			}
+			NOT = { religion = sunni }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = TUR # Ottomans
+						tag = MAM # Mamluks
+						tag = SYR # Syria
+						tag = NAJ # Najd
+						tag = ADE # Yemen
+						tag = KHO # Khorasan
+						tag = BAL # Baluchistan
+						tag = AFG # Afghanistan
+						tag = ARD # Ardalan
+						tag = MOR # Morocco
+						tag = TUN # Tunisia
+						tag = ALG # Algiers
+						tag = TLC # Tlemcen
+						culture_group = turko_semitic
+						culture_group = iranian
+						culture_group = maghrebi
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 225
+								province_id = 379
+								province_id = 384
+								province_id = 385
+								province_id = 410
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 225
+								province_id = 379
+								province_id = 384
+								province_id = 385
+								province_id = 410
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = sunni
+			capital_scope = { change_religion = sunni }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = TUR # Ottomans
+						tag = MAM # Burgi (Mamluks)
+						tag = SYR # Syria
+						tag = NAJ # Najd
+						tag = ADE # Yemen
+						tag = KHO # Khorasan
+						tag = BAL # Baluchistan
+						tag = AFG # Afghanistan
+						tag = ARD # Ardalan
+						tag = MOR # Morocco
+						tag = TUN # Tunisia
+						tag = ALG # Algiers
+						tag = TLC # Tlemcen
+						culture_group = turko_semitic
+						culture_group = iranian
+						culture_group = maghrebi
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 225
+							province_id = 379
+							province_id = 384
+							province_id = 385
+							province_id = 410
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = sunni
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = TUR # Ottomans
+						tag = MAM # Burgi (Mamluks)
+						tag = SYR # Syria
+						tag = NAJ # Najd
+						tag = ADE # Yemen
+						tag = KHO # Khorasan
+						tag = BAL # Baluchistan
+						tag = AFG # Afghanistan
+						tag = ARD # Ardalan
+						tag = MOR # Morocco
+						tag = TUN # Tunisia
+						tag = ALG # Algiers
+						tag = TLC # Tlemcen
+						culture_group = turko_semitic
+						culture_group = iranian
+						culture_group = maghrebi
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 225
+							province_id = 379
+							province_id = 384
+							province_id = 385
+							province_id = 410
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = sunni
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############             SHIA             ###############
+	############################################################
+	
+	convert_to_shia_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 379 # Jerusalem
+				owns_core_province = 382 # Damascus
+				owns_core_province = 384 # Medina
+				owns_core_province = 385 # Mecca
+				owns_core_province = 2311 # Samawah
+			}
+			NOT = { religion = shiite }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = IRQ # Iraq
+						tag = ALH # Haasa
+						tag = PER # Persia
+						tag = SRV # Shirvanshah
+						tag = TAB # Tabarestan
+						tag = ABB # Dongola
+						culture_group = turko_semitic
+						culture_group = iranian
+						culture_group = maghrebi
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 379
+								province_id = 382
+								province_id = 384
+								province_id = 385
+								province_id = 2311
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 379
+								province_id = 382
+								province_id = 384
+								province_id = 385
+								province_id = 2311
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = shiite
+			capital_scope = { change_religion = shiite }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = IRQ # Iraq
+						tag = ALH # Haasa
+						tag = PER # Persia
+						tag = SRV # Shirvanshah
+						tag = TAB # Tabarestan
+						tag = ABB # Dongola
+						culture_group = turko_semitic
+						culture_group = iranian
+						culture_group = maghrebi
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 379
+							province_id = 382
+							province_id = 384
+							province_id = 385
+							province_id = 2311
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = shiite
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = IRQ # Iraq
+						tag = ALH # Haasa
+						tag = PER # Persia
+						tag = SRV # Shirvanshah
+						tag = TAB # Tabarestan
+						tag = ABB # Dongola
+						culture_group = turko_semitic
+						culture_group = iranian
+						culture_group = maghrebi
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 379
+							province_id = 382
+							province_id = 384
+							province_id = 385
+							province_id = 2311
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = shiite
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############             IBADI            ###############
+	############################################################
+	
+	convert_to_ibadi_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 379 # Jerusalem
+				owns_core_province = 384 # Medina
+				owns_core_province = 385 # Mecca
+				owns_core_province = 403 # Nizwa
+				owns_core_province = 2463 # Maaskar
+			}
+			NOT = { religion = ibadi }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = MZB # Mzab
+						tag = OMA # Oman
+						culture_group = turko_semitic
+						culture_group = iranian
+						culture_group = maghrebi
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 379
+								province_id = 384
+								province_id = 385
+								province_id = 403
+								province_id = 2463
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 379
+								province_id = 384
+								province_id = 385
+								province_id = 403
+								province_id = 2463
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = ibadi
+			capital_scope = { change_religion = ibadi }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = MZB # Mzab
+						tag = OMA # Oman
+						culture_group = turko_semitic
+						culture_group = iranian
+						culture_group = maghrebi
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 379
+							province_id = 384
+							province_id = 385
+							province_id = 403
+							province_id = 2463
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = ibadi
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = MZB # Mzab
+						tag = OMA # Oman
+						culture_group = turko_semitic
+						culture_group = iranian
+						culture_group = maghrebi
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 379
+							province_id = 384
+							province_id = 385
+							province_id = 403
+							province_id = 2463
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = ibadi
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############            JEWISH            ###############
+	############################################################
+	
+	convert_to_jewish_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 365 # Sinai
+				owns_core_province = 379 # Jerusalem
+				owns_core_province = 382 # Damascus
+				owns_core_province = 401 # Dhofar
+				owns_core_province = 414 # Hamadan
+			}
+			NOT = { religion = jewish }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = ISR # Israel
+						# culture_group = none
+						primary_culture = hebrew
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 365
+								province_id = 379
+								province_id = 382
+								province_id = 401
+								province_id = 414
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 365
+								province_id = 379
+								province_id = 382
+								province_id = 401
+								province_id = 414
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = jewish
+			capital_scope = { change_religion = jewish }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = ISR # Israel
+						# culture_group = none
+						primary_culture = hebrew
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 365
+							province_id = 379
+							province_id = 382
+							province_id = 401
+							province_id = 414
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = jewish
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = ISR # Israel
+						# culture_group = none
+						primary_culture = hebrew
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 365
+							province_id = 379
+							province_id = 382
+							province_id = 401
+							province_id = 414
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = jewish
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############           MAHAYANA           ###############
+	############################################################
+	
+	# Provinces taken from Refumee's mod 'Holy Sites'.
+	
+	convert_to_mahayana_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 558 # Patna
+				owns_core_province = 613 # Dong Kinh
+				owns_core_province = 1836 # Luoyang
+				owns_core_province = 2057 # Bhelsa
+				owns_core_province = 2073 # Baltistan
+			}
+			NOT = { religion = mahayana }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = DAI
+						tag = TOK
+						tag = PGS
+						culture_group = mon_khmer
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 558
+								province_id = 613
+								province_id = 1836
+								province_id = 2057
+								province_id = 2073
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 558
+								province_id = 613
+								province_id = 1836
+								province_id = 2057
+								province_id = 2073
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = mahayana
+			capital_scope = { change_religion = mahayana }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = DAI
+						tag = TOK
+						tag = PGS
+						culture_group = mon_khmer
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 558
+							province_id = 613
+							province_id = 1836
+							province_id = 2057
+							province_id = 2073
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = mahayana
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = DAI
+						tag = TOK
+						tag = PGS
+						culture_group = mon_khmer
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 558
+							province_id = 613
+							province_id = 1836
+							province_id = 2057
+							province_id = 2073
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = mahayana
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############           THERAVADA          ###############
+	############################################################
+	
+	# Provinces taken from Refumee's mod 'Holy Sites'.
+	
+	convert_to_theravada_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 558 # Patna
+				owns_core_province = 609 # Angkor
+				owns_core_province = 2057 # Bhelsa
+				owns_core_province = 2073 # Baltistan
+				owns_core_province = 2099 # Kandy
+			}
+			NOT = { religion = buddhism } # Theravada
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = SST
+						tag = ARK
+						tag = AVA
+						tag = HSE
+						tag = LNA
+						tag = MYA
+						tag = PEG
+						tag = TAU
+						tag = AYU
+						tag = KHM
+						tag = LXA
+						tag = LUA
+						tag = MPH
+						tag = SUK
+						tag = PGR
+						tag = CEY
+						tag = CDL
+						culture_group = burman
+						culture_group = thai
+						culture_group = mon_khmer
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 558
+								province_id = 609
+								province_id = 2057
+								province_id = 2073
+								province_id = 2099
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 558
+								province_id = 609
+								province_id = 2057
+								province_id = 2073
+								province_id = 2099
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = buddhism
+			capital_scope = { change_religion = buddhism }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = SST
+						tag = ARK
+						tag = AVA
+						tag = HSE
+						tag = LNA
+						tag = MYA
+						tag = PEG
+						tag = TAU
+						tag = AYU
+						tag = KHM
+						tag = LXA
+						tag = LUA
+						tag = MPH
+						tag = SUK
+						tag = PGR
+						tag = CEY
+						tag = CDL
+						culture_group = burman
+						culture_group = thai
+						culture_group = mon_khmer
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 558
+							province_id = 609
+							province_id = 2057
+							province_id = 2073
+							province_id = 2099
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = buddhism
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = SST
+						tag = ARK
+						tag = AVA
+						tag = HSE
+						tag = LNA
+						tag = MYA
+						tag = PEG
+						tag = TAU
+						tag = AYU
+						tag = KHM
+						tag = LXA
+						tag = LUA
+						tag = MPH
+						tag = SUK
+						tag = PGR
+						tag = CEY
+						tag = CDL
+						culture_group = burman
+						culture_group = thai
+						culture_group = mon_khmer
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 558
+							province_id = 609
+							province_id = 2057
+							province_id = 2073
+							province_id = 2099
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = buddhism
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############           VAJRAYANA          ###############
+	############################################################
+	
+	# Provinces taken from Refumee's mod 'Holy Sites'.
+	
+	# date = 630.1.1 (Used for Extended Timeline)
+	
+	convert_to_vajrayana_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 558 # Patna
+				owns_core_province = 677 # Lhasa
+				owns_core_province = 2057 # Bhelsa
+				owns_core_province = 2073 # Baltistan
+				owns_core_province = 2133 # Dege
+			}
+			NOT = { religion = vajrayana }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = TIB
+						tag = BHU
+						tag = GUG
+						tag = KAM
+						tag = UTS
+						tag = KLK
+						tag = ZUN
+						tag = LDK
+						primary_culture = tibetan
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 558
+								province_id = 677
+								province_id = 2057
+								province_id = 2073
+								province_id = 2133
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 558
+								province_id = 677
+								province_id = 2057
+								province_id = 2073
+								province_id = 2133
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = vajrayana
+			capital_scope = { change_religion = vajrayana }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = TIB
+						tag = BHU
+						tag = GUG
+						tag = KAM
+						tag = UTS
+						tag = KLK
+						tag = ZUN
+						tag = LDK
+						primary_culture = tibetan
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 558
+							province_id = 677
+							province_id = 2057
+							province_id = 2073
+							province_id = 2133
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = vajrayana
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = TIB
+						tag = BHU
+						tag = GUG
+						tag = KAM
+						tag = UTS
+						tag = KLK
+						tag = ZUN
+						tag = LDK
+						primary_culture = tibetan
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 558
+							province_id = 677
+							province_id = 2057
+							province_id = 2073
+							province_id = 2133
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = vajrayana
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############           HINDUISM           ###############
+	############################################################
+	
+	# Provinces taken from Refumee's mod 'Holy Sites'.
+	
+	# Country_tag(s)
+	# tag = 
+	
+	convert_to_hinduism_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 518 # Chittor
+				owns_core_province = 523 # Oudh
+				owns_core_province = 525 # Gird
+				owns_core_province = 2052 # Navanagar
+				owns_core_province = 2095 # Varanasi
+			}
+			NOT = { religion = hinduism }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						# tag = 
+						culture_group = dravidian
+						culture_group = central_indic
+						culture_group = eastern_aryan
+						culture_group = hindusthani
+						culture_group = western_aryan
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 518
+								province_id = 523
+								province_id = 525
+								province_id = 2052
+								province_id = 2095
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 518
+								province_id = 523
+								province_id = 525
+								province_id = 2052
+								province_id = 2095
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = hinduism
+			capital_scope = { change_religion = hinduism }
+			if = {
+				limit = {
+					calc_true_if = {
+						# tag = 
+						culture_group = dravidian
+						culture_group = central_indic
+						culture_group = eastern_aryan
+						culture_group = hindusthani
+						culture_group = western_aryan
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 518
+							province_id = 523
+							province_id = 525
+							province_id = 2052
+							province_id = 2095
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = hinduism
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						# tag = 
+						culture_group = dravidian
+						culture_group = central_indic
+						culture_group = eastern_aryan
+						culture_group = hindusthani
+						culture_group = western_aryan
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 518
+							province_id = 523
+							province_id = 525
+							province_id = 2052
+							province_id = 2095
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = hinduism
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############            SIKHISM           ###############
+	############################################################
+	
+	# Provinces taken from Refumee's mod 'Holy Sites'.
+	
+	# Country_tag(s)
+	# tag = 
+	
+	# date = 1499.01.01
+	
+	convert_to_sikhism_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 507 # Lahore
+				owns_core_province = 558 # Patna
+				owns_core_province = 1948 # Bidar
+				owns_core_province = 2062 # Panipat
+				owns_core_province = 2065 # Bhattiana
+			}
+			is_religion_enabled = sikhism
+			NOT = { religion = sikhism }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						# tag = 
+						culture_group = dravidian
+						culture_group = central_indic
+						culture_group = eastern_aryan
+						culture_group = hindusthani
+						culture_group = western_aryan
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 507
+								province_id = 558
+								province_id = 1948
+								province_id = 2062
+								province_id = 2065
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 507
+								province_id = 558
+								province_id = 1948
+								province_id = 2062
+								province_id = 2065
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = sikhism
+			capital_scope = { change_religion = sikhism }
+			if = {
+				limit = {
+					calc_true_if = {
+						# tag = 
+						culture_group = dravidian
+						culture_group = central_indic
+						culture_group = eastern_aryan
+						culture_group = hindusthani
+						culture_group = western_aryan
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 507
+							province_id = 558
+							province_id = 1948
+							province_id = 2062
+							province_id = 2065
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = sikhism
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						# tag = 
+						culture_group = dravidian
+						culture_group = central_indic
+						culture_group = eastern_aryan
+						culture_group = hindusthani
+						culture_group = western_aryan
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 507
+							province_id = 558
+							province_id = 1948
+							province_id = 2062
+							province_id = 2065
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = sikhism
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############            JAINISM           ###############
+	############################################################
+	
+	# Country_tag(s)
+	# tag = 
+	
+	convert_to_jainism_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 515 # Girnar
+				owns_core_province = 533 # Mysore
+				owns_core_province = 2053 # Patan
+				owns_core_province = 2067 # Gorwar
+				owns_core_province = 2096 # Damin
+			}
+			NOT = { religion = jain }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						# tag = 
+						culture_group = dravidian
+						culture_group = central_indic
+						culture_group = eastern_aryan
+						culture_group = hindusthani
+						culture_group = western_aryan
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 515
+								province_id = 533
+								province_id = 2053
+								province_id = 2067
+								province_id = 2096
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 515
+								province_id = 533
+								province_id = 2053
+								province_id = 2067
+								province_id = 2096
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = jain
+			capital_scope = { change_religion = jain }
+			if = {
+				limit = {
+					calc_true_if = {
+						# tag = 
+						culture_group = dravidian
+						culture_group = central_indic
+						culture_group = eastern_aryan
+						culture_group = hindusthani
+						culture_group = western_aryan
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 515
+							province_id = 533
+							province_id = 2053
+							province_id = 2067
+							province_id = 2096
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = jain
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						# tag = 
+						culture_group = dravidian
+						culture_group = central_indic
+						culture_group = eastern_aryan
+						culture_group = hindusthani
+						culture_group = western_aryan
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 515
+							province_id = 533
+							province_id = 2053
+							province_id = 2067
+							province_id = 2096
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = jain
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############            ZUNIST            ###############
+	############################################################
+	
+	# Country_tag(s)
+	# tag = 
+	
+	convert_to_zunist_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 361 # Cairo
+				owns_core_province = 410 # Iraq-i-Arab (Baghdad)
+				owns_core_province = 447 # Kandahar
+				owns_core_province = 451 # Kabulistan
+				owns_core_province = 506 # Multan
+			}
+			NOT = { religion = zun_pagan_reformed }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						# tag = ZAB # Zabul
+						primary_culture = afghani
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 361
+								province_id = 410
+								province_id = 447
+								province_id = 451
+								province_id = 506
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 361
+								province_id = 410
+								province_id = 447
+								province_id = 451
+								province_id = 506
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = zun_pagan_reformed
+			capital_scope = { change_religion = zun_pagan_reformed }
+			if = {
+				limit = {
+					calc_true_if = {
+						# tag = ZAB # Zabul
+						primary_culture = afghani
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 361
+							province_id = 410
+							province_id = 447
+							province_id = 451
+							province_id = 506
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = zun_pagan_reformed
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						# tag = ZAB # Zabul
+						primary_culture = afghani
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 361
+							province_id = 410
+							province_id = 447
+							province_id = 451
+							province_id = 506
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = zun_pagan_reformed
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############         CONFUCIANISM         ###############
+	############################################################
+	
+	# Provinces taken from Refumee's mod 'Holy Sites'.
+	
+	# Country_tag(s)
+	
+	convert_to_confucianism_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 667 # Canton
+				owns_core_province = 679 # Chengdu
+				owns_core_province = 691 # Jinan [Mount Tai]
+				owns_core_province = 700 # Xi'an
+				owns_core_province = 1816 # Beijing
+			}
+			NOT = { religion = confucianism }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = MNG # Ming
+						culture_group = east_asian
+						culture_group = korean_g
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 667
+								province_id = 679
+								province_id = 691
+								province_id = 700
+								province_id = 1816
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 667
+								province_id = 679
+								province_id = 691
+								province_id = 700
+								province_id = 1816
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = confucianism
+			capital_scope = { change_religion = confucianism }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = MNG
+						culture_group = east_asian
+						culture_group = korean_g
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 667
+							province_id = 679
+							province_id = 691
+							province_id = 700
+							province_id = 1816
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = confucianism
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = MNG
+						culture_group = east_asian
+						culture_group = korean_g
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 667
+							province_id = 679
+							province_id = 691
+							province_id = 700
+							province_id = 1816
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = confucianism
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	############################################################
+	###############            SHINTO            ###############
+	############################################################
+	
+	# Provinces taken from Refumee's mod 'Holy Sites'.
+	
+	# date = 712.1.1 
+	
+	convert_to_shinto_decision = {
+		major = yes
+		potential = {
+			OR = {
+				owns_core_province = 1018 # Izumo
+				owns_core_province = 1020 # Yamashiro/Kyoto
+				owns_core_province = 1025 # Dewa
+				owns_core_province = 1030 # Owari
+				owns_core_province = 1832 # Yamato
+			}
+			NOT = { religion = shinto }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		allow =  {
+			is_at_war = no 
+			is_subject = false
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						tag = JAP # Japan
+						culture_group = japanese_g
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 1018
+								province_id = 1020
+								province_id = 1025
+								province_id = 1030
+								province_id = 1832
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				# AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							OR = {
+								province_id = 1018
+								province_id = 1020
+								province_id = 1025
+								province_id = 1030
+								province_id = 1832
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				# }
+			}
+		}
+		effect = {
+			change_religion = shinto
+			capital_scope = { change_religion = shinto }
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = JAP
+						culture_group = japanese_g
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 1018
+							province_id = 1020
+							province_id = 1025
+							province_id = 1030
+							province_id = 1832
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = shinto
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = JAP
+						culture_group = japanese_g
+					}
+				}
+				every_owned_province = {
+					limit = {
+						OR = {
+							province_id = 1018
+							province_id = 1020
+							province_id = 1025
+							province_id = 1030
+							province_id = 1832
+						}
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = shinto
+				}
+				add_stability = -4
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+}

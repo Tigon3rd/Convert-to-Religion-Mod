@@ -1,0 +1,332 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_province_animism"
+		texturefile = "gfx//interface//ideas_EU4//province_animism.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_aztec_rebels"
+		texturefile = "gfx//interface//ideas_EU4//province_aztec_rebels.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_bogomilist"
+		texturefile = "gfx//interface//ideas_EU4//province_bogomilist.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_buddhist"
+		texturefile = "gfx//interface//ideas_EU4//province_buddhist.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_cathar"
+		texturefile = "gfx//interface//ideas_EU4//province_cathar.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_catholic"
+		texturefile = "gfx//interface//ideas_EU4//province_catholic.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_confucian"
+		texturefile = "gfx//interface//ideas_EU4//province_confucian.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_coptic"
+		texturefile = "gfx//interface//ideas_EU4//province_coptic.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_druze"
+		texturefile = "gfx//interface//ideas_EU4//province_druze.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_fetishist"
+		texturefile = "gfx//interface//ideas_EU4//province_fetishist.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_fraticelli"
+		texturefile = "gfx//interface//ideas_EU4//province_fraticelli.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_hellenic"
+		texturefile = "gfx//interface//ideas_EU4//province_hellenic.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_hindu"
+		texturefile = "gfx//interface//ideas_EU4//province_hindu.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_hurufi"
+		texturefile = "gfx//interface//ideas_EU4//province_hurufi.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_ibadi"
+		texturefile = "gfx//interface//ideas_EU4//province_ibadi.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_iconoclast"
+		texturefile = "gfx//interface//ideas_EU4//province_iconoclast.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_incan_rebels"
+		texturefile = "gfx//interface//ideas_EU4//province_incan_rebels.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_inti"
+		texturefile = "gfx//interface//ideas_EU4//province_inti.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_jain"
+		texturefile = "gfx//interface//ideas_EU4//province_jain.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_jewish"
+		texturefile = "gfx//interface//ideas_EU4//province_jewish.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_karaite"
+		texturefile = "gfx//interface//ideas_EU4//province_karaite.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_kharijite"
+		texturefile = "gfx//interface//ideas_EU4//province_kharijite.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_lollard"
+		texturefile = "gfx//interface//ideas_EU4//province_lollard.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_mahayana"
+		texturefile = "gfx//interface//ideas_EU4//province_mahayana.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_manichean"
+		texturefile = "gfx//interface//ideas_EU4//province_manichean.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_mayan"
+		texturefile = "gfx//interface//ideas_EU4//province_mayan.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_mazdaki"
+		texturefile = "gfx//interface//ideas_EU4//province_mazdaki.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_messalian"
+		texturefile = "gfx//interface//ideas_EU4//province_messalian.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_monophysite"
+		texturefile = "gfx//interface//ideas_EU4//province_monophysite.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_monothelite"
+		texturefile = "gfx//interface//ideas_EU4//province_monothelite.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_nahuatl"
+		texturefile = "gfx//interface//ideas_EU4//province_nahuatl.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_nestorian"
+		texturefile = "gfx//interface//ideas_EU4//province_nestorian.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_norse"
+		texturefile = "gfx//interface//ideas_EU4//province_norse.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_orthodox"
+		texturefile = "gfx//interface//ideas_EU4//province_orthodox.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_paulician"
+		texturefile = "gfx//interface//ideas_EU4//province_paulician.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_protestant"
+		texturefile = "gfx//interface//ideas_EU4//province_protestant.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_reformed"
+		texturefile = "gfx//interface//ideas_EU4//province_reformed.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_romuva"
+		texturefile = "gfx//interface//ideas_EU4//province_romuva.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_samaritan"
+		texturefile = "gfx//interface//ideas_EU4//province_samaritan.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_shia"
+		texturefile = "gfx//interface//ideas_EU4//province_shia.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_shinto"
+		texturefile = "gfx//interface//ideas_EU4//province_shinto.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_sikh"
+		texturefile = "gfx//interface//ideas_EU4//province_sikh.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_slavic"
+		texturefile = "gfx//interface//ideas_EU4//province_slavic.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_sunni"
+		texturefile = "gfx//interface//ideas_EU4//province_sunni.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_suomenusko"
+		texturefile = "gfx//interface//ideas_EU4//province_suomenusko.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_tengri"
+		texturefile = "gfx//interface//ideas_EU4//province_tengri.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_theravada"
+		texturefile = "gfx//interface//ideas_EU4//province_theravada.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_totemist"
+		texturefile = "gfx//interface//ideas_EU4//province_totemist.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_vajrayana"
+		texturefile = "gfx//interface//ideas_EU4//province_vajrayana.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_waldensian"
+		texturefile = "gfx//interface//ideas_EU4//province_waldensian.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_west_african_rebels"
+		texturefile = "gfx//interface//ideas_EU4//province_west_african_rebels.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_yazidi"
+		texturefile = "gfx//interface//ideas_EU4//province_yazidi.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_zikri"
+		texturefile = "gfx//interface//ideas_EU4//province_zikri.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_zoroastrian"
+		texturefile = "gfx//interface//ideas_EU4//province_zoroastrian.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_zunist"
+		texturefile = "gfx//interface//ideas_EU4//province_zunist.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+}
