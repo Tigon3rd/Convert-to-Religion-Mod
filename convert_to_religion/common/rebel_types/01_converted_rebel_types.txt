@@ -175,7 +175,7 @@ baltic_pagan_reformed_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "baltic_pagan_reformed_rebels_demand"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -373,7 +373,7 @@ finnish_pagan_reformed_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "finnish_pagan_reformed_rebels_demand"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -571,7 +571,7 @@ slavic_pagan_reformed_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "slavic_pagan_reformed_rebels_demand"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -769,7 +769,7 @@ zunist_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "zunist_rebels_demand"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -806,6 +806,204 @@ zunist_rebels = {
 				NOT = { religion = zun_pagan_reformed }
 			}
 			change_religion = zun_pagan_reformed
+			force_converted = yes
+		}
+	}
+}
+
+######################################################################
+# Bon Reformed rebels. Disgruntled fanatics.
+######################################################################
+bon_rebels = {
+
+	area = nation 					# Sticks to provinces of their nation
+	government = theocracy 			# Desires Theocracy
+	religion = bon
+	defection = religion			# Defects to countries of their religion
+	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
+	independence = none				# Does not strive for independence
+	unit_transfer = yes
+	gfx_type = culture_province
+	
+	resilient = no
+	reinforcing = yes
+	general = yes
+	smart = yes
+	
+	artillery = 0.0
+	infantry = 0.7
+	cavalry = 0.3
+	
+	morale = 1.1
+
+	# Possible handle actions
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = yes
+	handle_action_send_missionary = yes		
+	
+	# The rebel type with the highest modifier for this province gets picked
+	spawn_chance = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			is_overseas = yes
+		}
+		modifier = {
+			factor = 0.0
+			owner = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.0
+			NOT = { religion = bon }
+		}
+		modifier = {
+			factor = 0.001
+			tolerance_to_this = 5
+		}
+		modifier = {
+			factor = 0.5
+			tolerance_to_this = 2
+		}
+		modifier = {
+			factor = 5.0
+			owner = { has_country_flag = religious_turmoil }
+		}		
+		modifier = {
+			factor = 2000
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = 1 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = -1 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = -2 }
+		}
+	}
+ 
+ 	# This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 0.0
+			religion = bon
+			owner = { religion = bon }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religion = bon }
+			any_neighbor_province = {
+	 			religion = bon
+	 			NOT = { has_province_modifier = "forced_conversion" }
+	 		}
+	 	}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+ 
+ 	# Province Scope
+ 	siege_won_trigger = {
+		NOT = {
+			AND = {
+				owned_by = PAP
+				is_capital = yes
+			}
+		}
+ 	}
+	siege_won_effect = {
+		if = {
+			limit = {
+				religion = bon
+			}
+			add_province_modifier = {
+				name = "religious_violence"
+				duration = 730
+			}
+		}
+		if = {
+			limit = {
+				NOT = { religion = bon }
+			}
+			change_religion = bon
+			add_province_modifier = {
+				name = "forced_conversion"
+				duration = 730
+			}
+		}
+	}
+	
+	# Country scope
+	can_negotiate_trigger = {
+		religion_group = pagan
+	}
+	
+	# Country scope
+	can_enforce_trigger = {
+		always = yes
+	}
+	
+	# Localisation for their demands
+	demands_description = "generic_rebels_demand"
+	
+	# Country Scope	
+	demands_enforced_effect = {
+		if = {
+			limit = {
+				NOT = { religion_group = pagan }
+			}
+			add_prestige = -50
+			every_owned_province = {
+				limit = {
+					has_rebel_faction = REB
+				}
+				add_local_autonomy = 20
+			}
+		}
+		if = {
+			limit = {
+				tag = PAP
+			}
+			add_stability = -1
+		}
+		if = {
+			limit = {
+				religion = bon
+			}
+			add_country_modifier = {
+				name = "religious_intolerance"
+				duration = 3650
+			}
+		}
+		if = {
+			limit = {
+				religion_group = pagan
+				NOT = { religion = bon }
+			}
+			change_religion = bon
 			force_converted = yes
 		}
 	}
@@ -967,7 +1165,7 @@ hellenic_pagan_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "hellenic_pagan_rebels_demand"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -1162,7 +1360,7 @@ cathar_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "cathar_rebels_demand"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -1357,7 +1555,7 @@ fraticelli_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "fraticelli_rebels_demand"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -1552,7 +1750,7 @@ waldensian_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "waldensian_rebels_demand"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -1747,7 +1945,7 @@ lollard_religion_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "lollard_religion_rebels_demand"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -1942,7 +2140,7 @@ monophysite_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "monophysite_rebels_demand"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -2137,7 +2335,7 @@ bogomilist_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "bogomilist_rebels_demand"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -2332,7 +2530,7 @@ monothelite_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "monothelite_rebels_demand"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -2527,7 +2725,7 @@ iconoclast_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "iconoclast_rebels_demand"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -2722,7 +2920,7 @@ paulician_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "paulician_rebels_demand_desc"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -2917,7 +3115,7 @@ nestorian_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "nestorian_rebels_demand_desc"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -3112,7 +3310,7 @@ messalian_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "messalian_rebels_demand_desc"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -3307,7 +3505,7 @@ zikri_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "zikri_rebels_demand_desc"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -3502,7 +3700,7 @@ yazidi_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "yazidi_rebels_demand_desc"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -3697,7 +3895,7 @@ kharijite_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "kharijite_rebels_demand_desc"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -3892,7 +4090,7 @@ druze_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "druze_rebels_demand_desc"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -4087,7 +4285,7 @@ hurufi_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "hurufi_rebels_demand_desc"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -4282,7 +4480,7 @@ mazdaki_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "mazdaki_rebels_demand_desc"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -4319,6 +4517,201 @@ mazdaki_rebels = {
 				NOT = { religion = mazdaki }
 			}
 			change_religion = mazdaki
+			force_converted = yes
+		}
+	}
+}
+
+khurmazta_rebels = {
+
+	area = nation 					# Sticks to provinces of their nation
+	government = theocracy 			# Desires Theocracy
+	religion = khurmazta
+	defection = religion			# Defects to countries of their religion
+	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
+	independence = none				# Does not strive for independence
+	unit_transfer = yes
+	gfx_type = culture_province
+	
+	resilient = no
+	reinforcing = yes
+	general = yes
+	smart = yes
+	
+	artillery = 0.0
+	infantry = 0.7
+	cavalry = 0.3
+	
+	morale = 1.1
+
+	# Possible handle actions
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = yes
+	handle_action_send_missionary = yes		
+	
+	# The rebel type with the highest modifier for this province gets picked
+	spawn_chance = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			is_overseas = yes
+		}
+		modifier = {
+			factor = 0.0
+			owner = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.0
+			NOT = { religion = khurmazta }
+		}
+		modifier = {
+			factor = 0.001
+			tolerance_to_this = 5
+		}
+		modifier = {
+			factor = 0.5
+			tolerance_to_this = 2
+		}
+		modifier = {
+			factor = 5.0
+			owner = { has_country_flag = religious_turmoil }
+		}		
+		modifier = {
+			factor = 2000
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = 1 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = -1 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = -2 }
+		}
+	}
+ 
+ 	# This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 0.0
+			religion = khurmazta
+			owner = { religion = khurmazta }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religion = khurmazta }
+			any_neighbor_province = {
+	 			religion = khurmazta
+	 			NOT = { has_province_modifier = "forced_conversion" }
+	 		}
+	 	}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+ 
+ 	# Province Scope
+ 	siege_won_trigger = {
+		NOT = {
+			AND = {
+				owned_by = PAP
+				is_capital = yes
+			}
+		}
+ 	}
+	siege_won_effect = {
+		if = {
+			limit = {
+				religion = khurmazta
+			}
+			add_province_modifier = {
+				name = "religious_violence"
+				duration = 730
+			}
+		}
+		if = {
+			limit = {
+				NOT = { religion = khurmazta }
+			}
+			change_religion = khurmazta
+			add_province_modifier = {
+				name = "forced_conversion"
+				duration = 730
+			}
+		}
+	}
+	
+	# Country scope
+	can_negotiate_trigger = {
+		religion_group = zoroastrian_group
+	}
+	
+	# Country scope
+	can_enforce_trigger = {
+		always = yes
+	}
+	
+	# Localisation for their demands
+	demands_description = "generic_rebels_demand"
+	
+	# Country Scope	
+	demands_enforced_effect = {
+		if = {
+			limit = {
+				NOT = { religion_group = zoroastrian_group }
+			}
+			add_prestige = -50
+			every_owned_province = {
+				limit = {
+					has_rebel_faction = REB
+				}
+				add_local_autonomy = 20
+			}
+		}
+		if = {
+			limit = {
+				tag = PAP
+			}
+			add_stability = -1
+		}
+		if = {
+			limit = {
+				religion = khurmazta
+			}
+			add_country_modifier = {
+				name = "religious_intolerance"
+				duration = 3650
+			}
+		}
+		if = {
+			limit = {
+				religion_group = zoroastrian_group
+				NOT = { religion = khurmazta }
+			}
+			change_religion = khurmazta
 			force_converted = yes
 		}
 	}
@@ -4477,7 +4870,7 @@ manichean_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "manichean_rebels_demand_desc"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -4672,7 +5065,7 @@ samaritan_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "samaritan_rebels_demand_desc"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -4867,7 +5260,7 @@ karaite_rebels = {
 	}
 	
 	# Localisation for their demands
-	demands_description = "karaite_rebels_demand_desc"
+	demands_description = "generic_rebels_demand"
 	
 	# Country Scope	
 	demands_enforced_effect = {
@@ -4904,6 +5297,201 @@ karaite_rebels = {
 				NOT = { religion = karaite_faith }
 			}
 			change_religion = karaite_faith
+			force_converted = yes
+		}
+	}
+}
+
+jain_rebels = {
+
+	area = nation 					# Sticks to provinces of their nation
+	government = theocracy 			# Desires Theocracy
+	religion = jain
+	defection = religion			# Defects to countries of their religion
+	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
+	independence = none				# Does not strive for independence
+	unit_transfer = yes
+	gfx_type = culture_province
+	
+	resilient = no
+	reinforcing = yes
+	general = yes
+	smart = yes
+	
+	artillery = 0.0
+	infantry = 0.7
+	cavalry = 0.3
+	
+	morale = 1.1
+
+	# Possible handle actions
+	handle_action_negotiate = yes
+	handle_action_stability = yes
+	handle_action_build_core = yes
+	handle_action_send_missionary = yes		
+	
+	# The rebel type with the highest modifier for this province gets picked
+	spawn_chance = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			is_overseas = yes
+		}
+		modifier = {
+			factor = 0.0
+			owner = { religion = ROOT }
+		}
+		modifier = {
+			factor = 0.0
+			NOT = { religion = jain }
+		}
+		modifier = {
+			factor = 0.001
+			tolerance_to_this = 5
+		}
+		modifier = {
+			factor = 0.5
+			tolerance_to_this = 2
+		}
+		modifier = {
+			factor = 5.0
+			owner = { has_country_flag = religious_turmoil }
+		}		
+		modifier = {
+			factor = 2000
+			has_missionary = yes
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = 1 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = -1 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { tolerance_to_this = -2 }
+		}
+	}
+ 
+ 	# This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = 1
+		modifier = {
+			factor = 0.5
+			units_in_province = 1
+		}
+		modifier = {
+			factor = 0.001
+			controlled_by = REB
+		}
+		modifier = {
+			factor = 0.0
+			religion = jain
+			owner = { religion = jain }
+		}
+		modifier = {
+			factor = 2.0
+			NOT = { religion = jain }
+			any_neighbor_province = {
+	 			religion = jain
+	 			NOT = { has_province_modifier = "forced_conversion" }
+	 		}
+	 	}
+		modifier = {
+			factor = 1.5
+			unrest = 2
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 4
+		}
+		modifier = {
+			factor = 1.5
+			unrest = 6
+		}
+	}
+ 
+ 	# Province Scope
+ 	siege_won_trigger = {
+		NOT = {
+			AND = {
+				owned_by = PAP
+				is_capital = yes
+			}
+		}
+ 	}
+	siege_won_effect = {
+		if = {
+			limit = {
+				religion = jain
+			}
+			add_province_modifier = {
+				name = "religious_violence"
+				duration = 730
+			}
+		}
+		if = {
+			limit = {
+				NOT = { religion = jain }
+			}
+			change_religion = jain
+			add_province_modifier = {
+				name = "forced_conversion"
+				duration = 730
+			}
+		}
+	}
+	
+	# Country scope
+	can_negotiate_trigger = {
+		religion_group = dharmic
+	}
+	
+	# Country scope
+	can_enforce_trigger = {
+		always = yes
+	}
+	
+	# Localisation for their demands
+	demands_description = "generic_rebels_demand"
+	
+	# Country Scope	
+	demands_enforced_effect = {
+		if = {
+			limit = {
+				NOT = { religion_group = dharmic }
+			}
+			add_prestige = -50
+			every_owned_province = {
+				limit = {
+					has_rebel_faction = REB
+				}
+				add_local_autonomy = 20
+			}
+		}
+		if = {
+			limit = {
+				tag = PAP
+			}
+			add_stability = -1
+		}
+		if = {
+			limit = {
+				religion = jain
+			}
+			add_country_modifier = {
+				name = "religious_intolerance"
+				duration = 3650
+			}
+		}
+		if = {
+			limit = {
+				religion_group = dharmic
+				NOT = { religion = jain }
+			}
+			change_religion = jain
 			force_converted = yes
 		}
 	}

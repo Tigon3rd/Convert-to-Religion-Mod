@@ -16,8 +16,17 @@ christian = {
 		}
 		heretic = { ZAMIKAELITES STEPHANITES EUSTATHIANS }
 		
-		has_patriarchs = yes		# Uses patriarch authority
 		misguided_heretic = yes		# Other christians hate them less
+		
+		holy_sites = { 358 1227 2313 1234 419 }
+		
+		blessings = {
+			legitimize_government
+			encourage_warriors_of_the_faith
+			send_monks_to_establish_monasteries
+			promote_territorial_rights
+			will_of_the_martyrs
+		}
 	}
 }
 
@@ -82,6 +91,25 @@ pagan = {
 		}
 		
 		heretic = { DARKNESS }	
+	}
+	bon = {
+		color = { 8 140 131 }
+		icon = 60
+		country = {
+			tolerance_heretic = 1
+			shock_damage_received = -0.1
+		}
+		country_as_secondary = {
+			horde_unity = 1
+			shock_damage_received = -0.1
+		}
+		province = {
+			local_defensiveness = 0.1
+		}
+		
+		heretic = { ZEN }
+		
+		uses_karma = yes
 	}
 }
 
