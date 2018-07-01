@@ -4,7 +4,15 @@ protestant_CoR_province = {
 	picture = "province_protestant"
 }
 
+holy_site_protestant_province = {
+	picture = "province_protestant"
+}
+
 reformed_CoR_province = {
+	picture = "province_reformed"
+}
+
+holy_site_reformed_province = {
 	picture = "province_reformed"
 }
 

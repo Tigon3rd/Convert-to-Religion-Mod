@@ -1,5 +1,7 @@
 ﻿l_english:
  # Event Modifiers
+ holy_site_protestant_province: "Protestant Holy Site"
+ holy_site_reformed_province: "Reformed Holy Site"
  protestant_CoR_province: "Protestant Center of Reformation (Holy Site)"
  reformed_CoR_province: "Reformed Center of Reformation (Holy Site)"
  holy_site_hellenic_province: "Hellenic Holy Site"
@@ -48,6 +50,12 @@
  ctr_events.4.title: "Reformed Center of Reformation province flags"
  ctr_events.4.desc: "Sets province flags each time a Center of Reformation for Reformed spawns."
  ctr_events.4.OPTA: "Add Holy Site province modifier"
+ ctr_events.5.title: "Protestant Holy Sites province flags"
+ ctr_events.5.desc: "Sets province flags when Protestant spawns."
+ ctr_events.5.OPTA: "Add Holy Site province modifier"
+ ctr_events.6.title: "Reformed Holy Sites province flags"
+ ctr_events.6.desc: "Sets province flags when Reformed spawns."
+ ctr_events.6.OPTA: "Add Holy Site province modifier"
  
  # Remove flags and modifiers
  ctr_events.99.title: "Removes all Holy Sites"

@@ -2,7 +2,7 @@
 
 # Credit to the EU4WIKI site.
 # Credit to the CK2WIKI site for Holy Site info, which was flawed so I have to -
-# Credit CK2 province conversion table and CK2 province temple info, from CK2 files.
+# Credit CK2 province conversion table and CK2 province temple info, from CK2's EU4 converter files.
 # Credit to Refumee from Steam and his mod Holy Sites
 
 country_decisions = {
@@ -154,10 +154,10 @@ country_decisions = {
 		major = yes
 		potential = {
 			OR = {
-				owns_core_province = 430 # Bushehr
-				owns_core_province = 434 # Kohistan
+				owns_core_province = 4332 # Siraf
+				owns_core_province = 4327 # Jask
 				owns_core_province = 450 # Balkh
-				owns_core_province = 2211 # Ardalan
+				owns_core_province = 4293 # Arbil
 				owns_core_province = 2236 # Bojnord
 			}
 			NOT = { religion = zoroastrian }
@@ -182,10 +182,10 @@ country_decisions = {
 					calc_true_if = {
 						all_owned_province = {
 							OR = {
-								province_id = 430
-								province_id = 434
+								province_id = 4332
+								province_id = 4327
 								province_id = 450
-								province_id = 2211
+								province_id = 4293
 								province_id = 2236
 							}
 							is_core = ROOT
@@ -201,10 +201,10 @@ country_decisions = {
 					calc_true_if = {
 						all_owned_province = {
 							OR = {
-								province_id = 430
-								province_id = 434
+								province_id = 4332
+								province_id = 4327
 								province_id = 450
-								province_id = 2211
+								province_id = 4293
 								province_id = 2236
 							}
 							is_core = ROOT
@@ -236,10 +236,10 @@ country_decisions = {
 				every_owned_province = {
 					limit = {
 						OR = {
-							province_id = 430
-							province_id = 434
+							province_id = 4332
+							province_id = 4327
 							province_id = 450
-							province_id = 2211
+							province_id = 4293
 							province_id = 2236
 						}
 						OR = {
@@ -265,10 +265,10 @@ country_decisions = {
 				every_owned_province = {
 					limit = {
 						OR = {
-							province_id = 430
-							province_id = 434
+							province_id = 4332
+							province_id = 4327
 							province_id = 450
-							province_id = 2211
+							province_id = 4293
 							province_id = 2236
 						}
 						OR = {
@@ -324,6 +324,7 @@ country_decisions = {
 					# calc_true_if = {
 						# tag = 
 						# culture_group = 
+						# primary_culture =
 						# amount = 1
 					# }
 					# calc_true_if = {
@@ -373,6 +374,7 @@ country_decisions = {
 					# calc_true_if = {
 						# tag = 
 						# culture_group = 
+						# primary_culture =
 						# amount = 1
 					# }
 				# }
@@ -399,6 +401,7 @@ country_decisions = {
 					# NOT = {
 						# tag = 
 						# culture_group = 
+						# primary_culture =
 					# }
 				# }
 				# every_owned_province = {
@@ -756,7 +759,7 @@ country_decisions = {
 	# province_id = 808 # Cuzco (Coricancha and/or Machu Picchu)
 	# province_id = 804 # Puno (Isla del Sol - Lake Titicaca)
 	
-	### For 5 Holy Sites with all being in the nahuatl religion area ###
+	### For 5 Holy Sites with all being in the inti religion area ###
 	# province_id = 812 # Chanchan (Chan Chan)
 	# province_id = 806 # Nazca (Nazca Lines)
 	
@@ -940,7 +943,7 @@ country_decisions = {
 				owns_core_province = 38 # Riga
 				owns_core_province = 47 # Stralsund
 				owns_core_province = 269 # Podlasia
-				owns_core_province = 297 # Bryansk
+				owns_core_province = 4244 # Trubchevsk (Pochep)
 				owns_core_province = 1859 # Chelmno (Culm, Torun)
 			}
 			NOT = { religion = baltic_pagan_reformed }
@@ -968,7 +971,7 @@ country_decisions = {
 								province_id = 38
 								province_id = 47
 								province_id = 269
-								province_id = 297
+								province_id = 4244
 								province_id = 1859
 							}
 							is_core = ROOT
@@ -987,7 +990,7 @@ country_decisions = {
 								province_id = 38
 								province_id = 47
 								province_id = 269
-								province_id = 297
+								province_id = 4244
 								province_id = 1859
 							}
 							is_core = ROOT
@@ -1022,7 +1025,7 @@ country_decisions = {
 							province_id = 38
 							province_id = 47
 							province_id = 269
-							province_id = 297
+							province_id = 4244
 							province_id = 1859
 						}
 						OR = {
@@ -1051,7 +1054,7 @@ country_decisions = {
 							province_id = 38
 							province_id = 47
 							province_id = 269
-							province_id = 297
+							province_id = 4244
 							province_id = 1859
 						}
 						OR = {
@@ -1951,6 +1954,7 @@ country_decisions = {
 					# calc_true_if = {
 						# tag = 
 						# culture_group = 
+						# primary_culture =
 						# amount = 1
 					# }
 					# calc_true_if = {
@@ -2000,6 +2004,7 @@ country_decisions = {
 					# calc_true_if = {
 						# tag = 
 						# culture_group = 
+						# primary_culture =
 						# amount = 1
 					# }
 				# }
@@ -2026,6 +2031,7 @@ country_decisions = {
 					# NOT = {
 						# tag = 
 						# culture_group = 
+						# primary_culture =
 					# }
 				# }
 				# every_owned_province = {
@@ -2589,11 +2595,11 @@ country_decisions = {
 						tag = DAM # Damot
 						tag = ETH # Ethiopia
 						tag = ARM # Armenia
-						culture = nubian
-						culture = tigray
-						culture = sidamo
-						culture = amhara
-						culture = armenian
+						primary_culture = nubian
+						primary_culture = tigray
+						primary_culture = sidamo
+						primary_culture = amhara
+						primary_culture = armenian
 						amount = 1
 					}
 					calc_true_if = {
@@ -2649,11 +2655,11 @@ country_decisions = {
 						tag = DAM # Damot
 						tag = ETH # Ethiopia
 						tag = ARM # Armenia
-						culture = nubian
-						culture = tigray
-						culture = sidamo
-						culture = amhara
-						culture = armenian
+						primary_culture = nubian
+						primary_culture = tigray
+						primary_culture = sidamo
+						primary_culture = amhara
+						primary_culture = armenian
 						amount = 1
 					}
 				}
@@ -2686,11 +2692,11 @@ country_decisions = {
 						tag = DAM # Damot
 						tag = ETH # Ethiopia
 						tag = ARM # Armenia
-						culture = nubian
-						culture = tigray
-						culture = sidamo
-						culture = amhara
-						culture = armenian
+						primary_culture = nubian
+						primary_culture = tigray
+						primary_culture = sidamo
+						primary_culture = amhara
+						primary_culture = armenian
 					}
 				}
 				every_owned_province = {
@@ -2876,18 +2882,18 @@ country_decisions = {
 			is_at_war = no 
 			is_subject = false
 			stability = 1
-			# OR = {
-				# AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
-					# calc_true_if = {
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
 						# Just going to use the countries that contains the provinces listed
-						# tag = SWE # Sweden
-						# tag = DAN # Denmark
-						# tag = SAX # Saxony
-						# tag = ENG # England
-						# tag = BOH # Bohemia
+						tag = SWE # Sweden
+						tag = DAN # Denmark
+						tag = SAX # Saxony
+						tag = ENG # England
+						tag = BOH # Bohemia
 						# culture_group = 
-						# amount = 1
-					# }
+						amount = 1
+					}
 					calc_true_if = {
 						all_owned_province = {
 							has_province_modifier = protestant_CoR_province
@@ -2907,10 +2913,11 @@ country_decisions = {
 						}
 						amount = 3
 					}
-				# }
+				}
 				# AND = { # Else you need all 5 Holy Sites
-					# calc_true_if = {
-						# all_owned_province = {
+					calc_true_if = {
+						all_owned_province = {
+							has_province_modifier = protestant_CoR_province
 							# OR = {
 								# province_id = 1
 								# province_id = 12
@@ -2918,34 +2925,35 @@ country_decisions = {
 								# province_id = 236
 								# province_id = 266
 							# }
-							# is_core = ROOT
-							# OR = {
-								# has_building = temple
-								# has_building = cathedral
-							# }
-						# }
-						# amount = 5
-					# }
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
 				# }
-			# }
+			}
 		}
 		effect = {
 			change_religion = protestant
 			capital_scope = { change_religion = protestant }
-			# if = {
-				# limit = {
-					# calc_true_if = {
-						# tag = SWE # Sweden
-						# tag = DAN # Denmark
-						# tag = SAX # Saxony
-						# tag = ENG # England
-						# tag = BOH # Bohemia
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = SWE # Sweden
+						tag = DAN # Denmark
+						tag = SAX # Saxony
+						tag = ENG # England
+						tag = BOH # Bohemia
 						# culture_group = 
-						# amount = 1
-					# }
-				# }
-				# every_owned_province = {
-					# limit = {
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						has_province_modifier = protestant_CoR_province
 						# OR = {
 							# province_id = 1
 							# province_id = 12
@@ -2953,26 +2961,26 @@ country_decisions = {
 							# province_id = 236
 							# province_id = 266
 						# }
-						# OR = {
-							# has_building = temple
-							# has_building = cathedral
-						# }
-					# }
-					# change_religion = protestant
-				# }
-				# add_stability = -2
-			# }
-			# if = {
-				# limit = {
-					# NOT = {
-						# tag = SWE # Sweden
-						# tag = DAN # Denmark
-						# tag = SAX # Saxony
-						# tag = ENG # England
-						# tag = BOH # Bohemia
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = protestant
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = SWE # Sweden
+						tag = DAN # Denmark
+						tag = SAX # Saxony
+						tag = ENG # England
+						tag = BOH # Bohemia
 						# culture_group = 
-					# }
-				# }
+					}
+				}
 				every_owned_province = {
 					limit = {
 						has_province_modifier = protestant_CoR_province
@@ -2992,7 +3000,7 @@ country_decisions = {
 					change_religion = protestant
 				}
 				add_stability = -4
-			# }
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -3029,18 +3037,18 @@ country_decisions = {
 			is_at_war = no 
 			is_subject = false
 			stability = 1
-			# OR = {
-				# AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
-					# calc_true_if = {
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
 						# Just going to use the countries that contains the provinces listed
-						# tag = PAL # The Palatinate
-						# tag = FRI # Friesland
-						# tag = SCO # Scotland
-						# tag = SAV # Savoy
-						# tag = HUN # Hungary
+						tag = PAL # The Palatinate
+						tag = FRI # Friesland
+						tag = SCO # Scotland
+						tag = SAV # Savoy
+						tag = HUN # Hungary
 						# culture_group = 
-						# amount = 1
-					# }
+						amount = 1
+					}
 					calc_true_if = {
 						all_owned_province = {
 							has_province_modifier = reformed_CoR_province
@@ -3060,10 +3068,11 @@ country_decisions = {
 						}
 						amount = 3
 					}
-				# }
+				}
 				# AND = { # Else you need all 5 Holy Sites
-					# calc_true_if = {
-						# all_owned_province = {
+					calc_true_if = {
+						all_owned_province = {
+							has_province_modifier = reformed_CoR_province
 							# OR = {
 								# province_id = 77
 								# province_id = 100
@@ -3071,34 +3080,35 @@ country_decisions = {
 								# province_id = 1867
 								# province_id = 1951
 							# }
-							# is_core = ROOT
-							# OR = {
-								# has_building = temple
-								# has_building = cathedral
-							# }
-						# }
-						# amount = 5
-					# }
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
 				# }
-			# }
+			}
 		}
 		effect = {
 			change_religion = reformed
 			capital_scope = { change_religion = reformed }
-			# if = {
-				# limit = {
-					# calc_true_if = {
-						# tag = PAL # The Palatinate
-						# tag = FRI # Friesland
-						# tag = SCO # Scotland
-						# tag = SAV # Savoy
-						# tag = HUN # Hungary
+			if = {
+				limit = {
+					calc_true_if = {
+						tag = PAL # The Palatinate
+						tag = FRI # Friesland
+						tag = SCO # Scotland
+						tag = SAV # Savoy
+						tag = HUN # Hungary
 						# culture_group = 
-						# amount = 1
-					# }
-				# }
-				# every_owned_province = {
-					# limit = {
+						amount = 1
+					}
+				}
+				every_owned_province = {
+					limit = {
+						has_province_modifier = reformed_CoR_province
 						# OR = {
 							# province_id = 77
 							# province_id = 100
@@ -3106,26 +3116,26 @@ country_decisions = {
 							# province_id = 1867
 							# province_id = 1951
 						# }
-						# OR = {
-							# has_building = temple
-							# has_building = cathedral
-						# }
-					# }
-					# change_religion = reformed
-				# }
-				# add_stability = -2
-			# }
-			# if = {
-				# limit = {
-					# NOT = {
-						# tag = PAL # The Palatinate
-						# tag = FRI # Friesland
-						# tag = SCO # Scotland
-						# tag = SAV # Savoy
-						# tag = HUN # Hungary
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+					change_religion = reformed
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						tag = PAL # The Palatinate
+						tag = FRI # Friesland
+						tag = SCO # Scotland
+						tag = SAV # Savoy
+						tag = HUN # Hungary
 						# culture_group = 
-					# }
-				# }
+					}
+				}
 				every_owned_province = {
 					limit = {
 						has_province_modifier = reformed_CoR_province
@@ -3145,7 +3155,7 @@ country_decisions = {
 					change_religion = reformed
 				}
 				add_stability = -4
-			# }
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -4216,8 +4226,6 @@ country_decisions = {
 	###############           HINDUISM           ###############
 	############################################################
 	
-	# Provinces taken from Refumee's mod 'Holy Sites'.
-	
 	# Country_tag(s)
 	# tag = 
 	
@@ -4225,9 +4233,9 @@ country_decisions = {
 		major = yes
 		potential = {
 			OR = {
-				owns_core_province = 518 # Chittor
+				owns_core_province = 740 # Malwa
 				owns_core_province = 523 # Oudh
-				owns_core_province = 525 # Gird
+				owns_core_province = 524 # Central Doab
 				owns_core_province = 2052 # Navanagar
 				owns_core_province = 2095 # Varanasi
 			}
@@ -4253,9 +4261,9 @@ country_decisions = {
 					calc_true_if = {
 						all_owned_province = {
 							OR = {
-								province_id = 518
+								province_id = 740
 								province_id = 523
-								province_id = 525
+								province_id = 524
 								province_id = 2052
 								province_id = 2095
 							}
@@ -4272,9 +4280,9 @@ country_decisions = {
 					calc_true_if = {
 						all_owned_province = {
 							OR = {
-								province_id = 518
+								province_id = 740
 								province_id = 523
-								province_id = 525
+								province_id = 524
 								province_id = 2052
 								province_id = 2095
 							}
@@ -4307,9 +4315,9 @@ country_decisions = {
 				every_owned_province = {
 					limit = {
 						OR = {
-							province_id = 518
+							province_id = 740
 							province_id = 523
-							province_id = 525
+							province_id = 524
 							province_id = 2052
 							province_id = 2095
 						}
@@ -4336,9 +4344,9 @@ country_decisions = {
 				every_owned_province = {
 					limit = {
 						OR = {
-							province_id = 518
+							province_id = 740
 							province_id = 523
-							province_id = 525
+							province_id = 524
 							province_id = 2052
 							province_id = 2095
 						}
@@ -4377,6 +4385,7 @@ country_decisions = {
 				owns_core_province = 1948 # Bidar
 				owns_core_province = 2062 # Panipat
 				owns_core_province = 2065 # Bhattiana
+				# 2075 # Doaba (is a Triggered Modifier and Religious Center)
 			}
 			is_religion_enabled = sikhism
 			NOT = { religion = sikhism }
@@ -4931,6 +4940,7 @@ country_decisions = {
 				owns_core_province = 1025 # Dewa
 				owns_core_province = 1030 # Owari
 				owns_core_province = 1832 # Yamato
+				# 4359 # Ise (Ise Grand Shrine - Religious Center)
 			}
 			NOT = { religion = shinto }
 			NOT = { tag = PAP } # The Papal State

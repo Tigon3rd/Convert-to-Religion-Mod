@@ -6,4 +6,4 @@ tags={
 	"Religion"
 }
 picture="convert_to_religion.jpg"
-supported_version="1.24.*.*"
+supported_version="1.25.*.*"

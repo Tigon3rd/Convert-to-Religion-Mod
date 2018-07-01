@@ -329,4 +329,16 @@ spriteTypes = {
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
+	spriteType = {
+		name = "GFX_province_bon"
+		texturefile = "gfx//interface//ideas_EU4//province_bon.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_anglican"
+		texturefile = "gfx//interface//ideas_EU4//province_anglican.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
 }
