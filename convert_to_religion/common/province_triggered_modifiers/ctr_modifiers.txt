@@ -1,0 +1,3352 @@
+namespace = ctr_modifiers
+
+# Province Triggered modifiers are here.
+# These are added to provinces through the add_province_triggered_modifier effect
+#
+# Effects are fully scriptable here.
+
+
+###########################################
+# HELLENIC
+###########################################
+
+holy_site_hellenic_0118 = { # Roma
+	picture = "province_hellenic"
+	potential = {
+	}
+
+	trigger = {
+		religion = hellenic_pagan
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_hellenic_0146 = { # Athens
+	picture = "province_hellenic"
+	potential = {
+	}
+
+	trigger = {
+		religion = hellenic_pagan
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_hellenic_0358 = { # Alexandria
+	picture = "province_hellenic"
+	potential = {
+	}
+
+	trigger = {
+		religion = hellenic_pagan
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_hellenic_0148 = { # Thessaloniki
+	picture = "province_hellenic"
+	potential = {
+	}
+
+	trigger = {
+		religion = hellenic_pagan
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_hellenic_2296 = { # Biga
+	picture = "province_hellenic"
+	potential = {
+	}
+
+	trigger = {
+		religion = hellenic_pagan
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# ZOROASTRIAN
+###########################################
+
+holy_site_zoroastrian_4332 = { # Siraf
+	picture = "province_zoroastrian"
+	potential = {
+	}
+
+	trigger = {
+		religion = zoroastrian
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_zoroastrian_4327 = { # Jask
+	picture = "province_zoroastrian"
+	potential = {
+	}
+
+	trigger = {
+		religion = zoroastrian
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_zoroastrian_450 = { # Balkh
+	picture = "province_zoroastrian"
+	potential = {
+	}
+
+	trigger = {
+		religion = zoroastrian
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_zoroastrian_4293 = { # Arbil
+	picture = "province_zoroastrian"
+	potential = {
+	}
+
+	trigger = {
+		religion = zoroastrian
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_zoroastrian_2236 = { # Bojnord
+	picture = "province_zoroastrian"
+	potential = {
+	}
+
+	trigger = {
+		religion = zoroastrian
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# TOTEMISM
+###########################################
+
+# holy_site_totemism_[PROVINCE] = {
+	# picture = "province_totemist"
+	# potential = {
+	# }
+
+	# trigger = {
+		# religion = totemism
+	# }
+
+	# local_missionary_strength = -0.05	
+	
+	# #Province scope
+	# on_activation = {
+	
+	# }
+	
+	# on_deactivation = {
+	
+	# }
+# }
+
+###########################################
+# MAYAN
+###########################################
+
+holy_site_mayan_0842 = { # Peten
+	picture = "province_mayan"
+	potential = {
+	}
+
+	trigger = {
+		religion = mesoamerican_religion
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_mayan_0843 = { # Belize
+	picture = "province_mayan"
+	potential = {
+	}
+
+	trigger = {
+		religion = mesoamerican_religion
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_mayan_0846 = { # Yucatan
+	picture = "province_mayan"
+	potential = {
+	}
+
+	trigger = {
+		religion = mesoamerican_religion
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_mayan_2632 = { # Xicallanco
+	picture = "province_mayan"
+	potential = {
+	}
+
+	trigger = {
+		religion = mesoamerican_religion
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_mayan_2633 = { # Mani
+	picture = "province_mayan"
+	potential = {
+	}
+
+	trigger = {
+		religion = mesoamerican_religion
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# NAHUATL
+###########################################
+
+holy_site_nahuatl_0852 = { # Mexico
+	picture = "province_nahuatl"
+	potential = {
+	}
+
+	trigger = {
+		religion = nahuatl
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_nahuatl_0854 = { # Sayultecas
+	picture = "province_nahuatl"
+	potential = {
+	}
+
+	trigger = {
+		religion = nahuatl
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_nahuatl_2626 = { # Tulucan
+	picture = "province_nahuatl"
+	potential = {
+	}
+
+	trigger = {
+		religion = nahuatl
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_nahuatl_2644 = { # Cholula
+	picture = "province_nahuatl"
+	potential = {
+	}
+
+	trigger = {
+		religion = nahuatl
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_nahuatl_2647 = { # Cuetlaxtlan
+	picture = "province_nahuatl"
+	potential = {
+	}
+
+	trigger = {
+		religion = nahuatl
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# INTI
+###########################################
+
+holy_site_inti_0804 = { # Puno
+	picture = "province_inti"
+	potential = {
+	}
+
+	trigger = {
+		religion = inti
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_inti_0806 = { # Nazca
+	picture = "province_inti"
+	potential = {
+	}
+
+	trigger = {
+		religion = inti
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_inti_0808 = { # Cuzco
+	picture = "province_inti"
+	potential = {
+	}
+
+	trigger = {
+		religion = inti
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_inti_0809 = { # Lima
+	picture = "province_inti"
+	potential = {
+	}
+
+	trigger = {
+		religion = inti
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_inti_0812 = { # Chanchan
+	picture = "province_inti"
+	potential = {
+	}
+
+	trigger = {
+		religion = inti
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# ROMUVA
+###########################################
+
+holy_site_romuva_0038 = { # Riga
+	picture = "province_romuva"
+	potential = {
+	}
+
+	trigger = {
+		religion = baltic_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_romuva_0047 = { # Stralsund
+	picture = "province_romuva"
+	potential = {
+	}
+
+	trigger = {
+		religion = baltic_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_romuva_0269 = { # Podlasia
+	picture = "province_romuva"
+	potential = {
+	}
+
+	trigger = {
+		religion = baltic_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_romuva_4244 = { # Trubchevsk (Pochep)
+	picture = "province_romuva"
+	potential = {
+	}
+
+	trigger = {
+		religion = baltic_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_romuva_1859 = { # Chelmno (Culm, Torun)
+	picture = "province_romuva"
+	potential = {
+	}
+
+	trigger = {
+		religion = baltic_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# SLAVIC
+###########################################
+
+holy_site_slavic_0047 = { # Stralsund
+	picture = "province_slavic"
+	potential = {
+	}
+
+	trigger = {
+		religion = slavic_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_slavic_0256 = { # Plock
+	picture = "province_slavic"
+	potential = {
+	}
+
+	trigger = {
+		religion = slavic_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_slavic_0268 = { # Moldavia
+	picture = "province_slavic"
+	potential = {
+	}
+
+	trigger = {
+		religion = slavic_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_slavic_0280 = { # Kiev
+	picture = "province_slavic"
+	potential = {
+	}
+
+	trigger = {
+		religion = slavic_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_slavic_2749 = { # Tikhvin
+	picture = "province_slavic"
+	potential = {
+	}
+
+	trigger = {
+		religion = slavic_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# SOUMENUSKO
+###########################################
+
+holy_site_suomenusko_0030 = { # Viborg
+	picture = "province_suomenusko"
+	potential = {
+	}
+
+	trigger = {
+		religion = finnish_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_suomenusko_0035 = { # Ösel
+	picture = "province_suomenusko"
+	potential = {
+	}
+
+	trigger = {
+		religion = finnish_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_suomenusko_0301 = { # Ryazan
+	picture = "province_suomenusko"
+	potential = {
+	}
+
+	trigger = {
+		religion = finnish_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_suomenusko_0305 = { # Perm
+	picture = "province_suomenusko"
+	potential = {
+	}
+
+	trigger = {
+		religion = finnish_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_suomenusko_2749 = { # Tikhvin
+	picture = "province_suomenusko"
+	potential = {
+	}
+
+	trigger = {
+		religion = finnish_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# NORSE
+###########################################
+
+holy_site_norse_0001 = { # Uppland
+	picture = "province_norse"
+	potential = {
+	}
+
+	trigger = {
+		religion = norse_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_norse_0012 = { # Sjaelland
+	picture = "province_norse"
+	potential = {
+	}
+
+	trigger = {
+		religion = norse_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_norse_0020 = { # Trondelag
+	picture = "province_norse"
+	potential = {
+	}
+
+	trigger = {
+		religion = norse_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_norse_0096 = { # Zeeland
+	picture = "province_norse"
+	potential = {
+	}
+
+	trigger = {
+		religion = norse_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_norse_2972 = { # Paderborn
+	picture = "province_norse"
+	potential = {
+	}
+
+	trigger = {
+		religion = norse_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# TENGRI
+###########################################
+
+holy_site_tengri_0284 = { # Crimea
+	picture = "province_tengri"
+	potential = {
+	}
+
+	trigger = {
+		religion = tengri_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_tengri_0464 = { # Astrakhan
+	picture = "province_tengri"
+	potential = {
+	}
+
+	trigger = {
+		religion = tengri_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_tengri_0716 = { # Tannu Uriankhai
+	picture = "province_tengri"
+	potential = {
+	}
+
+	trigger = {
+		religion = tengri_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_tengri_1076 = { # Kurgan
+	picture = "province_tengri"
+	potential = {
+	}
+
+	trigger = {
+		religion = tengri_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_tengri_1970 = { # Syghnak
+	picture = "province_tengri"
+	potential = {
+	}
+
+	trigger = {
+		religion = tengri_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# FETISHIST
+###########################################
+
+holy_site_fetishist_0344 = { # Marrakech
+	picture = "province_fetishist"
+	potential = {
+	}
+
+	trigger = {
+		religion = shamanism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_fetishist_1132 = { # Timbuktu
+	picture = "province_fetishist"
+	potential = {
+	}
+
+	trigger = {
+		religion = shamanism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_fetishist_2249 = { # Sibiridugu
+	picture = "province_fetishist"
+	potential = {
+	}
+
+	trigger = {
+		religion = shamanism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_fetishist_2454 = { # Kairouan (El Kef)
+	picture = "province_fetishist"
+	potential = {
+	}
+
+	trigger = {
+		religion = shamanism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_fetishist_2463 = { # Maaskar
+	picture = "province_fetishist"
+	potential = {
+	}
+
+	trigger = {
+		religion = shamanism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# ANIMISM
+###########################################
+
+# holy_site_animism_province = {
+	# picture = "province_animism"
+	# potential = {
+	# }
+
+	# trigger = {
+		# religion = animism
+	# }
+
+	# local_missionary_strength = -0.05	
+	
+	# #Province scope
+	# on_activation = {
+	
+	# }
+	
+	# on_deactivation = {
+	
+	# }
+# }
+
+###########################################
+# CATHOLIC
+###########################################
+
+holy_site_catholic_0085 = { # Köln
+	picture = "province_catholic"
+	potential = {
+	}
+
+	trigger = {
+		religion = catholic
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_catholic_0118 = { # Roma
+	picture = "province_catholic"
+	potential = {
+	}
+
+	trigger = {
+		religion = catholic
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_catholic_0206 = { # Galicia
+	picture = "province_catholic"
+	potential = {
+	}
+
+	trigger = {
+		religion = catholic
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_catholic_0235 = { # Kent
+	picture = "province_catholic"
+	potential = {
+	}
+
+	trigger = {
+		religion = catholic
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_catholic_0379 = { # Jerusalem
+	picture = "province_catholic"
+	potential = {
+	}
+
+	trigger = {
+		religion = catholic
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# ORTHODOX
+###########################################
+
+holy_site_orthodox_0146 = { # Athens
+	picture = "province_orthodox"
+	potential = {
+	}
+
+	trigger = {
+		religion = orthodox
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_orthodox_0151 = { # Constantinople
+	picture = "province_orthodox"
+	potential = {
+	}
+
+	trigger = {
+		religion = orthodox
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_orthodox_0318 = { # Sugla
+	picture = "province_orthodox"
+	potential = {
+	}
+
+	trigger = {
+		religion = orthodox
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_orthodox_0379 = { # Jerusalem
+	picture = "province_orthodox"
+	potential = {
+	}
+
+	trigger = {
+		religion = orthodox
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_orthodox_2313 = { # Antioch
+	picture = "province_orthodox"
+	potential = {
+	}
+
+	trigger = {
+		religion = orthodox
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# MONOPHYSITE
+###########################################
+
+holy_site_monophysite_0358 = { # Alexandria
+	picture = "province_monophysite"
+	potential = {
+	}
+
+	trigger = {
+		religion = monophysite
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_monophysite_0379 = { # Jerusalem
+	picture = "province_monophysite"
+	potential = {
+	}
+
+	trigger = {
+		religion = monophysite
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_monophysite_1227 = { # Tigre (Aksum)
+	picture = "province_monophysite"
+	potential = {
+	}
+
+	trigger = {
+		religion = monophysite
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_monophysite_2322 = { # Wadi Halfa 
+	picture = "province_monophysite"
+	potential = {
+	}
+
+	trigger = {
+		religion = monophysite
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_monophysite_2313 = { # Antioch
+	picture = "province_monophysite"
+	potential = {
+	}
+
+	trigger = {
+		religion = monophysite
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# COPTIC
+###########################################
+
+holy_site_coptic_0358 = { # Alexandria
+	picture = "province_coptic"
+	potential = {
+	}
+
+	trigger = {
+		religion = coptic
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_coptic_0419 = { # Yerevan (Armenia)
+	picture = "province_coptic"
+	potential = {
+	}
+
+	trigger = {
+		religion = coptic
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_coptic_1227 = { # Tigre (Aksum)
+	picture = "province_coptic"
+	potential = {
+	}
+
+	trigger = {
+		religion = coptic
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_coptic_1234 = { # Qasr Ibrim
+	picture = "province_coptic"
+	potential = {
+	}
+
+	trigger = {
+		religion = coptic
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_coptic_2313 = { # Antioch
+	picture = "province_coptic"
+	potential = {
+	}
+
+	trigger = {
+		religion = coptic
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# NESTORIAN
+###########################################
+
+holy_site_nestorian_0358 = { # Alexandria
+	picture = "province_nestorian"
+	potential = {
+	}
+
+	trigger = {
+		religion = nestorian
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_nestorian_0379 = { # Jerusalem
+	picture = "province_nestorian"
+	potential = {
+	}
+
+	trigger = {
+		religion = nestorian
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_nestorian_0410 = { # Baghdad (Iraq-i-Arab)
+	picture = "province_nestorian"
+	potential = {
+	}
+
+	trigger = {
+		religion = nestorian
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_nestorian_0428 = { # Rey
+	picture = "province_nestorian"
+	potential = {
+	}
+
+	trigger = {
+		religion = nestorian
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_nestorian_2313 = { # Antioch
+	picture = "province_nestorian"
+	potential = {
+	}
+
+	trigger = {
+		religion = nestorian
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# SUNNI
+###########################################
+
+holy_site_sunni_0225 = { # Cordoba
+	picture = "province_sunni"
+	potential = {
+	}
+
+	trigger = {
+		religion = sunni
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_sunni_0379 = { # Jerusalem
+	picture = "province_sunni"
+	potential = {
+	}
+
+	trigger = {
+		religion = sunni
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_sunni_0384 = { # Medina
+	picture = "province_sunni"
+	potential = {
+	}
+
+	trigger = {
+		religion = sunni
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_sunni_0385 = { # Mecca
+	picture = "province_sunni"
+	potential = {
+	}
+
+	trigger = {
+		religion = sunni
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_sunni_0410 = { # Baghdad (Iraq-i-Arab)
+	picture = "province_sunni"
+	potential = {
+	}
+
+	trigger = {
+		religion = sunni
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# SHIA
+###########################################
+
+holy_site_shia_0379 = { # Jerusalem
+	picture = "province_shia"
+	potential = {
+	}
+
+	trigger = {
+		religion = shiite
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_shia_0382 = { # Damascus
+	picture = "province_shia"
+	potential = {
+	}
+
+	trigger = {
+		religion = shiite
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_shia_0384 = { # Medina
+	picture = "province_shia"
+	potential = {
+	}
+
+	trigger = {
+		religion = shiite
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_shia_0385 = { # Mecca
+	picture = "province_shia"
+	potential = {
+	}
+
+	trigger = {
+		religion = shiite
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_shia_2311 = { # Samawah
+	picture = "province_shia"
+	potential = {
+	}
+
+	trigger = {
+		religion = shiite
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# IBADI
+###########################################
+
+holy_site_ibadi_0379 = { # Jerusalem
+	picture = "province_ibadi"
+	potential = {
+	}
+
+	trigger = {
+		religion = ibadi
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_ibadi_0384 = { # Medina
+	picture = "province_ibadi"
+	potential = {
+	}
+
+	trigger = {
+		religion = ibadi
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_ibadi_0385 = { # Mecca
+	picture = "province_ibadi"
+	potential = {
+	}
+
+	trigger = {
+		religion = ibadi
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_ibadi_0403 = { # Nizwa
+	picture = "province_ibadi"
+	potential = {
+	}
+
+	trigger = {
+		religion = ibadi
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_ibadi_2463 = { # Maaskar
+	picture = "province_ibadi"
+	potential = {
+	}
+
+	trigger = {
+		religion = ibadi
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# JEWISH
+###########################################
+
+holy_site_jewish_0365 = { # Sinai
+	picture = "province_jewish"
+	potential = {
+	}
+
+	trigger = {
+		religion = jewish
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_jewish_0379 = { # Jerusalem
+	picture = "province_jewish"
+	potential = {
+	}
+
+	trigger = {
+		religion = jewish
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_jewish_0382 = { # Damascus
+	picture = "province_jewish"
+	potential = {
+	}
+
+	trigger = {
+		religion = jewish
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_jewish_0401 = { # Dhofar
+	picture = "province_jewish"
+	potential = {
+	}
+
+	trigger = {
+		religion = jewish
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_jewish_0414 = { # Hamadan
+	picture = "province_jewish"
+	potential = {
+	}
+
+	trigger = {
+		religion = jewish
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# MAHAYANA
+###########################################
+
+holy_site_mahayana_0558 = { # Patna
+	picture = "province_mahayana"
+	potential = {
+	}
+
+	trigger = {
+		religion = mahayana
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_mahayana_0613 = { # Dong Kinh
+	picture = "province_mahayana"
+	potential = {
+	}
+
+	trigger = {
+		religion = mahayana
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_mahayana_1836 = { # Luoyang
+	picture = "province_mahayana"
+	potential = {
+	}
+
+	trigger = {
+		religion = mahayana
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_mahayana_2057 = { # Bhelsa
+	picture = "province_mahayana"
+	potential = {
+	}
+
+	trigger = {
+		religion = mahayana
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_mahayana_2073 = { # Baltistan
+	picture = "province_mahayana"
+	potential = {
+	}
+
+	trigger = {
+		religion = mahayana
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# THERAVADA
+###########################################
+
+holy_site_theravada_0558 = { # Patna
+	picture = "province_theravada"
+	potential = {
+	}
+
+	trigger = {
+		religion = buddhism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_theravada_0609 = { # Angkor
+	picture = "province_theravada"
+	potential = {
+	}
+
+	trigger = {
+		religion = buddhism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_theravada_2057 = { # Bhelsa
+	picture = "province_theravada"
+	potential = {
+	}
+
+	trigger = {
+		religion = buddhism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_theravada_2073 = { # Baltistan
+	picture = "province_theravada"
+	potential = {
+	}
+
+	trigger = {
+		religion = buddhism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_theravada_2099 = { # Kandy
+	picture = "province_theravada"
+	potential = {
+	}
+
+	trigger = {
+		religion = buddhism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# VAJRAYANA
+###########################################
+
+holy_site_vajrayana_0558 = { # Patna
+	picture = "province_vajrayana"
+	potential = {
+	}
+
+	trigger = {
+		religion = vajrayana
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_vajrayana_0677 = { # Lhasa
+	picture = "province_vajrayana"
+	potential = {
+	}
+
+	trigger = {
+		religion = vajrayana
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_vajrayana_2057 = { # Bhelsa
+	picture = "province_vajrayana"
+	potential = {
+	}
+
+	trigger = {
+		religion = vajrayana
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_vajrayana_2073 = { # Baltistan
+	picture = "province_vajrayana"
+	potential = {
+	}
+
+	trigger = {
+		religion = vajrayana
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_vajrayana_2133 = { # Dege
+	picture = "province_vajrayana"
+	potential = {
+	}
+
+	trigger = {
+		religion = vajrayana
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# HINDU
+###########################################
+
+holy_site_hinduism_0740 = { # Malwa
+	picture = "province_hindu"
+	potential = {
+	}
+
+	trigger = {
+		religion = hinduism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_hinduism_0523 = { # Oudh
+	picture = "province_hindu"
+	potential = {
+	}
+
+	trigger = {
+		religion = hinduism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_hinduism_0524 = { # Central Doab
+	picture = "province_hindu"
+	potential = {
+	}
+
+	trigger = {
+		religion = hinduism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_hinduism_2052 = { # Navanagar
+	picture = "province_hindu"
+	potential = {
+	}
+
+	trigger = {
+		religion = hinduism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_hinduism_2095 = { # Varanasi
+	picture = "province_hindu"
+	potential = {
+	}
+
+	trigger = {
+		religion = hinduism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# SIKH
+###########################################
+
+holy_site_sikh_0507 = { # Lahore
+	picture = "province_sikh"
+	potential = {
+	}
+
+	trigger = {
+		religion = sikhism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_sikh_0558 = { # Patna
+	picture = "province_sikh"
+	potential = {
+	}
+
+	trigger = {
+		religion = sikhism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_sikh_1948 = { # Bidar
+	picture = "province_sikh"
+	potential = {
+	}
+
+	trigger = {
+		religion = sikhism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_sikh_2062 = { # Panipat
+	picture = "province_sikh"
+	potential = {
+	}
+
+	trigger = {
+		religion = sikhism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_sikh_2065 = { # Bhattiana
+	picture = "province_sikh"
+	potential = {
+	}
+
+	trigger = {
+		religion = sikhism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# JAIN
+###########################################
+
+holy_site_jain_0515 = { # Girnar
+	picture = "province_jain"
+	potential = {
+	}
+
+	trigger = {
+		religion = jain
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_jain_0533 = { # Mysore
+	picture = "province_jain"
+	potential = {
+	}
+
+	trigger = {
+		religion = jain
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_jain_2053 = { # Patan
+	picture = "province_jain"
+	potential = {
+	}
+
+	trigger = {
+		religion = jain
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_jain_2067 = { # Gorwar
+	picture = "province_jain"
+	potential = {
+	}
+
+	trigger = {
+		religion = jain
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_jain_2096 = { # Damin
+	picture = "province_jain"
+	potential = {
+	}
+
+	trigger = {
+		religion = jain
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# ZUNIST
+###########################################
+
+holy_site_zunist_0361 = { # Cairo
+	picture = "province_zunist"
+	potential = {
+	}
+
+	trigger = {
+		religion = zun_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_zunist_0410 = { # Iraq-i-Arab (Baghdad)
+	picture = "province_zunist"
+	potential = {
+	}
+
+	trigger = {
+		religion = zun_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_zunist_0447 = { # Kandahar
+	picture = "province_zunist"
+	potential = {
+	}
+
+	trigger = {
+		religion = zun_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_zunist_0451 = { # Kabulistan
+	picture = "province_zunist"
+	potential = {
+	}
+
+	trigger = {
+		religion = zun_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_zunist_0506 = { # Multan
+	picture = "province_zunist"
+	potential = {
+	}
+
+	trigger = {
+		religion = zun_pagan_reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# CONFUCIAN
+###########################################
+
+holy_site_confucian_0667 = { # Canton
+	picture = "province_confucian"
+	potential = {
+	}
+
+	trigger = {
+		religion = confucianism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_confucian_0679 = { # Chengdu
+	picture = "province_confucian"
+	potential = {
+	}
+
+	trigger = {
+		religion = confucianism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_confucian_0691 = { # Jinan [Mount Tai]
+	picture = "province_confucian"
+	potential = {
+	}
+
+	trigger = {
+		religion = confucianism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_confucian_0700 = { # Xi'an
+	picture = "province_confucian"
+	potential = {
+	}
+
+	trigger = {
+		religion = confucianism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_confucian_1816 = { # Beijing
+	picture = "province_confucian"
+	potential = {
+	}
+
+	trigger = {
+		religion = confucianism
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# SHINTO
+###########################################
+
+holy_site_shinto_1018 = { # Izumo
+	picture = "province_shinto"
+	potential = {
+	}
+
+	trigger = {
+		religion = shinto
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_shinto_1020 = { # Yamashiro/Kyoto
+	picture = "province_shinto"
+	potential = {
+	}
+
+	trigger = {
+		religion = shinto
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_shinto_1025 = { # Dewa
+	picture = "province_shinto"
+	potential = {
+	}
+
+	trigger = {
+		religion = shinto
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_shinto_4359 = { # Ise
+	picture = "province_shinto"
+	potential = {
+	}
+
+	trigger = {
+		religion = shinto
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_shinto_1029 = { # Kai
+	picture = "province_shinto"
+	potential = {
+	}
+
+	trigger = {
+		religion = shinto
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# PROTESTANT
+###########################################
+
+protestant_CoR_province = {
+	picture = "province_protestant"
+	potential = {
+	}
+
+	trigger = {
+		religion = protestant
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_protestant_0118 = { # Roma
+	picture = "province_protestant"
+	potential = {
+	}
+
+	trigger = {
+		religion = protestant
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_protestant_0379 = { # Jerusalem
+	picture = "province_protestant"
+	potential = {
+	}
+
+	trigger = {
+		religion = protestant
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# REFORMED
+###########################################
+
+reformed_CoR_province = {
+	picture = "province_reformed"
+	potential = {
+	}
+
+	trigger = {
+		religion = reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_reformed_0118 = { # Roma
+	picture = "province_reformed"
+	potential = {
+	}
+
+	trigger = {
+		religion = reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_reformed_0379 = { # Jerusalem
+	picture = "province_reformed"
+	potential = {
+	}
+
+	trigger = {
+		religion = reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}

@@ -1084,7 +1084,7 @@ country_decisions = {
 				owns_core_province = 256 # Plock
 				owns_core_province = 268 # Moldavia
 				owns_core_province = 280 # Kiev
-				owns_core_province = 310 # Novgorod
+				owns_core_province = 2749 # Tikhvin
 			}
 			NOT = { religion = slavic_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
@@ -1119,7 +1119,7 @@ country_decisions = {
 								province_id = 256
 								province_id = 268
 								province_id = 280
-								province_id = 310
+								province_id = 2749
 							}
 							is_core = ROOT
 							OR = {
@@ -1138,7 +1138,7 @@ country_decisions = {
 								province_id = 256
 								province_id = 268
 								province_id = 280
-								province_id = 310
+								province_id = 2749
 							}
 							is_core = ROOT
 							OR = {
@@ -1180,7 +1180,7 @@ country_decisions = {
 							province_id = 256
 							province_id = 268
 							province_id = 280
-							province_id = 310
+							province_id = 2749
 						}
 						OR = {
 							has_building = temple
@@ -1216,7 +1216,7 @@ country_decisions = {
 							province_id = 256
 							province_id = 268
 							province_id = 280
-							province_id = 310
+							province_id = 2749
 						}
 						OR = {
 							has_building = temple
@@ -1245,7 +1245,7 @@ country_decisions = {
 				owns_core_province = 35 # Ösel
 				owns_core_province = 301 # Ryazan
 				owns_core_province = 305 # Perm
-				owns_core_province = 310 # Novgorod
+				owns_core_province = 2749 # Tikhvin
 			}
 			NOT = { religion = finnish_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
@@ -1276,7 +1276,7 @@ country_decisions = {
 								province_id = 35
 								province_id = 301
 								province_id = 305
-								province_id = 310
+								province_id = 2749
 							}
 							is_core = ROOT
 							OR = {
@@ -1295,7 +1295,7 @@ country_decisions = {
 								province_id = 35
 								province_id = 301
 								province_id = 305
-								province_id = 310
+								province_id = 2749
 							}
 							is_core = ROOT
 							OR = {
@@ -1333,7 +1333,7 @@ country_decisions = {
 							province_id = 35
 							province_id = 301
 							province_id = 305
-							province_id = 310
+							province_id = 2749
 						}
 						OR = {
 							has_building = temple
@@ -1365,7 +1365,7 @@ country_decisions = {
 							province_id = 35
 							province_id = 301
 							province_id = 305
-							province_id = 310
+							province_id = 2749
 						}
 						OR = {
 							has_building = temple
@@ -2217,7 +2217,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			OR = {
-				owns_core_province = 148 # Macedonia
+				owns_core_province = 146 # Athens
 				owns_core_province = 151 # Constantinople
 				owns_core_province = 318 # Sugla
 				owns_core_province = 379 # Jerusalem
@@ -2261,7 +2261,7 @@ country_decisions = {
 					calc_true_if = {
 						all_owned_province = {
 							OR = {
-								province_id = 148
+								province_id = 146
 								province_id = 151
 								province_id = 318
 								province_id = 379
@@ -2280,7 +2280,7 @@ country_decisions = {
 					calc_true_if = {
 						all_owned_province = {
 							OR = {
-								province_id = 148
+								province_id = 146
 								province_id = 151
 								province_id = 318
 								province_id = 379
@@ -2332,7 +2332,7 @@ country_decisions = {
 				every_owned_province = {
 					limit = {
 						OR = {
-							province_id = 148
+							province_id = 146
 							province_id = 151
 							province_id = 318
 							province_id = 379
@@ -2378,7 +2378,7 @@ country_decisions = {
 				every_owned_province = {
 					limit = {
 						OR = {
-							province_id = 148
+							province_id = 146
 							province_id = 151
 							province_id = 318
 							province_id = 379
@@ -3345,6 +3345,7 @@ country_decisions = {
 				owns_core_province = 384 # Medina
 				owns_core_province = 385 # Mecca
 				owns_core_province = 2311 # Samawah
+				# 2221 # Mashhad (Maybe change Damascus to this, especially since it already has a Religious Center modifier and to spread out the Holy Sites more)
 			}
 			NOT = { religion = shiite }
 			NOT = { tag = PAP } # The Papal State
@@ -3754,6 +3755,7 @@ country_decisions = {
 	############################################################
 	
 	# Provinces taken from Refumee's mod 'Holy Sites'.
+	# Triggered Modifier = The Conquest of Bodh Gaya (558), Conquest of Luoyang (1836)
 	
 	convert_to_mahayana_decision = {
 		major = yes
@@ -3890,6 +3892,7 @@ country_decisions = {
 	############################################################
 	
 	# Provinces taken from Refumee's mod 'Holy Sites'.
+	# Triggered Modifier = The Conquest of Bodh Gaya (558), Conquest of the Lankan Temples (2099)
 	
 	convert_to_theravada_decision = {
 		major = yes
@@ -4074,6 +4077,7 @@ country_decisions = {
 	############################################################
 	
 	# Provinces taken from Refumee's mod 'Holy Sites'.
+	# Triggered Modifier = The Conquest of Bodh Gaya (558), Conquest of Lhasa (677)
 	
 	# date = 630.1.1 (Used for Extended Timeline)
 	
@@ -4370,6 +4374,7 @@ country_decisions = {
 	############################################################
 	
 	# Provinces taken from Refumee's mod 'Holy Sites'.
+	# Triggered Modifier = The Conquest of Amritsar (2075)
 	
 	# Country_tag(s)
 	# tag = 
@@ -4927,7 +4932,7 @@ country_decisions = {
 	###############            SHINTO            ###############
 	############################################################
 	
-	# Provinces taken from Refumee's mod 'Holy Sites'.
+	# Provinces mostly taken from Refumee's mod 'Holy Sites'.
 	
 	# date = 712.1.1 
 	
@@ -4938,9 +4943,10 @@ country_decisions = {
 				owns_core_province = 1018 # Izumo
 				owns_core_province = 1020 # Yamashiro/Kyoto
 				owns_core_province = 1025 # Dewa
-				owns_core_province = 1030 # Owari
-				owns_core_province = 1832 # Yamato
-				# 4359 # Ise (Ise Grand Shrine - Religious Center)
+				# owns_core_province = 1030 # Owari (province was split in two (Owari and Ise), which means that Ise should be the right one)
+				# owns_core_province = 1832 # Yamato
+				owns_core_province = 4359 # Ise (Ise Grand Shrine - Religious Center)
+				owns_core_province = 1029 # Kai (to spread out the Holy Sites more. Maybe use 1028 # Musashi or 1839 # Suruga, research needed)
 			}
 			NOT = { religion = shinto }
 			NOT = { tag = PAP } # The Papal State
@@ -4963,8 +4969,8 @@ country_decisions = {
 								province_id = 1018
 								province_id = 1020
 								province_id = 1025
-								province_id = 1030
-								province_id = 1832
+								province_id = 4359
+								province_id = 1029
 							}
 							is_core = ROOT
 							OR = {
@@ -4982,8 +4988,8 @@ country_decisions = {
 								province_id = 1018
 								province_id = 1020
 								province_id = 1025
-								province_id = 1030
-								province_id = 1832
+								province_id = 4359
+								province_id = 1029
 							}
 							is_core = ROOT
 							OR = {
@@ -5013,8 +5019,8 @@ country_decisions = {
 							province_id = 1018
 							province_id = 1020
 							province_id = 1025
-							province_id = 1030
-							province_id = 1832
+							province_id = 4359
+							province_id = 1029
 						}
 						OR = {
 							has_building = temple
@@ -5038,8 +5044,8 @@ country_decisions = {
 							province_id = 1018
 							province_id = 1020
 							province_id = 1025
-							province_id = 1030
-							province_id = 1832
+							province_id = 4359
+							province_id = 1029
 						}
 						OR = {
 							has_building = temple
