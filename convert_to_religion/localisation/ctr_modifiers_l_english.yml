@@ -1,11 +1,21 @@
 ﻿l_english:
  # Province Triggered Modifiers
  # Hellenic
+ holy_site_hellenic_0118:0 "Hellenic Holy Site of Rome"
+ desc_holy_site_hellenic_0118:1 "The ancient city of Rome, once the seat of power of the Roman Empire and its Hellenic religion."
+ holy_site_hellenic_0146:0 "Hellenic Holy Site of Athens"
+ desc_holy_site_hellenic_0146:1 "The ancient city of Athens and Piraeaus."
+ holy_site_hellenic_0358:0 "Hellenic Holy Site of Alexandria"
+ desc_holy_site_hellenic_0358:1 "The ancient city of Alexandria founded by Alexander the Great as a Hellenistic center in Egypt."
+ holy_site_hellenic_0148:0 "Hellenic Holy Site of Thesedessa"
+ desc_holy_site_hellenic_0148:1 "The ancient city of Edessa."
+ holy_site_hellenic_2296:0 "Hellenic Holy Site of Abydos"
+ desc_holy_site_hellenic_2296:1 "The ancient city of Abydos."
  # Zoroastrian
  holy_site_zoroastrian_4332: "Zoroastrian Holy Site of Siraf"
  holy_site_zoroastrian_4327: "Zoroastrian Holy Site of Jask"
  holy_site_zoroastrian_450: "Zoroastrian Holy Site of Balkh"
- holy_site_zoroastrian_4293: "Zoroastrian Holy Site of Arbil"
+ holy_site_zoroastrian_2206: "Zoroastrian Holy Site of Urmia"
  holy_site_zoroastrian_2236: "Zoroastrian Holy Site of Bojnord"
  # Totemism
  # Mayan
@@ -70,9 +80,9 @@
  holy_site_catholic_0235: "Catholic Holy Site of Canterbury"
  holy_site_catholic_0379: "Catholic Holy Site of Jerusalem"
  # Orthodox
- holy_site_orthodox_0146: "Orthodox Holy Site of Piraeaus"
+ holy_site_orthodox_0148: "Orthodox Holy Site of Mount Athos"
  holy_site_orthodox_0151: "Orthodox Holy Site of Constantinople"
- holy_site_orthodox_0318: "Orthodox Holy Site of Ephesos"
+ holy_site_orthodox_0318: "Orthodox Holy Site of Lebedos"
  holy_site_orthodox_0379: "Orthodox Holy Site of Jerusalem"
  holy_site_orthodox_2313: "Orthodox Holy Site of Antioch"
  # Monophysite
@@ -88,11 +98,11 @@
  holy_site_coptic_1234: "Coptic Holy Site of Qasr Ibrim"
  holy_site_coptic_2313: "Coptic Holy Site of Antioch"
  # Nestorian
- holy_site_nestorian_0358: "Nestorian Holy Site of Alexandria"
+ holy_site_nestorian_0535: "Nestorian Holy Site of Kochin"
  holy_site_nestorian_0379: "Nestorian Holy Site of Jerusalem"
  holy_site_nestorian_0410: "Nestorian Holy Site of Baghdad"
  holy_site_nestorian_0428: "Nestorian Holy Site of Rayy"
- holy_site_nestorian_2313: "Nestorian Holy Site of Antioch"
+ holy_site_nestorian_2308: "Nestorian Holy Site of Edessa"
  # Sunni
  holy_site_sunni_0225: "Sunni Holy Site of Cordoba"
  # desc_holy_site_sunni_0225: ""
@@ -136,19 +146,19 @@
  holy_site_mahayana_0558: "Mahayana Holy Site of Bodh Gaya"
  holy_site_mahayana_0613: "Mahayana Holy Site of Dong Kinh"
  holy_site_mahayana_1836: "Mahayana Holy Site of Luoyang"
- holy_site_mahayana_2057: "Mahayana Holy Site of Bhelsa"
- holy_site_mahayana_2073: "Mahayana Holy Site of Baltistan"
+ holy_site_mahayana_0740: "Mahayana Holy Site of Sanchi"
+ holy_site_mahayana_2077: "Mahayana Holy Site of Oddiyana"
  # Theravada
  holy_site_theravada_0558: "Theravada Holy Site of Bodh Gaya"
  holy_site_theravada_0609: "Theravada Holy Site of Angkor Wat"
- holy_site_theravada_2057: "Theravada Holy Site of Bhelsa"
- holy_site_theravada_2073: "Theravada Holy Site of Baltistan"
+ holy_site_theravada_0740: "Theravada Holy Site of Sanchi"
+ holy_site_theravada_2077: "Theravada Holy Site of Oddiyana"
  holy_site_theravada_2099: "Theravada Holy Site of the Lankan Temples"
  # Vajrayana
  holy_site_vajrayana_0558: "Vajrayana Holy Site of Bodh Gaya"
  holy_site_vajrayana_0677: "Vajrayana Holy Site of Lhasa"
- holy_site_vajrayana_2057: "Vajrayana Holy Site of Bhelsa"
- holy_site_vajrayana_2073: "Vajrayana Holy Site of Baltistan"
+ holy_site_vajrayana_0740: "Vajrayana Holy Site of Sanchi"
+ holy_site_vajrayana_2077: "Vajrayana Holy Site of Oddiyana"
  holy_site_vajrayana_2133: "Vajrayana Holy Site of Dege"
  # Hindu
  holy_site_hinduism_0740: "Hindu Holy Site of Mahakaleshwar"
@@ -161,7 +171,7 @@
  holy_site_sikh_0558: "Sikh Holy Site of Bodh Gaya"
  holy_site_sikh_1948: "Sikh Holy Site of Bidar"
  holy_site_sikh_2062: "Sikh Holy Site of Panipat"
- holy_site_sikh_2065: "Sikh Holy Site of Bhattiana"
+ holy_site_sikh_2075: "Sikh Holy Site of Amritsar"
  # Jain
  holy_site_jain_0515: "Jain Holy Site of Girnar"
  holy_site_jain_0533: "Jain Holy Site of Shravanabelagola"
@@ -170,7 +180,7 @@
  holy_site_jain_2096: "Jain Holy Site of Rajrappa"
  # Zunist
  holy_site_zunist_0361: "Zunist Holy Site of Cairo"
- holy_site_zunist_0410: "Zunist Holy Site of Baghdad"
+ holy_site_zunist_2236: "Zunist Holy Site of Bojnord"
  holy_site_zunist_0447: "Zunist Holy Site of Kandahar"
  holy_site_zunist_0451: "Zunist Holy Site of Kabulistan"
  holy_site_zunist_0506: "Zunist Holy Site of Multan"
@@ -194,4 +204,21 @@
  reformed_CoR_province: "Reformed Center of Reformation (Holy Site)"
  holy_site_reformed_0118: "Reformed Holy Site of Rome"
  holy_site_reformed_0379: "Reformed Holy Site of Jerusalem"
- 
+ # Bon
+ holy_site_bon_0450: "Bön Holy Site of Balkh"
+ holy_site_bon_0508: "Bön Holy Site of Kashmir"
+ holy_site_bon_0677: "Bön Holy Site of Lhasa"
+ holy_site_bon_0676: "Bön Holy Site of Yungdrungling"
+ holy_site_bon_0710: "Bön Holy Site of Hotan"
+ # Yazidi
+ holy_site_yazidi_2236: "Yazidi Holy Site of Bojnord"
+ holy_site_yazidi_4332: "Yazidi Holy Site of Siraf"
+ holy_site_yazidi_0411: "Yazidi Holy Site of Mosul"
+ holy_site_yazidi_0385: "Yazidi Holy Site of Mecca"
+ holy_site_yazidi_0379: "Yazidi Holy Site of Jerusalem"
+ # Manichean
+ holy_site_manichean_0412: "Manichean Holy Site of Khuzestan"
+ holy_site_manichean_0454: "Manichean Holy Site of Samarkand"
+ holy_site_manichean_0410: "Manichean Holy Site of Baghdad"
+ holy_site_manichean_0379: "Manichean Holy Site of Jerusalem"
+ holy_site_manichean_2077: "Manichean Holy Site of Margalla"

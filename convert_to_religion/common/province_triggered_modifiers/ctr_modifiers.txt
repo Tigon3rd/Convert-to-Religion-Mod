@@ -1,10 +1,9 @@
-namespace = ctr_modifiers
+# namespace = ctr_modifiers
 
 # Province Triggered modifiers are here.
 # These are added to provinces through the add_province_triggered_modifier effect
 #
 # Effects are fully scriptable here.
-
 
 ###########################################
 # HELLENIC
@@ -182,7 +181,7 @@ holy_site_zoroastrian_450 = { # Balkh
 	}
 }
 
-holy_site_zoroastrian_4293 = { # Arbil
+holy_site_zoroastrian_2206 = { # Urmia
 	picture = "province_zoroastrian"
 	potential = {
 	}
@@ -1368,7 +1367,7 @@ holy_site_catholic_0379 = { # Jerusalem
 # ORTHODOX
 ###########################################
 
-holy_site_orthodox_0146 = { # Athens
+holy_site_orthodox_0148 = { # Thessaloniki (Mount Athos)
 	picture = "province_orthodox"
 	potential = {
 	}
@@ -1695,7 +1694,7 @@ holy_site_coptic_2313 = { # Antioch
 # NESTORIAN
 ###########################################
 
-holy_site_nestorian_0358 = { # Alexandria
+holy_site_nestorian_0535 = { # Kochin
 	picture = "province_nestorian"
 	potential = {
 	}
@@ -1779,7 +1778,7 @@ holy_site_nestorian_0428 = { # Rey
 	}
 }
 
-holy_site_nestorian_2313 = { # Antioch
+holy_site_nestorian_2308 = { # Urfa
 	picture = "province_nestorian"
 	potential = {
 	}
@@ -2303,7 +2302,7 @@ holy_site_mahayana_1836 = { # Luoyang
 	}
 }
 
-holy_site_mahayana_2057 = { # Bhelsa
+holy_site_mahayana_0740 = { # Malwa
 	picture = "province_mahayana"
 	potential = {
 	}
@@ -2324,7 +2323,7 @@ holy_site_mahayana_2057 = { # Bhelsa
 	}
 }
 
-holy_site_mahayana_2073 = { # Baltistan
+holy_site_mahayana_2077 = { # Margalla
 	picture = "province_mahayana"
 	potential = {
 	}
@@ -2391,7 +2390,7 @@ holy_site_theravada_0609 = { # Angkor
 	}
 }
 
-holy_site_theravada_2057 = { # Bhelsa
+holy_site_theravada_0740 = { # Malwa
 	picture = "province_theravada"
 	potential = {
 	}
@@ -2412,7 +2411,7 @@ holy_site_theravada_2057 = { # Bhelsa
 	}
 }
 
-holy_site_theravada_2073 = { # Baltistan
+holy_site_theravada_2077 = { # Margalla
 	picture = "province_theravada"
 	potential = {
 	}
@@ -2500,7 +2499,7 @@ holy_site_vajrayana_0677 = { # Lhasa
 	}
 }
 
-holy_site_vajrayana_2057 = { # Bhelsa
+holy_site_vajrayana_0740 = { # Malwa
 	picture = "province_vajrayana"
 	potential = {
 	}
@@ -2521,7 +2520,7 @@ holy_site_vajrayana_2057 = { # Bhelsa
 	}
 }
 
-holy_site_vajrayana_2073 = { # Baltistan
+holy_site_vajrayana_2077 = { # Margalla
 	picture = "province_vajrayana"
 	potential = {
 	}
@@ -2760,7 +2759,7 @@ holy_site_sikh_2062 = { # Panipat
 	}
 }
 
-holy_site_sikh_2065 = { # Bhattiana
+holy_site_sikh_2075 = { # Doaba
 	picture = "province_sikh"
 	potential = {
 	}
@@ -2915,7 +2914,7 @@ holy_site_zunist_0361 = { # Cairo
 	}
 }
 
-holy_site_zunist_0410 = { # Iraq-i-Arab (Baghdad)
+holy_site_zunist_2236 = { # Bojnord
 	picture = "province_zunist"
 	potential = {
 	}
@@ -3337,6 +3336,333 @@ holy_site_reformed_0379 = { # Jerusalem
 
 	trigger = {
 		religion = reformed
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# BON
+###########################################
+
+holy_site_bon_0450 = { # Balkh
+	picture = "province_bon"
+	potential = {
+	}
+
+	trigger = {
+		religion = bon
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_bon_0508 = { # Kashmir
+	picture = "province_bon"
+	potential = {
+	}
+
+	trigger = {
+		religion = bon
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_bon_0677 = { # Lhasa
+	picture = "province_bon"
+	potential = {
+	}
+
+	trigger = {
+		religion = bon
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_bon_0676 = { # Shigatse
+	picture = "province_bon"
+	potential = {
+	}
+
+	trigger = {
+		religion = bon
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_bon_0710 = { # Hotan
+	picture = "province_bon"
+	potential = {
+	}
+
+	trigger = {
+		religion = bon
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# YAZIDI
+###########################################
+
+holy_site_yazidi_2236 = { # Bojnord
+	picture = "province_yazidi"
+	potential = {
+	}
+
+	trigger = {
+		religion = yazidi
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_yazidi_4332 = { # Siraf
+	picture = "province_yazidi"
+	potential = {
+	}
+
+	trigger = {
+		religion = yazidi
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_yazidi_0411 = { # Mosul
+	picture = "province_yazidi"
+	potential = {
+	}
+
+	trigger = {
+		religion = yazidi
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_yazidi_0385 = { # Mecca
+	picture = "province_yazidi"
+	potential = {
+	}
+
+	trigger = {
+		religion = yazidi
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_yazidi_0379 = { # Jerusalem
+	picture = "province_yazidi"
+	potential = {
+	}
+
+	trigger = {
+		religion = yazidi
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# MANICHEAN
+###########################################
+
+holy_site_manichean_0412 = { # Khuzestan
+	picture = "province_manichean"
+	potential = {
+	}
+
+	trigger = {
+		religion = manichean
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_manichean_0454 = { # Samarkand
+	picture = "province_manichean"
+	potential = {
+	}
+
+	trigger = {
+		religion = manichean
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_manichean_0410 = { # Baghdad
+	picture = "province_manichean"
+	potential = {
+	}
+
+	trigger = {
+		religion = manichean
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_manichean_0379 = { # Jerusalem
+	picture = "province_manichean"
+	potential = {
+	}
+
+	trigger = {
+		religion = manichean
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_manichean_2077 = { # Margalla
+	picture = "province_manichean"
+	potential = {
+	}
+
+	trigger = {
+		religion = manichean
 	}
 
 	local_missionary_strength = -0.05	

@@ -25,6 +25,19 @@ country_decisions = {
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 118
+				province_id = 146
+				province_id = 358
+				province_id = 148
+				province_id = 2296
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
 		allow =  {
 			is_at_war = no 
 			is_subject = false
@@ -157,12 +170,25 @@ country_decisions = {
 				owns_core_province = 4332 # Siraf
 				owns_core_province = 4327 # Jask
 				owns_core_province = 450 # Balkh
-				owns_core_province = 4293 # Arbil
+				owns_core_province = 2206 # Urmia
 				owns_core_province = 2236 # Bojnord
 			}
 			NOT = { religion = zoroastrian }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4332
+				province_id = 4327
+				province_id = 450
+				province_id = 2206
+				province_id = 2236
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -185,7 +211,7 @@ country_decisions = {
 								province_id = 4332
 								province_id = 4327
 								province_id = 450
-								province_id = 4293
+								province_id = 2206
 								province_id = 2236
 							}
 							is_core = ROOT
@@ -204,7 +230,7 @@ country_decisions = {
 								province_id = 4332
 								province_id = 4327
 								province_id = 450
-								province_id = 4293
+								province_id = 2206
 								province_id = 2236
 							}
 							is_core = ROOT
@@ -239,7 +265,7 @@ country_decisions = {
 							province_id = 4332
 							province_id = 4327
 							province_id = 450
-							province_id = 4293
+							province_id = 2206
 							province_id = 2236
 						}
 						OR = {
@@ -268,7 +294,7 @@ country_decisions = {
 							province_id = 4332
 							province_id = 4327
 							province_id = 450
-							province_id = 4293
+							province_id = 2206
 							province_id = 2236
 						}
 						OR = {
@@ -314,6 +340,19 @@ country_decisions = {
 			# NOT = { religion = totemism }
 			# NOT = { tag = PAP } # The Papal State
 			# NOT = { tag = HLR } # Holy Roman Empire
+		# }
+		# provinces_to_highlight = {
+			# OR = {
+				# province_id = 
+				# province_id = 
+				# province_id = 
+				# province_id = 
+				# province_id = 
+			# }
+			# OR = {
+				# NOT = { owned_by = ROOT }
+				# NOT = { is_core = ROOT }
+			# }
 		# }
 		# allow =  {
 			# is_at_war = no 
@@ -461,6 +500,19 @@ country_decisions = {
 			NOT = { religion = mesoamerican_religion }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 842
+				province_id = 843
+				province_id = 846
+				province_id = 2632
+				province_id = 2633
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -617,6 +669,19 @@ country_decisions = {
 			NOT = { religion = nahuatl }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 852
+				province_id = 854
+				province_id = 2626
+				province_id = 2644
+				province_id = 2647
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -779,6 +844,19 @@ country_decisions = {
 			NOT = { religion = inti }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 804
+				province_id = 806
+				province_id = 808
+				province_id = 809
+				province_id = 812
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -950,6 +1028,19 @@ country_decisions = {
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 38
+				province_id = 47
+				province_id = 269
+				province_id = 4244
+				province_id = 1859
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
 		allow =  {
 			is_at_war = no 
 			is_subject = false
@@ -1089,6 +1180,19 @@ country_decisions = {
 			NOT = { religion = slavic_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 47
+				province_id = 256
+				province_id = 268
+				province_id = 280
+				province_id = 2749
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -1251,6 +1355,19 @@ country_decisions = {
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 30
+				province_id = 35
+				province_id = 301
+				province_id = 305
+				province_id = 2749
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
 		allow =  {
 			is_at_war = no 
 			is_subject = false
@@ -1390,15 +1507,28 @@ country_decisions = {
 		major = yes
 		potential = {
 			OR = {
-				owns_core_province = 1	# Uppland
-				owns_core_province = 12	# Sjaelland
-				owns_core_province = 20	# Trondelag
-				owns_core_province = 96	# Zeeland
+				owns_core_province = 1 # Uppland
+				owns_core_province = 12 # Sjaelland
+				owns_core_province = 20 # Trondelag
+				owns_core_province = 96 # Zeeland
 				owns_core_province = 2972 # Paderborn
 			}
 			NOT = { religion = norse_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1
+				province_id = 12
+				province_id = 20
+				province_id = 96
+				province_id = 2972
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -1545,6 +1675,19 @@ country_decisions = {
 			NOT = { religion = tengri_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 284
+				province_id = 464
+				province_id = 716
+				province_id = 1076
+				province_id = 1970
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -1755,6 +1898,19 @@ country_decisions = {
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 344
+				province_id = 1132
+				province_id = 2249
+				province_id = 2454
+				province_id = 2463
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
 		allow =  {
 			is_at_war = no 
 			is_subject = false
@@ -1945,6 +2101,19 @@ country_decisions = {
 			# NOT = { tag = PAP } # The Papal State
 			# NOT = { tag = HLR } # Holy Roman Empire
 		# }
+		# provinces_to_highlight = {
+			# OR = {
+				# province_id = 
+				# province_id = 
+				# province_id = 
+				# province_id = 
+				# province_id = 
+			# }
+			# OR = {
+				# NOT = { owned_by = ROOT }
+				# NOT = { is_core = ROOT }
+			# }
+		# }
 		# allow =  {
 			# is_at_war = no 
 			# is_subject = false
@@ -2073,6 +2242,19 @@ country_decisions = {
 				owns_core_province = 379 # Jerusalem
 			}
 			NOT = { religion = catholic }
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 85
+				province_id = 118
+				province_id = 206
+				province_id = 235
+				province_id = 379
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -2217,7 +2399,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			OR = {
-				owns_core_province = 146 # Athens
+				owns_core_province = 148 # Thessaloniki (Mount Athos)
 				owns_core_province = 151 # Constantinople
 				owns_core_province = 318 # Sugla
 				owns_core_province = 379 # Jerusalem
@@ -2225,6 +2407,19 @@ country_decisions = {
 			}
 			NOT = { religion = orthodox }
 			NOT = { tag = PAP } # The Papal State
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 148
+				province_id = 151
+				province_id = 318
+				province_id = 379
+				province_id = 2313
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -2261,7 +2456,7 @@ country_decisions = {
 					calc_true_if = {
 						all_owned_province = {
 							OR = {
-								province_id = 146
+								province_id = 148
 								province_id = 151
 								province_id = 318
 								province_id = 379
@@ -2280,7 +2475,7 @@ country_decisions = {
 					calc_true_if = {
 						all_owned_province = {
 							OR = {
-								province_id = 146
+								province_id = 148
 								province_id = 151
 								province_id = 318
 								province_id = 379
@@ -2332,7 +2527,7 @@ country_decisions = {
 				every_owned_province = {
 					limit = {
 						OR = {
-							province_id = 146
+							province_id = 148
 							province_id = 151
 							province_id = 318
 							province_id = 379
@@ -2378,7 +2573,7 @@ country_decisions = {
 				every_owned_province = {
 					limit = {
 						OR = {
-							province_id = 146
+							province_id = 148
 							province_id = 151
 							province_id = 318
 							province_id = 379
@@ -2412,11 +2607,24 @@ country_decisions = {
 				owns_core_province = 358 # Alexandria
 				owns_core_province = 379 # Jerusalem
 				owns_core_province = 1227 # Tigre (Aksum)
-				owns_core_province = 2322 # Wadi Halfa (maybe change it to 1234 # Qasr Ibrim)
+				owns_core_province = 2322 # Wadi Halfa
 				owns_core_province = 2313 # Antioch
 			}
 			NOT = { religion = monophysite }
 			NOT = { tag = PAP } # The Papal State
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 358
+				province_id = 379
+				province_id = 1227
+				province_id = 2322
+				province_id = 2313
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -2580,6 +2788,19 @@ country_decisions = {
 			NOT = { religion = coptic }
 			NOT = { tag = PAP } # The Papal State
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 358
+				province_id = 419
+				province_id = 1227
+				province_id = 1234
+				province_id = 2313
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
 		allow =  {
 			is_at_war = no 
 			is_subject = false
@@ -2733,14 +2954,27 @@ country_decisions = {
 		major = yes
 		potential = {
 			OR = {
-				owns_core_province = 358 # Alexandria
+				owns_core_province = 535 # Kochin
 				owns_core_province = 379 # Jerusalem
 				owns_core_province = 410 # Baghdad (Iraq-i-Arab)
 				owns_core_province = 428 # Rey
-				owns_core_province = 2313 # Antioch
+				owns_core_province = 2308 # Urfa
 			}
 			NOT = { religion = nestorian }
 			NOT = { tag = PAP } # The Papal State
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 535
+				province_id = 379
+				province_id = 410
+				province_id = 428
+				province_id = 2308
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -2756,11 +2990,11 @@ country_decisions = {
 					# calc_true_if = {
 						# all_owned_province = {
 							# OR = {
-								# province_id = 358
+								# province_id = 535
 								# province_id = 379
 								# province_id = 410
 								# province_id = 428
-								# province_id = 2313
+								# province_id = 2308
 							# }
 							# is_core = ROOT
 							# OR = {
@@ -2775,11 +3009,11 @@ country_decisions = {
 					calc_true_if = {
 						all_owned_province = {
 							OR = {
-								province_id = 358
+								province_id = 535
 								province_id = 379
 								province_id = 410
 								province_id = 428
-								province_id = 2313
+								province_id = 2308
 							}
 							is_core = ROOT
 							OR = {
@@ -2806,11 +3040,11 @@ country_decisions = {
 				# every_owned_province = {
 					# limit = {
 						# OR = {
-							# province_id = 358
+							# province_id = 535
 							# province_id = 379
 							# province_id = 410
 							# province_id = 428
-							# province_id = 2313
+							# province_id = 2308
 						# }
 						# OR = {
 							# has_building = temple
@@ -2831,11 +3065,11 @@ country_decisions = {
 				every_owned_province = {
 					limit = {
 						OR = {
-							province_id = 358
+							province_id = 535
 							province_id = 379
 							province_id = 410
 							province_id = 428
-							province_id = 2313
+							province_id = 2308
 						}
 						OR = {
 							has_building = temple
@@ -2878,6 +3112,19 @@ country_decisions = {
 			NOT = { tag = PAP } # The Papal State
 			is_religion_enabled = protestant
 		}
+		# provinces_to_highlight = {
+			# OR = {
+				# province_id = 
+				# province_id = 
+				# province_id = 
+				# province_id = 
+				# province_id = 
+			# }
+			# OR = {
+				# NOT = { owned_by = ROOT }
+				# NOT = { is_core = ROOT }
+			# }
+		# }
 		allow =  {
 			is_at_war = no 
 			is_subject = false
@@ -3033,6 +3280,19 @@ country_decisions = {
 			NOT = { tag = PAP } # The Papal State
 			is_religion_enabled = reformed
 		}
+		# provinces_to_highlight = {
+			# OR = {
+				# province_id = 
+				# province_id = 
+				# province_id = 
+				# province_id = 
+				# province_id = 
+			# }
+			# OR = {
+				# NOT = { owned_by = ROOT }
+				# NOT = { is_core = ROOT }
+			# }
+		# }
 		allow =  {
 			is_at_war = no 
 			is_subject = false
@@ -3179,6 +3439,19 @@ country_decisions = {
 			NOT = { religion = sunni }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 225
+				province_id = 379
+				province_id = 384
+				province_id = 385
+				province_id = 410
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -3351,6 +3624,19 @@ country_decisions = {
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 379
+				province_id = 382
+				province_id = 384
+				province_id = 385
+				province_id = 2311
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
 		allow =  {
 			is_at_war = no 
 			is_subject = false
@@ -3500,6 +3786,19 @@ country_decisions = {
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 379
+				province_id = 384
+				province_id = 385
+				province_id = 403
+				province_id = 2463
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
 		allow =  {
 			is_at_war = no 
 			is_subject = false
@@ -3637,6 +3936,19 @@ country_decisions = {
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 365
+				province_id = 379
+				province_id = 382
+				province_id = 401
+				province_id = 414
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
 		allow =  {
 			is_at_war = no 
 			is_subject = false
@@ -3754,7 +4066,7 @@ country_decisions = {
 	###############           MAHAYANA           ###############
 	############################################################
 	
-	# Provinces taken from Refumee's mod 'Holy Sites'.
+	# Provinces mostly taken from Refumee's mod 'Holy Sites'.
 	# Triggered Modifier = The Conquest of Bodh Gaya (558), Conquest of Luoyang (1836)
 	
 	convert_to_mahayana_decision = {
@@ -3764,12 +4076,25 @@ country_decisions = {
 				owns_core_province = 558 # Patna
 				owns_core_province = 613 # Dong Kinh
 				owns_core_province = 1836 # Luoyang
-				owns_core_province = 2057 # Bhelsa
-				owns_core_province = 2073 # Baltistan
+				owns_core_province = 740 # Malwa
+				owns_core_province = 2077 # Margalla
 			}
 			NOT = { religion = mahayana }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 558
+				province_id = 613
+				province_id = 1836
+				province_id = 740
+				province_id = 2077
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -3790,8 +4115,8 @@ country_decisions = {
 								province_id = 558
 								province_id = 613
 								province_id = 1836
-								province_id = 2057
-								province_id = 2073
+								province_id = 740
+								province_id = 2077
 							}
 							is_core = ROOT
 							OR = {
@@ -3809,8 +4134,8 @@ country_decisions = {
 								province_id = 558
 								province_id = 613
 								province_id = 1836
-								province_id = 2057
-								province_id = 2073
+								province_id = 740
+								province_id = 2077
 							}
 							is_core = ROOT
 							OR = {
@@ -3842,8 +4167,8 @@ country_decisions = {
 							province_id = 558
 							province_id = 613
 							province_id = 1836
-							province_id = 2057
-							province_id = 2073
+							province_id = 740
+							province_id = 2077
 						}
 						OR = {
 							has_building = temple
@@ -3869,8 +4194,8 @@ country_decisions = {
 							province_id = 558
 							province_id = 613
 							province_id = 1836
-							province_id = 2057
-							province_id = 2073
+							province_id = 740
+							province_id = 2077
 						}
 						OR = {
 							has_building = temple
@@ -3891,7 +4216,7 @@ country_decisions = {
 	###############           THERAVADA          ###############
 	############################################################
 	
-	# Provinces taken from Refumee's mod 'Holy Sites'.
+	# Provinces mostly taken from Refumee's mod 'Holy Sites'.
 	# Triggered Modifier = The Conquest of Bodh Gaya (558), Conquest of the Lankan Temples (2099)
 	
 	convert_to_theravada_decision = {
@@ -3900,13 +4225,26 @@ country_decisions = {
 			OR = {
 				owns_core_province = 558 # Patna
 				owns_core_province = 609 # Angkor
-				owns_core_province = 2057 # Bhelsa
-				owns_core_province = 2073 # Baltistan
+				owns_core_province = 740 # Malwa
+				owns_core_province = 2077 # Margalla
 				owns_core_province = 2099 # Kandy
 			}
 			NOT = { religion = buddhism } # Theravada
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 558
+				province_id = 609
+				province_id = 740
+				province_id = 2077
+				province_id = 2099
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -3942,8 +4280,8 @@ country_decisions = {
 							OR = {
 								province_id = 558
 								province_id = 609
-								province_id = 2057
-								province_id = 2073
+								province_id = 740
+								province_id = 2077
 								province_id = 2099
 							}
 							is_core = ROOT
@@ -3961,8 +4299,8 @@ country_decisions = {
 							OR = {
 								province_id = 558
 								province_id = 609
-								province_id = 2057
-								province_id = 2073
+								province_id = 740
+								province_id = 2077
 								province_id = 2099
 							}
 							is_core = ROOT
@@ -4010,8 +4348,8 @@ country_decisions = {
 						OR = {
 							province_id = 558
 							province_id = 609
-							province_id = 2057
-							province_id = 2073
+							province_id = 740
+							province_id = 2077
 							province_id = 2099
 						}
 						OR = {
@@ -4053,8 +4391,8 @@ country_decisions = {
 						OR = {
 							province_id = 558
 							province_id = 609
-							province_id = 2057
-							province_id = 2073
+							province_id = 740
+							province_id = 2077
 							province_id = 2099
 						}
 						OR = {
@@ -4076,7 +4414,7 @@ country_decisions = {
 	###############           VAJRAYANA          ###############
 	############################################################
 	
-	# Provinces taken from Refumee's mod 'Holy Sites'.
+	# Provinces mostly taken from Refumee's mod 'Holy Sites'.
 	# Triggered Modifier = The Conquest of Bodh Gaya (558), Conquest of Lhasa (677)
 	
 	# date = 630.1.1 (Used for Extended Timeline)
@@ -4087,13 +4425,26 @@ country_decisions = {
 			OR = {
 				owns_core_province = 558 # Patna
 				owns_core_province = 677 # Lhasa
-				owns_core_province = 2057 # Bhelsa
-				owns_core_province = 2073 # Baltistan
+				owns_core_province = 740 # Malwa
+				owns_core_province = 2077 # Margalla
 				owns_core_province = 2133 # Dege
 			}
 			NOT = { religion = vajrayana }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 558
+				province_id = 677
+				province_id = 740
+				province_id = 2077
+				province_id = 2133
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -4118,8 +4469,8 @@ country_decisions = {
 							OR = {
 								province_id = 558
 								province_id = 677
-								province_id = 2057
-								province_id = 2073
+								province_id = 740
+								province_id = 2077
 								province_id = 2133
 							}
 							is_core = ROOT
@@ -4137,8 +4488,8 @@ country_decisions = {
 							OR = {
 								province_id = 558
 								province_id = 677
-								province_id = 2057
-								province_id = 2073
+								province_id = 740
+								province_id = 2077
 								province_id = 2133
 							}
 							is_core = ROOT
@@ -4175,8 +4526,8 @@ country_decisions = {
 						OR = {
 							province_id = 558
 							province_id = 677
-							province_id = 2057
-							province_id = 2073
+							province_id = 740
+							province_id = 2077
 							province_id = 2133
 						}
 						OR = {
@@ -4207,8 +4558,8 @@ country_decisions = {
 						OR = {
 							province_id = 558
 							province_id = 677
-							province_id = 2057
-							province_id = 2073
+							province_id = 740
+							province_id = 2077
 							province_id = 2133
 						}
 						OR = {
@@ -4246,6 +4597,19 @@ country_decisions = {
 			NOT = { religion = hinduism }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 740
+				province_id = 523
+				province_id = 524
+				province_id = 2052
+				province_id = 2095
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -4389,13 +4753,25 @@ country_decisions = {
 				owns_core_province = 558 # Patna
 				owns_core_province = 1948 # Bidar
 				owns_core_province = 2062 # Panipat
-				owns_core_province = 2065 # Bhattiana
-				# 2075 # Doaba (is a Triggered Modifier and Religious Center)
+				owns_core_province = 2075 # Doaba
 			}
 			is_religion_enabled = sikhism
 			NOT = { religion = sikhism }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 507
+				province_id = 558
+				province_id = 1948
+				province_id = 2062
+				province_id = 2075
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -4419,7 +4795,7 @@ country_decisions = {
 								province_id = 558
 								province_id = 1948
 								province_id = 2062
-								province_id = 2065
+								province_id = 2075
 							}
 							is_core = ROOT
 							OR = {
@@ -4438,7 +4814,7 @@ country_decisions = {
 								province_id = 558
 								province_id = 1948
 								province_id = 2062
-								province_id = 2065
+								province_id = 2075
 							}
 							is_core = ROOT
 							OR = {
@@ -4473,7 +4849,7 @@ country_decisions = {
 							province_id = 558
 							province_id = 1948
 							province_id = 2062
-							province_id = 2065
+							province_id = 2075
 						}
 						OR = {
 							has_building = temple
@@ -4502,7 +4878,7 @@ country_decisions = {
 							province_id = 558
 							province_id = 1948
 							province_id = 2062
-							province_id = 2065
+							province_id = 2075
 						}
 						OR = {
 							has_building = temple
@@ -4539,6 +4915,19 @@ country_decisions = {
 			NOT = { religion = jain }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 515
+				province_id = 533
+				province_id = 2053
+				province_id = 2067
+				province_id = 2096
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -4674,7 +5063,7 @@ country_decisions = {
 		potential = {
 			OR = {
 				owns_core_province = 361 # Cairo
-				owns_core_province = 410 # Iraq-i-Arab (Baghdad)
+				owns_core_province = 2236 # Bojnord
 				owns_core_province = 447 # Kandahar
 				owns_core_province = 451 # Kabulistan
 				owns_core_province = 506 # Multan
@@ -4682,6 +5071,19 @@ country_decisions = {
 			NOT = { religion = zun_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 361
+				province_id = 2236
+				province_id = 447
+				province_id = 451
+				province_id = 506
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -4698,7 +5100,7 @@ country_decisions = {
 						all_owned_province = {
 							OR = {
 								province_id = 361
-								province_id = 410
+								province_id = 2236
 								province_id = 447
 								province_id = 451
 								province_id = 506
@@ -4717,7 +5119,7 @@ country_decisions = {
 						all_owned_province = {
 							OR = {
 								province_id = 361
-								province_id = 410
+								province_id = 2236
 								province_id = 447
 								province_id = 451
 								province_id = 506
@@ -4748,7 +5150,7 @@ country_decisions = {
 					limit = {
 						OR = {
 							province_id = 361
-							province_id = 410
+							province_id = 2236
 							province_id = 447
 							province_id = 451
 							province_id = 506
@@ -4773,7 +5175,7 @@ country_decisions = {
 					limit = {
 						OR = {
 							province_id = 361
-							province_id = 410
+							province_id = 2236
 							province_id = 447
 							province_id = 451
 							province_id = 506
@@ -4814,6 +5216,19 @@ country_decisions = {
 			NOT = { religion = confucianism }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 667
+				province_id = 679
+				province_id = 691
+				province_id = 700
+				province_id = 1816
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
 		}
 		allow =  {
 			is_at_war = no 
@@ -4952,6 +5367,19 @@ country_decisions = {
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
 		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1018
+				province_id = 1020
+				province_id = 1025
+				province_id = 4359
+				province_id = 1029
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
 		allow =  {
 			is_at_war = no 
 			is_subject = false
@@ -5061,5 +5489,18 @@ country_decisions = {
 			factor = 0
 		}
 	}
+	
+	############################################################
+	###############             BÖN              ###############
+	############################################################
+	
+	############################################################
+	###############            YAZIDI            ###############
+	############################################################
+	
+	############################################################
+	###############          MANICHEAN           ###############
+	############################################################
+	
 	
 }
