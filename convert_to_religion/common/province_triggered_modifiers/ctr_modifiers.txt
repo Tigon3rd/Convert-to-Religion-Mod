@@ -1,10 +1,5 @@
 # namespace = ctr_modifiers
 
-# Province Triggered modifiers are here.
-# These are added to provinces through the add_province_triggered_modifier effect
-#
-# Effects are fully scriptable here.
-
 ###########################################
 # HELLENIC
 ###########################################
@@ -2675,7 +2670,7 @@ holy_site_hinduism_2095 = { # Varanasi
 # SIKH
 ###########################################
 
-holy_site_sikh_0507 = { # Lahore
+holy_site_sikh_2075 = { # Doaba
 	picture = "province_sikh"
 	potential = {
 	}
@@ -2738,7 +2733,7 @@ holy_site_sikh_1948 = { # Bidar
 	}
 }
 
-holy_site_sikh_2062 = { # Panipat
+holy_site_sikh = { # Random province
 	picture = "province_sikh"
 	potential = {
 	}
@@ -2759,26 +2754,47 @@ holy_site_sikh_2062 = { # Panipat
 	}
 }
 
-holy_site_sikh_2075 = { # Doaba
-	picture = "province_sikh"
-	potential = {
-	}
+# holy_site_sikh_0507 = { # Lahore
+	# picture = "province_sikh"
+	# potential = {
+	# }
 
-	trigger = {
-		religion = sikhism
-	}
+	# trigger = {
+		# religion = sikhism
+	# }
 
-	local_missionary_strength = -0.05	
+	# local_missionary_strength = -0.05	
 	
-	#Province scope
-	on_activation = {
+	# #Province scope
+	# on_activation = {
 	
-	}
+	# }
 	
-	on_deactivation = {
+	# on_deactivation = {
 	
-	}
-}
+	# }
+# }
+
+# holy_site_sikh_2062 = { # Panipat
+	# picture = "province_sikh"
+	# potential = {
+	# }
+
+	# trigger = {
+		# religion = sikhism
+	# }
+
+	# local_missionary_strength = -0.05	
+	
+	# #Province scope
+	# on_activation = {
+	
+	# }
+	
+	# on_deactivation = {
+	
+	# }
+# }
 
 ###########################################
 # JAIN
