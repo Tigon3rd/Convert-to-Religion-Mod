@@ -1,6 +1,5 @@
 namespace = ctr_events
 
-
 country_event = {
 	id = ctr_events.1
 	title = "ctr_events.1.title"
@@ -891,30 +890,24 @@ country_event = { # Randomly select 2 Sikh provinces as holy sites when Sikh is 
 		}
 		
 		every_province = {
-			limit = {
+			limit = { # Locate the province where Sikh spawned
 				religion = sikhism
 				has_active_triggered_province_modifier = religious_center
 			}
-			# if = {
-				# limit = {
-					# has_active_triggered_province_modifier = religious_center
-				# }
-				add_province_triggered_modifier = holy_site_sikh
-				set_province_flag = holy_site_sikh_1_primary
-				remove_province_triggered_modifier = religious_center
-				set_province_flag = religious_center_removed_1
-			# }
-			set_province_flag = every_province_caught
+			add_province_triggered_modifier = holy_site_sikh
+			# set_province_flag = holy_site_sikh_1_primary
+			remove_province_triggered_modifier = religious_center
+			# set_province_flag = religious_center_removed_1
 		}
 		random_province = {
 			limit = {
 				religion = sikhism
 				NOT = { has_active_triggered_province_modifier = holy_site_sikh }
-				NOT = { has_province_flag = holy_site_sikh_1_primary }
+				# NOT = { has_province_flag = holy_site_sikh_1_primary }
 			}
 			add_province_triggered_modifier = holy_site_sikh
-			set_province_flag = holy_site_sikh_1_secondary
-			set_province_flag = NO_religious_center
+			# set_province_flag = holy_site_sikh_1_secondary
+			# set_province_flag = NO_religious_center
 		}
 	}
 	option = {
@@ -938,7 +931,7 @@ country_event = { # Randomly select 2 Sikh provinces as holy sites when Sikh is 
 					has_active_triggered_province_modifier = religious_center
 				}
 				remove_province_triggered_modifier = religious_center
-				set_province_flag = religious_center_removed_2
+				# set_province_flag = religious_center_removed_2
 			}
 			if = {
 				limit = {
@@ -947,13 +940,13 @@ country_event = { # Randomly select 2 Sikh provinces as holy sites when Sikh is 
 					NOT = { province_id = 1948 }
 				}
 				add_province_triggered_modifier = holy_site_sikh
-				set_province_flag = holy_site_sikh_2_primary_secondary_or_tertiary
+				# set_province_flag = holy_site_sikh_2_primary_and_secondary
 			}
 		}
 	}
 }
 
-province_event = {
+province_event = { # Protestant Center of Reformation gets Holy Site
 	id = ctr_events.3
 	title = "ctr_events.3.title"
 	desc = "ctr_events.3.desc"
@@ -984,7 +977,7 @@ province_event = {
 	}
 }
 
-province_event = {
+province_event = { # Reformed Center of Reformation gets Holy Site
 	id = ctr_events.4
 	title = "ctr_events.4.title"
 	desc = "ctr_events.4.desc"
@@ -1100,97 +1093,6 @@ country_event = { # Separate Reformed event, as it only needs to trigger when Re
 		}
 	}
 }
-
-# province_event = { # Separate event used to test
-	# id = ctr_events.70
-	# title = "ctr_events.70.title"
-	# desc = "ctr_events.70.desc"
-	# picture = RELIGIOUS_CONVERSION_eventPicture
-	
-	# # fire_only_once = yes
-	# # is_triggered_only = yes
-	# # hidden = yes
-	
-	# trigger = {
-		# has_province_modifier = holy_site_catholic_0235
-		# NOT = { has_province_flag = event_ctr70_fired }
-		# NOT = { has_province_flag = WHOOHOO_holy_site_catholic_0235_flag }
-	# }
-	
-	# mean_time_to_happen = {
-		# days = 1
-	# }
-	
-	# immediate = {
-		# set_province_flag = event_ctr70_fired
-	# }
-	
-	# option = {
-		# name = "ctr_events.70.OPTA"
-		# ai_chance = { factor = 100 }
-		
-		# set_province_flag = WHOOHOO_holy_site_catholic_0235_flag
-	# }
-# }
-
-# country_event = {
-	# id = ctr_events.90
-	# title = "ctr_events.90.title"
-	# desc = "ctr_events.90.desc"
-	# picture = RELIGIOUS_CONVERSION_eventPicture
-	
-	# fire_only_once = yes
-	# hidden = yes
-	
-	# trigger = {
-		# OR = {
-			# religion = protestant
-			# religion = reformed
-		# }
-		# any_province = {
-			# is_reformation_center = yes
-			# OR = {
-				# NOT = { has_province_flag = protestant_CoR_flag }
-				# NOT = { has_province_flag = reformed_CoR_flag }
-			# }
-		# }
-		# # started_in = 1579.1.23
-	# }
-	
-	# # immediate = {
-		# # Maybe use "save event target"
-	# # }
-	
-	# mean_time_to_happen = {
-		# days = 1
-	# }
-	
-	# option = {
-		# name = "ctr_events.90.OPTA"
-		# ai_chance = { factor = 100 }
-		
-		# every_province = {
-			# limit = {
-				# any_province = {
-					# is_reformation_center = yes
-					# religion = protestant
-					# NOT = { has_province_flag = protestant_CoR_flag }
-				# }
-			# }
-			# province_event = { id = ctr_events.3 }
-		# }
-		# every_province = {
-			# limit = {
-				# any_province = {
-					# is_reformation_center = yes
-					# religion = reformed
-					# NOT = { has_province_flag = reformed_CoR_flag }
-				# }
-			# }
-			# province_event = { id = ctr_events.4 }
-		# }
-	# }
-# }
 
 #######################################################
 # REMOVES ALL FLAGS AND PERMANENT MODIFIERS 

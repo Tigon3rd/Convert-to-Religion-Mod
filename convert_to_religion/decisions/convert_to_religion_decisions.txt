@@ -37,8 +37,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes # This one as it would seem to also allow for tributaries, which I don't know if "is_subject = false" do! 
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -183,8 +183,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -342,8 +342,8 @@ country_decisions = {
 			# }
 		# }
 		# allow =  {
-			# is_at_war = no 
-			# is_subject = false
+			# is_at_war = no
+			# is_free_or_tributary_trigger = yes
 			# stability = 1
 			# OR = {
 				# AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -498,8 +498,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -663,8 +663,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -834,8 +834,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -1012,8 +1012,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -1160,8 +1160,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -1329,8 +1329,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -1486,8 +1486,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -1640,8 +1640,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -1857,8 +1857,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -2055,8 +2055,8 @@ country_decisions = {
 			# }
 		# }
 		# allow =  {
-			# is_at_war = no 
-			# is_subject = false
+			# is_at_war = no
+			# is_free_or_tributary_trigger = yes
 			# stability = 1
 			# OR = {
 				# AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -2192,8 +2192,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			# I don't know if the Papal State can lose catholic religion or what happens if they do. The papal State should in theory cease to exist. Holy Roman Empire can become Protestant in the reformation war.
 			OR = {
@@ -2352,8 +2352,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -2552,8 +2552,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -2722,8 +2722,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -2892,8 +2892,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			# OR = {
 				# AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -3037,8 +3037,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -3222,8 +3222,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -3398,8 +3398,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -3577,8 +3577,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -3734,8 +3734,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -3879,8 +3879,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -4021,8 +4021,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -4166,8 +4166,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -4361,8 +4361,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -4521,8 +4521,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -4680,8 +4680,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -4834,8 +4834,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -4985,8 +4985,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -5125,8 +5125,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
@@ -5270,8 +5270,8 @@ country_decisions = {
 			}
 		}
 		allow =  {
-			is_at_war = no 
-			is_subject = false
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
