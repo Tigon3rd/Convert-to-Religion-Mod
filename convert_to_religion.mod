@@ -1,9 +1,9 @@
-name="Convert to Religion"
-path="mod/convert_to_religion"
+version="1.1"
 tags={
-	"Gameplay"
 	"Missions And Decisions"
+	"Gameplay"
 	"Religion"
 }
-picture="convert_to_religion.jpg"
-supported_version="1.25.*.*"
+name="Convert to Religion"
+supported_version="1.29.*.*"
+path="C:/Users/prima/Documents/Paradox Interactive/Europa Universalis IV/mod/convert_to_religion"

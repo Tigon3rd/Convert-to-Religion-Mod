@@ -1,8 +1,12 @@
-# namespace = ctr_event_modifiers
+# Country Modifiers
 
 holy_site_conversion_zeal = {
 	global_missionary_strength = 0.05
 	global_heretic_missionary_strength = 0.05
+	missionary_maintenance_cost = -0.33
 	tolerance_heretic = 2
 	tolerance_heathen = 1
+	religion = yes
 }
+
+has_recently_converted_ctr_timer = { }

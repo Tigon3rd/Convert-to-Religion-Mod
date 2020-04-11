@@ -1,0 +1,132 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new dieties, make sure they are uniquely named.
+
+
+# Mesoamerican
+huitzilopochtli = {
+	prestige = 1
+	global_unrest = -1
+	
+	allow = { religion = mesoamerican_religion }
+	sprite = 73
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}
+	}
+}
+
+tlaloc = {
+	manpower_recovery_speed = 0.20
+	production_efficiency = 0.1
+
+	allow = { religion = mesoamerican_religion }
+	sprite = 74
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}
+	}
+}
+
+tonatiuh = {
+	defensiveness = 0.2
+	core_creation = -0.10
+
+	allow = { religion = mesoamerican_religion }
+	sprite = 75
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}
+	}
+}
+
+tezcatlipoca = {
+	ae_impact = -0.15
+	legitimacy = 1
+
+	allow = { religion = mesoamerican_religion }
+	sprite = 76
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}
+	}
+}
+
+chalchiuhtlicue = {
+	naval_attrition = -0.10
+	naval_morale = 0.20
+
+	allow = { religion = mesoamerican_religion }
+	sprite = 77
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_colonialist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}
+	}
+}
+
+quetzalcoatl = {
+	range = 0.20
+	technology_cost = -0.10
+
+	allow = { religion = mesoamerican_religion }
+	sprite = 78
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_diplomat
+		}
+	}
+}

@@ -1,0 +1,487 @@
+
+# Holy Site War
+cb_holy_site = {
+	valid_for_subject = no
+
+	prerequisites = {
+		# is_neighbor_of = FROM
+		OR = {
+			AND = {
+				religion = hellenic_pagan
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 118 # Roma
+							province_id = 146 # Athens
+							province_id = 358 # Alexandria
+							province_id = 148 # Thessaloniki
+							province_id = 2296 # Biga
+						}
+					}
+				}
+			}
+			AND = {
+				religion = zoroastrian
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 4332 # Siraf
+							province_id = 4327 # Jask
+							province_id = 450 # Balkh
+							province_id = 2206 # Urmia
+							province_id = 2236 # Bojnord
+						}
+					}
+				}
+			}
+			AND = {
+				religion = mesoamerican_religion
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 842 # Peten
+							province_id = 843 # Belize
+							province_id = 846 # Yucatan
+							province_id = 2632 # Xicallanco
+							province_id = 2633 # Mani
+						}
+					}
+				}
+			}
+			AND = {
+				religion = nahuatl
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 852 # Mexico
+							province_id = 854 # Sayultecas
+							province_id = 2626 # Tulucan
+							province_id = 2644 # Cholula
+							province_id = 2647 # Cuetlaxtlan
+						}
+					}
+				}
+			}
+			AND = {
+				religion = inti
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 804 # Puno
+							province_id = 806 # Nazca
+							province_id = 808 # Cuzco
+							province_id = 809 # Lima
+							province_id = 812 # Chanchan
+						}
+					}
+				}
+			}
+			AND = {
+				religion = baltic_pagan_reformed
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 38 # Riga
+							province_id = 47 # Stralsund
+							province_id = 269 # Podlasia
+							province_id = 4244 # Trubchevsk (Pochep)
+							province_id = 1859 # Chelmno (Culm, Torun)
+						}
+					}
+				}
+			}
+			AND = {
+				religion = slavic_pagan_reformed
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 47 # Stralsund
+							province_id = 256 # Plock
+							province_id = 268 # Moldavia
+							province_id = 280 # Kiev
+							province_id = 2749 # Tikhvin
+						}
+					}
+				}
+			}
+			AND = {
+				religion = finnish_pagan_reformed
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 30 # Viborg
+							province_id = 35 # Ösel
+							province_id = 301 # Ryazan
+							province_id = 305 # Perm
+							province_id = 2749 # Tikhvin
+						}
+					}
+				}
+			}
+			AND = {
+				religion = norse_pagan_reformed
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 1 # Uppland
+							province_id = 12 # Sjaelland
+							province_id = 20 # Trondelag
+							province_id = 96 # Zeeland
+							province_id = 2972 # Paderborn
+						}
+					}
+				}
+			}
+			AND = {
+				religion = tengri_pagan_reformed
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 284 # Crimea
+							province_id = 464 # Astrakhan
+							province_id = 716 # Tannu Uriankhai
+							province_id = 1076 # Kurgan
+							province_id = 1970 # Syghnak
+						}
+					}
+				}
+			}
+			AND = {
+				religion = shamanism
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 344 # Marrakech
+							province_id = 1132 # Timbuktu
+							province_id = 2249 # Sibiridugu
+							province_id = 2454 # Kairouan (El Kef)
+							province_id = 2463 # Maaskar
+						}
+					}
+				}
+			}
+			AND = {
+				religion = catholic
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 85 # Köln
+							province_id = 118 # Roma
+							province_id = 206 # Galicia
+							province_id = 235 # Kent
+							province_id = 379 # Jerusalem
+						}
+					}
+				}
+			}
+			AND = {
+				religion = orthodox
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 148 # Thessaloniki (Mount Athos)
+							province_id = 151 # Constantinople
+							province_id = 318 # Sugla
+							province_id = 379 # Jerusalem
+							province_id = 2313 # Antioch
+						}
+					}
+				}
+			}
+			AND = {
+				religion = monophysite
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 358 # Alexandria
+							province_id = 379 # Jerusalem
+							province_id = 1227 # Tigre (Aksum)
+							province_id = 2322 # Wadi Halfa
+							province_id = 2313 # Antioch
+						}
+					}
+				}
+			}
+			AND = {
+				religion = coptic
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 358 # Alexandria
+							province_id = 419 # Yerevan (Armenia)
+							province_id = 1227 # Tigre (Aksum)
+							province_id = 1234 # Qasr Ibrim
+							province_id = 2313 # Antioch
+						}
+					}
+				}
+			}
+			AND = {
+				religion = nestorian
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 535 # Kochin
+							province_id = 379 # Jerusalem
+							province_id = 410 # Baghdad (Iraq-i-Arab)
+							province_id = 428 # Rey
+							province_id = 2308 # Urfa
+						}
+					}
+				}
+			}
+			AND = {
+				religion = protestant
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 118
+							province_id = 379
+							has_province_modifier = protestant_CoR_province
+						}
+					}
+				}
+			}
+			AND = {
+				religion = reformed
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 118
+							province_id = 379
+							has_province_modifier = reformed_CoR_province
+						}
+					}
+				}
+			}
+			AND = {
+				religion = sunni
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 225 # Cordoba
+							province_id = 379 # Jerusalem
+							province_id = 384 # Medina
+							province_id = 385 # Mecca
+							province_id = 410 # Baghdad (Iraq-i-Arab)
+						}
+					}
+				}
+			}
+			AND = {
+				religion = shiite
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 379 # Jerusalem
+							province_id = 382 # Damascus
+							province_id = 384 # Medina
+							province_id = 385 # Mecca
+							province_id = 2311 # Samawah
+						}
+					}
+				}
+			}
+			AND = {
+				religion = ibadi
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 379 # Jerusalem
+							province_id = 384 # Medina
+							province_id = 385 # Mecca
+							province_id = 403 # Nizwa
+							province_id = 2463 # Maaskar
+						}
+					}
+				}
+			}
+			AND = {
+				religion = jewish
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 365 # Sinai
+							province_id = 379 # Jerusalem
+							province_id = 382 # Damascus
+							province_id = 401 # Dhofar
+							province_id = 414 # Hamadan
+						}
+					}
+				}
+			}
+			AND = {
+				religion = mahayana
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 558 # Patna
+							province_id = 613 # Dong Kinh
+							province_id = 1836 # Luoyang
+							province_id = 740 # Malwa
+							province_id = 2077 # Margalla
+						}
+					}
+				}
+			}
+			AND = {
+				religion = buddhism # Theravada
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 558 # Patna
+							province_id = 609 # Angkor
+							province_id = 740 # Malwa
+							province_id = 2077 # Margalla
+							province_id = 2099 # Kandy
+						}
+					}
+				}
+			}
+			AND = {
+				religion = vajrayana
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 558 # Patna
+							province_id = 677 # Lhasa
+							province_id = 740 # Malwa
+							province_id = 2077 # Margalla
+							province_id = 2133 # Dege
+						}
+					}
+				}
+			}
+			AND = {
+				religion = hinduism
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 740 # Malwa
+							province_id = 523 # Oudh
+							province_id = 524 # Central Doab
+							province_id = 2052 # Navanagar
+							province_id = 2095 # Varanasi
+						}
+					}
+				}
+			}
+			AND = {
+				religion = sikhism
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 2075 # Doaba
+							province_id = 558 # Patna
+							province_id = 1948 # Bidar
+							has_province_modifier = holy_site_sikh
+						}
+					}
+				}
+			}
+			AND = {
+				religion = jain
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 515 # Girnar
+							province_id = 533 # Mysore
+							province_id = 2053 # Patan
+							province_id = 2067 # Gorwar
+							province_id = 2096 # Damin
+						}
+					}
+				}
+			}
+			AND = {
+				religion = zun_pagan_reformed
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 361 # Cairo
+							province_id = 2236 # Bojnord
+							province_id = 447 # Kandahar
+							province_id = 451 # Kabulistan
+							province_id = 506 # Multan
+						}
+					}
+				}
+			}
+			AND = {
+				religion = confucianism
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 667 # Canton
+							province_id = 679 # Chengdu
+							province_id = 691 # Jinan [Mount Tai]
+							province_id = 700 # Xi'an
+							province_id = 1816 # Beijing
+						}
+					}
+				}
+			}
+			AND = {
+				religion = shinto
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 1018 # Izumo
+							province_id = 1020 # Yamashiro/Kyoto
+							province_id = 1025 # Dewa
+							province_id = 4359 # Ise
+							province_id = 1839 # Suruga
+						}
+					}
+				}
+			}
+			AND = {
+				religion = bon
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 450 # Balkh
+							province_id = 508 # Kashmir
+							province_id = 677 # Lhasa
+							province_id = 676 # Shigatse
+							province_id = 710 # Hotan
+						}
+					}
+				}
+			}
+			AND = {
+				religion = yazidi
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 2236 # Bojnord
+							province_id = 4332 # Siraf
+							province_id = 411 # Mosul
+							province_id = 385 # Mecca
+							province_id = 379 # Jerusalem
+						}
+					}
+				}
+			}
+			AND = {
+				religion = manichean
+				FROM = {
+					any_owned_province = {
+						OR = {
+							province_id = 412 # Khuzestan
+							province_id = 454 # Samarkand
+							province_id = 410 # Baghdad
+							province_id = 379 # Jerusalem
+							province_id = 2077 # Margalla
+						}
+					}
+				}
+			}
+		}
+		
+		NOT = {	has_matching_religion = FROM }
+		is_revolution_target = no
+	}
+
+	war_goal = take_holy_site
+}

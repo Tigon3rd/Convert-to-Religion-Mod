@@ -20,749 +20,743 @@ country_event = {
 	
 	immediate = {
 		set_global_flag = holy_sites_added
-	}
-	
-	option = {
-		name = "ctr_events.1.OPTA"
-		ai_chance = { factor = 100 }
-		
 		every_province = {
 			if = {
 				limit = { # Roma
 					province_id = 118
 				}
-				add_province_triggered_modifier = holy_site_hellenic_0118
-				add_province_triggered_modifier = holy_site_catholic_0118
+				add_province_triggered_modifier = holy_site_hellenic_rome
+				add_province_triggered_modifier = holy_site_catholic_rome
 				remove_province_triggered_modifier = religious_center
 			}
 			if = {
 				limit = { # Athens
 					province_id = 146
 				}
-				add_province_triggered_modifier = holy_site_hellenic_0146
+				add_province_triggered_modifier = holy_site_hellenic_athens
 			}
 			if = {
 				limit = { # Alexandria
 					province_id = 358
 				}
-				add_province_triggered_modifier = holy_site_hellenic_0358
-				add_province_triggered_modifier = holy_site_monophysite_0358
-				add_province_triggered_modifier = holy_site_coptic_0358
+				add_province_triggered_modifier = holy_site_hellenic_alexandria
+				add_province_triggered_modifier = holy_site_monophysite_alexandria
+				add_province_triggered_modifier = holy_site_coptic_alexandria
 			}
 			if = {
 				limit = { # Thessaloniki # Macedonia
 					province_id = 148
 				}
-				add_province_triggered_modifier = holy_site_hellenic_0148
-				add_province_triggered_modifier = holy_site_orthodox_0148
+				add_province_triggered_modifier = holy_site_hellenic_edessa
+				add_province_triggered_modifier = holy_site_orthodox_athos
 			}
 			if = {
 				limit = { # Biga
 					province_id = 2296
 				}
-				add_province_triggered_modifier = holy_site_hellenic_2296
+				add_province_triggered_modifier = holy_site_hellenic_abydos
 			}
 			if = {
 				limit = { # Siraf
 					province_id = 4332
 				}
-				add_province_triggered_modifier = holy_site_zoroastrian_4332
-				add_province_triggered_modifier = holy_site_yazidi_4332
+				add_province_triggered_modifier = holy_site_zoroastrian_siraf
+				add_province_triggered_modifier = holy_site_yazidi_siraf
 			}
 			if = {
 				limit = { # Jask
 					province_id = 4327
 				}
-				add_province_triggered_modifier = holy_site_zoroastrian_4327
+				add_province_triggered_modifier = holy_site_zoroastrian_jask
 			}
 			if = {
 				limit = { # Balkh
 					province_id = 450
 				}
-				add_province_triggered_modifier = holy_site_zoroastrian_450
-				add_province_triggered_modifier = holy_site_bon_0450
+				add_province_triggered_modifier = holy_site_zoroastrian_balkh
+				add_province_triggered_modifier = holy_site_bon_balkh
 			}
 			if = {
 				limit = { # Urmia
 					province_id = 2206
 				}
-				add_province_triggered_modifier = holy_site_zoroastrian_2206
+				add_province_triggered_modifier = holy_site_zoroastrian_urmia
 			}
 			if = {
 				limit = { # Bojnord
 					province_id = 2236
 				}
-				add_province_triggered_modifier = holy_site_zoroastrian_2236
-				add_province_triggered_modifier = holy_site_zunist_2236
-				add_province_triggered_modifier = holy_site_yazidi_2236
+				add_province_triggered_modifier = holy_site_zoroastrian_bojnord
+				add_province_triggered_modifier = holy_site_zunist_bojnord
+				add_province_triggered_modifier = holy_site_yazidi_bojnord
 			}
 			if = {
 				limit = { # Peten
 					province_id = 842
 				}
-				add_province_triggered_modifier = holy_site_mayan_0842
+				add_province_triggered_modifier = holy_site_mayan_tikal
 			}
 			if = {
 				limit = { # Belize
 					province_id = 843
 				}
-				add_province_triggered_modifier = holy_site_mayan_0843
+				add_province_triggered_modifier = holy_site_mayan_caracol
 			}
 			if = {
 				limit = { # Yucatan
 					province_id = 846
 				}
-				add_province_triggered_modifier = holy_site_mayan_0846
+				add_province_triggered_modifier = holy_site_mayan_chichenitza
 			}
 			if = {
 				limit = { # Xicallanco
 					province_id = 2632
 				}
-				add_province_triggered_modifier = holy_site_mayan_2632
+				add_province_triggered_modifier = holy_site_mayan_palenque
 			}
 			if = {
-				limit = { # Mani
-					province_id = 2633
+				limit = { # Ah Canul
+					province_id = 2651
 				}
-				add_province_triggered_modifier = holy_site_mayan_2633
+				add_province_triggered_modifier = holy_site_mayan_uxmal
 			}
 			if = {
 				limit = { # Mexico
 					province_id = 852
 				}
-				add_province_triggered_modifier = holy_site_nahuatl_0852
+				add_province_triggered_modifier = holy_site_nahuatl_tenochtitlan
 			}
 			if = {
 				limit = { # Sayultecas
 					province_id = 854
 				}
-				add_province_triggered_modifier = holy_site_nahuatl_0854
+				add_province_triggered_modifier = holy_site_nahuatl_sayultecas
 			}
 			if = {
 				limit = { # Tulucan
 					province_id = 2626
 				}
-				add_province_triggered_modifier = holy_site_nahuatl_2626
+				add_province_triggered_modifier = holy_site_nahuatl_calixtlahuaca
 			}
 			if = {
 				limit = { # Cholula
 					province_id = 2644
 				}
-				add_province_triggered_modifier = holy_site_nahuatl_2644
+				add_province_triggered_modifier = holy_site_nahuatl_cholula
 			}
 			if = {
 				limit = { # Cuetlaxtlan
 					province_id = 2647
 				}
-				add_province_triggered_modifier = holy_site_nahuatl_2647
+				add_province_triggered_modifier = holy_site_nahuatl_coatepec
 			}
 			if = {
 				limit = { # Puno
 					province_id = 804
 				}
-				add_province_triggered_modifier = holy_site_inti_0804
+				add_province_triggered_modifier = holy_site_inti_titicaca
 			}
 			if = {
 				limit = { # Nazca
 					province_id = 806
 				}
-				add_province_triggered_modifier = holy_site_inti_0806
+				add_province_triggered_modifier = holy_site_inti_nazca
 			}
 			if = {
 				limit = { # Cuzco
 					province_id = 808
 				}
-				add_province_triggered_modifier = holy_site_inti_0808
+				add_province_triggered_modifier = holy_site_inti_machupicchu
 			}
 			if = {
 				limit = { # Lima
 					province_id = 809
 				}
-				add_province_triggered_modifier = holy_site_inti_0809
+				add_province_triggered_modifier = holy_site_inti_pachacamac
 			}
 			if = {
 				limit = { # Chanchan
 					province_id = 812
 				}
-				add_province_triggered_modifier = holy_site_inti_0812
+				add_province_triggered_modifier = holy_site_inti_chanchan
 			}
 			if = {
 				limit = { # Riga
 					province_id = 38
 				}
-				add_province_triggered_modifier = holy_site_romuva_0038
+				add_province_triggered_modifier = holy_site_romuva_riga
 			}
 			if = {
 				limit = { # Stralsund
 					province_id = 47
 				}
-				add_province_triggered_modifier = holy_site_romuva_0047
-				add_province_triggered_modifier = holy_site_slavic_0047
+				add_province_triggered_modifier = holy_site_romuva_rugen
+				add_province_triggered_modifier = holy_site_slavic_rugen
 			}
 			if = {
 				limit = { # Podlasia
 					province_id = 269
 				}
-				add_province_triggered_modifier = holy_site_romuva_0269
+				add_province_triggered_modifier = holy_site_romuva_podlasie
 			}
 			if = {
 				limit = { # Trubchevsk (Pochep)
 					province_id = 4244
 				}
-				add_province_triggered_modifier = holy_site_romuva_4244
+				add_province_triggered_modifier = holy_site_romuva_pochep
 			}
 			if = {
 				limit = { # Chelmno (Culm, Torun)
 					province_id = 1859
 				}
-				add_province_triggered_modifier = holy_site_romuva_1859
+				add_province_triggered_modifier = holy_site_romuva_chelminskie
 			}
 			if = {
 				limit = { # Plock
 					province_id = 256
 				}
-				add_province_triggered_modifier = holy_site_slavic_0256
+				add_province_triggered_modifier = holy_site_slavic_plock
 			}
 			if = {
 				limit = { # Moldavia
 					province_id = 268
 				}
-				add_province_triggered_modifier = holy_site_slavic_0268
+				add_province_triggered_modifier = holy_site_slavic_husi
 			}
 			if = {
 				limit = { # Kiev
 					province_id = 280
 				}
-				add_province_triggered_modifier = holy_site_slavic_0280
+				add_province_triggered_modifier = holy_site_slavic_kiev
 			}
 			if = {
 				limit = { # Tikhvin
 					province_id = 2749
 				}
-				add_province_triggered_modifier = holy_site_slavic_2749
-				add_province_triggered_modifier = holy_site_suomenusko_2749
+				add_province_triggered_modifier = holy_site_slavic_tikhvin
+				add_province_triggered_modifier = holy_site_suomenusko_tikhvin
 			}
 			if = {
 				limit = { # Viborg
 					province_id = 30
 				}
-				add_province_triggered_modifier = holy_site_suomenusko_0030
+				add_province_triggered_modifier = holy_site_suomenusko_raivola
 			}
 			if = {
 				limit = { # Ösel
 					province_id = 35
 				}
-				add_province_triggered_modifier = holy_site_suomenusko_0035
+				add_province_triggered_modifier = holy_site_suomenusko_hiiumaa
 			}
 			if = {
 				limit = { # Ryazan
 					province_id = 301
 				}
-				add_province_triggered_modifier = holy_site_suomenusko_0301
+				add_province_triggered_modifier = holy_site_suomenusko_ryazan
 			}
 			if = {
 				limit = { # Perm
 					province_id = 305
 				}
-				add_province_triggered_modifier = holy_site_suomenusko_0305
+				add_province_triggered_modifier = holy_site_suomenusko_perm
 			}
 			if = {
 				limit = { # Uppland
 					province_id = 1
 				}
-				add_province_triggered_modifier = holy_site_norse_0001
+				add_province_triggered_modifier = holy_site_norse_uppland
 			}
 			if = {
 				limit = { # Sjaelland
 					province_id = 12
 				}
-				add_province_triggered_modifier = holy_site_norse_0012
+				add_province_triggered_modifier = holy_site_norse_lejre
 			}
 			if = {
 				limit = { # Trondelag
 					province_id = 20
 				}
-				add_province_triggered_modifier = holy_site_norse_0020
+				add_province_triggered_modifier = holy_site_norse_maere
 			}
 			if = {
 				limit = { # Zeeland
 					province_id = 96
 				}
-				add_province_triggered_modifier = holy_site_norse_0096
+				add_province_triggered_modifier = holy_site_norse_tholen
 			}
 			if = {
 				limit = { # Paderborn
 					province_id = 2972
 				}
-				add_province_triggered_modifier = holy_site_norse_2972
+				add_province_triggered_modifier = holy_site_norse_paderborn
 			}
 			if = {
 				limit = { # Crimea
 					province_id = 284
 				}
-				add_province_triggered_modifier = holy_site_tengri_0284
+				add_province_triggered_modifier = holy_site_tengri_crimea
 			}
 			if = {
 				limit = { # Astrakhan
 					province_id = 464
 				}
-				add_province_triggered_modifier = holy_site_tengri_0464
+				add_province_triggered_modifier = holy_site_tengri_itil
 			}
 			if = {
 				limit = { # Tannu Uriankhai
 					province_id = 716
 				}
-				add_province_triggered_modifier = holy_site_tengri_0716
+				add_province_triggered_modifier = holy_site_tengri_otuken
 			}
 			if = {
 				limit = { # Kurgan
 					province_id = 1076
 				}
-				add_province_triggered_modifier = holy_site_tengri_1076
+				add_province_triggered_modifier = holy_site_tengri_tobol
 			}
 			if = {
 				limit = { # Syghnak
 					province_id = 1970
 				}
-				add_province_triggered_modifier = holy_site_tengri_1970
+				add_province_triggered_modifier = holy_site_tengri_syganak
 			}
 			if = {
 				limit = { # Marrakech
 					province_id = 344
 				}
-				add_province_triggered_modifier = holy_site_fetishist_0344
+				add_province_triggered_modifier = holy_site_fetishist_marrakech
 			}
 			if = {
 				limit = { # Timbuktu
 					province_id = 1132
 				}
-				add_province_triggered_modifier = holy_site_fetishist_1132
+				add_province_triggered_modifier = holy_site_fetishist_timbuktu
 			}
 			if = {
 				limit = { # Sibiridugu
 					province_id = 2249
 				}
-				add_province_triggered_modifier = holy_site_fetishist_2249
+				add_province_triggered_modifier = holy_site_fetishist_bamako
 			}
 			if = {
 				limit = { # Kairouan (El Kef)
 					province_id = 2454
 				}
-				add_province_triggered_modifier = holy_site_fetishist_2454
+				add_province_triggered_modifier = holy_site_fetishist_medjerda
 			}
 			if = {
 				limit = { # Maaskar
 					province_id = 2463
 				}
-				add_province_triggered_modifier = holy_site_fetishist_2463
-				add_province_triggered_modifier = holy_site_ibadi_2463
+				add_province_triggered_modifier = holy_site_fetishist_atlas
+				add_province_triggered_modifier = holy_site_ibadi_atlas
 			}
 			if = {
 				limit = { # Köln
 					province_id = 85
 				}
-				add_province_triggered_modifier = holy_site_catholic_0085
+				add_province_triggered_modifier = holy_site_catholic_koln
 			}
 			if = {
 				limit = { # Galicia
 					province_id = 206
 				}
-				add_province_triggered_modifier = holy_site_catholic_0206
+				add_province_triggered_modifier = holy_site_catholic_santiago
 			}
 			if = {
 				limit = { # Kent
 					province_id = 235
 				}
-				add_province_triggered_modifier = holy_site_catholic_0235
+				add_province_triggered_modifier = holy_site_catholic_kent
 			}
 			if = {
 				limit = { # Jerusalem
 					province_id = 379
 				}
-				add_province_triggered_modifier = holy_site_catholic_0379
-				add_province_triggered_modifier = holy_site_orthodox_0379
-				add_province_triggered_modifier = holy_site_monophysite_0379
-				add_province_triggered_modifier = holy_site_nestorian_0379
-				add_province_triggered_modifier = holy_site_sunni_0379
-				add_province_triggered_modifier = holy_site_shia_0379
-				add_province_triggered_modifier = holy_site_ibadi_0379
-				add_province_triggered_modifier = holy_site_jewish_0379
-				add_province_triggered_modifier = holy_site_yazidi_0379
-				add_province_triggered_modifier = holy_site_manichean_0379
+				add_province_triggered_modifier = holy_site_catholic_jerusalem
+				add_province_triggered_modifier = holy_site_orthodox_jerusalem
+				add_province_triggered_modifier = holy_site_monophysite_jerusalem
+				add_province_triggered_modifier = holy_site_nestorian_jerusalem
+				add_province_triggered_modifier = holy_site_sunni_jerusalem
+				add_province_triggered_modifier = holy_site_shia_jerusalem
+				add_province_triggered_modifier = holy_site_ibadi_jerusalem
+				add_province_triggered_modifier = holy_site_jewish_jerusalem
+				add_province_triggered_modifier = holy_site_yazidi_jerusalem
+				add_province_triggered_modifier = holy_site_manichean_jerusalem
 			}
 			if = {
 				limit = { # Constantinople
 					province_id = 151
 				}
-				add_province_triggered_modifier = holy_site_orthodox_0151
+				add_province_triggered_modifier = holy_site_orthodox_hagiasophia
 			}
 			if = {
 				limit = { # Sugla
 					province_id = 318
 				}
-				add_province_triggered_modifier = holy_site_orthodox_0318
+				add_province_triggered_modifier = holy_site_orthodox_lebedos
 			}
 			if = {
 				limit = { # Antioch
 					province_id = 2313
 				}
-				add_province_triggered_modifier = holy_site_orthodox_2313
-				add_province_triggered_modifier = holy_site_monophysite_2313
-				add_province_triggered_modifier = holy_site_coptic_2313
+				add_province_triggered_modifier = holy_site_orthodox_antioch
+				add_province_triggered_modifier = holy_site_monophysite_antioch
+				add_province_triggered_modifier = holy_site_coptic_antioch
 			}
 			if = {
 				limit = { # Tigre (Aksum)
 					province_id = 1227
 				}
-				add_province_triggered_modifier = holy_site_monophysite_1227
-				add_province_triggered_modifier = holy_site_coptic_1227
+				add_province_triggered_modifier = holy_site_monophysite_aksum
+				add_province_triggered_modifier = holy_site_coptic_aksum
 			}
 			if = {
 				limit = { # Wadi Halfa
 					province_id = 2322
 				}
-				add_province_triggered_modifier = holy_site_monophysite_2322
+				add_province_triggered_modifier = holy_site_monophysite_napata
 			}
 			if = {
 				limit = { # Yerevan (Armenia)
 					province_id = 419
 				}
-				add_province_triggered_modifier = holy_site_coptic_0419
+				add_province_triggered_modifier = holy_site_coptic_yerevan
 			}
 			if = {
 				limit = { # Qasr Ibrim
 					province_id = 1234
 				}
-				add_province_triggered_modifier = holy_site_coptic_1234
+				add_province_triggered_modifier = holy_site_coptic_qasribrim
 			}
 			if = {
 				limit = { # Baghdad (Iraq-i-Arab)
 					province_id = 410
 				}
-				add_province_triggered_modifier = holy_site_nestorian_0410
-				add_province_triggered_modifier = holy_site_sunni_0410
-				add_province_triggered_modifier = holy_site_manichean_0410
+				add_province_triggered_modifier = holy_site_nestorian_baghdad
+				add_province_triggered_modifier = holy_site_sunni_baghdad
+				add_province_triggered_modifier = holy_site_manichean_baghdad
 			}
 			if = {
 				limit = { # Rey
 					province_id = 428
 				}
-				add_province_triggered_modifier = holy_site_nestorian_0428
+				add_province_triggered_modifier = holy_site_nestorian_rayy
 			}
 			if = {
 				limit = { # Urfa
 					province_id = 2308
 				}
-				add_province_triggered_modifier = holy_site_nestorian_2308
+				add_province_triggered_modifier = holy_site_nestorian_edessa
 			}
 			if = {
 				limit = { # Kochin
 					province_id = 535
 				}
-				add_province_triggered_modifier = holy_site_nestorian_0535
+				add_province_triggered_modifier = holy_site_nestorian_kochin
 			}
 			if = {
 				limit = { # Cordoba
 					province_id = 225
 				}
-				add_province_triggered_modifier = holy_site_sunni_0225
+				add_province_triggered_modifier = holy_site_sunni_cordoba
 			}
 			if = {
 				limit = { # Medina
 					province_id = 384
 				}
-				add_province_triggered_modifier = holy_site_sunni_0384
-				add_province_triggered_modifier = holy_site_shia_0384
-				add_province_triggered_modifier = holy_site_ibadi_0384
+				add_province_triggered_modifier = holy_site_sunni_medina
+				add_province_triggered_modifier = holy_site_shia_medina
+				add_province_triggered_modifier = holy_site_ibadi_medina
 			}
 			if = {
 				limit = { # Mecca
 					province_id = 385
 				}
-				add_province_triggered_modifier = holy_site_sunni_0385
-				add_province_triggered_modifier = holy_site_shia_0385
-				add_province_triggered_modifier = holy_site_ibadi_0385
-				add_province_triggered_modifier = holy_site_yazidi_0385
+				add_province_triggered_modifier = holy_site_sunni_mecca
+				add_province_triggered_modifier = holy_site_shia_mecca
+				add_province_triggered_modifier = holy_site_ibadi_mecca
+				add_province_triggered_modifier = holy_site_yazidi_mecca
 				remove_province_triggered_modifier = religious_center
 			}
 			if = {
 				limit = { # Damascus
 					province_id = 382
 				}
-				add_province_triggered_modifier = holy_site_shia_0382
-				add_province_triggered_modifier = holy_site_jewish_0382
+				add_province_triggered_modifier = holy_site_shia_damascus
+				add_province_triggered_modifier = holy_site_jewish_damascus
 			}
 			if = {
 				limit = { # Samawah
 					province_id = 2311
 				}
-				add_province_triggered_modifier = holy_site_shia_2311
+				add_province_triggered_modifier = holy_site_shia_nadjaf
 				remove_province_triggered_modifier = religious_center
 			}
 			if = {
 				limit = { # Nizwa
 					province_id = 403
 				}
-				add_province_triggered_modifier = holy_site_ibadi_0403
+				add_province_triggered_modifier = holy_site_ibadi_nizwa
 			}
 			if = {
 				limit = { # Sinai
 					province_id = 365
 				}
-				add_province_triggered_modifier = holy_site_jewish_0365
+				add_province_triggered_modifier = holy_site_jewish_sinai
 			}
 			if = {
 				limit = { # Dhofar
 					province_id = 401
 				}
-				add_province_triggered_modifier = holy_site_jewish_0401
+				add_province_triggered_modifier = holy_site_jewish_dhofar
 			}
 			if = {
 				limit = { # Hamadan
 					province_id = 414
 				}
-				add_province_triggered_modifier = holy_site_jewish_0414
+				add_province_triggered_modifier = holy_site_jewish_hamadan
 			}
 			if = {
 				limit = { # Patna
 					province_id = 558
 				}
-				add_province_triggered_modifier = holy_site_mahayana_0558
-				add_province_triggered_modifier = holy_site_theravada_0558
-				add_province_triggered_modifier = holy_site_vajrayana_0558
+				add_province_triggered_modifier = holy_site_mahayana_bodhgaya
+				add_province_triggered_modifier = holy_site_theravada_bodhgaya
+				add_province_triggered_modifier = holy_site_vajrayana_bodhgaya
 			}
 			if = {
 				limit = { # Malwa
 					province_id = 740
 				}
-				add_province_triggered_modifier = holy_site_mahayana_0740
-				add_province_triggered_modifier = holy_site_theravada_0740
-				add_province_triggered_modifier = holy_site_vajrayana_0740
-				add_province_triggered_modifier = holy_site_hinduism_0740
+				add_province_triggered_modifier = holy_site_mahayana_sanchi
+				add_province_triggered_modifier = holy_site_theravada_sanchi
+				add_province_triggered_modifier = holy_site_vajrayana_sanchi
+				add_province_triggered_modifier = holy_site_hinduism_mahakaleshwar
 			}
 			if = {
 				limit = { # Margalla
 					province_id = 2077
 				}
-				add_province_triggered_modifier = holy_site_mahayana_2077
-				add_province_triggered_modifier = holy_site_theravada_2077
-				add_province_triggered_modifier = holy_site_vajrayana_2077
-				add_province_triggered_modifier = holy_site_manichean_2077
+				add_province_triggered_modifier = holy_site_mahayana_oddiyana
+				add_province_triggered_modifier = holy_site_theravada_oddiyana
+				add_province_triggered_modifier = holy_site_vajrayana_oddiyana
+				add_province_triggered_modifier = holy_site_manichean_margalla
 			}
 			if = {
 				limit = { # Dong Kinh
 					province_id = 613
 				}
-				add_province_triggered_modifier = holy_site_mahayana_0613
+				add_province_triggered_modifier = holy_site_mahayana_dongkinh
 			}
 			if = {
 				limit = { # Luoyang
 					province_id = 1836
 				}
-				add_province_triggered_modifier = holy_site_mahayana_1836
+				add_province_triggered_modifier = holy_site_mahayana_luoyang
 			}
 			if = {
 				limit = { # Angkor
 					province_id = 609
 				}
-				add_province_triggered_modifier = holy_site_theravada_0609
+				add_province_triggered_modifier = holy_site_theravada_angkorwat
 			}
 			if = {
 				limit = { # Kandy
 					province_id = 2099
 				}
-				add_province_triggered_modifier = holy_site_theravada_2099
+				add_province_triggered_modifier = holy_site_theravada_lankantemples
 				remove_province_triggered_modifier = religious_center
 			}
 			if = {
 				limit = { # Lhasa
 					province_id = 677
 				}
-				add_province_triggered_modifier = holy_site_vajrayana_0677
-				add_province_triggered_modifier = holy_site_bon_0677
+				add_province_triggered_modifier = holy_site_vajrayana_lhasa
+				add_province_triggered_modifier = holy_site_bon_lhasa
 				remove_province_triggered_modifier = religious_center
 			}
 			if = {
 				limit = { # Dege
 					province_id = 2133
 				}
-				add_province_triggered_modifier = holy_site_vajrayana_2133
+				add_province_triggered_modifier = holy_site_vajrayana_dege
 			}
 			if = {
 				limit = { # Oudh
 					province_id = 523
 				}
-				add_province_triggered_modifier = holy_site_hinduism_0523
+				add_province_triggered_modifier = holy_site_hinduism_janmabhoomi
 			}
 			if = {
 				limit = { # Central Doab
 					province_id = 524
 				}
-				add_province_triggered_modifier = holy_site_hinduism_0524
+				add_province_triggered_modifier = holy_site_hinduism_krishnajanmabhoomi
 			}
 			if = {
 				limit = { # Navanagar
 					province_id = 2052
 				}
-				add_province_triggered_modifier = holy_site_hinduism_2052
+				add_province_triggered_modifier = holy_site_hinduism_dwarakadheesh
 			}
 			if = {
 				limit = { # Varanasi
 					province_id = 2095
 				}
-				add_province_triggered_modifier = holy_site_hinduism_2095
+				add_province_triggered_modifier = holy_site_hinduism_varanasi
 				remove_province_triggered_modifier = religious_center
 			}
 			if = {
 				limit = { # Girnar
 					province_id = 515
 				}
-				add_province_triggered_modifier = holy_site_jain_0515
+				add_province_triggered_modifier = holy_site_jain_girnar
 			}
 			if = {
 				limit = { # Mysore
 					province_id = 533
 				}
-				add_province_triggered_modifier = holy_site_jain_0533
+				add_province_triggered_modifier = holy_site_jain_shravanabelagola
 			}
 			if = {
 				limit = { # Patan
 					province_id = 2053
 				}
-				add_province_triggered_modifier = holy_site_jain_2053
+				add_province_triggered_modifier = holy_site_jain_vadnagar
 			}
 			if = {
 				limit = { # Gorwar
 					province_id = 2067
 				}
-				add_province_triggered_modifier = holy_site_jain_2067
+				add_province_triggered_modifier = holy_site_jain_bhillamala
 			}
 			if = {
 				limit = { # Damin
 					province_id = 2096
 				}
-				add_province_triggered_modifier = holy_site_jain_2096
+				add_province_triggered_modifier = holy_site_jain_rajrappa
 			}
 			if = {
 				limit = { # Cairo
 					province_id = 361
 				}
-				add_province_triggered_modifier = holy_site_zunist_0361
+				add_province_triggered_modifier = holy_site_zunist_cairo
 			}
 			if = {
 				limit = { # Kandahar
 					province_id = 447
 				}
-				add_province_triggered_modifier = holy_site_zunist_0447
+				add_province_triggered_modifier = holy_site_zunist_kandahar
 			}
 			if = {
 				limit = { # Kabulistan
 					province_id = 451
 				}
-				add_province_triggered_modifier = holy_site_zunist_0451
+				add_province_triggered_modifier = holy_site_zunist_kabul
 			}
 			if = {
 				limit = { # Multan
 					province_id = 506
 				}
-				add_province_triggered_modifier = holy_site_zunist_0506
+				add_province_triggered_modifier = holy_site_zunist_multan
 			}
 			if = {
 				limit = { # Canton
 					province_id = 667
 				}
-				add_province_triggered_modifier = holy_site_confucian_0667
+				add_province_triggered_modifier = holy_site_confucian_canton
 			}
 			if = {
 				limit = { # Chengdu
 					province_id = 679
 				}
-				add_province_triggered_modifier = holy_site_confucian_0679
+				add_province_triggered_modifier = holy_site_confucian_chengdu
 			}
 			if = {
 				limit = { # Jinan [Mount Tai]
 					province_id = 691
 				}
-				add_province_triggered_modifier = holy_site_confucian_0691
+				add_province_triggered_modifier = holy_site_confucian_jinan
 			}
 			if = {
 				limit = { # Xi'an
 					province_id = 700
 				}
-				add_province_triggered_modifier = holy_site_confucian_0700
+				add_province_triggered_modifier = holy_site_confucian_xian
 			}
 			if = {
 				limit = { # Beijing
 					province_id = 1816
 				}
-				add_province_triggered_modifier = holy_site_confucian_1816
+				add_province_triggered_modifier = holy_site_confucian_beijing
 			}
 			if = {
 				limit = { # Izumo
 					province_id = 1018
 				}
-				add_province_triggered_modifier = holy_site_shinto_1018
+				add_province_triggered_modifier = holy_site_shinto_izumo
 			}
 			if = {
 				limit = { # Yamashiro/Kyoto
 					province_id = 1020
 				}
-				add_province_triggered_modifier = holy_site_shinto_1020
+				add_province_triggered_modifier = holy_site_shinto_kyoto
 			}
 			if = {
 				limit = { # Dewa
 					province_id = 1025
 				}
-				add_province_triggered_modifier = holy_site_shinto_1025
+				add_province_triggered_modifier = holy_site_shinto_dewa
 			}
 			if = {
 				limit = { # Ise
 					province_id = 4359
 				}
-				add_province_triggered_modifier = holy_site_shinto_4359
+				add_province_triggered_modifier = holy_site_shinto_ise
 				remove_province_triggered_modifier = religious_center
 			}
 			if = {
-				limit = { # Kai
-					province_id = 1029
+				limit = { # Suruga
+					province_id = 1839
 				}
-				add_province_triggered_modifier = holy_site_shinto_1029
+				add_province_triggered_modifier = holy_site_shinto_mtfuji
 			}
 			if = {
 				limit = { # Kashmir
 					province_id = 508
 				}
-				add_province_triggered_modifier = holy_site_bon_0508
+				add_province_triggered_modifier = holy_site_bon_kashmir
 			}
 			if = {
 				limit = { # Shigatse
 					province_id = 676
 				}
-				add_province_triggered_modifier = holy_site_bon_0676
+				add_province_triggered_modifier = holy_site_bon_yungdrungling
 			}
 			if = {
 				limit = { # Hotan
 					province_id = 710
 				}
-				add_province_triggered_modifier = holy_site_bon_0710
+				add_province_triggered_modifier = holy_site_bon_hotan
 			}
 			if = {
 				limit = { # Mosul
 					province_id = 411
 				}
-				add_province_triggered_modifier = holy_site_yazidi_0411
+				add_province_triggered_modifier = holy_site_yazidi_mosul
 			}
 			if = {
 				limit = { # Khuzestan
 					province_id = 412
 				}
-				add_province_triggered_modifier = holy_site_manichean_0412
+				add_province_triggered_modifier = holy_site_manichean_khuzestan
 			}
 			if = {
 				limit = { # Samarkand
 					province_id = 454
 				}
-				add_province_triggered_modifier = holy_site_manichean_0454
+				add_province_triggered_modifier = holy_site_manichean_samarkand
 			}
 			
 			# Adds province modifier to make Jewish and Zoroastrian start provinces survive longer (10950 days or 30 years)
@@ -798,6 +792,12 @@ country_event = {
 			}
 		}
 	}
+	
+	option = {
+		name = "ctr_events.1.OPTA"
+		ai_chance = { factor = 100 }
+		
+	}
 }
 
 country_event = { # Separate Sikh event, as it only needs to trigger when Sikh is enabled
@@ -831,19 +831,19 @@ country_event = { # Separate Sikh event, as it only needs to trigger when Sikh i
 				limit = { # Doaba
 					province_id = 2075
 				}
-				add_province_triggered_modifier = holy_site_sikh_2075
+				add_province_triggered_modifier = holy_site_sikh_amritsar
 			}
 			if = {
 				limit = { # Patna
 					province_id = 558
 				}
-				add_province_triggered_modifier = holy_site_sikh_0558
+				add_province_triggered_modifier = holy_site_sikh_bodhgaya
 			}
 			if = {
 				limit = { # Bidar
 					province_id = 1948
 				}
-				add_province_triggered_modifier = holy_site_sikh_1948
+				add_province_triggered_modifier = holy_site_sikh_bidar
 			}
 			# if = {
 				# limit = { # Lahore
@@ -860,7 +860,6 @@ country_event = { # Separate Sikh event, as it only needs to trigger when Sikh i
 		}
 	}
 }
-
 
 country_event = { # Randomly select 2 Sikh provinces as holy sites when Sikh is enabled
 	id = ctr_events.7
@@ -1019,7 +1018,7 @@ country_event = { # Separate Protestant event, as it only needs to trigger when 
 	
 	trigger = {
 		is_religion_enabled = protestant
-		NOT = { has_global_flag = prot_holy_sites_added }
+		NOT = { has_global_flag = protestant_holy_sites_added }
 	}
 	
 	mean_time_to_happen = {
@@ -1027,7 +1026,7 @@ country_event = { # Separate Protestant event, as it only needs to trigger when 
 	}
 	
 	immediate = {
-		set_global_flag = prot_holy_sites_added
+		set_global_flag = protestant_holy_sites_added
 	}
 	
 	option = {
@@ -1039,13 +1038,13 @@ country_event = { # Separate Protestant event, as it only needs to trigger when 
 				limit = { # Roma
 					province_id = 118
 				}
-				add_province_triggered_modifier = holy_site_protestant_0118
+				add_province_triggered_modifier = holy_site_protestant_rome
 			}
 			if = {
 				limit = { # Jerusalem
 					province_id = 379
 				}
-				add_province_triggered_modifier = holy_site_protestant_0379
+				add_province_triggered_modifier = holy_site_protestant_jerusalem
 			}
 		}
 	}
@@ -1062,7 +1061,7 @@ country_event = { # Separate Reformed event, as it only needs to trigger when Re
 	
 	trigger = {
 		is_religion_enabled = reformed
-		NOT = { has_global_flag = refo_holy_sites_added }
+		NOT = { has_global_flag = reformed_holy_sites_added }
 	}
 	
 	mean_time_to_happen = {
@@ -1070,7 +1069,7 @@ country_event = { # Separate Reformed event, as it only needs to trigger when Re
 	}
 	
 	immediate = {
-		set_global_flag = refo_holy_sites_added
+		set_global_flag = reformed_holy_sites_added
 	}
 	
 	option = {
@@ -1082,15 +1081,156 @@ country_event = { # Separate Reformed event, as it only needs to trigger when Re
 				limit = { # Roma
 					province_id = 118
 				}
-				add_province_triggered_modifier = holy_site_reformed_0118
+				add_province_triggered_modifier = holy_site_reformed_rome
 			}
 			if = {
 				limit = { # Jerusalem
 					province_id = 379
 				}
-				add_province_triggered_modifier = holy_site_reformed_0379
+				add_province_triggered_modifier = holy_site_reformed_jerusalem
 			}
 		}
+	}
+}
+
+country_event = { # Separate Anglican event, as it only needs to trigger when Anglican is enabled
+	id = ctr_events.8
+	title = "ctr_events.8.title"
+	desc = "ctr_events.8.desc"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	# fire_only_once = yes
+	hidden = yes
+	
+	trigger = {
+		is_religion_enabled = anglican
+		NOT = { has_global_flag = anglican_holy_sites_added }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = anglican_holy_sites_added
+	}
+	
+	option = {
+		name = "ctr_events.8.OPTA"
+		ai_chance = { factor = 100 }
+		
+		every_province = {
+			if = {
+				limit = { # Roma
+					province_id = 118
+				}
+				add_province_triggered_modifier = holy_site_anglican_rome
+			}
+			if = {
+				limit = { # Jerusalem
+					province_id = 379
+				}
+				add_province_triggered_modifier = holy_site_anglican_jerusalem
+			}
+		}
+	}
+}
+
+country_event = { # Makes the first Anglican spawned provinces into Holy Sites
+	id = ctr_events.9
+	title = "ctr_events.9.title"
+	desc = "ctr_events.9.desc"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	fire_only_once = yes
+	hidden = yes
+	
+	trigger = {
+		is_religion_enabled = anglican
+		religion = anglican
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "ctr_events.9.OPTA"
+		ai_chance = { factor = 100 }
+		
+		capital_scope = {
+			add_province_triggered_modifier = anglican_CoR_province
+		}
+		
+		if = {
+			limit = {
+				ai = no
+				any_owned_province = { 
+					is_reformation_center = yes
+					religion = anglican
+					is_capital = no
+				}
+			}
+			random_owned_province = {
+				limit = {
+					is_reformation_center = yes
+					religion = anglican
+					is_capital = no
+				}
+				add_province_triggered_modifier = anglican_CoR_province
+			}
+		}
+		
+		random_owned_province = {
+			limit = { # Locate the province where the 2nd Anglican spawned
+				religion = anglican
+				NOT = { has_province_modifier = anglican_CoR_province }
+				# is_capital = no
+				# is_reformation_center = no
+			}
+			add_province_triggered_modifier = anglican_CoR_province
+		}
+	}
+}
+
+province_event = { # Makes sure Anglican gets up to 3 Holy Sites besides Rome & Jerusalem
+	id = ctr_events.10
+	title = "ctr_events.10.title"
+	desc = "ctr_events.10.desc"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		religion = anglican
+		# Not sure if this 'calc_true_if' works as I imagine
+		NOT = {
+			calc_true_if = {
+				any_province = {
+					has_province_modifier = anglican_CoR_province
+				}
+				amount = 3
+			}
+		}
+		NOT = { has_province_modifier = anglican_CoR_province }
+		NOT = {
+			any_neighbor_province = {
+				has_province_modifier = anglican_CoR_province
+			}
+		}
+	}
+	
+	immediate = {
+		add_province_triggered_modifier = anglican_CoR_province
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "ctr_events.10.OPTA"
+		ai_chance = { factor = 100 }
 	}
 }
 
@@ -1118,6 +1258,8 @@ country_event = {
 				}
 				remove_province_triggered_modifier = holy_site_hellenic_0118
 				remove_province_triggered_modifier = holy_site_catholic_0118
+				remove_province_triggered_modifier = holy_site_protestant_0118
+				remove_province_triggered_modifier = holy_site_reformed_0118
 			}
 			if = {
 				limit = { # Athens
@@ -1473,6 +1615,8 @@ country_event = {
 				remove_province_triggered_modifier = holy_site_jewish_0379
 				remove_province_triggered_modifier = holy_site_yazidi_0379
 				remove_province_triggered_modifier = holy_site_manichean_0379
+				remove_province_triggered_modifier = holy_site_protestant_0379
+				remove_province_triggered_modifier = holy_site_reformed_0379
 			}
 			if = {
 				limit = { # Constantinople
@@ -1861,33 +2005,11 @@ country_event = {
 				}
 				remove_province_triggered_modifier = holy_site_sikh_1948
 			}
-			if = {
-				limit = { # Roma
-					province_id = 118
-				}
-				remove_province_triggered_modifier = holy_site_protestant_0118
-			}
-			if = {
-				limit = { # Jerusalem
-					province_id = 379
-				}
-				remove_province_triggered_modifier = holy_site_protestant_0379
-			}
-			if = {
-				limit = { # Roma
-					province_id = 118
-				}
-				remove_province_triggered_modifier = holy_site_reformed_0118
-			}
-			if = {
-				limit = { # Jerusalem
-					province_id = 379
-				}
-				remove_province_triggered_modifier = holy_site_reformed_0379
-			}
 		}
 		clr_global_flag = holy_sites_added
 		clr_global_flag = sikh_holy_sites_added
+		clr_global_flag = protestant_holy_sites_added
+		clr_global_flag = reformed_holy_sites_added
 		clr_global_flag = prot_holy_sites_added
 		clr_global_flag = refo_holy_sites_added
 		# country_event = { 

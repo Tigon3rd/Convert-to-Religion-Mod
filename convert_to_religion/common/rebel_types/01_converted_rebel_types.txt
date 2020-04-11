@@ -397,7 +397,7 @@ finnish_pagan_reformed_rebels = {
 		}
 		if = {
 			limit = {
-				religion = animism
+				religion = finnish_pagan_reformed
 			}
 			add_country_modifier = {
 				name = "religious_intolerance"
@@ -407,9 +407,9 @@ finnish_pagan_reformed_rebels = {
 		if = {
 			limit = {
 				religion_group = pagan
-				NOT = { religion = animism }
+				NOT = { religion = finnish_pagan_reformed }
 			}
-			change_religion = animism
+			change_religion = finnish_pagan_reformed
 			force_converted = yes
 		}
 	}

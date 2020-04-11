@@ -1,10 +1,10 @@
-# namespace = ctr_modifiers
+# Province Triggered Modifiers
 
 ###########################################
 # HELLENIC
 ###########################################
 
-holy_site_hellenic_0118 = { # Roma
+holy_site_hellenic_rome = { # Roma
 	picture = "province_hellenic"
 	potential = {
 	}
@@ -25,7 +25,7 @@ holy_site_hellenic_0118 = { # Roma
 	}
 }
 
-holy_site_hellenic_0146 = { # Athens
+holy_site_hellenic_athens = { # Athens
 	picture = "province_hellenic"
 	potential = {
 	}
@@ -46,7 +46,7 @@ holy_site_hellenic_0146 = { # Athens
 	}
 }
 
-holy_site_hellenic_0358 = { # Alexandria
+holy_site_hellenic_alexandria = { # Alexandria
 	picture = "province_hellenic"
 	potential = {
 	}
@@ -67,7 +67,7 @@ holy_site_hellenic_0358 = { # Alexandria
 	}
 }
 
-holy_site_hellenic_0148 = { # Thessaloniki
+holy_site_hellenic_edessa = { # Thessaloniki
 	picture = "province_hellenic"
 	potential = {
 	}
@@ -88,7 +88,7 @@ holy_site_hellenic_0148 = { # Thessaloniki
 	}
 }
 
-holy_site_hellenic_2296 = { # Biga
+holy_site_hellenic_abydos = { # Biga
 	picture = "province_hellenic"
 	potential = {
 	}
@@ -113,7 +113,7 @@ holy_site_hellenic_2296 = { # Biga
 # ZOROASTRIAN
 ###########################################
 
-holy_site_zoroastrian_4332 = { # Siraf
+holy_site_zoroastrian_siraf = { # Siraf
 	picture = "province_zoroastrian"
 	potential = {
 	}
@@ -134,7 +134,7 @@ holy_site_zoroastrian_4332 = { # Siraf
 	}
 }
 
-holy_site_zoroastrian_4327 = { # Jask
+holy_site_zoroastrian_jask = { # Jask
 	picture = "province_zoroastrian"
 	potential = {
 	}
@@ -155,7 +155,7 @@ holy_site_zoroastrian_4327 = { # Jask
 	}
 }
 
-holy_site_zoroastrian_450 = { # Balkh
+holy_site_zoroastrian_balkh = { # Balkh
 	picture = "province_zoroastrian"
 	potential = {
 	}
@@ -176,7 +176,7 @@ holy_site_zoroastrian_450 = { # Balkh
 	}
 }
 
-holy_site_zoroastrian_2206 = { # Urmia
+holy_site_zoroastrian_urmia = { # Urmia
 	picture = "province_zoroastrian"
 	potential = {
 	}
@@ -197,7 +197,7 @@ holy_site_zoroastrian_2206 = { # Urmia
 	}
 }
 
-holy_site_zoroastrian_2236 = { # Bojnord
+holy_site_zoroastrian_bojnord = { # Bojnord
 	picture = "province_zoroastrian"
 	potential = {
 	}
@@ -226,20 +226,14 @@ holy_site_zoroastrian_2236 = { # Bojnord
 	# picture = "province_totemist"
 	# potential = {
 	# }
-
 	# trigger = {
 		# religion = totemism
 	# }
-
-	# local_missionary_strength = -0.05	
-	
-	# #Province scope
+	# local_missionary_strength = -0.05
+	# # Province scope
 	# on_activation = {
-	
 	# }
-	
 	# on_deactivation = {
-	
 	# }
 # }
 
@@ -247,7 +241,7 @@ holy_site_zoroastrian_2236 = { # Bojnord
 # MAYAN
 ###########################################
 
-holy_site_mayan_0842 = { # Peten
+holy_site_mayan_tikal = { # Peten
 	picture = "province_mayan"
 	potential = {
 	}
@@ -268,7 +262,7 @@ holy_site_mayan_0842 = { # Peten
 	}
 }
 
-holy_site_mayan_0843 = { # Belize
+holy_site_mayan_caracol = { # Belize
 	picture = "province_mayan"
 	potential = {
 	}
@@ -289,7 +283,7 @@ holy_site_mayan_0843 = { # Belize
 	}
 }
 
-holy_site_mayan_0846 = { # Yucatan
+holy_site_mayan_chichenitza = { # Yucatan
 	picture = "province_mayan"
 	potential = {
 	}
@@ -310,7 +304,7 @@ holy_site_mayan_0846 = { # Yucatan
 	}
 }
 
-holy_site_mayan_2632 = { # Xicallanco
+holy_site_mayan_palenque = { # Xicallanco
 	picture = "province_mayan"
 	potential = {
 	}
@@ -331,7 +325,7 @@ holy_site_mayan_2632 = { # Xicallanco
 	}
 }
 
-holy_site_mayan_2633 = { # Mani
+holy_site_mayan_uxmal = { # Ah Canul
 	picture = "province_mayan"
 	potential = {
 	}
@@ -356,7 +350,7 @@ holy_site_mayan_2633 = { # Mani
 # NAHUATL
 ###########################################
 
-holy_site_nahuatl_0852 = { # Mexico
+holy_site_nahuatl_tenochtitlan = { # Mexico
 	picture = "province_nahuatl"
 	potential = {
 	}
@@ -377,7 +371,7 @@ holy_site_nahuatl_0852 = { # Mexico
 	}
 }
 
-holy_site_nahuatl_0854 = { # Sayultecas
+holy_site_nahuatl_sayultecas = { # Sayultecas
 	picture = "province_nahuatl"
 	potential = {
 	}
@@ -398,7 +392,7 @@ holy_site_nahuatl_0854 = { # Sayultecas
 	}
 }
 
-holy_site_nahuatl_2626 = { # Tulucan
+holy_site_nahuatl_calixtlahuaca = { # Tulucan
 	picture = "province_nahuatl"
 	potential = {
 	}
@@ -419,7 +413,7 @@ holy_site_nahuatl_2626 = { # Tulucan
 	}
 }
 
-holy_site_nahuatl_2644 = { # Cholula
+holy_site_nahuatl_cholula = { # Cholula
 	picture = "province_nahuatl"
 	potential = {
 	}
@@ -440,7 +434,7 @@ holy_site_nahuatl_2644 = { # Cholula
 	}
 }
 
-holy_site_nahuatl_2647 = { # Cuetlaxtlan
+holy_site_nahuatl_coatepec = { # Cuetlaxtlan
 	picture = "province_nahuatl"
 	potential = {
 	}
@@ -465,7 +459,7 @@ holy_site_nahuatl_2647 = { # Cuetlaxtlan
 # INTI
 ###########################################
 
-holy_site_inti_0804 = { # Puno
+holy_site_inti_titicaca = { # Puno
 	picture = "province_inti"
 	potential = {
 	}
@@ -486,7 +480,7 @@ holy_site_inti_0804 = { # Puno
 	}
 }
 
-holy_site_inti_0806 = { # Nazca
+holy_site_inti_nazca = { # Nazca
 	picture = "province_inti"
 	potential = {
 	}
@@ -507,7 +501,7 @@ holy_site_inti_0806 = { # Nazca
 	}
 }
 
-holy_site_inti_0808 = { # Cuzco
+holy_site_inti_machupicchu = { # Cuzco
 	picture = "province_inti"
 	potential = {
 	}
@@ -528,7 +522,7 @@ holy_site_inti_0808 = { # Cuzco
 	}
 }
 
-holy_site_inti_0809 = { # Lima
+holy_site_inti_pachacamac = { # Lima
 	picture = "province_inti"
 	potential = {
 	}
@@ -549,7 +543,7 @@ holy_site_inti_0809 = { # Lima
 	}
 }
 
-holy_site_inti_0812 = { # Chanchan
+holy_site_inti_chanchan = { # Chanchan
 	picture = "province_inti"
 	potential = {
 	}
@@ -574,7 +568,7 @@ holy_site_inti_0812 = { # Chanchan
 # ROMUVA
 ###########################################
 
-holy_site_romuva_0038 = { # Riga
+holy_site_romuva_riga = { # Riga
 	picture = "province_romuva"
 	potential = {
 	}
@@ -595,7 +589,7 @@ holy_site_romuva_0038 = { # Riga
 	}
 }
 
-holy_site_romuva_0047 = { # Stralsund
+holy_site_romuva_rugen = { # Stralsund
 	picture = "province_romuva"
 	potential = {
 	}
@@ -616,7 +610,7 @@ holy_site_romuva_0047 = { # Stralsund
 	}
 }
 
-holy_site_romuva_0269 = { # Podlasia
+holy_site_romuva_podlasie = { # Podlasia
 	picture = "province_romuva"
 	potential = {
 	}
@@ -637,7 +631,7 @@ holy_site_romuva_0269 = { # Podlasia
 	}
 }
 
-holy_site_romuva_4244 = { # Trubchevsk (Pochep)
+holy_site_romuva_pochep = { # Trubchevsk (Pochep)
 	picture = "province_romuva"
 	potential = {
 	}
@@ -658,7 +652,7 @@ holy_site_romuva_4244 = { # Trubchevsk (Pochep)
 	}
 }
 
-holy_site_romuva_1859 = { # Chelmno (Culm, Torun)
+holy_site_romuva_chelminskie = { # Chelmno (Culm, Torun)
 	picture = "province_romuva"
 	potential = {
 	}
@@ -683,7 +677,7 @@ holy_site_romuva_1859 = { # Chelmno (Culm, Torun)
 # SLAVIC
 ###########################################
 
-holy_site_slavic_0047 = { # Stralsund
+holy_site_slavic_rugen = { # Stralsund
 	picture = "province_slavic"
 	potential = {
 	}
@@ -704,7 +698,7 @@ holy_site_slavic_0047 = { # Stralsund
 	}
 }
 
-holy_site_slavic_0256 = { # Plock
+holy_site_slavic_plock = { # Plock
 	picture = "province_slavic"
 	potential = {
 	}
@@ -725,7 +719,7 @@ holy_site_slavic_0256 = { # Plock
 	}
 }
 
-holy_site_slavic_0268 = { # Moldavia
+holy_site_slavic_husi = { # Moldavia
 	picture = "province_slavic"
 	potential = {
 	}
@@ -746,7 +740,7 @@ holy_site_slavic_0268 = { # Moldavia
 	}
 }
 
-holy_site_slavic_0280 = { # Kiev
+holy_site_slavic_kiev = { # Kiev
 	picture = "province_slavic"
 	potential = {
 	}
@@ -767,7 +761,7 @@ holy_site_slavic_0280 = { # Kiev
 	}
 }
 
-holy_site_slavic_2749 = { # Tikhvin
+holy_site_slavic_tikhvin = { # Tikhvin
 	picture = "province_slavic"
 	potential = {
 	}
@@ -792,7 +786,7 @@ holy_site_slavic_2749 = { # Tikhvin
 # SOUMENUSKO
 ###########################################
 
-holy_site_suomenusko_0030 = { # Viborg
+holy_site_suomenusko_raivola = { # Viborg
 	picture = "province_suomenusko"
 	potential = {
 	}
@@ -813,7 +807,7 @@ holy_site_suomenusko_0030 = { # Viborg
 	}
 }
 
-holy_site_suomenusko_0035 = { # Ösel
+holy_site_suomenusko_hiiumaa = { # Ösel
 	picture = "province_suomenusko"
 	potential = {
 	}
@@ -834,7 +828,7 @@ holy_site_suomenusko_0035 = { # Ösel
 	}
 }
 
-holy_site_suomenusko_0301 = { # Ryazan
+holy_site_suomenusko_ryazan = { # Ryazan
 	picture = "province_suomenusko"
 	potential = {
 	}
@@ -855,7 +849,7 @@ holy_site_suomenusko_0301 = { # Ryazan
 	}
 }
 
-holy_site_suomenusko_0305 = { # Perm
+holy_site_suomenusko_perm = { # Perm
 	picture = "province_suomenusko"
 	potential = {
 	}
@@ -876,7 +870,7 @@ holy_site_suomenusko_0305 = { # Perm
 	}
 }
 
-holy_site_suomenusko_2749 = { # Tikhvin
+holy_site_suomenusko_tikhvin = { # Tikhvin
 	picture = "province_suomenusko"
 	potential = {
 	}
@@ -901,7 +895,7 @@ holy_site_suomenusko_2749 = { # Tikhvin
 # NORSE
 ###########################################
 
-holy_site_norse_0001 = { # Uppland
+holy_site_norse_uppland = { # Uppland
 	picture = "province_norse"
 	potential = {
 	}
@@ -922,7 +916,7 @@ holy_site_norse_0001 = { # Uppland
 	}
 }
 
-holy_site_norse_0012 = { # Sjaelland
+holy_site_norse_lejre = { # Sjaelland
 	picture = "province_norse"
 	potential = {
 	}
@@ -943,7 +937,7 @@ holy_site_norse_0012 = { # Sjaelland
 	}
 }
 
-holy_site_norse_0020 = { # Trondelag
+holy_site_norse_maere = { # Trondelag
 	picture = "province_norse"
 	potential = {
 	}
@@ -964,7 +958,7 @@ holy_site_norse_0020 = { # Trondelag
 	}
 }
 
-holy_site_norse_0096 = { # Zeeland
+holy_site_norse_tholen = { # Zeeland
 	picture = "province_norse"
 	potential = {
 	}
@@ -985,7 +979,7 @@ holy_site_norse_0096 = { # Zeeland
 	}
 }
 
-holy_site_norse_2972 = { # Paderborn
+holy_site_norse_paderborn = { # Paderborn
 	picture = "province_norse"
 	potential = {
 	}
@@ -1010,7 +1004,7 @@ holy_site_norse_2972 = { # Paderborn
 # TENGRI
 ###########################################
 
-holy_site_tengri_0284 = { # Crimea
+holy_site_tengri_crimea = { # Crimea
 	picture = "province_tengri"
 	potential = {
 	}
@@ -1031,7 +1025,7 @@ holy_site_tengri_0284 = { # Crimea
 	}
 }
 
-holy_site_tengri_0464 = { # Astrakhan
+holy_site_tengri_itil = { # Astrakhan
 	picture = "province_tengri"
 	potential = {
 	}
@@ -1052,7 +1046,7 @@ holy_site_tengri_0464 = { # Astrakhan
 	}
 }
 
-holy_site_tengri_0716 = { # Tannu Uriankhai
+holy_site_tengri_otuken = { # Tannu Uriankhai
 	picture = "province_tengri"
 	potential = {
 	}
@@ -1073,7 +1067,7 @@ holy_site_tengri_0716 = { # Tannu Uriankhai
 	}
 }
 
-holy_site_tengri_1076 = { # Kurgan
+holy_site_tengri_tobol = { # Kurgan
 	picture = "province_tengri"
 	potential = {
 	}
@@ -1094,7 +1088,7 @@ holy_site_tengri_1076 = { # Kurgan
 	}
 }
 
-holy_site_tengri_1970 = { # Syghnak
+holy_site_tengri_syganak = { # Syghnak
 	picture = "province_tengri"
 	potential = {
 	}
@@ -1119,7 +1113,7 @@ holy_site_tengri_1970 = { # Syghnak
 # FETISHIST
 ###########################################
 
-holy_site_fetishist_0344 = { # Marrakech
+holy_site_fetishist_marrakech = { # Marrakech
 	picture = "province_fetishist"
 	potential = {
 	}
@@ -1140,7 +1134,7 @@ holy_site_fetishist_0344 = { # Marrakech
 	}
 }
 
-holy_site_fetishist_1132 = { # Timbuktu
+holy_site_fetishist_timbuktu = { # Timbuktu
 	picture = "province_fetishist"
 	potential = {
 	}
@@ -1161,7 +1155,7 @@ holy_site_fetishist_1132 = { # Timbuktu
 	}
 }
 
-holy_site_fetishist_2249 = { # Sibiridugu
+holy_site_fetishist_bamako = { # Sibiridugu
 	picture = "province_fetishist"
 	potential = {
 	}
@@ -1182,7 +1176,7 @@ holy_site_fetishist_2249 = { # Sibiridugu
 	}
 }
 
-holy_site_fetishist_2454 = { # Kairouan (El Kef)
+holy_site_fetishist_medjerda = { # Kairouan (El Kef)
 	picture = "province_fetishist"
 	potential = {
 	}
@@ -1203,7 +1197,7 @@ holy_site_fetishist_2454 = { # Kairouan (El Kef)
 	}
 }
 
-holy_site_fetishist_2463 = { # Maaskar
+holy_site_fetishist_atlas = { # Maaskar
 	picture = "province_fetishist"
 	potential = {
 	}
@@ -1232,20 +1226,14 @@ holy_site_fetishist_2463 = { # Maaskar
 	# picture = "province_animism"
 	# potential = {
 	# }
-
 	# trigger = {
 		# religion = animism
 	# }
-
 	# local_missionary_strength = -0.05	
-	
 	# #Province scope
 	# on_activation = {
-	
 	# }
-	
 	# on_deactivation = {
-	
 	# }
 # }
 
@@ -1253,7 +1241,7 @@ holy_site_fetishist_2463 = { # Maaskar
 # CATHOLIC
 ###########################################
 
-holy_site_catholic_0085 = { # Köln
+holy_site_catholic_koln = { # Köln
 	picture = "province_catholic"
 	potential = {
 	}
@@ -1274,7 +1262,7 @@ holy_site_catholic_0085 = { # Köln
 	}
 }
 
-holy_site_catholic_0118 = { # Roma
+holy_site_catholic_rome = { # Roma
 	picture = "province_catholic"
 	potential = {
 	}
@@ -1295,7 +1283,7 @@ holy_site_catholic_0118 = { # Roma
 	}
 }
 
-holy_site_catholic_0206 = { # Galicia
+holy_site_catholic_santiago = { # Galicia
 	picture = "province_catholic"
 	potential = {
 	}
@@ -1316,7 +1304,7 @@ holy_site_catholic_0206 = { # Galicia
 	}
 }
 
-holy_site_catholic_0235 = { # Kent
+holy_site_catholic_kent = { # Kent
 	picture = "province_catholic"
 	potential = {
 	}
@@ -1337,7 +1325,7 @@ holy_site_catholic_0235 = { # Kent
 	}
 }
 
-holy_site_catholic_0379 = { # Jerusalem
+holy_site_catholic_jerusalem = { # Jerusalem
 	picture = "province_catholic"
 	potential = {
 	}
@@ -1362,7 +1350,7 @@ holy_site_catholic_0379 = { # Jerusalem
 # ORTHODOX
 ###########################################
 
-holy_site_orthodox_0148 = { # Thessaloniki (Mount Athos)
+holy_site_orthodox_athos = { # Thessaloniki (Mount Athos)
 	picture = "province_orthodox"
 	potential = {
 	}
@@ -1383,7 +1371,7 @@ holy_site_orthodox_0148 = { # Thessaloniki (Mount Athos)
 	}
 }
 
-holy_site_orthodox_0151 = { # Constantinople
+holy_site_orthodox_hagiasophia = { # Constantinople
 	picture = "province_orthodox"
 	potential = {
 	}
@@ -1404,7 +1392,7 @@ holy_site_orthodox_0151 = { # Constantinople
 	}
 }
 
-holy_site_orthodox_0318 = { # Sugla
+holy_site_orthodox_lebedos = { # Sugla
 	picture = "province_orthodox"
 	potential = {
 	}
@@ -1425,7 +1413,7 @@ holy_site_orthodox_0318 = { # Sugla
 	}
 }
 
-holy_site_orthodox_0379 = { # Jerusalem
+holy_site_orthodox_jerusalem = { # Jerusalem
 	picture = "province_orthodox"
 	potential = {
 	}
@@ -1446,7 +1434,7 @@ holy_site_orthodox_0379 = { # Jerusalem
 	}
 }
 
-holy_site_orthodox_2313 = { # Antioch
+holy_site_orthodox_antioch = { # Antioch
 	picture = "province_orthodox"
 	potential = {
 	}
@@ -1471,7 +1459,7 @@ holy_site_orthodox_2313 = { # Antioch
 # MONOPHYSITE
 ###########################################
 
-holy_site_monophysite_0358 = { # Alexandria
+holy_site_monophysite_alexandria = { # Alexandria
 	picture = "province_monophysite"
 	potential = {
 	}
@@ -1492,7 +1480,7 @@ holy_site_monophysite_0358 = { # Alexandria
 	}
 }
 
-holy_site_monophysite_0379 = { # Jerusalem
+holy_site_monophysite_jerusalem = { # Jerusalem
 	picture = "province_monophysite"
 	potential = {
 	}
@@ -1513,7 +1501,7 @@ holy_site_monophysite_0379 = { # Jerusalem
 	}
 }
 
-holy_site_monophysite_1227 = { # Tigre (Aksum)
+holy_site_monophysite_aksum = { # Tigre (Aksum)
 	picture = "province_monophysite"
 	potential = {
 	}
@@ -1534,7 +1522,7 @@ holy_site_monophysite_1227 = { # Tigre (Aksum)
 	}
 }
 
-holy_site_monophysite_2322 = { # Wadi Halfa 
+holy_site_monophysite_napata = { # Wadi Halfa 
 	picture = "province_monophysite"
 	potential = {
 	}
@@ -1555,7 +1543,7 @@ holy_site_monophysite_2322 = { # Wadi Halfa
 	}
 }
 
-holy_site_monophysite_2313 = { # Antioch
+holy_site_monophysite_antioch = { # Antioch
 	picture = "province_monophysite"
 	potential = {
 	}
@@ -1580,7 +1568,7 @@ holy_site_monophysite_2313 = { # Antioch
 # COPTIC
 ###########################################
 
-holy_site_coptic_0358 = { # Alexandria
+holy_site_coptic_alexandria = { # Alexandria
 	picture = "province_coptic"
 	potential = {
 	}
@@ -1601,7 +1589,7 @@ holy_site_coptic_0358 = { # Alexandria
 	}
 }
 
-holy_site_coptic_0419 = { # Yerevan (Armenia)
+holy_site_coptic_yerevan = { # Yerevan (Armenia)
 	picture = "province_coptic"
 	potential = {
 	}
@@ -1622,7 +1610,7 @@ holy_site_coptic_0419 = { # Yerevan (Armenia)
 	}
 }
 
-holy_site_coptic_1227 = { # Tigre (Aksum)
+holy_site_coptic_aksum = { # Tigre (Aksum)
 	picture = "province_coptic"
 	potential = {
 	}
@@ -1643,7 +1631,7 @@ holy_site_coptic_1227 = { # Tigre (Aksum)
 	}
 }
 
-holy_site_coptic_1234 = { # Qasr Ibrim
+holy_site_coptic_qasribrim = { # Qasr Ibrim
 	picture = "province_coptic"
 	potential = {
 	}
@@ -1664,7 +1652,7 @@ holy_site_coptic_1234 = { # Qasr Ibrim
 	}
 }
 
-holy_site_coptic_2313 = { # Antioch
+holy_site_coptic_antioch = { # Antioch
 	picture = "province_coptic"
 	potential = {
 	}
@@ -1689,7 +1677,7 @@ holy_site_coptic_2313 = { # Antioch
 # NESTORIAN
 ###########################################
 
-holy_site_nestorian_0535 = { # Kochin
+holy_site_nestorian_kochin = { # Kochin
 	picture = "province_nestorian"
 	potential = {
 	}
@@ -1710,7 +1698,7 @@ holy_site_nestorian_0535 = { # Kochin
 	}
 }
 
-holy_site_nestorian_0379 = { # Jerusalem
+holy_site_nestorian_jerusalem = { # Jerusalem
 	picture = "province_nestorian"
 	potential = {
 	}
@@ -1731,7 +1719,7 @@ holy_site_nestorian_0379 = { # Jerusalem
 	}
 }
 
-holy_site_nestorian_0410 = { # Baghdad (Iraq-i-Arab)
+holy_site_nestorian_baghdad = { # Baghdad (Iraq-i-Arab)
 	picture = "province_nestorian"
 	potential = {
 	}
@@ -1752,7 +1740,7 @@ holy_site_nestorian_0410 = { # Baghdad (Iraq-i-Arab)
 	}
 }
 
-holy_site_nestorian_0428 = { # Rey
+holy_site_nestorian_rayy = { # Rey
 	picture = "province_nestorian"
 	potential = {
 	}
@@ -1773,7 +1761,7 @@ holy_site_nestorian_0428 = { # Rey
 	}
 }
 
-holy_site_nestorian_2308 = { # Urfa
+holy_site_nestorian_edessa = { # Urfa
 	picture = "province_nestorian"
 	potential = {
 	}
@@ -1798,7 +1786,7 @@ holy_site_nestorian_2308 = { # Urfa
 # SUNNI
 ###########################################
 
-holy_site_sunni_0225 = { # Cordoba
+holy_site_sunni_cordoba = { # Cordoba
 	picture = "province_sunni"
 	potential = {
 	}
@@ -1819,7 +1807,7 @@ holy_site_sunni_0225 = { # Cordoba
 	}
 }
 
-holy_site_sunni_0379 = { # Jerusalem
+holy_site_sunni_jerusalem = { # Jerusalem
 	picture = "province_sunni"
 	potential = {
 	}
@@ -1840,7 +1828,7 @@ holy_site_sunni_0379 = { # Jerusalem
 	}
 }
 
-holy_site_sunni_0384 = { # Medina
+holy_site_sunni_medina = { # Medina
 	picture = "province_sunni"
 	potential = {
 	}
@@ -1861,7 +1849,7 @@ holy_site_sunni_0384 = { # Medina
 	}
 }
 
-holy_site_sunni_0385 = { # Mecca
+holy_site_sunni_mecca = { # Mecca
 	picture = "province_sunni"
 	potential = {
 	}
@@ -1882,7 +1870,7 @@ holy_site_sunni_0385 = { # Mecca
 	}
 }
 
-holy_site_sunni_0410 = { # Baghdad (Iraq-i-Arab)
+holy_site_sunni_baghdad = { # Baghdad (Iraq-i-Arab)
 	picture = "province_sunni"
 	potential = {
 	}
@@ -1907,7 +1895,7 @@ holy_site_sunni_0410 = { # Baghdad (Iraq-i-Arab)
 # SHIA
 ###########################################
 
-holy_site_shia_0379 = { # Jerusalem
+holy_site_shia_jerusalem = { # Jerusalem
 	picture = "province_shia"
 	potential = {
 	}
@@ -1928,7 +1916,7 @@ holy_site_shia_0379 = { # Jerusalem
 	}
 }
 
-holy_site_shia_0382 = { # Damascus
+holy_site_shia_damascus = { # Damascus
 	picture = "province_shia"
 	potential = {
 	}
@@ -1949,7 +1937,7 @@ holy_site_shia_0382 = { # Damascus
 	}
 }
 
-holy_site_shia_0384 = { # Medina
+holy_site_shia_medina = { # Medina
 	picture = "province_shia"
 	potential = {
 	}
@@ -1970,7 +1958,7 @@ holy_site_shia_0384 = { # Medina
 	}
 }
 
-holy_site_shia_0385 = { # Mecca
+holy_site_shia_mecca = { # Mecca
 	picture = "province_shia"
 	potential = {
 	}
@@ -1991,7 +1979,7 @@ holy_site_shia_0385 = { # Mecca
 	}
 }
 
-holy_site_shia_2311 = { # Samawah
+holy_site_shia_nadjaf = { # Samawah
 	picture = "province_shia"
 	potential = {
 	}
@@ -2016,7 +2004,7 @@ holy_site_shia_2311 = { # Samawah
 # IBADI
 ###########################################
 
-holy_site_ibadi_0379 = { # Jerusalem
+holy_site_ibadi_jerusalem = { # Jerusalem
 	picture = "province_ibadi"
 	potential = {
 	}
@@ -2037,7 +2025,7 @@ holy_site_ibadi_0379 = { # Jerusalem
 	}
 }
 
-holy_site_ibadi_0384 = { # Medina
+holy_site_ibadi_medina = { # Medina
 	picture = "province_ibadi"
 	potential = {
 	}
@@ -2058,7 +2046,7 @@ holy_site_ibadi_0384 = { # Medina
 	}
 }
 
-holy_site_ibadi_0385 = { # Mecca
+holy_site_ibadi_mecca = { # Mecca
 	picture = "province_ibadi"
 	potential = {
 	}
@@ -2079,7 +2067,7 @@ holy_site_ibadi_0385 = { # Mecca
 	}
 }
 
-holy_site_ibadi_0403 = { # Nizwa
+holy_site_ibadi_nizwa = { # Nizwa
 	picture = "province_ibadi"
 	potential = {
 	}
@@ -2100,7 +2088,7 @@ holy_site_ibadi_0403 = { # Nizwa
 	}
 }
 
-holy_site_ibadi_2463 = { # Maaskar
+holy_site_ibadi_atlas = { # Maaskar
 	picture = "province_ibadi"
 	potential = {
 	}
@@ -2125,7 +2113,7 @@ holy_site_ibadi_2463 = { # Maaskar
 # JEWISH
 ###########################################
 
-holy_site_jewish_0365 = { # Sinai
+holy_site_jewish_sinai = { # Sinai
 	picture = "province_jewish"
 	potential = {
 	}
@@ -2146,7 +2134,7 @@ holy_site_jewish_0365 = { # Sinai
 	}
 }
 
-holy_site_jewish_0379 = { # Jerusalem
+holy_site_jewish_jerusalem = { # Jerusalem
 	picture = "province_jewish"
 	potential = {
 	}
@@ -2167,7 +2155,7 @@ holy_site_jewish_0379 = { # Jerusalem
 	}
 }
 
-holy_site_jewish_0382 = { # Damascus
+holy_site_jewish_damascus = { # Damascus
 	picture = "province_jewish"
 	potential = {
 	}
@@ -2188,7 +2176,7 @@ holy_site_jewish_0382 = { # Damascus
 	}
 }
 
-holy_site_jewish_0401 = { # Dhofar
+holy_site_jewish_dhofar = { # Dhofar
 	picture = "province_jewish"
 	potential = {
 	}
@@ -2209,7 +2197,7 @@ holy_site_jewish_0401 = { # Dhofar
 	}
 }
 
-holy_site_jewish_0414 = { # Hamadan
+holy_site_jewish_hamadan = { # Hamadan
 	picture = "province_jewish"
 	potential = {
 	}
@@ -2234,7 +2222,7 @@ holy_site_jewish_0414 = { # Hamadan
 # MAHAYANA
 ###########################################
 
-holy_site_mahayana_0558 = { # Patna
+holy_site_mahayana_bodhgaya = { # Patna
 	picture = "province_mahayana"
 	potential = {
 	}
@@ -2255,7 +2243,7 @@ holy_site_mahayana_0558 = { # Patna
 	}
 }
 
-holy_site_mahayana_0613 = { # Dong Kinh
+holy_site_mahayana_dongkinh = { # Dong Kinh
 	picture = "province_mahayana"
 	potential = {
 	}
@@ -2276,7 +2264,7 @@ holy_site_mahayana_0613 = { # Dong Kinh
 	}
 }
 
-holy_site_mahayana_1836 = { # Luoyang
+holy_site_mahayana_luoyang = { # Luoyang
 	picture = "province_mahayana"
 	potential = {
 	}
@@ -2297,7 +2285,7 @@ holy_site_mahayana_1836 = { # Luoyang
 	}
 }
 
-holy_site_mahayana_0740 = { # Malwa
+holy_site_mahayana_sanchi = { # Malwa
 	picture = "province_mahayana"
 	potential = {
 	}
@@ -2318,7 +2306,7 @@ holy_site_mahayana_0740 = { # Malwa
 	}
 }
 
-holy_site_mahayana_2077 = { # Margalla
+holy_site_mahayana_oddiyana = { # Margalla
 	picture = "province_mahayana"
 	potential = {
 	}
@@ -2343,7 +2331,7 @@ holy_site_mahayana_2077 = { # Margalla
 # THERAVADA
 ###########################################
 
-holy_site_theravada_0558 = { # Patna
+holy_site_theravada_bodhgaya = { # Patna
 	picture = "province_theravada"
 	potential = {
 	}
@@ -2364,7 +2352,7 @@ holy_site_theravada_0558 = { # Patna
 	}
 }
 
-holy_site_theravada_0609 = { # Angkor
+holy_site_theravada_angkorwat = { # Angkor
 	picture = "province_theravada"
 	potential = {
 	}
@@ -2385,7 +2373,7 @@ holy_site_theravada_0609 = { # Angkor
 	}
 }
 
-holy_site_theravada_0740 = { # Malwa
+holy_site_theravada_sanchi = { # Malwa
 	picture = "province_theravada"
 	potential = {
 	}
@@ -2406,7 +2394,7 @@ holy_site_theravada_0740 = { # Malwa
 	}
 }
 
-holy_site_theravada_2077 = { # Margalla
+holy_site_theravada_oddiyana = { # Margalla
 	picture = "province_theravada"
 	potential = {
 	}
@@ -2427,7 +2415,7 @@ holy_site_theravada_2077 = { # Margalla
 	}
 }
 
-holy_site_theravada_2099 = { # Kandy
+holy_site_theravada_lankantemples = { # Kandy
 	picture = "province_theravada"
 	potential = {
 	}
@@ -2452,7 +2440,7 @@ holy_site_theravada_2099 = { # Kandy
 # VAJRAYANA
 ###########################################
 
-holy_site_vajrayana_0558 = { # Patna
+holy_site_vajrayana_bodhgaya = { # Patna
 	picture = "province_vajrayana"
 	potential = {
 	}
@@ -2473,7 +2461,7 @@ holy_site_vajrayana_0558 = { # Patna
 	}
 }
 
-holy_site_vajrayana_0677 = { # Lhasa
+holy_site_vajrayana_lhasa = { # Lhasa
 	picture = "province_vajrayana"
 	potential = {
 	}
@@ -2494,7 +2482,7 @@ holy_site_vajrayana_0677 = { # Lhasa
 	}
 }
 
-holy_site_vajrayana_0740 = { # Malwa
+holy_site_vajrayana_sanchi = { # Malwa
 	picture = "province_vajrayana"
 	potential = {
 	}
@@ -2515,7 +2503,7 @@ holy_site_vajrayana_0740 = { # Malwa
 	}
 }
 
-holy_site_vajrayana_2077 = { # Margalla
+holy_site_vajrayana_oddiyana = { # Margalla
 	picture = "province_vajrayana"
 	potential = {
 	}
@@ -2536,7 +2524,7 @@ holy_site_vajrayana_2077 = { # Margalla
 	}
 }
 
-holy_site_vajrayana_2133 = { # Dege
+holy_site_vajrayana_dege = { # Dege
 	picture = "province_vajrayana"
 	potential = {
 	}
@@ -2561,7 +2549,7 @@ holy_site_vajrayana_2133 = { # Dege
 # HINDU
 ###########################################
 
-holy_site_hinduism_0740 = { # Malwa
+holy_site_hinduism_mahakaleshwar = { # Malwa
 	picture = "province_hindu"
 	potential = {
 	}
@@ -2582,7 +2570,7 @@ holy_site_hinduism_0740 = { # Malwa
 	}
 }
 
-holy_site_hinduism_0523 = { # Oudh
+holy_site_hinduism_janmabhoomi = { # Oudh
 	picture = "province_hindu"
 	potential = {
 	}
@@ -2603,7 +2591,7 @@ holy_site_hinduism_0523 = { # Oudh
 	}
 }
 
-holy_site_hinduism_0524 = { # Central Doab
+holy_site_hinduism_krishnajanmabhoomi = { # Central Doab
 	picture = "province_hindu"
 	potential = {
 	}
@@ -2624,7 +2612,7 @@ holy_site_hinduism_0524 = { # Central Doab
 	}
 }
 
-holy_site_hinduism_2052 = { # Navanagar
+holy_site_hinduism_dwarakadheesh = { # Navanagar
 	picture = "province_hindu"
 	potential = {
 	}
@@ -2645,7 +2633,7 @@ holy_site_hinduism_2052 = { # Navanagar
 	}
 }
 
-holy_site_hinduism_2095 = { # Varanasi
+holy_site_hinduism_varanasi = { # Varanasi
 	picture = "province_hindu"
 	potential = {
 	}
@@ -2670,7 +2658,7 @@ holy_site_hinduism_2095 = { # Varanasi
 # SIKH
 ###########################################
 
-holy_site_sikh_2075 = { # Doaba
+holy_site_sikh_amritsar = { # Doaba
 	picture = "province_sikh"
 	potential = {
 	}
@@ -2691,7 +2679,7 @@ holy_site_sikh_2075 = { # Doaba
 	}
 }
 
-holy_site_sikh_0558 = { # Patna
+holy_site_sikh_bodhgaya = { # Patna
 	picture = "province_sikh"
 	potential = {
 	}
@@ -2712,7 +2700,7 @@ holy_site_sikh_0558 = { # Patna
 	}
 }
 
-holy_site_sikh_1948 = { # Bidar
+holy_site_sikh_bidar = { # Bidar
 	picture = "province_sikh"
 	potential = {
 	}
@@ -2758,20 +2746,14 @@ holy_site_sikh = { # Random province
 	# picture = "province_sikh"
 	# potential = {
 	# }
-
 	# trigger = {
 		# religion = sikhism
 	# }
-
 	# local_missionary_strength = -0.05	
-	
 	# #Province scope
 	# on_activation = {
-	
 	# }
-	
 	# on_deactivation = {
-	
 	# }
 # }
 
@@ -2779,20 +2761,14 @@ holy_site_sikh = { # Random province
 	# picture = "province_sikh"
 	# potential = {
 	# }
-
 	# trigger = {
 		# religion = sikhism
 	# }
-
 	# local_missionary_strength = -0.05	
-	
 	# #Province scope
 	# on_activation = {
-	
 	# }
-	
 	# on_deactivation = {
-	
 	# }
 # }
 
@@ -2800,7 +2776,7 @@ holy_site_sikh = { # Random province
 # JAIN
 ###########################################
 
-holy_site_jain_0515 = { # Girnar
+holy_site_jain_girnar = { # Girnar
 	picture = "province_jain"
 	potential = {
 	}
@@ -2821,7 +2797,7 @@ holy_site_jain_0515 = { # Girnar
 	}
 }
 
-holy_site_jain_0533 = { # Mysore
+holy_site_jain_shravanabelagola = { # Mysore
 	picture = "province_jain"
 	potential = {
 	}
@@ -2842,7 +2818,7 @@ holy_site_jain_0533 = { # Mysore
 	}
 }
 
-holy_site_jain_2053 = { # Patan
+holy_site_jain_vadnagar = { # Patan
 	picture = "province_jain"
 	potential = {
 	}
@@ -2863,7 +2839,7 @@ holy_site_jain_2053 = { # Patan
 	}
 }
 
-holy_site_jain_2067 = { # Gorwar
+holy_site_jain_bhillamala = { # Gorwar
 	picture = "province_jain"
 	potential = {
 	}
@@ -2884,7 +2860,7 @@ holy_site_jain_2067 = { # Gorwar
 	}
 }
 
-holy_site_jain_2096 = { # Damin
+holy_site_jain_rajrappa = { # Damin
 	picture = "province_jain"
 	potential = {
 	}
@@ -2909,7 +2885,7 @@ holy_site_jain_2096 = { # Damin
 # ZUNIST
 ###########################################
 
-holy_site_zunist_0361 = { # Cairo
+holy_site_zunist_cairo = { # Cairo
 	picture = "province_zunist"
 	potential = {
 	}
@@ -2930,7 +2906,7 @@ holy_site_zunist_0361 = { # Cairo
 	}
 }
 
-holy_site_zunist_2236 = { # Bojnord
+holy_site_zunist_bojnord = { # Bojnord
 	picture = "province_zunist"
 	potential = {
 	}
@@ -2951,7 +2927,7 @@ holy_site_zunist_2236 = { # Bojnord
 	}
 }
 
-holy_site_zunist_0447 = { # Kandahar
+holy_site_zunist_kandahar = { # Kandahar
 	picture = "province_zunist"
 	potential = {
 	}
@@ -2972,7 +2948,7 @@ holy_site_zunist_0447 = { # Kandahar
 	}
 }
 
-holy_site_zunist_0451 = { # Kabulistan
+holy_site_zunist_kabul = { # Kabulistan
 	picture = "province_zunist"
 	potential = {
 	}
@@ -2993,7 +2969,7 @@ holy_site_zunist_0451 = { # Kabulistan
 	}
 }
 
-holy_site_zunist_0506 = { # Multan
+holy_site_zunist_multan = { # Multan
 	picture = "province_zunist"
 	potential = {
 	}
@@ -3018,7 +2994,7 @@ holy_site_zunist_0506 = { # Multan
 # CONFUCIAN
 ###########################################
 
-holy_site_confucian_0667 = { # Canton
+holy_site_confucian_canton = { # Canton
 	picture = "province_confucian"
 	potential = {
 	}
@@ -3039,7 +3015,7 @@ holy_site_confucian_0667 = { # Canton
 	}
 }
 
-holy_site_confucian_0679 = { # Chengdu
+holy_site_confucian_chengdu = { # Chengdu
 	picture = "province_confucian"
 	potential = {
 	}
@@ -3060,7 +3036,7 @@ holy_site_confucian_0679 = { # Chengdu
 	}
 }
 
-holy_site_confucian_0691 = { # Jinan [Mount Tai]
+holy_site_confucian_jinan = { # Jinan [Mount Tai]
 	picture = "province_confucian"
 	potential = {
 	}
@@ -3081,7 +3057,7 @@ holy_site_confucian_0691 = { # Jinan [Mount Tai]
 	}
 }
 
-holy_site_confucian_0700 = { # Xi'an
+holy_site_confucian_xian = { # Xi'an
 	picture = "province_confucian"
 	potential = {
 	}
@@ -3102,7 +3078,7 @@ holy_site_confucian_0700 = { # Xi'an
 	}
 }
 
-holy_site_confucian_1816 = { # Beijing
+holy_site_confucian_beijing = { # Beijing
 	picture = "province_confucian"
 	potential = {
 	}
@@ -3127,7 +3103,7 @@ holy_site_confucian_1816 = { # Beijing
 # SHINTO
 ###########################################
 
-holy_site_shinto_1018 = { # Izumo
+holy_site_shinto_izumo = { # Izumo
 	picture = "province_shinto"
 	potential = {
 	}
@@ -3148,7 +3124,7 @@ holy_site_shinto_1018 = { # Izumo
 	}
 }
 
-holy_site_shinto_1020 = { # Yamashiro/Kyoto
+holy_site_shinto_kyoto = { # Yamashiro/Kyoto
 	picture = "province_shinto"
 	potential = {
 	}
@@ -3169,7 +3145,7 @@ holy_site_shinto_1020 = { # Yamashiro/Kyoto
 	}
 }
 
-holy_site_shinto_1025 = { # Dewa
+holy_site_shinto_dewa = { # Dewa
 	picture = "province_shinto"
 	potential = {
 	}
@@ -3190,7 +3166,7 @@ holy_site_shinto_1025 = { # Dewa
 	}
 }
 
-holy_site_shinto_4359 = { # Ise
+holy_site_shinto_ise = { # Ise
 	picture = "province_shinto"
 	potential = {
 	}
@@ -3211,7 +3187,7 @@ holy_site_shinto_4359 = { # Ise
 	}
 }
 
-holy_site_shinto_1029 = { # Kai
+holy_site_shinto_mtfuji = { # Suruga
 	picture = "province_shinto"
 	potential = {
 	}
@@ -3257,7 +3233,7 @@ protestant_CoR_province = {
 	}
 }
 
-holy_site_protestant_0118 = { # Roma
+holy_site_protestant_rome = { # Roma
 	picture = "province_protestant"
 	potential = {
 	}
@@ -3278,7 +3254,7 @@ holy_site_protestant_0118 = { # Roma
 	}
 }
 
-holy_site_protestant_0379 = { # Jerusalem
+holy_site_protestant_jerusalem = { # Jerusalem
 	picture = "province_protestant"
 	potential = {
 	}
@@ -3324,7 +3300,7 @@ reformed_CoR_province = {
 	}
 }
 
-holy_site_reformed_0118 = { # Roma
+holy_site_reformed_rome = { # Roma
 	picture = "province_reformed"
 	potential = {
 	}
@@ -3345,7 +3321,7 @@ holy_site_reformed_0118 = { # Roma
 	}
 }
 
-holy_site_reformed_0379 = { # Jerusalem
+holy_site_reformed_jerusalem = { # Jerusalem
 	picture = "province_reformed"
 	potential = {
 	}
@@ -3367,10 +3343,10 @@ holy_site_reformed_0379 = { # Jerusalem
 }
 
 ###########################################
-# BON
+# BÖN
 ###########################################
 
-holy_site_bon_0450 = { # Balkh
+holy_site_bon_balkh = { # Balkh
 	picture = "province_bon"
 	potential = {
 	}
@@ -3391,7 +3367,7 @@ holy_site_bon_0450 = { # Balkh
 	}
 }
 
-holy_site_bon_0508 = { # Kashmir
+holy_site_bon_kashmir = { # Kashmir
 	picture = "province_bon"
 	potential = {
 	}
@@ -3412,7 +3388,7 @@ holy_site_bon_0508 = { # Kashmir
 	}
 }
 
-holy_site_bon_0677 = { # Lhasa
+holy_site_bon_lhasa = { # Lhasa
 	picture = "province_bon"
 	potential = {
 	}
@@ -3433,7 +3409,7 @@ holy_site_bon_0677 = { # Lhasa
 	}
 }
 
-holy_site_bon_0676 = { # Shigatse
+holy_site_bon_yungdrungling = { # Shigatse
 	picture = "province_bon"
 	potential = {
 	}
@@ -3454,7 +3430,7 @@ holy_site_bon_0676 = { # Shigatse
 	}
 }
 
-holy_site_bon_0710 = { # Hotan
+holy_site_bon_hotan = { # Hotan
 	picture = "province_bon"
 	potential = {
 	}
@@ -3479,7 +3455,7 @@ holy_site_bon_0710 = { # Hotan
 # YAZIDI
 ###########################################
 
-holy_site_yazidi_2236 = { # Bojnord
+holy_site_yazidi_bojnord = { # Bojnord
 	picture = "province_yazidi"
 	potential = {
 	}
@@ -3500,7 +3476,7 @@ holy_site_yazidi_2236 = { # Bojnord
 	}
 }
 
-holy_site_yazidi_4332 = { # Siraf
+holy_site_yazidi_siraf = { # Siraf
 	picture = "province_yazidi"
 	potential = {
 	}
@@ -3521,7 +3497,7 @@ holy_site_yazidi_4332 = { # Siraf
 	}
 }
 
-holy_site_yazidi_0411 = { # Mosul
+holy_site_yazidi_mosul = { # Mosul
 	picture = "province_yazidi"
 	potential = {
 	}
@@ -3542,7 +3518,7 @@ holy_site_yazidi_0411 = { # Mosul
 	}
 }
 
-holy_site_yazidi_0385 = { # Mecca
+holy_site_yazidi_mecca = { # Mecca
 	picture = "province_yazidi"
 	potential = {
 	}
@@ -3563,7 +3539,7 @@ holy_site_yazidi_0385 = { # Mecca
 	}
 }
 
-holy_site_yazidi_0379 = { # Jerusalem
+holy_site_yazidi_jerusalem = { # Jerusalem
 	picture = "province_yazidi"
 	potential = {
 	}
@@ -3588,7 +3564,7 @@ holy_site_yazidi_0379 = { # Jerusalem
 # MANICHEAN
 ###########################################
 
-holy_site_manichean_0412 = { # Khuzestan
+holy_site_manichean_khuzestan = { # Khuzestan
 	picture = "province_manichean"
 	potential = {
 	}
@@ -3609,7 +3585,7 @@ holy_site_manichean_0412 = { # Khuzestan
 	}
 }
 
-holy_site_manichean_0454 = { # Samarkand
+holy_site_manichean_samarkand = { # Samarkand
 	picture = "province_manichean"
 	potential = {
 	}
@@ -3630,7 +3606,7 @@ holy_site_manichean_0454 = { # Samarkand
 	}
 }
 
-holy_site_manichean_0410 = { # Baghdad
+holy_site_manichean_baghdad = { # Baghdad
 	picture = "province_manichean"
 	potential = {
 	}
@@ -3651,7 +3627,7 @@ holy_site_manichean_0410 = { # Baghdad
 	}
 }
 
-holy_site_manichean_0379 = { # Jerusalem
+holy_site_manichean_jerusalem = { # Jerusalem
 	picture = "province_manichean"
 	potential = {
 	}
@@ -3672,13 +3648,80 @@ holy_site_manichean_0379 = { # Jerusalem
 	}
 }
 
-holy_site_manichean_2077 = { # Margalla
+holy_site_manichean_margalla = { # Margalla
 	picture = "province_manichean"
 	potential = {
 	}
 
 	trigger = {
 		religion = manichean
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+###########################################
+# ANGLICAN
+###########################################
+
+anglican_CoR_province = {
+	picture = "province_anglican"
+	potential = {
+	}
+
+	trigger = {
+		religion = anglican
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_anglican_rome = { # Roma
+	picture = "province_anglican"
+	potential = {
+	}
+
+	trigger = {
+		religion = anglican
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_anglican_jerusalem = { # Jerusalem
+	picture = "province_anglican"
+	potential = {
+	}
+
+	trigger = {
+		religion = anglican
 	}
 
 	local_missionary_strength = -0.05	

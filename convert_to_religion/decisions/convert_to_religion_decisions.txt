@@ -15,34 +15,43 @@ country_decisions = {
 	convert_to_hellenic_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 118 # Roma
-				owns = 146 # Athens
-				owns = 358 # Alexandria
-				owns = 148 # Thessaloniki
-				owns = 2296 # Biga
-				any_owned_province = { religion = hellenic_pagan }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_hellenic_rome
+					has_province_modifier = holy_site_hellenic_athens
+					has_province_modifier = holy_site_hellenic_alexandria
+					has_province_modifier = holy_site_hellenic_edessa
+					# Hellenic Holy Site Edessa needs update to new province in 1.30 Emperor expansion. (New province named Siroz)
+					has_province_modifier = holy_site_hellenic_abydos
+					religion = hellenic_pagan
+				}
 			}
+				# owns = 118 # Roma
+				# owns = 146 # Athens
+				# owns = 358 # Alexandria
+				# owns = 148 # Thessaloniki
+				# owns = 2296 # Biga
 			NOT = { religion = hellenic_pagan }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 118
-				province_id = 146
-				province_id = 358
-				province_id = 148
-				province_id = 2296
+				has_province_modifier = holy_site_hellenic_rome
+				has_province_modifier = holy_site_hellenic_athens
+				has_province_modifier = holy_site_hellenic_alexandria
+				has_province_modifier = holy_site_hellenic_edessa
+				has_province_modifier = holy_site_hellenic_abydos
 			}
 		}
 		allow =  {
 			is_at_war = no
-			is_free_or_tributary_trigger = yes # This one as it would seem to also allow for tributaries, which I don't know if "is_subject = false" do! 
+			is_free_or_tributary_trigger = yes
 			stability = 1
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
-					#OR = {
 					calc_true_if = {
 						tag = ROM # Roman Empire
 						tag = BYZ # Byzantine Empire
@@ -112,6 +121,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes } # Need to test to see if this exclude the "bug" on the ingame textbox, whereas if your capital is also a holy site it gets listed and changed twice.
 				}
 				change_religion = hellenic_pagan
 				add_permanent_province_modifier = {
@@ -121,13 +131,12 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = ROM # Roman Empire
 						tag = BYZ # Byzantine Empire
 						tag = GRE # Greece
 						culture_group = byzantine
 						culture_group = latin
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -148,6 +157,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_hellenic_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -161,25 +178,34 @@ country_decisions = {
 	convert_to_zoroastrian_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 4332 # Siraf
-				owns = 4327 # Jask
-				owns = 450 # Balkh
-				owns = 2206 # Urmia
-				owns = 2236 # Bojnord
-				any_owned_province = { religion = zoroastrian }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_zoroastrian_siraf
+					has_province_modifier = holy_site_zoroastrian_jask
+					has_province_modifier = holy_site_zoroastrian_balkh
+					has_province_modifier = holy_site_zoroastrian_urmia
+					has_province_modifier = holy_site_zoroastrian_bojnord
+					religion = zoroastrian
+				}
 			}
+				# owns = 4332 # Siraf
+				# owns = 4327 # Jask
+				# owns = 450 # Balkh
+				# owns = 2206 # Urmia
+				# owns = 2236 # Bojnord
 			NOT = { religion = zoroastrian }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 4332
-				province_id = 4327
-				province_id = 450
-				province_id = 2206
-				province_id = 2236
+				has_province_modifier = holy_site_zoroastrian_siraf
+				has_province_modifier = holy_site_zoroastrian_jask
+				has_province_modifier = holy_site_zoroastrian_balkh
+				has_province_modifier = holy_site_zoroastrian_urmia
+				has_province_modifier = holy_site_zoroastrian_bojnord
 			}
 		}
 		allow =  {
@@ -267,14 +293,13 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = PER # Persia
 						tag = KHO # Khorasan
 						tag = BAL # Baluchistan
 						tag = AFG # Afghanistan
 						tag = TIM # Timurid
 						culture_group = iranian
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -295,6 +320,14 @@ country_decisions = {
 			add_country_modifier = {
 				name = holy_site_conversion_zeal
 				duration = 3650
+			}
+			set_country_flag = ctr_zoroastrian_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
 			}
 		}
 		ai_will_do = {
@@ -320,6 +353,16 @@ country_decisions = {
 	# convert_to_totemism_decision = {
 		# major = yes
 		# potential = {
+			# any_owned_province = {
+				# OR = {
+					# has_province_modifier = holy_site_
+					# has_province_modifier = holy_site_
+					# has_province_modifier = holy_site_
+					# has_province_modifier = holy_site_
+					# has_province_modifier = holy_site_
+					# religion = totemism
+				# }
+			# }
 			# OR = {
 				# owns = 
 				# owns = 
@@ -331,6 +374,8 @@ country_decisions = {
 			# NOT = { religion = totemism }
 			# NOT = { tag = PAP } # The Papal State
 			# NOT = { tag = HLR } # Holy Roman Empire
+			# is_defender_of_faith = no
+			# NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		# }
 		# provinces_to_highlight = {
 			# OR = {
@@ -423,11 +468,10 @@ country_decisions = {
 			# }
 			# if = {
 				# limit = {
-					# calc_true_if = {
+					# OR = {
 						# tag = 
 						# culture_group = 
-						# primary_culture =
-						# amount = 1
+						# primary_culture = 
 					# }
 				# }
 				# add_stability = -2
@@ -446,15 +490,29 @@ country_decisions = {
 				# name = holy_site_conversion_zeal
 				# duration = 3650
 			# }
+			# hidden_effect = {
+				# add_country_modifier = {
+					# name = has_recently_converted_ctr_timer
+					# duration = 3650
+					# hidden = yes
+				# }
+			# }
 		# }
 		# ai_will_do = {
 			# factor = 0
 		# }
 	# }
 	
+	
 	############################################################
 	###############             MAYAN            ###############
 	############################################################
+	
+	# FROM WIKIPEDIA:
+	# < Uxmal > along with < Palenque >, < Chichén >, and < Calakmul > in Mexico, 
+	# < Caracol > and < Xunantunich > in Belize, 
+	# and < Tikal > in Guatemala,
+	# is considered one of the most important archaeological sites of Maya culture.
 	
 	### For only 3 Holy Sites with them being from the 3 different religions ###
 	# province_id = 809 # Lima [Inca] (Sacred Site of Pachacamac)
@@ -467,34 +525,44 @@ country_decisions = {
 	
 	### For 5 Holy Sites with all being in the mayan religion area ### (these 2 with Yucatan means that 3 provences is right besides eachother, would probably be too much)
 	# province_id = 2652 # Ecab (Coba) (maybe switch with BELIZE)
-	# province_id = 2633 # Mani (Uxmal)
+	# province_id = 2651 # Ah Canul (Uxmal)
 	
 	### This didn't seem to fit, but could be used to maybe spread out the sites a little ###
 	# province_id = 843 # Belize (Caracol) (maybe switch with ECAB)
+	# province_id = 2636 # Chacujal (Copán)
 	
 	convert_to_mayan_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 842 # Peten
-				owns = 843 # Belize
-				owns = 846 # Yucatan
-				owns = 2632 # Xicallanco
-				owns = 2633 # Mani
-				any_owned_province = { religion = mesoamerican_religion }
-				# Maybe make it so you have to have your Capital in the american continents
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_mayan_tikal
+					has_province_modifier = holy_site_mayan_caracol
+					has_province_modifier = holy_site_mayan_chichenitza
+					has_province_modifier = holy_site_mayan_palenque
+					has_province_modifier = holy_site_mayan_uxmal
+					religion = mesoamerican_religion
+				}
 			}
+				# owns = 842 # Peten
+				# owns = 843 # Belize
+				# owns = 846 # Yucatan
+				# owns = 2632 # Xicallanco
+				# owns = 2651 # Ah Canul
+			# Maybe make it so you have to have your Capital in the american continents
 			NOT = { religion = mesoamerican_religion }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 842
-				province_id = 843
-				province_id = 846
-				province_id = 2632
-				province_id = 2633
+				has_province_modifier = holy_site_mayan_tikal
+				has_province_modifier = holy_site_mayan_caracol
+				has_province_modifier = holy_site_mayan_chichenitza
+				has_province_modifier = holy_site_mayan_palenque
+				has_province_modifier = holy_site_mayan_uxmal
 			}
 		}
 		allow =  {
@@ -519,7 +587,7 @@ country_decisions = {
 								province_id = 843
 								province_id = 846
 								province_id = 2632
-								province_id = 2633
+								province_id = 2651
 							}
 							is_core = ROOT
 							OR = {
@@ -538,7 +606,7 @@ country_decisions = {
 								province_id = 843
 								province_id = 846
 								province_id = 2632
-								province_id = 2633
+								province_id = 2651
 							}
 							is_core = ROOT
 							OR = {
@@ -567,7 +635,7 @@ country_decisions = {
 						province_id = 843
 						province_id = 846
 						province_id = 2632
-						province_id = 2633
+						province_id = 2651
 					}
 					OR = {
 						has_building = temple
@@ -582,14 +650,13 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = XIU # Xiu
 						tag = ITZ # Itza
 						tag = MAY # Maya
 						tag = COC # Cocomes
 						tag = KIC # Kiche
 						culture_group = maya
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -610,6 +677,14 @@ country_decisions = {
 			add_country_modifier = {
 				name = holy_site_conversion_zeal
 				duration = 3650
+			}
+			set_country_flag = ctr_mayan_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
 			}
 		}
 		ai_will_do = {
@@ -640,26 +715,35 @@ country_decisions = {
 	convert_to_nahuatl_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 852 # Mexico
-				owns = 854 # Sayultecas
-				owns = 2626 # Tulucan
-				owns = 2644 # Cholula
-				owns = 2647 # Cuetlaxtlan
-				any_owned_province = { religion = nahuatl }
-				# Maybe make it so you have to have your Capital in the american continents
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_nahuatl_tenochtitlan
+					has_province_modifier = holy_site_nahuatl_sayultecas
+					has_province_modifier = holy_site_nahuatl_calixtlahuaca
+					has_province_modifier = holy_site_nahuatl_cholula
+					has_province_modifier = holy_site_nahuatl_coatepec
+					religion = nahuatl
+				}
 			}
+				# owns = 852 # Mexico
+				# owns = 854 # Sayultecas
+				# owns = 2626 # Tulucan
+				# owns = 2644 # Cholula
+				# owns = 2647 # Cuetlaxtlan
+			# Maybe make it so you have to have your Capital in the american continents
 			NOT = { religion = nahuatl }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 852
-				province_id = 854
-				province_id = 2626
-				province_id = 2644
-				province_id = 2647
+				has_province_modifier = holy_site_nahuatl_tenochtitlan
+				has_province_modifier = holy_site_nahuatl_sayultecas
+				has_province_modifier = holy_site_nahuatl_calixtlahuaca
+				has_province_modifier = holy_site_nahuatl_cholula
+				has_province_modifier = holy_site_nahuatl_coatepec
 			}
 		}
 		allow =  {
@@ -749,7 +833,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = AZT # Aztec
 						tag = TAR # Tarascan
 						tag = TOT # Totonac
@@ -758,7 +842,6 @@ country_decisions = {
 						tag = TLA # Tlapanec
 						culture_group = central_american
 						culture_group = otomanguean
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -781,6 +864,14 @@ country_decisions = {
 			add_country_modifier = {
 				name = holy_site_conversion_zeal
 				duration = 3650
+			}
+			set_country_flag = ctr_nahuatl_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
 			}
 		}
 		ai_will_do = {
@@ -811,26 +902,35 @@ country_decisions = {
 	convert_to_inti_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 804 # Puno
-				owns = 806 # Nazca
-				owns = 808 # Cuzco
-				owns = 809 # Lima
-				owns = 812 # Chanchan
-				any_owned_province = { religion = inti }
-				# Maybe make it so you have to have your Capital in the american continents
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_inti_titicaca
+					has_province_modifier = holy_site_inti_nazca
+					has_province_modifier = holy_site_inti_machupicchu
+					has_province_modifier = holy_site_inti_pachacamac
+					has_province_modifier = holy_site_inti_chanchan
+					religion = inti
+				}
 			}
+				# owns = 804 # Puno
+				# owns = 806 # Nazca
+				# owns = 808 # Cuzco
+				# owns = 809 # Lima
+				# owns = 812 # Chanchan
+			# Maybe make it so you have to have your Capital in the american continents
 			NOT = { religion = inti }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 804
-				province_id = 806
-				province_id = 808
-				province_id = 809
-				province_id = 812
+				has_province_modifier = holy_site_inti_titicaca
+				has_province_modifier = holy_site_inti_nazca
+				has_province_modifier = holy_site_inti_machupicchu
+				has_province_modifier = holy_site_inti_pachacamac
+				has_province_modifier = holy_site_inti_chanchan
 			}
 		}
 		allow =  {
@@ -928,7 +1028,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = CSU # Cusco
 						tag = CRA # Charca
 						tag = CCQ # Calchaqui
@@ -945,7 +1045,6 @@ country_decisions = {
 						culture_group = andean_group
 						culture_group = chibchan
 						culture_group = maranon
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -977,6 +1076,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_inti_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -990,25 +1097,35 @@ country_decisions = {
 	convert_to_romuva_decision = { 
 		major = yes
 		potential = {
-			OR = {
-				owns = 38 # Riga
-				owns = 47 # Stralsund
-				owns = 269 # Podlasia
-				owns = 4244 # Trubchevsk (Pochep)
-				owns = 1859 # Chelmno (Culm, Torun)
-				any_owned_province = { religion = baltic_pagan_reformed }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_romuva_riga
+					has_province_modifier = holy_site_romuva_rugen
+					# Rugen becomes a new province in the new 1.30 Emperor expansion, so I will need to update all province ID's.
+					has_province_modifier = holy_site_romuva_podlasie
+					has_province_modifier = holy_site_romuva_pochep
+					has_province_modifier = holy_site_romuva_chelminskie
+					religion = baltic_pagan_reformed
+				}
 			}
+				# owns = 38 # Riga
+				# owns = 47 # Stralsund
+				# owns = 269 # Podlasia
+				# owns = 4244 # Trubchevsk (Pochep)
+				# owns = 1859 # Chelmno (Culm, Torun)
 			NOT = { religion = baltic_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 38
-				province_id = 47
-				province_id = 269
-				province_id = 4244
-				province_id = 1859
+				has_province_modifier = holy_site_romuva_riga
+				has_province_modifier = holy_site_romuva_rugen
+				has_province_modifier = holy_site_romuva_podlasie
+				has_province_modifier = holy_site_romuva_pochep
+				has_province_modifier = holy_site_romuva_chelminskie
 			}
 		}
 		allow =  {
@@ -1096,14 +1213,13 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = EST # Estonia
 						tag = LVA # Livonia
 						tag = LIT # Lithuania
 						tag = PRU # Prussia
 						primary_culture = prussian
 						culture_group = baltic
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -1125,6 +1241,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_romuva_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -1138,25 +1262,35 @@ country_decisions = {
 	convert_to_slavic_decision = { 
 		major = yes
 		potential = {
-			OR = {
-				owns = 47 # Stralsund
-				owns = 256 # Plock
-				owns = 268 # Moldavia
-				owns = 280 # Kiev
-				owns = 2749 # Tikhvin
-				any_owned_province = { religion = slavic_pagan_reformed }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_slavic_rugen
+					# Rugen becomes a new province in the new 1.30 Emperor expansion, so I will need to update all province ID's.
+					has_province_modifier = holy_site_slavic_plock
+					has_province_modifier = holy_site_slavic_husi
+					has_province_modifier = holy_site_slavic_kiev
+					has_province_modifier = holy_site_slavic_tikhvin
+					religion = slavic_pagan_reformed
+				}
 			}
+				# owns = 47 # Stralsund
+				# owns = 256 # Plock
+				# owns = 268 # Moldavia
+				# owns = 280 # Kiev
+				# owns = 2749 # Tikhvin
 			NOT = { religion = slavic_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 47
-				province_id = 256
-				province_id = 268
-				province_id = 280
-				province_id = 2749
+				has_province_modifier = holy_site_slavic_rugen
+				has_province_modifier = holy_site_slavic_plock
+				has_province_modifier = holy_site_slavic_husi
+				has_province_modifier = holy_site_slavic_kiev
+				has_province_modifier = holy_site_slavic_tikhvin
 			}
 		}
 		allow =  {
@@ -1251,7 +1385,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = BOH # Bohemia
 						tag = POL # Poland
 						tag = SIL # Silesia
@@ -1265,7 +1399,6 @@ country_decisions = {
 						culture_group = west_slavic
 						culture_group = east_slavic
 						primary_culture = slovak
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -1294,6 +1427,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_slavic_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -1307,25 +1448,34 @@ country_decisions = {
 	convert_to_suomenusko_decision = { 
 		major = yes
 		potential = {
-			OR = {
-				owns = 30 # Viborg
-				owns = 35 # Ösel
-				owns = 301 # Ryazan
-				owns = 305 # Perm
-				owns = 2749 # Tikhvin
-				any_owned_province = { religion = finnish_pagan_reformed }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_suomenusko_raivola
+					has_province_modifier = holy_site_suomenusko_hiiumaa
+					has_province_modifier = holy_site_suomenusko_ryazan
+					has_province_modifier = holy_site_suomenusko_perm
+					has_province_modifier = holy_site_suomenusko_tikhvin
+					religion = finnish_pagan_reformed
+				}
 			}
+				# owns = 30 # Viborg
+				# owns = 35 # Ösel
+				# owns = 301 # Ryazan
+				# owns = 305 # Perm
+				# owns = 2749 # Tikhvin
 			NOT = { religion = finnish_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 30
-				province_id = 35
-				province_id = 301
-				province_id = 305
-				province_id = 2749
+				has_province_modifier = holy_site_suomenusko_raivola
+				has_province_modifier = holy_site_suomenusko_hiiumaa
+				has_province_modifier = holy_site_suomenusko_ryazan
+				has_province_modifier = holy_site_suomenusko_perm
+				has_province_modifier = holy_site_suomenusko_tikhvin
 			}
 		}
 		allow =  {
@@ -1416,7 +1566,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = FIN # Finland
 						tag = SMI # Sami
 						tag = PRM # Perm
@@ -1426,7 +1576,6 @@ country_decisions = {
 						primary_culture = finnish
 						primary_culture = sapmi
 						culture_group = finno_ugric
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -1451,6 +1600,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_suomenusko_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -1464,25 +1621,34 @@ country_decisions = {
 	convert_to_norse_decision = { 
 		major = yes
 		potential = {
-			OR = {
-				owns = 1 # Uppland
-				owns = 12 # Sjaelland
-				owns = 20 # Trondelag
-				owns = 96 # Zeeland
-				owns = 2972 # Paderborn
-				any_owned_province = { religion = norse_pagan_reformed }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_norse_uppland
+					has_province_modifier = holy_site_norse_lejre
+					has_province_modifier = holy_site_norse_maere
+					has_province_modifier = holy_site_norse_tholen
+					has_province_modifier = holy_site_norse_paderborn
+					religion = norse_pagan_reformed
+				}
 			}
+				# owns = 1 # Uppland
+				# owns = 12 # Sjaelland
+				# owns = 20 # Trondelag
+				# owns = 96 # Zeeland
+				# owns = 2972 # Paderborn
 			NOT = { religion = norse_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 1
-				province_id = 12
-				province_id = 20
-				province_id = 96
-				province_id = 2972
+				has_province_modifier = holy_site_norse_uppland
+				has_province_modifier = holy_site_norse_lejre
+				has_province_modifier = holy_site_norse_maere
+				has_province_modifier = holy_site_norse_tholen
+				has_province_modifier = holy_site_norse_paderborn
 			}
 		}
 		allow =  {
@@ -1572,7 +1738,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = DAN # Denmark
 						tag = SWE # Sweden
 						tag = NOR # Norway
@@ -1581,7 +1747,6 @@ country_decisions = {
 						primary_culture = danish
 						primary_culture = swedish
 						primary_culture = norwegian
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -1605,6 +1770,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_norse_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -1618,25 +1791,34 @@ country_decisions = {
 	convert_to_tengri_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 284 # Crimea
-				owns = 464 # Astrakhan
-				owns = 716 # Tannu Uriankhai
-				owns = 1076 # Kurgan
-				owns = 1970 # Syghnak
-				any_owned_province = { religion = tengri_pagan_reformed }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_tengri_crimea
+					has_province_modifier = holy_site_tengri_itil
+					has_province_modifier = holy_site_tengri_otuken
+					has_province_modifier = holy_site_tengri_tobol
+					has_province_modifier = holy_site_tengri_syganak
+					religion = tengri_pagan_reformed
+				}
 			}
+				# owns = 284 # Crimea
+				# owns = 464 # Astrakhan
+				# owns = 716 # Tannu Uriankhai
+				# owns = 1076 # Kurgan
+				# owns = 1970 # Syghnak
 			NOT = { religion = tengri_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 284
-				province_id = 464
-				province_id = 716
-				province_id = 1076
-				province_id = 1970
+				has_province_modifier = holy_site_tengri_crimea
+				has_province_modifier = holy_site_tengri_itil
+				has_province_modifier = holy_site_tengri_otuken
+				has_province_modifier = holy_site_tengri_tobol
+				has_province_modifier = holy_site_tengri_syganak
 			}
 		}
 		allow =  {
@@ -1747,7 +1929,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = KHA # Mongolia
 						tag = CHH # Chahar
 						tag = KLK # Khalkha
@@ -1777,7 +1959,6 @@ country_decisions = {
 						culture_group = evenks
 						primary_culture = kamchatkan
 						primary_culture = manchu
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -1822,6 +2003,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_tengri_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -1835,25 +2024,34 @@ country_decisions = {
 	convert_to_fetishist_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 344 # Marrakech
-				owns = 1132 # Timbuktu
-				owns = 2249 # Sibiridugu
-				owns = 2454 # Kairouan (El Kef)
-				owns = 2463 # Maaskar
-				any_owned_province = { religion = shamanism }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_fetishist_marrakech
+					has_province_modifier = holy_site_fetishist_timbuktu
+					has_province_modifier = holy_site_fetishist_bamako
+					has_province_modifier = holy_site_fetishist_medjerda
+					has_province_modifier = holy_site_fetishist_atlas
+					religion = shamanism
+				}
 			}
+				# owns = 344 # Marrakech
+				# owns = 1132 # Timbuktu
+				# owns = 2249 # Sibiridugu
+				# owns = 2454 # Kairouan (El Kef)
+				# owns = 2463 # Maaskar
 			NOT = { religion = shamanism }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 344
-				province_id = 1132
-				province_id = 2249
-				province_id = 2454
-				province_id = 2463
+				has_province_modifier = holy_site_fetishist_marrakech
+				has_province_modifier = holy_site_fetishist_timbuktu
+				has_province_modifier = holy_site_fetishist_bamako
+				has_province_modifier = holy_site_fetishist_medjerda
+				has_province_modifier = holy_site_fetishist_atlas
 			}
 		}
 		allow =  {
@@ -1976,7 +2174,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						culture_group = maghrebi
 						culture_group = sahelian
 						culture_group = west_african
@@ -1985,7 +2183,6 @@ country_decisions = {
 						culture_group = great_lakes_group
 						culture_group = african
 						culture_group = southern_african
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -2008,6 +2205,14 @@ country_decisions = {
 			add_country_modifier = {
 				name = holy_site_conversion_zeal
 				duration = 3650
+			}
+			set_country_flag = ctr_fetishist_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
 			}
 		}
 		ai_will_do = {
@@ -2033,6 +2238,16 @@ country_decisions = {
 	# convert_to_animism_decision = {
 		# major = yes
 		# potential = {
+			# any_owned_province = {
+				# OR = {
+					# has_province_modifier = holy_site_
+					# has_province_modifier = holy_site_
+					# has_province_modifier = holy_site_
+					# has_province_modifier = holy_site_
+					# has_province_modifier = holy_site_
+					# religion = animism
+				# }
+			# }
 			# OR = {
 				# owns = 
 				# owns = 
@@ -2044,6 +2259,8 @@ country_decisions = {
 			# NOT = { religion = animism }
 			# NOT = { tag = PAP } # The Papal State
 			# NOT = { tag = HLR } # Holy Roman Empire
+			# is_defender_of_faith = no
+			# NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		# }
 		# provinces_to_highlight = {
 			# OR = {
@@ -2136,11 +2353,10 @@ country_decisions = {
 			# }
 			# if = {
 				# limit = {
-					# calc_true_if = {
+					# OR = {
 						# tag = 
 						# culture_group = 
-						# primary_culture =
-						# amount = 1
+						# primary_culture = 
 					# }
 				# }
 				# add_stability = -2
@@ -2159,6 +2375,13 @@ country_decisions = {
 				# name = holy_site_conversion_zeal
 				# duration = 3650
 			# }
+			# hidden_effect = {
+				# add_country_modifier = {
+					# name = has_recently_converted_ctr_timer
+					# duration = 3650
+					# hidden = yes
+				# }
+			# }
 		# }
 		# ai_will_do = {
 			# factor = 0
@@ -2172,23 +2395,32 @@ country_decisions = {
 	convert_to_catholic_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 85 # Köln
-				owns = 118 # Roma
-				owns = 206 # Galicia
-				owns = 235 # Kent
-				owns = 379 # Jerusalem
-				any_owned_province = { religion = catholic }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_catholic_koln
+					has_province_modifier = holy_site_catholic_rome
+					has_province_modifier = holy_site_catholic_santiago
+					has_province_modifier = holy_site_catholic_kent
+					has_province_modifier = holy_site_catholic_jerusalem
+					religion = catholic
+				}
 			}
+				# owns = 85 # Köln
+				# owns = 118 # Roma
+				# owns = 206 # Galicia
+				# owns = 235 # Kent
+				# owns = 379 # Jerusalem
 			NOT = { religion = catholic }
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 85
-				province_id = 118
-				province_id = 206
-				province_id = 235
-				province_id = 379
+				has_province_modifier = holy_site_catholic_koln
+				has_province_modifier = holy_site_catholic_rome
+				has_province_modifier = holy_site_catholic_santiago
+				has_province_modifier = holy_site_catholic_kent
+				has_province_modifier = holy_site_catholic_jerusalem
 			}
 		}
 		allow =  {
@@ -2281,7 +2513,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = PAP # The Papal State
 						tag = HLR # Holy Roman Empire
 						tag = KNI # The Knights
@@ -2292,7 +2524,6 @@ country_decisions = {
 						culture_group = french
 						culture_group = british
 						culture_group = germanic
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -2318,6 +2549,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_catholic_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -2331,24 +2570,33 @@ country_decisions = {
 	convert_to_orthodox_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 148 # Thessaloniki (Mount Athos)
-				owns = 151 # Constantinople
-				owns = 318 # Sugla
-				owns = 379 # Jerusalem
-				owns = 2313 # Antioch
-				any_owned_province = { religion = orthodox }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_orthodox_athos
+					has_province_modifier = holy_site_orthodox_hagiasophia
+					has_province_modifier = holy_site_orthodox_lebedos
+					has_province_modifier = holy_site_orthodox_jerusalem
+					has_province_modifier = holy_site_orthodox_antioch
+					religion = orthodox
+				}
 			}
+				# owns = 148 # Thessaloniki (Mount Athos)
+				# owns = 151 # Constantinople
+				# owns = 318 # Sugla
+				# owns = 379 # Jerusalem
+				# owns = 2313 # Antioch
 			NOT = { religion = orthodox }
 			NOT = { tag = PAP } # The Papal State
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 148
-				province_id = 151
-				province_id = 318
-				province_id = 379
-				province_id = 2313
+				has_province_modifier = holy_site_orthodox_athos
+				has_province_modifier = holy_site_orthodox_hagiasophia
+				has_province_modifier = holy_site_orthodox_lebedos
+				has_province_modifier = holy_site_orthodox_jerusalem
+				has_province_modifier = holy_site_orthodox_antioch
 			}
 		}
 		allow =  {
@@ -2453,7 +2701,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = GEO # Georgia
 						tag = CIR # Circassia
 						tag = ARM # Armenia
@@ -2477,7 +2725,6 @@ country_decisions = {
 						culture_group = south_slavic
 						culture_group = carpathian
 						culture_group = east_slavic
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -2516,6 +2763,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_orthodox_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -2531,24 +2786,33 @@ country_decisions = {
 	convert_to_monophysite_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 358 # Alexandria
-				owns = 379 # Jerusalem
-				owns = 1227 # Tigre (Aksum)
-				owns = 2322 # Wadi Halfa
-				owns = 2313 # Antioch
-				any_owned_province = { religion = monophysite }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_monophysite_alexandria
+					has_province_modifier = holy_site_monophysite_jerusalem
+					has_province_modifier = holy_site_monophysite_aksum
+					has_province_modifier = holy_site_monophysite_napata
+					has_province_modifier = holy_site_monophysite_antioch
+					religion = monophysite
+				}
 			}
+				# owns = 358 # Alexandria
+				# owns = 379 # Jerusalem
+				# owns = 1227 # Tigre (Aksum)
+				# owns = 2322 # Wadi Halfa
+				# owns = 2313 # Antioch
 			NOT = { religion = monophysite }
 			NOT = { tag = PAP } # The Papal State
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 358
-				province_id = 379
-				province_id = 1227
-				province_id = 2322
-				province_id = 2313
+				has_province_modifier = holy_site_monophysite_alexandria
+				has_province_modifier = holy_site_monophysite_jerusalem
+				has_province_modifier = holy_site_monophysite_aksum
+				has_province_modifier = holy_site_monophysite_napata
+				has_province_modifier = holy_site_monophysite_antioch
 			}
 		}
 		allow =  {
@@ -2643,7 +2907,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = ALO # Alodia
 						tag = MAK # Makuria
 						tag = MED # Medri Bahri
@@ -2657,7 +2921,6 @@ country_decisions = {
 						primary_culture = sidamo
 						primary_culture = amhara
 						primary_culture = armenian
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -2686,6 +2949,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_monophysite_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -2701,24 +2972,33 @@ country_decisions = {
 	convert_to_coptic_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 358 # Alexandria
-				owns = 419 # Yerevan (Armenia)
-				owns = 1227 # Tigre (Aksum)
-				owns = 1234 # Qasr Ibrim
-				owns = 2313 # Antioch
-				any_owned_province = { religion = coptic }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_coptic_alexandria
+					has_province_modifier = holy_site_coptic_yerevan
+					has_province_modifier = holy_site_coptic_aksum
+					has_province_modifier = holy_site_coptic_qasribrim
+					has_province_modifier = holy_site_coptic_antioch
+					religion = coptic
+				}
 			}
+				# owns = 358 # Alexandria
+				# owns = 419 # Yerevan (Armenia)
+				# owns = 1227 # Tigre (Aksum)
+				# owns = 1234 # Qasr Ibrim
+				# owns = 2313 # Antioch
 			NOT = { religion = coptic }
 			NOT = { tag = PAP } # The Papal State
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 358
-				province_id = 419
-				province_id = 1227
-				province_id = 1234
-				province_id = 2313
+				has_province_modifier = holy_site_coptic_alexandria
+				has_province_modifier = holy_site_coptic_yerevan
+				has_province_modifier = holy_site_coptic_aksum
+				has_province_modifier = holy_site_coptic_qasribrim
+				has_province_modifier = holy_site_coptic_antioch
 			}
 		}
 		allow =  {
@@ -2813,7 +3093,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = ALO # Alodia
 						tag = MAK # Makuria
 						tag = MED # Medri Bahri
@@ -2827,7 +3107,6 @@ country_decisions = {
 						primary_culture = sidamo
 						primary_culture = amhara
 						primary_culture = armenian
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -2856,6 +3135,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_coptic_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -2871,24 +3158,33 @@ country_decisions = {
 	convert_to_nestorian_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 535 # Kochin
-				owns = 379 # Jerusalem
-				owns = 410 # Baghdad (Iraq-i-Arab)
-				owns = 428 # Rey
-				owns = 2308 # Urfa
-				any_owned_province = { religion = nestorian }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_nestorian_kochin
+					has_province_modifier = holy_site_nestorian_jerusalem
+					has_province_modifier = holy_site_nestorian_baghdad
+					has_province_modifier = holy_site_nestorian_rayy
+					has_province_modifier = holy_site_nestorian_edessa
+					religion = nestorian
+				}
 			}
+				# owns = 535 # Kochin
+				# owns = 379 # Jerusalem
+				# owns = 410 # Baghdad (Iraq-i-Arab)
+				# owns = 428 # Rey
+				# owns = 2308 # Urfa
 			NOT = { religion = nestorian }
 			NOT = { tag = PAP } # The Papal State
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 535
-				province_id = 379
-				province_id = 410
-				province_id = 428
-				province_id = 2308
+				has_province_modifier = holy_site_nestorian_kochin
+				has_province_modifier = holy_site_nestorian_jerusalem
+				has_province_modifier = holy_site_nestorian_baghdad
+				has_province_modifier = holy_site_nestorian_rayy
+				has_province_modifier = holy_site_nestorian_edessa
 			}
 		}
 		allow =  {
@@ -2972,10 +3268,9 @@ country_decisions = {
 			}
 			# if = {
 				# limit = {
-					# calc_true_if = {
+					# OR = {
 						# tag = 
 						# culture_group = 
-						# amount = 1
 					# }
 				# }
 				# add_stability = -2
@@ -2992,6 +3287,14 @@ country_decisions = {
 			add_country_modifier = {
 				name = holy_site_conversion_zeal
 				duration = 3650
+			}
+			set_country_flag = ctr_nestorian_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
 			}
 		}
 		ai_will_do = {
@@ -3011,8 +3314,8 @@ country_decisions = {
 		potential = {
 			any_owned_province = {
 				OR = {
-					province_id = 118
-					province_id = 379
+					has_province_modifier = holy_site_protestant_rome
+					has_province_modifier = holy_site_protestant_jerusalem
 					has_province_modifier = protestant_CoR_province
 					religion = protestant
 				}
@@ -3027,12 +3330,14 @@ country_decisions = {
 			# }
 			NOT = { religion = protestant }
 			NOT = { tag = PAP } # The Papal State
+			is_defender_of_faith = no
 			is_religion_enabled = protestant
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 118
-				province_id = 379
+				has_province_modifier = holy_site_protestant_rome
+				has_province_modifier = holy_site_protestant_jerusalem
 				has_province_modifier = protestant_CoR_province
 			}
 		}
@@ -3141,7 +3446,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = SWE # Sweden
 						tag = DAN # Denmark
 						tag = SAX # Saxony
@@ -3152,7 +3457,6 @@ country_decisions = {
 						accepted_culture = saxon
 						accepted_culture = english
 						accepted_culture = czech
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -3178,6 +3482,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_protestant_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -3196,8 +3508,8 @@ country_decisions = {
 		potential = {
 			any_owned_province = {
 				OR = {
-					province_id = 118
-					province_id = 379
+					has_province_modifier = holy_site_reformed_rome
+					has_province_modifier = holy_site_reformed_jerusalem
 					has_province_modifier = reformed_CoR_province
 					religion = reformed
 				}
@@ -3212,12 +3524,14 @@ country_decisions = {
 			# }
 			NOT = { religion = reformed }
 			NOT = { tag = PAP } # The Papal State
+			is_defender_of_faith = no
 			is_religion_enabled = reformed
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 118
-				province_id = 379
+				has_province_modifier = holy_site_reformed_rome
+				has_province_modifier = holy_site_reformed_jerusalem
 				has_province_modifier = reformed_CoR_province
 			}
 		}
@@ -3326,7 +3640,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = PAL # The Palatinate
 						tag = FRI # Friesland
 						tag = SCO # Scotland
@@ -3337,7 +3651,6 @@ country_decisions = {
 						accepted_culture = scottish
 						accepted_culture = swiss
 						accepted_culture = hungarian
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -3363,6 +3676,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_reformed_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -3376,25 +3697,36 @@ country_decisions = {
 	convert_to_sunni_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 225 # Cordoba
-				owns = 379 # Jerusalem
-				owns = 384 # Medina
-				owns = 385 # Mecca
-				owns = 410 # Baghdad (Iraq-i-Arab)
-				any_owned_province = { religion = sunni }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_sunni_cordoba
+					has_province_modifier = holy_site_sunni_jerusalem
+					has_province_modifier = holy_site_sunni_medina
+					has_province_modifier = holy_site_sunni_mecca
+					has_province_modifier = holy_site_sunni_baghdad
+					religion = sunni
+				}
 			}
+			# OR = {
+				# owns = 225 # Cordoba
+				# owns = 379 # Jerusalem
+				# owns = 384 # Medina
+				# owns = 385 # Mecca
+				# owns = 410 # Baghdad (Iraq-i-Arab)
+			# }
 			NOT = { religion = sunni }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 225
-				province_id = 379
-				province_id = 384
-				province_id = 385
-				province_id = 410
+				has_province_modifier = holy_site_sunni_cordoba
+				has_province_modifier = holy_site_sunni_jerusalem
+				has_province_modifier = holy_site_sunni_medina
+				has_province_modifier = holy_site_sunni_mecca
+				has_province_modifier = holy_site_sunni_baghdad
 			}
 		}
 		allow =  {
@@ -3492,7 +3824,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = TUR # Ottomans
 						tag = MAM # Burgi (Mamluks)
 						tag = SYR # Syria
@@ -3509,7 +3841,6 @@ country_decisions = {
 						culture_group = turko_semitic
 						culture_group = iranian
 						culture_group = maghrebi
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -3541,6 +3872,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_sunni_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -3554,26 +3893,37 @@ country_decisions = {
 	convert_to_shia_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 379 # Jerusalem
-				owns = 382 # Damascus
-				owns = 384 # Medina
-				owns = 385 # Mecca
-				owns = 2311 # Samawah
-				# 2221 # Mashhad (Maybe change Damascus to this, especially since it already has a Religious Center modifier and to spread out the Holy Sites more)
-				any_owned_province = { religion = shiite }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_shia_jerusalem
+					has_province_modifier = holy_site_shia_damascus
+					has_province_modifier = holy_site_shia_medina
+					has_province_modifier = holy_site_shia_mecca
+					has_province_modifier = holy_site_shia_nadjaf
+					religion = shiite
+				}
 			}
+			# OR = {
+				# owns = 379 # Jerusalem
+				# owns = 382 # Damascus
+				# owns = 384 # Medina
+				# owns = 385 # Mecca
+				# owns = 2311 # Samawah
+				# 2221 # Mashhad (Maybe change Damascus to this, especially since it already has a Religious Center modifier and to spread out the Holy Sites more)
+			# }
 			NOT = { religion = shiite }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 379
-				province_id = 382
-				province_id = 384
-				province_id = 385
-				province_id = 2311
+				has_province_modifier = holy_site_shia_jerusalem
+				has_province_modifier = holy_site_shia_damascus
+				has_province_modifier = holy_site_shia_medina
+				has_province_modifier = holy_site_shia_mecca
+				has_province_modifier = holy_site_shia_nadjaf
 			}
 		}
 		allow =  {
@@ -3664,7 +4014,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = IRQ # Iraq
 						tag = ALH # Haasa
 						tag = PER # Persia
@@ -3674,7 +4024,6 @@ country_decisions = {
 						culture_group = turko_semitic
 						culture_group = iranian
 						culture_group = maghrebi
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -3699,6 +4048,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_shia_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -3712,25 +4069,36 @@ country_decisions = {
 	convert_to_ibadi_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 379 # Jerusalem
-				owns = 384 # Medina
-				owns = 385 # Mecca
-				owns = 403 # Nizwa
-				owns = 2463 # Maaskar
-				any_owned_province = { religion = ibadi }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_ibadi_jerusalem
+					has_province_modifier = holy_site_ibadi_medina
+					has_province_modifier = holy_site_ibadi_mecca
+					has_province_modifier = holy_site_ibadi_nizwa
+					has_province_modifier = holy_site_ibadi_atlas
+					religion = ibadi
+				}
 			}
+			# OR = {
+				# owns = 379 # Jerusalem
+				# owns = 384 # Medina
+				# owns = 385 # Mecca
+				# owns = 403 # Nizwa
+				# owns = 2463 # Maaskar
+			# }
 			NOT = { religion = ibadi }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 379
-				province_id = 384
-				province_id = 385
-				province_id = 403
-				province_id = 2463
+				has_province_modifier = holy_site_ibadi_jerusalem
+				has_province_modifier = holy_site_ibadi_medina
+				has_province_modifier = holy_site_ibadi_mecca
+				has_province_modifier = holy_site_ibadi_nizwa
+				has_province_modifier = holy_site_ibadi_atlas
 			}
 		}
 		allow =  {
@@ -3817,13 +4185,12 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = MZB # Mzab
 						tag = OMA # Oman
 						culture_group = turko_semitic
 						culture_group = iranian
 						culture_group = maghrebi
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -3844,6 +4211,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_ibadi_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -3857,25 +4232,36 @@ country_decisions = {
 	convert_to_jewish_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 365 # Sinai
-				owns = 379 # Jerusalem
-				owns = 382 # Damascus
-				owns = 401 # Dhofar
-				owns = 414 # Hamadan
-				any_owned_province = { religion = jewish }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_jewish_sinai
+					has_province_modifier = holy_site_jewish_jerusalem
+					has_province_modifier = holy_site_jewish_damascus
+					has_province_modifier = holy_site_jewish_dhofar
+					has_province_modifier = holy_site_jewish_hamadan
+					religion = jewish
+				}
 			}
+			# OR = {
+				# owns = 365 # Sinai
+				# owns = 379 # Jerusalem
+				# owns = 382 # Damascus
+				# owns = 401 # Dhofar
+				# owns = 414 # Hamadan
+			# }
 			NOT = { religion = jewish }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 365
-				province_id = 379
-				province_id = 382
-				province_id = 401
-				province_id = 414
+				has_province_modifier = holy_site_jewish_sinai
+				has_province_modifier = holy_site_jewish_jerusalem
+				has_province_modifier = holy_site_jewish_damascus
+				has_province_modifier = holy_site_jewish_dhofar
+				has_province_modifier = holy_site_jewish_hamadan
 			}
 		}
 		allow =  {
@@ -3960,11 +4346,10 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = ISR # Israel
 						# culture_group = none
 						primary_culture = hebrew
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -3983,6 +4368,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_jewish_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -3999,25 +4392,36 @@ country_decisions = {
 	convert_to_mahayana_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 558 # Patna
-				owns = 613 # Dong Kinh
-				owns = 1836 # Luoyang
-				owns = 740 # Malwa
-				owns = 2077 # Margalla
-				any_owned_province = { religion = mahayana }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_mahayana_bodhgaya
+					has_province_modifier = holy_site_mahayana_dongkinh
+					has_province_modifier = holy_site_mahayana_luoyang
+					has_province_modifier = holy_site_mahayana_sanchi
+					has_province_modifier = holy_site_mahayana_oddiyana
+					religion = mahayana
+				}
 			}
+			# OR = {
+				# owns = 558 # Patna
+				# owns = 613 # Dong Kinh
+				# owns = 1836 # Luoyang
+				# owns = 740 # Malwa
+				# owns = 2077 # Margalla
+			# }
 			NOT = { religion = mahayana }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 558
-				province_id = 613
-				province_id = 1836
-				province_id = 740
-				province_id = 2077
+				has_province_modifier = holy_site_mahayana_bodhgaya
+				has_province_modifier = holy_site_mahayana_dongkinh
+				has_province_modifier = holy_site_mahayana_luoyang
+				has_province_modifier = holy_site_mahayana_sanchi
+				has_province_modifier = holy_site_mahayana_oddiyana
 			}
 		}
 		allow =  {
@@ -4103,12 +4507,11 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = DAI
 						tag = TOK
 						tag = PGS
 						culture_group = mon_khmer
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -4128,6 +4531,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_mahayana_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -4144,25 +4555,36 @@ country_decisions = {
 	convert_to_theravada_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 558 # Patna
-				owns = 609 # Angkor
-				owns = 740 # Malwa
-				owns = 2077 # Margalla
-				owns = 2099 # Kandy
-				any_owned_province = { religion = buddhism }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_theravada_bodhgaya
+					has_province_modifier = holy_site_theravada_angkorwat
+					has_province_modifier = holy_site_theravada_sanchi
+					has_province_modifier = holy_site_theravada_oddiyana
+					has_province_modifier = holy_site_theravada_lankantemples
+					religion = buddhism
+				}
 			}
+			# OR = {
+				# owns = 558 # Patna
+				# owns = 609 # Angkor
+				# owns = 740 # Malwa
+				# owns = 2077 # Margalla
+				# owns = 2099 # Kandy
+			# }
 			NOT = { religion = buddhism } # Theravada
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 558
-				province_id = 609
-				province_id = 740
-				province_id = 2077
-				province_id = 2099
+				has_province_modifier = holy_site_theravada_bodhgaya
+				has_province_modifier = holy_site_theravada_angkorwat
+				has_province_modifier = holy_site_theravada_sanchi
+				has_province_modifier = holy_site_theravada_oddiyana
+				has_province_modifier = holy_site_theravada_lankantemples
 			}
 		}
 		allow =  {
@@ -4264,7 +4686,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = SST
 						tag = ARK
 						tag = AVA
@@ -4285,7 +4707,6 @@ country_decisions = {
 						culture_group = burman
 						culture_group = thai
 						culture_group = mon_khmer
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -4321,6 +4742,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_theravada_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -4339,25 +4768,36 @@ country_decisions = {
 	convert_to_vajrayana_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 558 # Patna
-				owns = 677 # Lhasa
-				owns = 740 # Malwa
-				owns = 2077 # Margalla
-				owns = 2133 # Dege
-				any_owned_province = { religion = vajrayana }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_vajrayana_bodhgaya
+					has_province_modifier = holy_site_vajrayana_lhasa
+					has_province_modifier = holy_site_vajrayana_sanchi
+					has_province_modifier = holy_site_vajrayana_oddiyana
+					has_province_modifier = holy_site_vajrayana_dege
+					religion = vajrayana
+				}
 			}
+			# OR = {
+				# owns = 558 # Patna
+				# owns = 677 # Lhasa
+				# owns = 740 # Malwa
+				# owns = 2077 # Margalla
+				# owns = 2133 # Dege
+			# }
 			NOT = { religion = vajrayana }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 558
-				province_id = 677
-				province_id = 740
-				province_id = 2077
-				province_id = 2133
+				has_province_modifier = holy_site_vajrayana_bodhgaya
+				has_province_modifier = holy_site_vajrayana_lhasa
+				has_province_modifier = holy_site_vajrayana_sanchi
+				has_province_modifier = holy_site_vajrayana_oddiyana
+				has_province_modifier = holy_site_vajrayana_dege
 			}
 		}
 		allow =  {
@@ -4448,7 +4888,7 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = TIB
 						tag = BHU
 						tag = GUG
@@ -4458,7 +4898,6 @@ country_decisions = {
 						tag = ZUN
 						tag = LDK
 						primary_culture = tibetan
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -4483,6 +4922,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_vajrayana_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -4499,25 +4946,36 @@ country_decisions = {
 	convert_to_hinduism_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 740 # Malwa
-				owns = 523 # Oudh
-				owns = 524 # Central Doab
-				owns = 2052 # Navanagar
-				owns = 2095 # Varanasi
-				any_owned_province = { religion = hinduism }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_hinduism_mahakaleshwar
+					has_province_modifier = holy_site_hinduism_janmabhoomi
+					has_province_modifier = holy_site_hinduism_krishnajanmabhoomi
+					has_province_modifier = holy_site_hinduism_dwarakadheesh
+					has_province_modifier = holy_site_hinduism_varanasi
+					religion = hinduism
+				}
 			}
+			# OR = {
+				# owns = 740 # Malwa
+				# owns = 523 # Oudh
+				# owns = 524 # Central Doab
+				# owns = 2052 # Navanagar
+				# owns = 2095 # Varanasi
+			# }
 			NOT = { religion = hinduism }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 740
-				province_id = 523
-				province_id = 524
-				province_id = 2052
-				province_id = 2095
+				has_province_modifier = holy_site_hinduism_mahakaleshwar
+				has_province_modifier = holy_site_hinduism_janmabhoomi
+				has_province_modifier = holy_site_hinduism_krishnajanmabhoomi
+				has_province_modifier = holy_site_hinduism_dwarakadheesh
+				has_province_modifier = holy_site_hinduism_varanasi
 			}
 		}
 		allow =  {
@@ -4605,14 +5063,13 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						# tag = 
 						culture_group = dravidian
 						culture_group = central_indic
 						culture_group = eastern_aryan
 						culture_group = hindusthani
 						culture_group = western_aryan
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -4633,6 +5090,14 @@ country_decisions = {
 			add_country_modifier = {
 				name = holy_site_conversion_zeal
 				duration = 3650
+			}
+			set_country_flag = ctr_hindu_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
 			}
 		}
 		ai_will_do = {
@@ -4657,9 +5122,9 @@ country_decisions = {
 		potential = {
 			any_owned_province = {
 				OR = {
-					province_id = 2075
-					province_id = 558
-					province_id = 1948
+					has_province_modifier = holy_site_sikh_amritsar
+					has_province_modifier = holy_site_sikh_bodhgaya
+					has_province_modifier = holy_site_sikh_bidar
 					has_province_modifier = holy_site_sikh
 					religion = sikhism
 				}
@@ -4668,15 +5133,15 @@ country_decisions = {
 			NOT = { religion = sikhism }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 2075
-				province_id = 558
-				province_id = 1948
+				has_province_modifier = holy_site_sikh_amritsar
+				has_province_modifier = holy_site_sikh_bodhgaya
+				has_province_modifier = holy_site_sikh_bidar
 				has_province_modifier = holy_site_sikh
-				# province_id = 507
-				# province_id = 2062
 			}
 		}
 		allow =  {
@@ -4767,14 +5232,13 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						# tag = 
 						culture_group = dravidian
 						culture_group = central_indic
 						culture_group = eastern_aryan
 						culture_group = hindusthani
 						culture_group = western_aryan
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -4796,6 +5260,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_sikh_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -4812,25 +5284,36 @@ country_decisions = {
 	convert_to_jainism_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 515 # Girnar
-				owns = 533 # Mysore
-				owns = 2053 # Patan
-				owns = 2067 # Gorwar
-				owns = 2096 # Damin
-				any_owned_province = { religion = jain }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_jain_girnar
+					has_province_modifier = holy_site_jain_shravanabelagola
+					has_province_modifier = holy_site_jain_vadnagar
+					has_province_modifier = holy_site_jain_bhillamala
+					has_province_modifier = holy_site_jain_rajrappa
+					religion = jain
+				}
 			}
+			# OR = {
+				# owns = 515 # Girnar
+				# owns = 533 # Mysore
+				# owns = 2053 # Patan
+				# owns = 2067 # Gorwar
+				# owns = 2096 # Damin
+			# }
 			NOT = { religion = jain }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 515
-				province_id = 533
-				province_id = 2053
-				province_id = 2067
-				province_id = 2096
+				has_province_modifier = holy_site_jain_girnar
+				has_province_modifier = holy_site_jain_shravanabelagola
+				has_province_modifier = holy_site_jain_vadnagar
+				has_province_modifier = holy_site_jain_bhillamala
+				has_province_modifier = holy_site_jain_rajrappa
 			}
 		}
 		allow =  {
@@ -4918,14 +5401,13 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						# tag = 
 						culture_group = dravidian
 						culture_group = central_indic
 						culture_group = eastern_aryan
 						culture_group = hindusthani
 						culture_group = western_aryan
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -4947,6 +5429,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_jain_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -4963,25 +5453,36 @@ country_decisions = {
 	convert_to_zunist_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 361 # Cairo
-				owns = 2236 # Bojnord
-				owns = 447 # Kandahar
-				owns = 451 # Kabulistan
-				owns = 506 # Multan
-				any_owned_province = { religion = zun_pagan_reformed }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_zunist_cairo
+					has_province_modifier = holy_site_zunist_bojnord
+					has_province_modifier = holy_site_zunist_kandahar
+					has_province_modifier = holy_site_zunist_kabul
+					has_province_modifier = holy_site_zunist_multan
+					religion = zun_pagan_reformed
+				}
 			}
+			# OR = {
+				# owns = 361 # Cairo
+				# owns = 2236 # Bojnord
+				# owns = 447 # Kandahar
+				# owns = 451 # Kabulistan
+				# owns = 506 # Multan
+			# }
 			NOT = { religion = zun_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 361
-				province_id = 2236
-				province_id = 447
-				province_id = 451
-				province_id = 506
+				has_province_modifier = holy_site_zunist_cairo
+				has_province_modifier = holy_site_zunist_bojnord
+				has_province_modifier = holy_site_zunist_kandahar
+				has_province_modifier = holy_site_zunist_kabul
+				has_province_modifier = holy_site_zunist_multan
 			}
 		}
 		allow =  {
@@ -5065,10 +5566,9 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						# tag = ZAB # Zabul
 						primary_culture = afghani
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -5085,6 +5585,14 @@ country_decisions = {
 			add_country_modifier = {
 				name = holy_site_conversion_zeal
 				duration = 3650
+			}
+			set_country_flag = ctr_zunist_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
 			}
 		}
 		ai_will_do = {
@@ -5103,25 +5611,36 @@ country_decisions = {
 	convert_to_confucianism_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 667 # Canton
-				owns = 679 # Chengdu
-				owns = 691 # Jinan [Mount Tai]
-				owns = 700 # Xi'an
-				owns = 1816 # Beijing
-				any_owned_province = { religion = confucianism }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_confucian_canton
+					has_province_modifier = holy_site_confucian_chengdu
+					has_province_modifier = holy_site_confucian_jinan
+					has_province_modifier = holy_site_confucian_xian
+					has_province_modifier = holy_site_confucian_beijing
+					religion = confucianism
+				}
 			}
+			# OR = {
+				# owns = 667 # Canton
+				# owns = 679 # Chengdu
+				# owns = 691 # Jinan [Mount Tai]
+				# owns = 700 # Xi'an
+				# owns = 1816 # Beijing
+			# }
 			NOT = { religion = confucianism }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 667
-				province_id = 679
-				province_id = 691
-				province_id = 700
-				province_id = 1816
+				has_province_modifier = holy_site_confucian_canton
+				has_province_modifier = holy_site_confucian_chengdu
+				has_province_modifier = holy_site_confucian_jinan
+				has_province_modifier = holy_site_confucian_xian
+				has_province_modifier = holy_site_confucian_beijing
 			}
 		}
 		allow =  {
@@ -5206,11 +5725,10 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = MNG
 						culture_group = east_asian
 						culture_group = korean_g
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -5229,6 +5747,14 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			set_country_flag = ctr_confucian_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 0
@@ -5240,33 +5766,43 @@ country_decisions = {
 	############################################################
 	
 	# Provinces mostly taken from Refumee's mod 'Holy Sites'.
+	# Updated with research from Google and Wikipedia.
 	
 	# date = 712.1.1 
 	
 	convert_to_shinto_decision = {
 		major = yes
 		potential = {
-			OR = {
-				owns = 1018 # Izumo
-				owns = 1020 # Yamashiro/Kyoto
-				owns = 1025 # Dewa
-				# owns = 1030 # Owari (province was split in two (Owari and Ise), which means that Ise should be the right one)
-				# owns = 1832 # Yamato
-				owns = 4359 # Ise (Ise Grand Shrine - Religious Center)
-				owns = 1029 # Kai (to spread out the Holy Sites more. Maybe use 1028 # Musashi or 1839 # Suruga, research needed)
-				any_owned_province = { religion = shinto }
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_shinto_izumo
+					has_province_modifier = holy_site_shinto_kyoto
+					has_province_modifier = holy_site_shinto_dewa
+					has_province_modifier = holy_site_shinto_ise
+					has_province_modifier = holy_site_shinto_mtfuji
+					religion = shinto
+				}
 			}
+			# OR = {
+				# owns = 1018 # Izumo
+				# owns = 1020 # Yamashiro/Kyoto
+				# owns = 1025 # Dewa
+				# owns = 4359 # Ise (Ise Grand Shrine - Religious Center)
+				# owns = 1839 # Suruga
+			# }
 			NOT = { religion = shinto }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 1018
-				province_id = 1020
-				province_id = 1025
-				province_id = 4359
-				province_id = 1029
+				has_province_modifier = holy_site_shinto_izumo
+				has_province_modifier = holy_site_shinto_kyoto
+				has_province_modifier = holy_site_shinto_dewa
+				has_province_modifier = holy_site_shinto_ise
+				has_province_modifier = holy_site_shinto_mtfuji
 			}
 		}
 		allow =  {
@@ -5287,7 +5823,7 @@ country_decisions = {
 								province_id = 1020
 								province_id = 1025
 								province_id = 4359
-								province_id = 1029
+								province_id = 1839
 							}
 							is_core = ROOT
 							OR = {
@@ -5306,7 +5842,7 @@ country_decisions = {
 								province_id = 1020
 								province_id = 1025
 								province_id = 4359
-								province_id = 1029
+								province_id = 1839
 							}
 							is_core = ROOT
 							OR = {
@@ -5335,7 +5871,7 @@ country_decisions = {
 						province_id = 1020
 						province_id = 1025
 						province_id = 4359
-						province_id = 1029
+						province_id = 1839
 					}
 					OR = {
 						has_building = temple
@@ -5350,10 +5886,9 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					calc_true_if = {
+					OR = {
 						tag = JAP
 						culture_group = japanese_g
-						amount = 1
 					}
 				}
 				add_stability = -2
@@ -5370,6 +5905,14 @@ country_decisions = {
 			add_country_modifier = {
 				name = holy_site_conversion_zeal
 				duration = 3650
+			}
+			set_country_flag = ctr_shinto_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
 			}
 		}
 		ai_will_do = {

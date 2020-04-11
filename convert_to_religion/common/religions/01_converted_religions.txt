@@ -46,6 +46,8 @@ pagan = {
 			fort_maintenance_modifier = -0.1
 			shock_damage_received = -0.1
 		}
+		
+		personal_deity = yes
 		heretic = { OLD_ROMUVA }	
 	}
 	finnish_pagan_reformed = {
@@ -59,6 +61,8 @@ pagan = {
 			num_accepted_cultures = 1
 			defensiveness = 0.1
 		}
+		
+		personal_deity = yes
 		heretic = { OLD_SUOMENUSKO }	
 	}
 	slavic_pagan_reformed = {
@@ -75,6 +79,7 @@ pagan = {
 			advisor_pool = 1
 		}
 		
+		personal_deity = yes
 		heretic = { OLD_SLAVIC }	
 	}
 	zun_pagan_reformed = {
@@ -122,6 +127,7 @@ pagan = {
 			development_cost = -0.1
 		}
 		
+		personal_deity = yes
 		heretic = { GOAT_SKULL }	
 	}
 }
