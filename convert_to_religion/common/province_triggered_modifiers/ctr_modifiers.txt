@@ -13,15 +13,15 @@ holy_site_hellenic_rome = { # Roma
 		religion = hellenic_pagan
 	}
 
-	local_missionary_strength = -0.05	
+	local_missionary_strength = -0.05
 	
 	#Province scope
 	on_activation = {
-	
+		
 	}
 	
 	on_deactivation = {
-	
+		
 	}
 }
 
@@ -38,11 +38,11 @@ holy_site_hellenic_athens = { # Athens
 	
 	#Province scope
 	on_activation = {
-	
+		
 	}
 	
 	on_deactivation = {
-	
+		
 	}
 }
 
@@ -59,11 +59,11 @@ holy_site_hellenic_alexandria = { # Alexandria
 	
 	#Province scope
 	on_activation = {
-	
+		
 	}
 	
 	on_deactivation = {
-	
+		
 	}
 }
 
@@ -80,11 +80,11 @@ holy_site_hellenic_edessa = { # Thessaloniki
 	
 	#Province scope
 	on_activation = {
-	
+		
 	}
 	
 	on_deactivation = {
-	
+		
 	}
 }
 
@@ -101,11 +101,11 @@ holy_site_hellenic_abydos = { # Biga
 	
 	#Province scope
 	on_activation = {
-	
+		
 	}
 	
 	on_deactivation = {
-	
+		
 	}
 }
 

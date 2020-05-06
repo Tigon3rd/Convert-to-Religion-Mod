@@ -66,3 +66,7 @@
  convert_to_confucianism_decision_desc: "By owning Holy sites we can convert our religion to Confucianism."
  convert_to_shinto_decision_title: "Convert to the Shinto Religion"
  convert_to_shinto_decision_desc: "By owning Holy sites we can convert our religion to Shintoism."
+ open_ctr_religious_debate_title: "Open Religious Debate"
+ open_ctr_religious_debate_desc: "Shows the available 'Convert to Religion' decisions that lets you convert via Holy Sites."
+ close_ctr_religious_debate_title: "Close Religious Debate"
+ close_ctr_religious_debate_desc: "Hides the available 'Convert to Religion' decisions that lets you convert via Holy Sites."
