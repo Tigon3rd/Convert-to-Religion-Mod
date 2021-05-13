@@ -67,7 +67,7 @@ holy_site_hellenic_alexandria = { # Alexandria
 	}
 }
 
-holy_site_hellenic_edessa = { # Thessaloniki
+holy_site_hellenic_edessa = { # Thessaloniki # changed to Siroz
 	picture = "province_hellenic"
 	potential = {
 	}
@@ -113,7 +113,7 @@ holy_site_hellenic_abydos = { # Biga
 # ZOROASTRIAN
 ###########################################
 
-holy_site_zoroastrian_siraf = { # Siraf
+holy_site_zoroastrian_larestan = { # Larestan
 	picture = "province_zoroastrian"
 	potential = {
 	}
@@ -134,7 +134,7 @@ holy_site_zoroastrian_siraf = { # Siraf
 	}
 }
 
-holy_site_zoroastrian_jask = { # Jask
+holy_site_zoroastrian_daman = { # Daman
 	picture = "province_zoroastrian"
 	potential = {
 	}
@@ -155,7 +155,7 @@ holy_site_zoroastrian_jask = { # Jask
 	}
 }
 
-holy_site_zoroastrian_balkh = { # Balkh
+holy_site_zoroastrian_khiva = { # Khiva
 	picture = "province_zoroastrian"
 	potential = {
 	}
@@ -176,7 +176,7 @@ holy_site_zoroastrian_balkh = { # Balkh
 	}
 }
 
-holy_site_zoroastrian_urmia = { # Urmia
+holy_site_zoroastrian_shirvan = { # Shirvan
 	picture = "province_zoroastrian"
 	potential = {
 	}
@@ -197,7 +197,7 @@ holy_site_zoroastrian_urmia = { # Urmia
 	}
 }
 
-holy_site_zoroastrian_bojnord = { # Bojnord
+holy_site_zoroastrian_sabzevar = { # Sabzevar
 	picture = "province_zoroastrian"
 	potential = {
 	}
@@ -589,7 +589,7 @@ holy_site_romuva_riga = { # Riga
 	}
 }
 
-holy_site_romuva_rugen = { # Stralsund
+holy_site_romuva_rugen = { # Rügen
 	picture = "province_romuva"
 	potential = {
 	}
@@ -677,7 +677,7 @@ holy_site_romuva_chelminskie = { # Chelmno (Culm, Torun)
 # SLAVIC
 ###########################################
 
-holy_site_slavic_rugen = { # Stralsund
+holy_site_slavic_rugen = { # Rügen
 	picture = "province_slavic"
 	potential = {
 	}
@@ -3735,3 +3735,71 @@ holy_site_anglican_jerusalem = { # Jerusalem
 	
 	}
 }
+
+###########################################
+# Hussite
+###########################################
+
+holy_site_hussite_prague = {
+	picture = "province_hussite"
+	potential = {
+	}
+
+	trigger = {
+		religion = hussite
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_hussite_rome = { # Roma
+	picture = "province_hussite"
+	potential = {
+	}
+
+	trigger = {
+		religion = hussite
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+holy_site_hussite_jerusalem = { # Jerusalem
+	picture = "province_hussite"
+	potential = {
+	}
+
+	trigger = {
+		religion = hussite
+	}
+
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+

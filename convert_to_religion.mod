@@ -5,5 +5,5 @@ tags={
 	"Religion"
 }
 name="Convert to Religion"
-supported_version="1.29.*.*"
+supported_version="1.30.*.*"
 path="C:/Users/prima/Documents/Paradox Interactive/Europa Universalis IV/mod/convert_to_religion"

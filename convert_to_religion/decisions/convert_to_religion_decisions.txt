@@ -21,8 +21,7 @@ country_decisions = {
 					has_province_modifier = holy_site_hellenic_rome
 					has_province_modifier = holy_site_hellenic_athens
 					has_province_modifier = holy_site_hellenic_alexandria
-					has_province_modifier = holy_site_hellenic_edessa
-					# Hellenic Holy Site Edessa needs update to new province in 1.30 Emperor expansion. (New province named Siroz)
+					has_province_modifier = holy_site_hellenic_edessa # New province is 4702 Siroz
 					has_province_modifier = holy_site_hellenic_abydos
 					religion = hellenic_pagan
 				}
@@ -67,7 +66,7 @@ country_decisions = {
 								province_id = 118
 								province_id = 146
 								province_id = 358
-								province_id = 148
+								province_id = 4702
 								province_id = 2296
 							}
 							is_core = ROOT
@@ -86,7 +85,7 @@ country_decisions = {
 								province_id = 118
 								province_id = 146
 								province_id = 358
-								province_id = 148
+								province_id = 4702
 								province_id = 2296
 							}
 							is_core = ROOT
@@ -106,7 +105,7 @@ country_decisions = {
 				change_religion = hellenic_pagan
 				add_permanent_province_modifier = {
 					name = "religious_zeal_at_conv"
-					duration = 4500
+					duration = 4500 # Seems like the normal missionary conversion is 30 years or a duration of 10950 days.
 				}
 			}
 			every_owned_province = {
@@ -115,14 +114,14 @@ country_decisions = {
 						province_id = 118
 						province_id = 146
 						province_id = 358
-						province_id = 148
+						province_id = 4702
 						province_id = 2296
 					}
 					OR = {
 						has_building = temple
 						has_building = cathedral
 					}
-					NOT = { is_capital = yes } # Need to test to see if this exclude the "bug" on the ingame textbox, whereas if your capital is also a holy site it gets listed and changed twice.
+					NOT = { is_capital = yes }
 				}
 				change_religion = hellenic_pagan
 				add_permanent_province_modifier = {
@@ -182,19 +181,19 @@ country_decisions = {
 			has_country_flag = ctr_religious_debate
 			any_owned_province = {
 				OR = {
-					has_province_modifier = holy_site_zoroastrian_siraf
-					has_province_modifier = holy_site_zoroastrian_jask
-					has_province_modifier = holy_site_zoroastrian_balkh
-					has_province_modifier = holy_site_zoroastrian_urmia
-					has_province_modifier = holy_site_zoroastrian_bojnord
+					has_province_modifier = holy_site_zoroastrian_larestan
+					has_province_modifier = holy_site_zoroastrian_daman
+					has_province_modifier = holy_site_zoroastrian_khiva
+					has_province_modifier = holy_site_zoroastrian_shirvan
+					has_province_modifier = holy_site_zoroastrian_sabzevar
 					religion = zoroastrian
 				}
 			}
-				# owns = 4332 # Siraf
-				# owns = 4327 # Jask
-				# owns = 450 # Balkh
-				# owns = 2206 # Urmia
-				# owns = 2236 # Bojnord
+				# owns = 4332 # Siraf - New Update: 2223 # Larestan
+				# owns = 4327 # Jask - New Update: 4430 # Daman
+				# owns = 450 # Balkh - New Update: 441 # Khiva
+				# owns = 2206 # Urmia - New Update: 421 # Shirvan
+				# owns = 2236 # Bojnord - New Update: 2235 # Sabzevar
 			NOT = { religion = zoroastrian }
 			NOT = { tag = PAP } # The Papal State
 			NOT = { tag = HLR } # Holy Roman Empire
@@ -203,11 +202,11 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				has_province_modifier = holy_site_zoroastrian_siraf
-				has_province_modifier = holy_site_zoroastrian_jask
-				has_province_modifier = holy_site_zoroastrian_balkh
-				has_province_modifier = holy_site_zoroastrian_urmia
-				has_province_modifier = holy_site_zoroastrian_bojnord
+				has_province_modifier = holy_site_zoroastrian_larestan
+				has_province_modifier = holy_site_zoroastrian_daman
+				has_province_modifier = holy_site_zoroastrian_khiva
+				has_province_modifier = holy_site_zoroastrian_shirvan
+				has_province_modifier = holy_site_zoroastrian_sabzevar
 			}
 		}
 		allow =  {
@@ -228,11 +227,11 @@ country_decisions = {
 					calc_true_if = {
 						all_owned_province = {
 							OR = {
-								province_id = 4332
-								province_id = 4327
-								province_id = 450
-								province_id = 2206
-								province_id = 2236
+								province_id = 2223
+								province_id = 4430
+								province_id = 441
+								province_id = 421
+								province_id = 2235
 							}
 							is_core = ROOT
 							OR = {
@@ -247,11 +246,11 @@ country_decisions = {
 					calc_true_if = {
 						all_owned_province = {
 							OR = {
-								province_id = 4332
-								province_id = 4327
-								province_id = 450
-								province_id = 2206
-								province_id = 2236
+								province_id = 2223
+								province_id = 4430
+								province_id = 441
+								province_id = 421
+								province_id = 2235
 							}
 							is_core = ROOT
 							OR = {
@@ -276,16 +275,17 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 4332
-						province_id = 4327
-						province_id = 450
-						province_id = 2206
-						province_id = 2236
+						province_id = 2223
+						province_id = 4430
+						province_id = 441
+						province_id = 421
+						province_id = 2235
 					}
 					OR = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = zoroastrian
 				add_permanent_province_modifier = {
@@ -645,6 +645,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = mesoamerican_religion
 				add_permanent_province_modifier = {
@@ -829,6 +830,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = nahuatl
 				add_permanent_province_modifier = {
@@ -1025,6 +1027,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = inti
 				add_permanent_province_modifier = {
@@ -1108,7 +1111,6 @@ country_decisions = {
 				OR = {
 					has_province_modifier = holy_site_romuva_riga
 					has_province_modifier = holy_site_romuva_rugen
-					# Rugen becomes a new province in the new 1.30 Emperor expansion, so I will need to update all province ID's.
 					has_province_modifier = holy_site_romuva_podlasie
 					has_province_modifier = holy_site_romuva_pochep
 					has_province_modifier = holy_site_romuva_chelminskie
@@ -1116,7 +1118,7 @@ country_decisions = {
 				}
 			}
 				# owns = 38 # Riga
-				# owns = 47 # Stralsund
+				# owns = 47 # Stralsund # 4745 # Rügen
 				# owns = 269 # Podlasia
 				# owns = 4244 # Trubchevsk (Pochep)
 				# owns = 1859 # Chelmno (Culm, Torun)
@@ -1154,7 +1156,7 @@ country_decisions = {
 						all_owned_province = {
 							OR = {
 								province_id = 38
-								province_id = 47
+								province_id = 4745
 								province_id = 269
 								province_id = 4244
 								province_id = 1859
@@ -1173,7 +1175,7 @@ country_decisions = {
 						all_owned_province = {
 							OR = {
 								province_id = 38
-								province_id = 47
+								province_id = 4745
 								province_id = 269
 								province_id = 4244
 								province_id = 1859
@@ -1202,7 +1204,7 @@ country_decisions = {
 				limit = {
 					OR = {
 						province_id = 38
-						province_id = 47
+						province_id = 4745
 						province_id = 269
 						province_id = 4244
 						province_id = 1859
@@ -1211,6 +1213,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = baltic_pagan_reformed
 				add_permanent_province_modifier = {
@@ -1273,7 +1276,6 @@ country_decisions = {
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_slavic_rugen
-					# Rugen becomes a new province in the new 1.30 Emperor expansion, so I will need to update all province ID's.
 					has_province_modifier = holy_site_slavic_plock
 					has_province_modifier = holy_site_slavic_husi
 					has_province_modifier = holy_site_slavic_kiev
@@ -1326,7 +1328,7 @@ country_decisions = {
 					calc_true_if = {
 						all_owned_province = {
 							OR = {
-								province_id = 47
+								province_id = 4745
 								province_id = 256
 								province_id = 268
 								province_id = 280
@@ -1345,7 +1347,7 @@ country_decisions = {
 					calc_true_if = {
 						all_owned_province = {
 							OR = {
-								province_id = 47
+								province_id = 4745
 								province_id = 256
 								province_id = 268
 								province_id = 280
@@ -1374,7 +1376,7 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 47
+						province_id = 4745
 						province_id = 256
 						province_id = 268
 						province_id = 280
@@ -1384,6 +1386,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = slavic_pagan_reformed
 				add_permanent_province_modifier = {
@@ -1566,6 +1569,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = finnish_pagan_reformed
 				add_permanent_province_modifier = {
@@ -1739,6 +1743,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = norse_pagan_reformed
 				add_permanent_province_modifier = {
@@ -1931,6 +1936,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = tengri_pagan_reformed
 				add_permanent_province_modifier = {
@@ -2177,6 +2183,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = shamanism
 				add_permanent_province_modifier = {
@@ -2518,6 +2525,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = catholic
 				add_permanent_province_modifier = {
@@ -2707,6 +2715,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = orthodox
 				add_permanent_province_modifier = {
@@ -2914,6 +2923,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = monophysite
 				add_permanent_province_modifier = {
@@ -3101,6 +3111,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = coptic
 				add_permanent_province_modifier = {
@@ -3277,6 +3288,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = nestorian
 				add_permanent_province_modifier = {
@@ -3456,6 +3468,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = protestant
 				add_permanent_province_modifier = {
@@ -3651,6 +3664,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = reformed
 				add_permanent_province_modifier = {
@@ -3836,6 +3850,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = sunni
 				add_permanent_province_modifier = {
@@ -4027,6 +4042,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = shiite
 				add_permanent_province_modifier = {
@@ -4199,6 +4215,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = ibadi
 				add_permanent_province_modifier = {
@@ -4361,6 +4378,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = jewish
 				add_permanent_province_modifier = {
@@ -4523,6 +4541,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = mahayana
 				add_permanent_province_modifier = {
@@ -4703,6 +4722,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = buddhism
 				add_permanent_province_modifier = {
@@ -4906,6 +4926,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = vajrayana
 				add_permanent_province_modifier = {
@@ -5082,6 +5103,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = hinduism
 				add_permanent_province_modifier = {
@@ -5252,6 +5274,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = sikhism
 				add_permanent_province_modifier = {
@@ -5422,6 +5445,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = jain
 				add_permanent_province_modifier = {
@@ -5588,6 +5612,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = zun_pagan_reformed
 				add_permanent_province_modifier = {
@@ -5748,6 +5773,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = confucianism
 				add_permanent_province_modifier = {
@@ -5910,6 +5936,7 @@ country_decisions = {
 						has_building = temple
 						has_building = cathedral
 					}
+					NOT = { is_capital = yes }
 				}
 				change_religion = shinto
 				add_permanent_province_modifier = {

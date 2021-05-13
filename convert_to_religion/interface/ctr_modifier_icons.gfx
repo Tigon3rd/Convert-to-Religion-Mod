@@ -341,6 +341,18 @@ spriteTypes = {
 		noOfFrames = 1
 		effectFile = "gfx/FX/buttonstate_linear.lua"
 	}
+	spriteType = {
+		name = "GFX_province_hussite"
+		texturefile = "gfx//interface//ideas_EU4//province_hussite.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
+	spriteType = {
+		name = "GFX_province_dreamtime"
+		texturefile = "gfx//interface//ideas_EU4//province_dreamtime.tga"
+		noOfFrames = 1
+		effectFile = "gfx/FX/buttonstate_linear.lua"
+	}
 
 	spriteType = {
 		name = "GFX_hindu_deities_strip"

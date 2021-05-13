@@ -27,6 +27,7 @@ country_event = {
 				}
 				add_province_triggered_modifier = holy_site_hellenic_rome
 				add_province_triggered_modifier = holy_site_catholic_rome
+				add_province_triggered_modifier = holy_site_hussite_rome
 				remove_province_triggered_modifier = religious_center
 			}
 			if = {
@@ -44,10 +45,15 @@ country_event = {
 				add_province_triggered_modifier = holy_site_coptic_alexandria
 			}
 			if = {
+				limit = { # Siroz
+					province_id = 4702
+				}
+				add_province_triggered_modifier = holy_site_hellenic_edessa
+			}
+			if = {
 				limit = { # Thessaloniki # Macedonia
 					province_id = 148
 				}
-				add_province_triggered_modifier = holy_site_hellenic_edessa
 				add_province_triggered_modifier = holy_site_orthodox_athos
 			}
 			if = {
@@ -57,36 +63,51 @@ country_event = {
 				add_province_triggered_modifier = holy_site_hellenic_abydos
 			}
 			if = {
+				limit = { # Larestan
+					province_id = 2223
+				}
+				add_province_triggered_modifier = holy_site_zoroastrian_larestan
+			}
+			if = {
 				limit = { # Siraf
 					province_id = 4332
 				}
-				add_province_triggered_modifier = holy_site_zoroastrian_siraf
 				add_province_triggered_modifier = holy_site_yazidi_siraf
 			}
 			if = {
-				limit = { # Jask
-					province_id = 4327
+				limit = { # Daman
+					province_id = 4430
 				}
-				add_province_triggered_modifier = holy_site_zoroastrian_jask
+				add_province_triggered_modifier = holy_site_zoroastrian_daman
+			}
+			if = {
+				limit = { # Khiva
+					province_id = 441
+				}
+				add_province_triggered_modifier = holy_site_zoroastrian_khiva
 			}
 			if = {
 				limit = { # Balkh
 					province_id = 450
 				}
-				add_province_triggered_modifier = holy_site_zoroastrian_balkh
 				add_province_triggered_modifier = holy_site_bon_balkh
 			}
 			if = {
-				limit = { # Urmia
-					province_id = 2206
+				limit = { # Shirvan
+					province_id = 421
 				}
-				add_province_triggered_modifier = holy_site_zoroastrian_urmia
+				add_province_triggered_modifier = holy_site_zoroastrian_shirvan
+			}
+			if = {
+				limit = { # Sabzevar
+					province_id = 2235
+				}
+				add_province_triggered_modifier = holy_site_zoroastrian_sabzevar
 			}
 			if = {
 				limit = { # Bojnord
 					province_id = 2236
 				}
-				add_province_triggered_modifier = holy_site_zoroastrian_bojnord
 				add_province_triggered_modifier = holy_site_zunist_bojnord
 				add_province_triggered_modifier = holy_site_yazidi_bojnord
 			}
@@ -187,8 +208,8 @@ country_event = {
 				add_province_triggered_modifier = holy_site_romuva_riga
 			}
 			if = {
-				limit = { # Stralsund
-					province_id = 47
+				limit = { # Rügen
+					province_id = 4745
 				}
 				add_province_triggered_modifier = holy_site_romuva_rugen
 				add_province_triggered_modifier = holy_site_slavic_rugen
@@ -383,6 +404,7 @@ country_event = {
 				add_province_triggered_modifier = holy_site_jewish_jerusalem
 				add_province_triggered_modifier = holy_site_yazidi_jerusalem
 				add_province_triggered_modifier = holy_site_manichean_jerusalem
+				add_province_triggered_modifier = holy_site_hussite_jerusalem
 			}
 			if = {
 				limit = { # Constantinople
@@ -757,6 +779,13 @@ country_event = {
 					province_id = 454
 				}
 				add_province_triggered_modifier = holy_site_manichean_samarkand
+			}
+			if = {
+				limit = { # Prague
+					province_id = 266
+				}
+				add_province_triggered_modifier = holy_site_hussite_prague
+				remove_province_triggered_modifier = religious_center
 			}
 			
 			# Adds province modifier to make Jewish and Zoroastrian start provinces survive longer (10950 days or 30 years)
