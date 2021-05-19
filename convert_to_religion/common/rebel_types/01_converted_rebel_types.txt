@@ -121,6 +121,11 @@ baltic_pagan_reformed_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = baltic_pagan_reformed
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -138,7 +143,10 @@ baltic_pagan_reformed_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -146,7 +154,11 @@ baltic_pagan_reformed_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = baltic_pagan_reformed
+				OR = {
+					religion = baltic_pagan_reformed
+					is_reformation_center = yes
+					owner = { religion = baltic_pagan_reformed }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -156,11 +168,20 @@ baltic_pagan_reformed_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = baltic_pagan_reformed }
+				is_reformation_center = no
+				NOT = { owner = { religion = baltic_pagan_reformed } }
 			}
 			change_religion = baltic_pagan_reformed
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -180,6 +201,13 @@ baltic_pagan_reformed_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = pagan }
@@ -194,11 +222,14 @@ baltic_pagan_reformed_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = baltic_pagan_reformed
 			}
@@ -207,13 +238,50 @@ baltic_pagan_reformed_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = pagan
 				NOT = { religion = baltic_pagan_reformed }
+				dominant_religion = baltic_pagan_reformed
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = baltic_pagan_reformed
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = baltic_pagan_reformed }
+				NOT = { dominant_religion = baltic_pagan_reformed }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = pagan
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = baltic_pagan_reformed
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -320,6 +388,11 @@ finnish_pagan_reformed_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = finnish_pagan_reformed
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -337,7 +410,10 @@ finnish_pagan_reformed_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -345,7 +421,11 @@ finnish_pagan_reformed_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = finnish_pagan_reformed
+				OR = {
+					religion = finnish_pagan_reformed
+					is_reformation_center = yes
+					owner = { religion = finnish_pagan_reformed }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -355,11 +435,20 @@ finnish_pagan_reformed_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = finnish_pagan_reformed }
+				is_reformation_center = no
+				NOT = { owner = { religion = finnish_pagan_reformed } }
 			}
 			change_religion = finnish_pagan_reformed
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -379,6 +468,13 @@ finnish_pagan_reformed_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = pagan }
@@ -393,11 +489,14 @@ finnish_pagan_reformed_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = finnish_pagan_reformed
 			}
@@ -406,13 +505,50 @@ finnish_pagan_reformed_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = pagan
 				NOT = { religion = finnish_pagan_reformed }
+				dominant_religion = finnish_pagan_reformed
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = finnish_pagan_reformed
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = finnish_pagan_reformed }
+				NOT = { dominant_religion = finnish_pagan_reformed }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = pagan
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = finnish_pagan_reformed
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -519,6 +655,11 @@ slavic_pagan_reformed_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = slavic_pagan_reformed
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -536,7 +677,10 @@ slavic_pagan_reformed_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -544,7 +688,11 @@ slavic_pagan_reformed_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = slavic_pagan_reformed
+				OR = {
+					religion = slavic_pagan_reformed
+					is_reformation_center = yes
+					owner = { religion = slavic_pagan_reformed }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -554,11 +702,20 @@ slavic_pagan_reformed_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = slavic_pagan_reformed }
+				is_reformation_center = no
+				NOT = { owner = { religion = slavic_pagan_reformed } }
 			}
 			change_religion = slavic_pagan_reformed
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -578,6 +735,13 @@ slavic_pagan_reformed_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = pagan }
@@ -592,11 +756,14 @@ slavic_pagan_reformed_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = slavic_pagan_reformed
 			}
@@ -605,13 +772,50 @@ slavic_pagan_reformed_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = pagan
 				NOT = { religion = slavic_pagan_reformed }
+				dominant_religion = slavic_pagan_reformed
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = slavic_pagan_reformed
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = slavic_pagan_reformed }
+				NOT = { dominant_religion = slavic_pagan_reformed }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = pagan
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = slavic_pagan_reformed
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -718,6 +922,11 @@ zunist_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = zun_pagan_reformed
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -735,7 +944,10 @@ zunist_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -743,7 +955,11 @@ zunist_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = zun_pagan_reformed
+				OR = {
+					religion = zun_pagan_reformed
+					is_reformation_center = yes
+					owner = { religion = zun_pagan_reformed }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -753,11 +969,20 @@ zunist_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = zun_pagan_reformed }
+				is_reformation_center = no
+				NOT = { owner = { religion = zun_pagan_reformed } }
 			}
 			change_religion = zun_pagan_reformed
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -777,6 +1002,13 @@ zunist_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = pagan }
@@ -791,11 +1023,14 @@ zunist_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = zun_pagan_reformed
 			}
@@ -804,13 +1039,50 @@ zunist_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = pagan
 				NOT = { religion = zun_pagan_reformed }
+				dominant_religion = zun_pagan_reformed
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = zun_pagan_reformed
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = zun_pagan_reformed }
+				NOT = { dominant_religion = zun_pagan_reformed }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = pagan
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = zun_pagan_reformed
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -917,6 +1189,11 @@ bon_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = bon
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -934,7 +1211,10 @@ bon_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -942,7 +1222,11 @@ bon_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = bon
+				OR = {
+					religion = bon
+					is_reformation_center = yes
+					owner = { religion = bon }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -952,11 +1236,20 @@ bon_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = bon }
+				is_reformation_center = no
+				NOT = { owner = { religion = bon } }
 			}
 			change_religion = bon
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -976,6 +1269,13 @@ bon_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = pagan }
@@ -990,11 +1290,14 @@ bon_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = bon
 			}
@@ -1003,13 +1306,50 @@ bon_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = pagan
 				NOT = { religion = bon }
+				dominant_religion = bon
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = bon
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = bon }
+				NOT = { dominant_religion = bon }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = pagan
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = bon
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -1116,6 +1456,11 @@ hellenic_pagan_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = hellenic_pagan
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -1133,7 +1478,10 @@ hellenic_pagan_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -1141,7 +1489,11 @@ hellenic_pagan_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = hellenic_pagan
+				OR = {
+					religion = hellenic_pagan
+					is_reformation_center = yes
+					owner = { religion = hellenic_pagan }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -1151,11 +1503,20 @@ hellenic_pagan_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = hellenic_pagan }
+				is_reformation_center = no
+				NOT = { owner = { religion = hellenic_pagan } }
 			}
 			change_religion = hellenic_pagan
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -1175,6 +1536,13 @@ hellenic_pagan_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = pagan }
@@ -1189,11 +1557,14 @@ hellenic_pagan_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = hellenic_pagan
 			}
@@ -1202,13 +1573,50 @@ hellenic_pagan_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = pagan
 				NOT = { religion = hellenic_pagan }
+				dominant_religion = hellenic_pagan
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = hellenic_pagan
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = hellenic_pagan }
+				NOT = { dominant_religion = hellenic_pagan }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = pagan
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = hellenic_pagan
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -1312,6 +1720,11 @@ cathar_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = cathar
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -1329,7 +1742,10 @@ cathar_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -1337,7 +1753,11 @@ cathar_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = cathar
+				OR = {
+					religion = cathar
+					is_reformation_center = yes
+					owner = { religion = cathar }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -1347,11 +1767,20 @@ cathar_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = cathar }
+				is_reformation_center = no
+				NOT = { owner = { religion = cathar } }
 			}
 			change_religion = cathar
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -1371,6 +1800,13 @@ cathar_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = christian }
@@ -1385,11 +1821,14 @@ cathar_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = cathar
 			}
@@ -1398,13 +1837,50 @@ cathar_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = christian
 				NOT = { religion = cathar }
+				dominant_religion = cathar
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = cathar
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = cathar }
+				NOT = { dominant_religion = cathar }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = christian
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = cathar
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -1508,6 +1984,11 @@ fraticelli_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = fraticelli
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -1525,7 +2006,10 @@ fraticelli_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -1533,7 +2017,11 @@ fraticelli_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = fraticelli
+				OR = {
+					religion = fraticelli
+					is_reformation_center = yes
+					owner = { religion = fraticelli }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -1543,11 +2031,20 @@ fraticelli_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = fraticelli }
+				is_reformation_center = no
+				NOT = { owner = { religion = fraticelli } }
 			}
 			change_religion = fraticelli
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -1567,6 +2064,13 @@ fraticelli_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = christian }
@@ -1581,11 +2085,14 @@ fraticelli_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = fraticelli
 			}
@@ -1594,13 +2101,50 @@ fraticelli_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = christian
 				NOT = { religion = fraticelli }
+				dominant_religion = fraticelli
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = fraticelli
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = fraticelli }
+				NOT = { dominant_religion = fraticelli }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = christian
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = fraticelli
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -1704,6 +2248,11 @@ waldensian_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = waldensian
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -1721,7 +2270,10 @@ waldensian_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -1729,7 +2281,11 @@ waldensian_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = waldensian
+				OR = {
+					religion = waldensian
+					is_reformation_center = yes
+					owner = { religion = waldensian }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -1739,11 +2295,20 @@ waldensian_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = waldensian }
+				is_reformation_center = no
+				NOT = { owner = { religion = waldensian } }
 			}
 			change_religion = waldensian
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -1763,6 +2328,13 @@ waldensian_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = christian }
@@ -1777,11 +2349,14 @@ waldensian_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = waldensian
 			}
@@ -1790,13 +2365,50 @@ waldensian_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = christian
 				NOT = { religion = waldensian }
+				dominant_religion = waldensian
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = waldensian
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = waldensian }
+				NOT = { dominant_religion = waldensian }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = christian
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = waldensian
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -1900,6 +2512,11 @@ lollard_religion_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = lollard
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -1917,7 +2534,10 @@ lollard_religion_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -1925,7 +2545,11 @@ lollard_religion_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = lollard
+				OR = {
+					religion = lollard
+					is_reformation_center = yes
+					owner = { religion = lollard }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -1935,11 +2559,20 @@ lollard_religion_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = lollard }
+				is_reformation_center = no
+				NOT = { owner = { religion = lollard } }
 			}
 			change_religion = lollard
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -1959,6 +2592,13 @@ lollard_religion_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = christian }
@@ -1973,11 +2613,14 @@ lollard_religion_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = lollard
 			}
@@ -1986,13 +2629,50 @@ lollard_religion_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = christian
 				NOT = { religion = lollard }
+				dominant_religion = lollard
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = lollard
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = lollard }
+				NOT = { dominant_religion = lollard }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = christian
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = lollard
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -2096,6 +2776,11 @@ monophysite_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = monophysite
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -2113,7 +2798,10 @@ monophysite_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -2121,7 +2809,11 @@ monophysite_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = monophysite
+				OR = {
+					religion = monophysite
+					is_reformation_center = yes
+					owner = { religion = monophysite }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -2131,11 +2823,20 @@ monophysite_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = monophysite }
+				is_reformation_center = no
+				NOT = { owner = { religion = monophysite } }
 			}
 			change_religion = monophysite
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -2155,6 +2856,13 @@ monophysite_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = christian }
@@ -2169,11 +2877,14 @@ monophysite_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = monophysite
 			}
@@ -2182,13 +2893,50 @@ monophysite_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = christian
 				NOT = { religion = monophysite }
+				dominant_religion = monophysite
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = monophysite
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = monophysite }
+				NOT = { dominant_religion = monophysite }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = christian
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = monophysite
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -2292,6 +3040,11 @@ bogomilist_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = bogomilist
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -2309,7 +3062,10 @@ bogomilist_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -2317,7 +3073,11 @@ bogomilist_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = bogomilist
+				OR = {
+					religion = bogomilist
+					is_reformation_center = yes
+					owner = { religion = bogomilist }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -2327,11 +3087,20 @@ bogomilist_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = bogomilist }
+				is_reformation_center = no
+				NOT = { owner = { religion = bogomilist } }
 			}
 			change_religion = bogomilist
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -2351,6 +3120,13 @@ bogomilist_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = christian }
@@ -2365,11 +3141,14 @@ bogomilist_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = bogomilist
 			}
@@ -2378,13 +3157,50 @@ bogomilist_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = christian
 				NOT = { religion = bogomilist }
+				dominant_religion = bogomilist
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = bogomilist
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = bogomilist }
+				NOT = { dominant_religion = bogomilist }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = christian
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = bogomilist
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -2488,6 +3304,11 @@ monothelite_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = monothelite
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -2505,7 +3326,10 @@ monothelite_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -2513,7 +3337,11 @@ monothelite_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = monothelite
+				OR = {
+					religion = monothelite
+					is_reformation_center = yes
+					owner = { religion = monothelite }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -2523,11 +3351,20 @@ monothelite_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = monothelite }
+				is_reformation_center = no
+				NOT = { owner = { religion = monothelite } }
 			}
 			change_religion = monothelite
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -2547,6 +3384,13 @@ monothelite_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = christian }
@@ -2561,11 +3405,14 @@ monothelite_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = monothelite
 			}
@@ -2574,13 +3421,50 @@ monothelite_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = christian
 				NOT = { religion = monothelite }
+				dominant_religion = monothelite
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = monothelite
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = monothelite }
+				NOT = { dominant_religion = monothelite }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = christian
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = monothelite
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -2684,6 +3568,11 @@ iconoclast_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = iconoclast
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -2701,7 +3590,10 @@ iconoclast_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -2709,7 +3601,11 @@ iconoclast_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = iconoclast
+				OR = {
+					religion = iconoclast
+					is_reformation_center = yes
+					owner = { religion = iconoclast }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -2719,11 +3615,20 @@ iconoclast_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = iconoclast }
+				is_reformation_center = no
+				NOT = { owner = { religion = iconoclast } }
 			}
 			change_religion = iconoclast
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -2743,6 +3648,13 @@ iconoclast_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = christian }
@@ -2757,11 +3669,14 @@ iconoclast_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = iconoclast
 			}
@@ -2770,13 +3685,50 @@ iconoclast_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = christian
 				NOT = { religion = iconoclast }
+				dominant_religion = iconoclast
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = iconoclast
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = iconoclast }
+				NOT = { dominant_religion = iconoclast }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = christian
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = iconoclast
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -2880,6 +3832,11 @@ paulician_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = paulician
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -2897,7 +3854,10 @@ paulician_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -2905,7 +3865,11 @@ paulician_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = paulician
+				OR = {
+					religion = paulician
+					is_reformation_center = yes
+					owner = { religion = paulician }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -2915,11 +3879,20 @@ paulician_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = paulician }
+				is_reformation_center = no
+				NOT = { owner = { religion = paulician } }
 			}
 			change_religion = paulician
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -2939,6 +3912,13 @@ paulician_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = christian }
@@ -2953,11 +3933,14 @@ paulician_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = paulician
 			}
@@ -2966,13 +3949,50 @@ paulician_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = christian
 				NOT = { religion = paulician }
+				dominant_religion = paulician
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = paulician
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = paulician }
+				NOT = { dominant_religion = paulician }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = christian
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = paulician
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -3076,6 +4096,11 @@ nestorian_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = nestorian
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -3093,7 +4118,10 @@ nestorian_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -3101,7 +4129,11 @@ nestorian_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = nestorian
+				OR = {
+					religion = nestorian
+					is_reformation_center = yes
+					owner = { religion = nestorian }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -3111,11 +4143,20 @@ nestorian_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = nestorian }
+				is_reformation_center = no
+				NOT = { owner = { religion = nestorian } }
 			}
 			change_religion = nestorian
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -3135,6 +4176,13 @@ nestorian_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = christian }
@@ -3149,11 +4197,14 @@ nestorian_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = nestorian
 			}
@@ -3162,13 +4213,50 @@ nestorian_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = christian
 				NOT = { religion = nestorian }
+				dominant_religion = nestorian
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = nestorian
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = nestorian }
+				NOT = { dominant_religion = nestorian }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = christian
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = nestorian
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -3272,6 +4360,11 @@ messalian_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = messalian
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -3289,7 +4382,10 @@ messalian_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -3297,7 +4393,11 @@ messalian_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = messalian
+				OR = {
+					religion = messalian
+					is_reformation_center = yes
+					owner = { religion = messalian }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -3307,11 +4407,20 @@ messalian_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = messalian }
+				is_reformation_center = no
+				NOT = { owner = { religion = messalian } }
 			}
 			change_religion = messalian
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -3331,6 +4440,13 @@ messalian_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = christian }
@@ -3345,11 +4461,14 @@ messalian_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = messalian
 			}
@@ -3358,13 +4477,50 @@ messalian_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = christian
 				NOT = { religion = messalian }
+				dominant_religion = messalian
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = messalian
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = messalian }
+				NOT = { dominant_religion = messalian }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = christian
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = messalian
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -3468,6 +4624,11 @@ zikri_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = zikri
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -3485,7 +4646,10 @@ zikri_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -3493,7 +4657,11 @@ zikri_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = zikri
+				OR = {
+					religion = zikri
+					is_reformation_center = yes
+					owner = { religion = zikri }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -3503,11 +4671,20 @@ zikri_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = zikri }
+				is_reformation_center = no
+				NOT = { owner = { religion = zikri } }
 			}
 			change_religion = zikri
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -3527,6 +4704,13 @@ zikri_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = muslim }
@@ -3541,11 +4725,14 @@ zikri_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = zikri
 			}
@@ -3554,13 +4741,50 @@ zikri_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = muslim
 				NOT = { religion = zikri }
+				dominant_religion = zikri
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = zikri
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = zikri }
+				NOT = { dominant_religion = zikri }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = muslim
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = zikri
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -3664,6 +4888,11 @@ yazidi_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = yazidi
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -3681,7 +4910,10 @@ yazidi_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -3689,7 +4921,11 @@ yazidi_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = yazidi
+				OR = {
+					religion = yazidi
+					is_reformation_center = yes
+					owner = { religion = yazidi }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -3699,11 +4935,20 @@ yazidi_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = yazidi }
+				is_reformation_center = no
+				NOT = { owner = { religion = zikri } }
 			}
 			change_religion = yazidi
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -3723,6 +4968,13 @@ yazidi_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = muslim }
@@ -3737,11 +4989,14 @@ yazidi_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = yazidi
 			}
@@ -3750,13 +5005,50 @@ yazidi_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = muslim
 				NOT = { religion = yazidi }
+				dominant_religion = yazidi
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = yazidi
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = yazidi }
+				NOT = { dominant_religion = yazidi }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = muslim
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = yazidi
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -3860,6 +5152,11 @@ kharijite_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = kharijite
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -3877,7 +5174,10 @@ kharijite_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -3885,7 +5185,11 @@ kharijite_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = kharijite
+				OR = {
+					religion = kharijite
+					is_reformation_center = yes
+					owner = { religion = kharijite }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -3895,11 +5199,20 @@ kharijite_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = kharijite }
+				is_reformation_center = no
+				NOT = { owner = { religion = kharijite } }
 			}
 			change_religion = kharijite
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -3919,6 +5232,13 @@ kharijite_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = muslim }
@@ -3933,11 +5253,14 @@ kharijite_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = kharijite
 			}
@@ -3946,13 +5269,50 @@ kharijite_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = muslim
 				NOT = { religion = kharijite }
+				dominant_religion = kharijite
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = kharijite
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = kharijite }
+				NOT = { dominant_religion = kharijite }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = muslim
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = kharijite
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -4056,6 +5416,11 @@ druze_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = druze
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -4073,7 +5438,10 @@ druze_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -4081,7 +5449,11 @@ druze_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = druze
+				OR = {
+					religion = druze
+					is_reformation_center = yes
+					owner = { religion = druze }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -4091,11 +5463,20 @@ druze_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = druze }
+				is_reformation_center = no
+				NOT = { owner = { religion = zikri } }
 			}
 			change_religion = druze
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -4115,6 +5496,13 @@ druze_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = muslim }
@@ -4129,11 +5517,14 @@ druze_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = druze
 			}
@@ -4142,13 +5533,50 @@ druze_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = muslim
 				NOT = { religion = druze }
+				dominant_religion = druze
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = druze
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = druze }
+				NOT = { dominant_religion = druze }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = muslim
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = druze
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -4252,6 +5680,11 @@ hurufi_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = hurufi
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -4269,7 +5702,10 @@ hurufi_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -4277,7 +5713,11 @@ hurufi_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = hurufi
+				OR = {
+					religion = hurufi
+					is_reformation_center = yes
+					owner = { religion = hurufi }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -4287,11 +5727,20 @@ hurufi_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = hurufi }
+				is_reformation_center = no
+				NOT = { owner = { religion = hurufi } }
 			}
 			change_religion = hurufi
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -4311,6 +5760,13 @@ hurufi_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = muslim }
@@ -4325,11 +5781,14 @@ hurufi_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = hurufi
 			}
@@ -4338,13 +5797,50 @@ hurufi_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = muslim
 				NOT = { religion = hurufi }
+				dominant_religion = hurufi
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = hurufi
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = hurufi }
+				NOT = { dominant_religion = hurufi }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = muslim
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = hurufi
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -4448,6 +5944,11 @@ mazdaki_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = mazdaki
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -4465,7 +5966,10 @@ mazdaki_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -4473,7 +5977,11 @@ mazdaki_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = mazdaki
+				OR = {
+					religion = mazdaki
+					is_reformation_center = yes
+					owner = { religion = mazdaki }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -4483,11 +5991,20 @@ mazdaki_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = mazdaki }
+				is_reformation_center = no
+				NOT = { owner = { religion = mazdaki } }
 			}
 			change_religion = mazdaki
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -4507,6 +6024,13 @@ mazdaki_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = zoroastrian_group }
@@ -4521,11 +6045,14 @@ mazdaki_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = mazdaki
 			}
@@ -4534,13 +6061,50 @@ mazdaki_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = zoroastrian_group
 				NOT = { religion = mazdaki }
+				dominant_religion = mazdaki
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = mazdaki
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = mazdaki }
+				NOT = { dominant_religion = mazdaki }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = zoroastrian_group
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = mazdaki
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -4644,6 +6208,11 @@ khurmazta_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = khurmazta
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -4661,7 +6230,10 @@ khurmazta_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -4669,7 +6241,11 @@ khurmazta_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = khurmazta
+				OR = {
+					religion = khurmazta
+					is_reformation_center = yes
+					owner = { religion = khurmazta }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -4679,11 +6255,20 @@ khurmazta_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = khurmazta }
+				is_reformation_center = no
+				NOT = { owner = { religion = khurmazta } }
 			}
 			change_religion = khurmazta
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -4703,6 +6288,13 @@ khurmazta_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = zoroastrian_group }
@@ -4717,11 +6309,14 @@ khurmazta_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = khurmazta
 			}
@@ -4730,13 +6325,27 @@ khurmazta_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = zoroastrian_group
 				NOT = { religion = khurmazta }
+				dominant_religion = khurmazta
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = khurmazta
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = khurmazta }
+				NOT = { dominant_religion = khurmazta }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = zoroastrian_group
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
 		}
 	}
 }
@@ -4840,6 +6449,11 @@ manichean_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = manichean
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -4857,7 +6471,10 @@ manichean_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -4865,7 +6482,11 @@ manichean_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = manichean
+				OR = {
+					religion = manichean
+					is_reformation_center = yes
+					owner = { religion = manichean }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -4875,11 +6496,20 @@ manichean_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = manichean }
+				is_reformation_center = no
+				NOT = { owner = { religion = manichean } }
 			}
 			change_religion = manichean
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -4899,6 +6529,13 @@ manichean_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = zoroastrian_group }
@@ -4913,11 +6550,14 @@ manichean_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = manichean
 			}
@@ -4926,13 +6566,50 @@ manichean_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = zoroastrian_group
 				NOT = { religion = manichean }
+				dominant_religion = manichean
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = manichean
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = manichean }
+				NOT = { dominant_religion = manichean }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = zoroastrian_group
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = manichean
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -5036,6 +6713,11 @@ samaritan_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = samaritan_faith
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -5053,7 +6735,10 @@ samaritan_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -5061,7 +6746,11 @@ samaritan_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = samaritan_faith
+				OR = {
+					religion = samaritan_faith
+					is_reformation_center = yes
+					owner = { religion = samaritan_faith }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -5071,11 +6760,20 @@ samaritan_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = samaritan_faith }
+				is_reformation_center = no
+				NOT = { owner = { religion = samaritan_faith } }
 			}
 			change_religion = samaritan_faith
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -5095,6 +6793,13 @@ samaritan_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = jewish_group }
@@ -5109,11 +6814,14 @@ samaritan_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = samaritan_faith
 			}
@@ -5122,13 +6830,50 @@ samaritan_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = jewish_group
 				NOT = { religion = samaritan_faith }
+				dominant_religion = samaritan_faith
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = samaritan_faith
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = samaritan_faith }
+				NOT = { dominant_religion = samaritan_faith }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = jewish_group
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = samaritan_faith
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -5232,6 +6977,11 @@ karaite_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = karaite_faith
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -5249,7 +6999,10 @@ karaite_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -5257,7 +7010,11 @@ karaite_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = karaite_faith
+				OR = {
+					religion = karaite_faith
+					is_reformation_center = yes
+					owner = { religion = karaite_faith }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -5267,11 +7024,20 @@ karaite_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = karaite_faith }
+				is_reformation_center = no
+				NOT = { owner = { religion = karaite_faith } }
 			}
 			change_religion = karaite_faith
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -5291,6 +7057,13 @@ karaite_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = jewish_group }
@@ -5305,11 +7078,14 @@ karaite_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = karaite_faith
 			}
@@ -5318,13 +7094,50 @@ karaite_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = jewish_group
 				NOT = { religion = karaite_faith }
+				dominant_religion = karaite_faith
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = karaite_faith
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = karaite_faith }
+				NOT = { dominant_religion = karaite_faith }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = jewish_group
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = karaite_faith
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }
@@ -5428,6 +7241,11 @@ jain_rebels = {
 	 		}
 	 	}
 		modifier = {
+			factor = 5
+			has_missionary = yes
+			religion = jain
+		}
+		modifier = {
 			factor = 1.5
 			unrest = 2
 		}
@@ -5445,7 +7263,10 @@ jain_rebels = {
  	siege_won_trigger = {
 		NOT = {
 			AND = {
-				owned_by = PAP
+				OR = {
+					owned_by = PAP
+					owned_by = FAP
+				}
 				is_capital = yes
 			}
 		}
@@ -5453,7 +7274,11 @@ jain_rebels = {
 	siege_won_effect = {
 		if = {
 			limit = {
-				religion = jain
+				OR = {
+					religion = jain
+					is_reformation_center = yes
+					owner = { religion = jain }
+				}
 			}
 			add_province_modifier = {
 				name = "religious_violence"
@@ -5463,11 +7288,20 @@ jain_rebels = {
 		if = {
 			limit = {
 				NOT = { religion = jain }
+				is_reformation_center = no
+				NOT = { owner = { religion = jain } }
 			}
 			change_religion = jain
 			add_province_modifier = {
 				name = "forced_conversion"
 				duration = 730
+			}
+		}
+		owner = {
+			change_estate_land_share = {
+				estate = estate_church
+				share = 10.0
+				province = ROOT
 			}
 		}
 	}
@@ -5487,6 +7321,13 @@ jain_rebels = {
 	
 	# Country Scope	
 	demands_enforced_effect = {
+		hidden_effect = {
+			add_country_modifier = {
+				name = just_lost_to_rebels
+				duration = 10
+				hidden = yes
+			}
+		}
 		if = {
 			limit = {
 				NOT = { religion_group = dharmic }
@@ -5501,11 +7342,14 @@ jain_rebels = {
 		}
 		if = {
 			limit = {
-				tag = PAP
+				OR = {
+					tag = PAP
+					tag = FAP
+				}
 			}
 			add_stability = -1
 		}
-		if = {
+		else_if = {
 			limit = {
 				religion = jain
 			}
@@ -5514,13 +7358,50 @@ jain_rebels = {
 				duration = 3650
 			}
 		}
-		if = {
+		else_if = {
 			limit = {
-				religion_group = dharmic
 				NOT = { religion = jain }
+				dominant_religion = jain
+				NOT = { tag = PAP }
+				NOT = { tag = FAP }
 			}
 			change_religion = jain
 			force_converted = yes
+		}
+		else_if = {
+			limit = {
+				NOT = { religion = jain }
+				NOT = { dominant_religion = jain }
+				NOT = { has_country_modifier = heretic_tolerance }
+				religion_group = dharmic
+			}
+			add_country_modifier = {
+				name = "heretic_tolerance"
+				duration = 3650
+			}
+		}
+		else = { add_stability = -1 } #Should probably never get here
+		if = {
+			limit = {
+				religion = jain
+				has_estate = estate_church
+				NOT = {
+					has_estate_influence_modifier = {
+						estate = estate_church
+						modifier = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+					}
+				}
+			}
+			add_estate_influence_modifier = {
+				estate = estate_church
+				desc = EST_VAL_RELIGIOUS_ZEALOTS_TRIUMPH
+				duration = 3650
+				influence = 15
+			}
+		}
+		change_estate_land_share = {
+			estate = estate_church
+			share = 10.0
 		}
 	}
 }

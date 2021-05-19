@@ -15,13 +15,20 @@ country_decisions = {
 	convert_to_hellenic_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			# This makes it so that only players gets to hide the decisions, so that if need be I can make AIs choose these.
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_hellenic_rome
 					has_province_modifier = holy_site_hellenic_athens
 					has_province_modifier = holy_site_hellenic_alexandria
-					has_province_modifier = holy_site_hellenic_edessa # New province is 4702 Siroz
+					has_province_modifier = holy_site_hellenic_edessa
 					has_province_modifier = holy_site_hellenic_abydos
 					religion = hellenic_pagan
 				}
@@ -29,10 +36,11 @@ country_decisions = {
 				# owns = 118 # Roma
 				# owns = 146 # Athens
 				# owns = 358 # Alexandria
-				# owns = 148 # Thessaloniki
+				# owns = 4702 # Siroz
 				# owns = 2296 # Biga
 			NOT = { religion = hellenic_pagan }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -178,7 +186,13 @@ country_decisions = {
 	convert_to_zoroastrian_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_zoroastrian_larestan
@@ -196,6 +210,7 @@ country_decisions = {
 				# owns = 2236 # Bojnord - New Update: 2235 # Sabzevar
 			NOT = { religion = zoroastrian }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -355,7 +370,13 @@ country_decisions = {
 	# convert_to_totemism_decision = {
 		# major = yes
 		# potential = {
-			# has_country_flag = ctr_religious_debate
+			# OR = {
+				# ai = yes
+				# AND = {
+					# ai = no
+					# has_country_flag = ctr_religious_debate
+				# }
+			# }
 			# any_owned_province = {
 				# OR = {
 					# has_province_modifier = holy_site_
@@ -376,6 +397,7 @@ country_decisions = {
 			# }
 			# NOT = { religion = totemism }
 			# NOT = { tag = PAP } # The Papal State
+			# NOT = { tag = FAP } # The Fraticelli Pope
 			# NOT = { tag = HLR } # Holy Roman Empire
 			# is_defender_of_faith = no
 			# NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -537,7 +559,13 @@ country_decisions = {
 	convert_to_mayan_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_mayan_tikal
@@ -556,6 +584,7 @@ country_decisions = {
 			# Maybe make it so you have to have your Capital in the american continents
 			NOT = { religion = mesoamerican_religion }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -720,7 +749,13 @@ country_decisions = {
 	convert_to_nahuatl_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_nahuatl_tenochtitlan
@@ -739,6 +774,7 @@ country_decisions = {
 			# Maybe make it so you have to have your Capital in the american continents
 			NOT = { religion = nahuatl }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -909,7 +945,13 @@ country_decisions = {
 	convert_to_inti_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_inti_titicaca
@@ -928,6 +970,7 @@ country_decisions = {
 			# Maybe make it so you have to have your Capital in the american continents
 			NOT = { religion = inti }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -971,7 +1014,7 @@ country_decisions = {
 							OR = {
 								province_id = 804
 								province_id = 806
-								province_id = 808
+								province_id = 807
 								province_id = 809
 								province_id = 812
 							}
@@ -990,7 +1033,7 @@ country_decisions = {
 							OR = {
 								province_id = 804
 								province_id = 806
-								province_id = 808
+								province_id = 807
 								province_id = 809
 								province_id = 812
 							}
@@ -1019,7 +1062,7 @@ country_decisions = {
 					OR = {
 						province_id = 804
 						province_id = 806
-						province_id = 808
+						province_id = 807
 						province_id = 809
 						province_id = 812
 					}
@@ -1106,7 +1149,13 @@ country_decisions = {
 	convert_to_romuva_decision = { 
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_romuva_riga
@@ -1124,6 +1173,7 @@ country_decisions = {
 				# owns = 1859 # Chelmno (Culm, Torun)
 			NOT = { religion = baltic_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -1272,7 +1322,13 @@ country_decisions = {
 	convert_to_slavic_decision = { 
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_slavic_rugen
@@ -1290,6 +1346,7 @@ country_decisions = {
 				# owns = 2749 # Tikhvin
 			NOT = { religion = slavic_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -1459,7 +1516,13 @@ country_decisions = {
 	convert_to_suomenusko_decision = { 
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_suomenusko_raivola
@@ -1477,6 +1540,7 @@ country_decisions = {
 				# owns = 2749 # Tikhvin
 			NOT = { religion = finnish_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -1634,7 +1698,13 @@ country_decisions = {
 	convert_to_norse_decision = { 
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_norse_uppland
@@ -1652,6 +1722,7 @@ country_decisions = {
 				# owns = 2972 # Paderborn
 			NOT = { religion = norse_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -1806,7 +1877,13 @@ country_decisions = {
 	convert_to_tengri_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_tengri_crimea
@@ -1824,6 +1901,7 @@ country_decisions = {
 				# owns = 1970 # Syghnak
 			NOT = { religion = tengri_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -2041,7 +2119,13 @@ country_decisions = {
 	convert_to_fetishist_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_fetishist_marrakech
@@ -2059,6 +2143,7 @@ country_decisions = {
 				# owns = 2463 # Maaskar
 			NOT = { religion = shamanism }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -2257,7 +2342,13 @@ country_decisions = {
 	# convert_to_animism_decision = {
 		# major = yes
 		# potential = {
-			# has_country_flag = ctr_religious_debate
+			# OR = {
+				# ai = yes
+				# AND = {
+					# ai = no
+					# has_country_flag = ctr_religious_debate
+				# }
+			# }
 			# any_owned_province = {
 				# OR = {
 					# has_province_modifier = holy_site_
@@ -2278,6 +2369,7 @@ country_decisions = {
 			# }
 			# NOT = { religion = animism }
 			# NOT = { tag = PAP } # The Papal State
+			# NOT = { tag = FAP } # The Fraticelli Pope
 			# NOT = { tag = HLR } # Holy Roman Empire
 			# is_defender_of_faith = no
 			# NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -2415,7 +2507,13 @@ country_decisions = {
 	convert_to_catholic_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_catholic_koln
@@ -2432,6 +2530,7 @@ country_decisions = {
 				# owns = 235 # Kent
 				# owns = 379 # Jerusalem
 			NOT = { religion = catholic }
+			NOT = { tag = FAP } # The Fraticelli Pope
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
@@ -2592,7 +2691,13 @@ country_decisions = {
 	convert_to_orthodox_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_orthodox_athos
@@ -2610,6 +2715,7 @@ country_decisions = {
 				# owns = 2313 # Antioch
 			NOT = { religion = orthodox }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
@@ -2810,7 +2916,13 @@ country_decisions = {
 	convert_to_monophysite_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_monophysite_alexandria
@@ -2824,10 +2936,11 @@ country_decisions = {
 				# owns = 358 # Alexandria
 				# owns = 379 # Jerusalem
 				# owns = 1227 # Tigre (Aksum)
-				# owns = 2322 # Wadi Halfa
+				# owns = 1234 # Qasr Ibrim
 				# owns = 2313 # Antioch
 			NOT = { religion = monophysite }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
@@ -2868,7 +2981,7 @@ country_decisions = {
 								province_id = 358
 								province_id = 379
 								province_id = 1227
-								province_id = 2322
+								province_id = 1234
 								province_id = 2313
 							}
 							is_core = ROOT
@@ -2887,7 +3000,7 @@ country_decisions = {
 								province_id = 358
 								province_id = 379
 								province_id = 1227
-								province_id = 2322
+								province_id = 1234
 								province_id = 2313
 							}
 							is_core = ROOT
@@ -2916,7 +3029,7 @@ country_decisions = {
 						province_id = 358
 						province_id = 379
 						province_id = 1227
-						province_id = 2322
+						province_id = 1234
 						province_id = 2313
 					}
 					OR = {
@@ -2998,7 +3111,13 @@ country_decisions = {
 	convert_to_coptic_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_coptic_alexandria
@@ -3016,6 +3135,7 @@ country_decisions = {
 				# owns = 2313 # Antioch
 			NOT = { religion = coptic }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
@@ -3186,7 +3306,13 @@ country_decisions = {
 	convert_to_nestorian_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_nestorian_kochin
@@ -3204,6 +3330,7 @@ country_decisions = {
 				# owns = 2308 # Urfa
 			NOT = { religion = nestorian }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
 		}
@@ -3337,12 +3464,18 @@ country_decisions = {
 	############################################################
 	
 	# Not any countries or cultures to connect to, going by the default Vanilla game, since it has to "spawn" first.
-	# Made an event that sets province flags on provinces where Centers of Reformations spawns, which allows me to target those, because they are random in each game.
+	# Made an event that puts my "protestant_CoR_province" modifier on provinces where Centers of Reformations spawns, because they are random in each game.
 	
 	convert_to_protestant_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_protestant_rome
@@ -3361,6 +3494,7 @@ country_decisions = {
 			# }
 			NOT = { religion = protestant }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			is_defender_of_faith = no
 			is_religion_enabled = protestant
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -3533,12 +3667,18 @@ country_decisions = {
 	############################################################
 	
 	# Not any countries or cultures to connect to, going by the default Vanilla game, since it has to "spawn" first.
-	# Made an event that sets province flags on provinces where Centers of Reformations spawns, which allows me to target those, because they are random in each game.
+	# Made an event that puts my "reformed_CoR_province" modifier on provinces where Centers of Reformations spawns, because they are random in each game.
 	
 	convert_to_reformed_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_reformed_rome
@@ -3557,6 +3697,7 @@ country_decisions = {
 			# }
 			NOT = { religion = reformed }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			is_defender_of_faith = no
 			is_religion_enabled = reformed
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -3731,7 +3872,13 @@ country_decisions = {
 	convert_to_sunni_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_sunni_cordoba
@@ -3751,6 +3898,7 @@ country_decisions = {
 			# }
 			NOT = { religion = sunni }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -3929,7 +4077,13 @@ country_decisions = {
 	convert_to_shia_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_shia_jerusalem
@@ -3950,6 +4104,7 @@ country_decisions = {
 			# }
 			NOT = { religion = shiite }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -4107,7 +4262,13 @@ country_decisions = {
 	convert_to_ibadi_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_ibadi_jerusalem
@@ -4127,6 +4288,7 @@ country_decisions = {
 			# }
 			NOT = { religion = ibadi }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -4272,7 +4434,13 @@ country_decisions = {
 	convert_to_jewish_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_jewish_sinai
@@ -4292,6 +4460,7 @@ country_decisions = {
 			# }
 			NOT = { religion = jewish }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -4434,7 +4603,13 @@ country_decisions = {
 	convert_to_mahayana_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_mahayana_bodhgaya
@@ -4454,6 +4629,7 @@ country_decisions = {
 			# }
 			NOT = { religion = mahayana }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -4599,7 +4775,13 @@ country_decisions = {
 	convert_to_theravada_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_theravada_bodhgaya
@@ -4619,6 +4801,7 @@ country_decisions = {
 			# }
 			NOT = { religion = buddhism } # Theravada
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -4814,7 +4997,13 @@ country_decisions = {
 	convert_to_vajrayana_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_vajrayana_bodhgaya
@@ -4834,6 +5023,7 @@ country_decisions = {
 			# }
 			NOT = { religion = vajrayana }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -4994,7 +5184,13 @@ country_decisions = {
 	convert_to_hinduism_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_hinduism_mahakaleshwar
@@ -5014,6 +5210,7 @@ country_decisions = {
 			# }
 			NOT = { religion = hinduism }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -5165,12 +5362,18 @@ country_decisions = {
 	# Country_tag(s)
 	# tag = 
 	
-	# date = 1499.01.01
+	# date = 1499.01.01 / event can spawn it from 1480.01.01
 	
 	convert_to_sikhism_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_sikh_amritsar
@@ -5183,6 +5386,7 @@ country_decisions = {
 			is_religion_enabled = sikhism
 			NOT = { religion = sikhism }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -5336,7 +5540,13 @@ country_decisions = {
 	convert_to_jainism_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_jain_girnar
@@ -5356,6 +5566,7 @@ country_decisions = {
 			# }
 			NOT = { religion = jain }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -5507,11 +5718,17 @@ country_decisions = {
 	convert_to_zunist_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_zunist_cairo
-					has_province_modifier = holy_site_zunist_bojnord
+					has_province_modifier = holy_site_zunist_sabzevar
 					has_province_modifier = holy_site_zunist_kandahar
 					has_province_modifier = holy_site_zunist_kabul
 					has_province_modifier = holy_site_zunist_multan
@@ -5527,6 +5744,7 @@ country_decisions = {
 			# }
 			NOT = { religion = zun_pagan_reformed }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -5534,7 +5752,7 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				has_province_modifier = holy_site_zunist_cairo
-				has_province_modifier = holy_site_zunist_bojnord
+				has_province_modifier = holy_site_zunist_sabzevar
 				has_province_modifier = holy_site_zunist_kandahar
 				has_province_modifier = holy_site_zunist_kabul
 				has_province_modifier = holy_site_zunist_multan
@@ -5667,7 +5885,13 @@ country_decisions = {
 	convert_to_confucianism_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_confucian_canton
@@ -5687,6 +5911,7 @@ country_decisions = {
 			# }
 			NOT = { religion = confucianism }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -5831,7 +6056,13 @@ country_decisions = {
 	convert_to_shinto_decision = {
 		major = yes
 		potential = {
-			has_country_flag = ctr_religious_debate
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
 			any_owned_province = {
 				OR = {
 					has_province_modifier = holy_site_shinto_izumo
@@ -5851,6 +6082,7 @@ country_decisions = {
 			# }
 			NOT = { religion = shinto }
 			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
 			NOT = { tag = HLR } # Holy Roman Empire
 			is_defender_of_faith = no
 			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
@@ -6000,6 +6232,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			NOT = { has_country_flag = ctr_religious_debate }
+			ai = no
 		}
 		allow = {
 			
@@ -6016,6 +6249,7 @@ country_decisions = {
 		major = yes
 		potential = {
 			has_country_flag = ctr_religious_debate
+			ai = no
 		}
 		allow = {
 			

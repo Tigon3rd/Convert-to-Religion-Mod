@@ -1,0 +1,262 @@
+#When adding effects directly in on_actions always consider if it would be best to do so through a scripted effect. on_actions with a lot of script in them are harder to get an overview of.
+
+# country
+on_startup = {	
+	# VANILLA
+	if = {
+		limit = {
+			current_age = age_of_discovery
+		}
+		KHM = {
+			add_disaster_progress = {
+				disaster = dark_age_of_cambodia
+				value = 100
+			}
+		}
+		LXA = {
+			if = {
+				limit = {
+					NOT = { has_country_flag = lxa_loyalty_flag }
+				}
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = -10
+				}
+				set_country_flag = lxa_loyalty_flag
+			}
+		}
+	}
+	if = {
+		limit = {
+			current_age = age_of_discovery
+		}
+		MAJ = {
+			add_disaster_progress = {
+				disaster = fall_of_majapahit
+				value = 100
+			}
+		}
+	}
+	emperor = {
+		save_global_event_target_as = Emperor
+	}
+	if = {
+		limit = {
+			is_emperor_of_china = yes
+		}
+		save_global_event_target_as = EmperorOfChina
+	}
+	events = {
+		muslim_school_events.20 #Pick School
+#		flavor_fra.15000 #Make the French Revolution happen if starting in 1789
+	}
+	if = {
+		limit = {
+			has_dlc = "Cradle of Civilization"
+			has_country_modifier = tur_janissary
+		}
+		remove_country_modifier = tur_janissary
+	}
+	initialize_schools_effect = yes #This is only used here but is used for readability of on_action file.
+
+	if = {
+		limit = {
+			NOT = { has_country_flag = new_flavour_bav_13_has_been_triggered }
+			OR = {
+				tag = UBV
+				tag = LBV
+				tag = ING
+			}
+		}
+		set_country_flag = new_flavour_bav_13_has_been_triggered
+		country_event = { id = new_flavour_bav.13 days = 90 } #better not to allow almost instant DOWs
+	}
+	if = {
+		limit = {
+			tag = FRA
+			started_in = 1789.7.14
+			NOT = { is_year = 1790 }
+			NOT = { has_disaster = french_revolution }
+		}
+		add_disaster_progress = {
+			value = 100
+			disaster = french_revolution
+		}
+	}
+	if = {
+		limit = {
+			exists = SUK
+		}
+		SUK = {
+			set_ruler_flag = suk_monarch_flag
+		}
+		AYU = {
+			set_country_flag = ayu_monarch_flag
+		}
+	}
+	# MODDED
+	add_holy_site_modifiers_to_provinces = yes
+}
+
+#Fraticelli Pope
+on_five_year_pulse_4 = {
+	# VANILLA
+	if = { #fail-safe for flavor_pap.7, making religious leagues happen at some point if there is no PAP
+		limit = {
+			is_year = 1610
+			NOT = { exists = PAP }
+			NOT = { has_global_flag = counter_reformation }
+		}
+		set_global_flag = counter_reformation
+	}
+	#fail-safe if for whatever reason these flags stay after being used in events
+	if = {
+		limit = {
+			had_country_flag = {
+				flag = advisor_events_adm
+				days = 720
+			}
+		}
+		clr_country_flag = advisor_events_adm
+	}
+	if = {
+		limit = {
+			had_country_flag = {
+				flag = advisor_events_dip
+				days = 720
+			}
+		}
+		clr_country_flag = advisor_events_dip
+	}
+	if = {
+		limit = {
+			had_country_flag = {
+				flag = advisor_events_mil
+				days = 720
+			}
+		}
+		clr_country_flag = advisor_events_mil
+	}
+	# MODDED
+	if = { #fail-safe for flavor_pap.7, making religious leagues happen at some point if there is no PAP
+		limit = {
+			is_year = 1610
+			NOT = { exists = FAP }
+			NOT = { has_global_flag = counter_reformation }
+		}
+		set_global_flag = counter_reformation
+	}
+	random_events = {
+		100 = ctr_events.400 # Heresy event (Religious Ideas) for converter religions
+		100 = ctr_events.1908 # Heresy event (Humanist Ideas) for converter religions
+		
+		1000 = 0
+	}
+}
+
+# ROOT = New vassal, FROM = Overlord
+on_create_vassal = {
+	# VANILLA
+	if = {
+		limit = {
+			tag = PAP
+		}
+		change_government = theocracy
+		change_religion = catholic
+		add_government_reform = papacy_reform
+		adopt_reform_progress = FROM
+	}
+	# MODDED
+	if = {
+		limit = {
+			tag = FAP
+		}
+		change_government = theocracy
+		change_religion = fraticelli
+		add_government_reform = papacy_reform
+		adopt_reform_progress = FROM
+	}
+}
+
+# this = Released country, FROM = Releasing country
+on_country_released = {
+	# VANILLA
+	if = {
+		limit = {
+			tag = PAP
+		}
+		change_government = theocracy
+		change_religion = catholic
+		add_government_reform = papacy_reform
+		adopt_reform_progress = FROM
+	}
+	if = {
+		limit = {
+			FROM = { has_reform = religious_permanent_revolution_reform }
+			NOT = { tag = PAP }
+		}
+		change_religion = FROM
+		adopt_reform_progress = FROM
+		add_country_modifier = {
+			name = global_holy_war_released_modifier
+			duration = 3650
+			hidden = yes
+		}
+		capital_scope = {
+			change_religion = FROM
+		}
+	}
+	# MODDED
+	if = {
+		limit = {
+			tag = FAP
+		}
+		change_government = theocracy
+		change_religion = fraticelli
+		add_government_reform = papacy_reform
+		adopt_reform_progress = FROM
+	}
+}
+
+on_country_creation = {
+	# VANILLA
+	if = {
+		limit = {
+			tag = PAP
+			OR = {
+				NOT = {
+					religion = catholic
+				}
+				NOT = {
+					has_reform = papacy_reform
+				}
+				NOT = {
+					government = theocracy
+				}
+			}
+		}
+		change_religion = catholic
+		change_government = theocracy
+		add_government_reform = papacy_reform
+	}
+	# MODDED
+	if = {
+		limit = {
+			tag = FAP
+			OR = {
+				NOT = {
+					religion = fraticelli
+				}
+				NOT = {
+					has_reform = papacy_reform
+				}
+				NOT = {
+					government = theocracy
+				}
+			}
+		}
+		change_religion = fraticelli
+		change_government = theocracy
+		add_government_reform = papacy_reform
+	}
+}

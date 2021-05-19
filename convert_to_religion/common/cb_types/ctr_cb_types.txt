@@ -1,4 +1,3 @@
-
 # Holy Site War
 cb_holy_site = {
 	valid_for_subject = no
@@ -69,7 +68,7 @@ cb_holy_site = {
 						OR = {
 							province_id = 804 # Puno
 							province_id = 806 # Nazca
-							province_id = 808 # Cuzco
+							province_id = 807 # Abancay
 							province_id = 809 # Lima
 							province_id = 812 # Chanchan
 						}
@@ -196,7 +195,7 @@ cb_holy_site = {
 							province_id = 358 # Alexandria
 							province_id = 379 # Jerusalem
 							province_id = 1227 # Tigre (Aksum)
-							province_id = 2322 # Wadi Halfa
+							province_id = 1234 # Qasr Ibrim
 							province_id = 2313 # Antioch
 						}
 					}
@@ -399,7 +398,7 @@ cb_holy_site = {
 					any_owned_province = {
 						OR = {
 							province_id = 361 # Cairo
-							province_id = 2236 # Bojnord
+							province_id = 2235 # Sabzevar
 							province_id = 447 # Kandahar
 							province_id = 451 # Kabulistan
 							province_id = 506 # Multan
@@ -454,8 +453,8 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 2236 # Bojnord
-							province_id = 4332 # Siraf
+							province_id = 2235 # Sabzevar
+							province_id = 2223 # Larestan
 							province_id = 411 # Mosul
 							province_id = 385 # Mecca
 							province_id = 379 # Jerusalem

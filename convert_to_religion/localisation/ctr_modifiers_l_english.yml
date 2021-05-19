@@ -292,8 +292,8 @@
  # Zunist
  holy_site_zunist_cairo: "Church of Zun Holy Site of Cairo"
  desc_holy_site_zunist_cairo: "The importance of this province as a Religious Holy Site will make it very difficult to convert."
- holy_site_zunist_bojnord: "Church of Zun Holy Site of Bojnord"
- desc_holy_site_zunist_bojnord: "The importance of this province as a Religious Holy Site will make it very difficult to convert."
+ holy_site_zunist_sabzevar: "Church of Zun Holy Site of Sabzevar"
+ desc_holy_site_zunist_sabzevar: "The importance of this province as a Religious Holy Site will make it very difficult to convert."
  holy_site_zunist_kandahar: "Church of Zun Holy Site of Kandahar"
  desc_holy_site_zunist_kandahar: "The importance of this province as a Religious Holy Site will make it very difficult to convert."
  holy_site_zunist_kabul: "Church of Zun Holy Site of Kabul"
@@ -348,10 +348,10 @@
  holy_site_bon_hotan: "Bön Holy Site of Hotan"
  desc_holy_site_bon_hotan: "The importance of this province as a Religious Holy Site will make it very difficult to convert."
  # Yazidi
- holy_site_yazidi_bojnord: "Yazidi Holy Site of Bojnord"
- desc_holy_site_yazidi_bojnord: "The importance of this province as a Religious Holy Site will make it very difficult to convert."
- holy_site_yazidi_siraf: "Yazidi Holy Site of Siraf"
- desc_holy_site_yazidi_siraf: "The importance of this province as a Religious Holy Site will make it very difficult to convert."
+ holy_site_yazidi_sabzevar: "Yazidi Holy Site of Sabzevar"
+ desc_holy_site_yazidi_sabzevar: "The importance of this province as a Religious Holy Site will make it very difficult to convert."
+ holy_site_yazidi_larestan: "Yazidi Holy Site of Larestan"
+ desc_holy_site_yazidi_larestan: "The importance of this province as a Religious Holy Site will make it very difficult to convert."
  holy_site_yazidi_mosul: "Yazidi Holy Site of Mosul"
  desc_holy_site_yazidi_mosul: "The importance of this province as a Religious Holy Site will make it very difficult to convert."
  holy_site_yazidi_mecca: "Yazidi Holy Site of Mecca"
@@ -376,6 +376,13 @@
  desc_holy_site_anglican_rome: "We have taken control of the ancient city of Rome, the seat of the head of the Catholic church.\nThe importance of this province as a Religious Holy Site will make it very difficult to convert."
  holy_site_anglican_jerusalem: "Anglican Holy Site of Jerusalem"
  desc_holy_site_anglican_jerusalem: "The importance of this province as a Religious Holy Site will make it very difficult to convert."
+ # Hussite
+ holy_site_hussite_prague: "Hussite Holy Site of Prague"
+ desc_holy_site_hussite_prague: "The importance of this province as a Religious Holy Site will make it very difficult to convert."
+ holy_site_hussite_rome: "Hussite Holy Site of Rome"
+ desc_holy_site_hussite_rome: "The importance of this province as a Religious Holy Site will make it very difficult to convert."
+ holy_site_hussite_jerusalem: "Hussite Holy Site of Jerusalem"
+ desc_holy_site_hussite_jerusalem: "The importance of this province as a Religious Holy Site will make it very difficult to convert."
  
  # Country Modifiers
  holy_site_conversion_zeal: "Religious Holy Site Zeal"

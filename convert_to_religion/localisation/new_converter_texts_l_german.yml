@@ -1,6 +1,30 @@
 ﻿l_german:
  TRL: "Trapalandia"
  TRL_ADJ: "Trapalandisch"
+ #Fraticelli Papst
+ FAP_ideas:0 "Fraticelli Ideas"
+ FAP_ideas_start:0 "Fraticelli Traditions"
+ FAP_ideas_bonus:0 "Fraticelli Ambitionen"
+ ZZZ_little_brethren:0 "Kleine Brüder"
+ ZZZ_little_brethren_desc:0 "Wir folgen den Lehren des heiligen Franziskus von Assisi, halten strenge Armutsgelübde und helfen allen, die sie brauchen. Diese Einhaltung schafft Vertrauen und Akzeptanz unter anderen Nationen."
+ ZZZ_true_christians:0 "Wahre Christen"
+ ZZZ_true_christians_desc:0 "Bevor die Kirche gereinigt wurde, hatte sie eine lange Zeit in Sünde, voller sinnloser Opulenz und Gier. Wir haben die Kirche zu ihren Wurzeln zurückgebracht und uns auf das Wesentliche konzentriert."
+ ZZZ_defenders_of_the_faith:0 "Verteidigung des Glaubens"
+ ZZZ_defenders_of_the_faith_desc:0 "In der Regel schieben wir Gewalt und bevorzugen Diplomatie. Unsere Nachbarn teilen diesen Glauben jedoch nicht immer und wir wurden in den Krieg gezwungen, auch wenn wir es nicht wünschen. Wenn wir jedoch in die Schlacht gezwungen werden, kämpfen wir mit dem vollen Wissen, dass der Herr an unserer Seite ist."
+ ZZZ_beauty_in_simplicity:0 "Simplicity"
+ ZZZ_beauty_in_simplicity_desc:0 "Wir verschwenden keine Zeit mit massiven Strukturen, die den Himmel dominieren, wir zahlen keine extravaganten Summen für Keramik, Glasmalereien oder Wandteppiche. Kultstätten sind für die Anbetung der Größe des Herrn gedacht, nicht für die Größe der Kirche. Unsere Gebäude sind funktional und kostengünstig, wir müssen niemanden beeindrucken."
+ ZZZ_love_thy_neighbor:0 "Liebe deinen Nachbarn"
+ ZZZ_love_thy_neighbor:0 "Der Herr hat uns geboten, einander zu lieben. Wir sollten keine Zeit damit verschwenden, darüber zu streiten, welche Art zu leben am besten ist. Solange Männer den Herrn von ganzem Herzen und von ganzer Seele lieben, ist es nicht wichtig, wie sie leben Alltag."
+ ZZZ_a_loving_hand:0 "Eine liebende Hand"
+ ZZZ_a_loving_hand_desc:0 "Wir behandeln unsere Untertanen so gut wir können, indem sie uns nur das bezahlen, was sie sich leisten können. Andere Nationen mögen uns ungläubig ansehen, aber wir scheinen nie die Revolten und Probleme anderer Nationen zu haben. Vielleicht sind diese ungläubig Herrscher könnten mehr vom König der Könige und weniger von ihren gierigen Schatzmeistern lernen."
+ ZZZ_spread_the_word:0 "Verbreite die gute Nachricht"
+ ZZZ_spread_the_word_desc:0 "Es ist unsere heilige Pflicht, das Wort des Herrn in der Welt zu verbreiten. Wir können niemals ruhen, bis die ganze Welt von seiner Herrlichkeit und seinem Mitgefühl weiß. Alle, die gerettet werden können, müssen gerettet werden!"
+ #Triggered Mods
+ fraticelli_rome:0 "Die Besetzung Roms"
+ desc_fraticelli_rome:1 "Rom als Fraticelli zu besetzen, konnte nichts anderes tun, als allgemeine Empörung hervorzurufen."
+ fraticelli_subjugation:0 "Unterwerfung des Papsttums"
+ desc_fraticelli_subjugation:0 "Wir haben die Länder des Papsttums unterworfen. Dies verletzt unser Ansehen in den Augen anderer Fraticelli Faithful."
+ 
  israelite: "Israelit"
  old_prussian: "Preußisch"
  TERAPANTHA: "Terapantha"
@@ -160,4 +184,6 @@
  generic_rebels_name: "$RELIGION$-Fanatiker"
  generic_rebels_desc: "Religiöse Fanatiker neigen dazu, sich in Provinzen zu erheben, die von Nationen eines anderen Glaubens kontrolliert werden. Sie versuchen, ihren Glauben zu verbreiten und alle Ungläubigen zu quälen."
  generic_rebels_army: "$RELIGION$-Armee"
+ monophysite_blessings:1 "Patriarchale Segen"
+ pick_monophysite_blessing:0 "Segen auswählen"
  

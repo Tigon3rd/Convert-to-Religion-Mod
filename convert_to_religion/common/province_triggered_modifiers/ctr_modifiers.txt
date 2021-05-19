@@ -501,7 +501,7 @@ holy_site_inti_nazca = { # Nazca
 	}
 }
 
-holy_site_inti_machupicchu = { # Cuzco
+holy_site_inti_machupicchu = { # Abancay
 	picture = "province_inti"
 	potential = {
 	}
@@ -1522,7 +1522,7 @@ holy_site_monophysite_aksum = { # Tigre (Aksum)
 	}
 }
 
-holy_site_monophysite_napata = { # Wadi Halfa 
+holy_site_monophysite_napata = { # Qasr Ibrim
 	picture = "province_monophysite"
 	potential = {
 	}
@@ -2906,7 +2906,7 @@ holy_site_zunist_cairo = { # Cairo
 	}
 }
 
-holy_site_zunist_bojnord = { # Bojnord
+holy_site_zunist_sabzevar = { # Sabzevar
 	picture = "province_zunist"
 	potential = {
 	}
@@ -3455,7 +3455,7 @@ holy_site_bon_hotan = { # Hotan
 # YAZIDI
 ###########################################
 
-holy_site_yazidi_bojnord = { # Bojnord
+holy_site_yazidi_sabzevar = { # Sabzevar
 	picture = "province_yazidi"
 	potential = {
 	}
@@ -3476,7 +3476,7 @@ holy_site_yazidi_bojnord = { # Bojnord
 	}
 }
 
-holy_site_yazidi_siraf = { # Siraf
+holy_site_yazidi_larestan = { # Larestan
 	picture = "province_yazidi"
 	potential = {
 	}
@@ -3801,5 +3801,152 @@ holy_site_hussite_jerusalem = { # Jerusalem
 	on_deactivation = {
 	
 	}
+}
+
+#Fraticelli Pope
+adm_vatican_library = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	trigger = {
+		owner = {
+			OR = {
+				tag = FAP
+				tag = PAP
+			}
+		}
+	}
+	adm_tech_cost_modifier = -0.05
+	global_unrest = -2
+}
+
+dip_vatican_library = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	trigger = {
+		owner = {
+			OR = {
+				tag = FAP
+				tag = PAP
+			}
+		}
+	}
+	dip_tech_cost_modifier = -0.05
+	diplomatic_reputation = 1
+}
+
+mil_vatican_library = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	trigger = {
+		owner = {
+			OR = {
+				tag = FAP
+				tag = PAP
+			}
+		}
+	}
+	
+	mil_tech_cost_modifier = -0.05
+	army_tradition_from_battle = 0.5
+}
+
+pap_sistine_chapel = {
+	potential = {
+		normal_or_historical_nations = yes
+		NOT = { has_global_flag = sistine_chapel_decorated }
+	}
+	trigger = {
+		owner = {
+			OR = {
+				tag = FAP
+				tag = PAP
+			}
+		}
+	}
+	
+	devotion = 0.1
+}
+
+pap_sistinechapel_botticelli = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	trigger = {
+		owner = {
+			OR = {
+				tag = FAP
+				tag = PAP
+			}
+		}
+	}
+	devotion = 0.1
+	global_unrest = -1
+}
+
+pap_sistinechapel_ghirlandaio = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	trigger = {
+		owner = {
+			OR = {
+				tag = FAP
+				tag = PAP
+			}
+		}
+	}
+	devotion = 0.1
+	prestige = 0.5
+}
+
+pap_sistinechapel_perugino = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	trigger = {
+		owner = {
+			OR = {
+				tag = FAP
+				tag = PAP
+			}
+		}
+	}
+	devotion = 0.1
+	improve_relation_modifier = 0.1
+}
+
+pap_sistinechapel_michelangelo = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	trigger = {
+		owner = {
+			OR = {
+				tag = FAP
+				tag = PAP
+			}
+		}
+	}
+	devotion = 0.1
+	idea_cost = -0.05
+}
+
+pap_sistinechapel_decorated = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	trigger = {
+		owner = {
+			OR = {
+				tag = FAP
+				tag = PAP
+			}
+		}
+	}
+	devotion = 0.1
+	global_missionary_strength = 0.01
 }
 
