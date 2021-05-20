@@ -537,7 +537,7 @@ country_event = {
 				}
 				change_religion = cathar
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -555,7 +555,7 @@ country_event = {
 				}
 				change_religion = fraticelli
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -573,7 +573,7 @@ country_event = {
 				}
 				change_religion = messalian
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -591,7 +591,7 @@ country_event = {
 				}
 				change_religion = waldensian
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -609,7 +609,7 @@ country_event = {
 				}
 				change_religion = lollard
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -627,7 +627,7 @@ country_event = {
 				}
 				change_religion = nestorian
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -645,7 +645,7 @@ country_event = {
 				}
 				change_religion = monophysite
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -663,7 +663,7 @@ country_event = {
 				}
 				change_religion = bogomilist
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -681,7 +681,7 @@ country_event = {
 				}
 				change_religion = monothelite
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -699,7 +699,7 @@ country_event = {
 				}
 				change_religion = iconoclast
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -718,7 +718,7 @@ country_event = {
 				# }
 				# change_religion = heretic
 				# add_province_modifier = {
-					# name = "forced_conversion"
+					# name = "religious_zeal_at_conv"
 					# duration = 730
 				# }
 			# }
@@ -735,7 +735,7 @@ country_event = {
 				}
 				change_religion = heretic
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -752,7 +752,7 @@ country_event = {
 				}
 				change_religion = heretic
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -837,7 +837,7 @@ country_event = {
 				}
 				change_religion = cathar
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -855,7 +855,7 @@ country_event = {
 				}
 				change_religion = fraticelli
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -873,7 +873,7 @@ country_event = {
 				}
 				change_religion = messalian
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -891,7 +891,7 @@ country_event = {
 				}
 				change_religion = waldensian
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -909,7 +909,7 @@ country_event = {
 				}
 				change_religion = lollard
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -927,7 +927,7 @@ country_event = {
 				}
 				change_religion = nestorian
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -945,7 +945,7 @@ country_event = {
 				}
 				change_religion = monophysite
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -963,7 +963,7 @@ country_event = {
 				}
 				change_religion = bogomilist
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -981,7 +981,7 @@ country_event = {
 				}
 				change_religion = monothelite
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -999,7 +999,7 @@ country_event = {
 				}
 				change_religion = iconoclast
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -1017,7 +1017,7 @@ country_event = {
 				# }
 				# change_religion = heretic
 				# add_province_modifier = {
-					# name = "forced_conversion"
+					# name = "religious_zeal_at_conv"
 					# duration = 730
 				# }
 			# }
@@ -1034,7 +1034,7 @@ country_event = {
 				}
 				change_religion = heretic
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
@@ -1051,7 +1051,7 @@ country_event = {
 				}
 				change_religion = heretic
 				add_province_modifier = {
-					name = "forced_conversion"
+					name = "religious_zeal_at_conv"
 					duration = 730
 				}
 			}
