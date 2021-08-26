@@ -94,6 +94,14 @@ baltic_pagan_reformed_rebels = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
 		}
+		# Makes them just a tiny amount more likely to spawn in these culture provinces
+		modifier = {
+			factor = 1.001
+			OR = {
+				culture = prussian
+				culture_group = baltic
+			}
+		}
 	}
  
  	# This is checked for EACH province in the Area of Operations
@@ -361,6 +369,16 @@ finnish_pagan_reformed_rebels = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
 		}
+		# Makes them just a tiny amount more likely to spawn in these culture provinces
+		modifier = {
+			factor = 1.001
+			OR = {
+				culture = finnish
+				culture = sapmi
+				culture = karelian
+				culture_group = finno_ugric
+			}
+		}
 	}
  
  	# This is checked for EACH province in the Area of Operations
@@ -627,6 +645,14 @@ slavic_pagan_reformed_rebels = {
 		modifier = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
+		}
+		# Makes them just a tiny amount more likely to spawn in these culture provinces
+		modifier = {
+			factor = 1.001
+			OR = {
+				culture_group = east_slavic
+				culture_group = west_slavic
+			}
 		}
 	}
  
@@ -1162,6 +1188,11 @@ bon_rebels = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
 		}
+		# Makes them just a tiny amount more likely to spawn in these culture provinces
+		modifier = {
+			factor = 1.001
+			culture = tibetan
+		}
 	}
  
  	# This is checked for EACH province in the Area of Operations
@@ -1429,6 +1460,11 @@ hellenic_pagan_rebels = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
 		}
+		# Makes them just a tiny amount more likely to spawn in these culture provinces
+		modifier = {
+			factor = 1.001
+			culture_group = byzantine
+		}
 	}
  
  	# This is checked for EACH province in the Area of Operations
@@ -1692,6 +1728,11 @@ cathar_rebels = {
 		modifier = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
+		}
+		# This should make these heresies a higher factor to spawn than other rebels. Have to check if this fucks something up.
+		modifier = {
+			factor = 1.001
+			religion = catholic
 		}
 	}
  
@@ -1957,6 +1998,11 @@ fraticelli_rebels = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
 		}
+		# This should make these heresies a higher factor to spawn than other rebels. Have to check if this fucks something up.
+		modifier = {
+			factor = 1.001
+			religion = catholic
+		}
 	}
  
  	# This is checked for EACH province in the Area of Operations
@@ -2220,6 +2266,11 @@ waldensian_rebels = {
 		modifier = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
+		}
+		# This should make these heresies a higher factor to spawn than other rebels. Have to check if this fucks something up.
+		modifier = {
+			factor = 1.001
+			religion = catholic
 		}
 	}
  
@@ -2485,6 +2536,11 @@ lollard_religion_rebels = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
 		}
+		# This should make these heresies a higher factor to spawn than other rebels. Have to check if this fucks something up.
+		modifier = {
+			factor = 1.001
+			religion = catholic
+		}
 	}
  
  	# This is checked for EACH province in the Area of Operations
@@ -2748,6 +2804,11 @@ monophysite_rebels = {
 		modifier = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
+		}
+		# This should make these heresies a higher factor to spawn than other rebels. Have to check if this fucks something up.
+		modifier = {
+			factor = 1.001
+			religion = coptic
 		}
 	}
  
@@ -3013,6 +3074,11 @@ bogomilist_rebels = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
 		}
+		# This should make these heresies a higher factor to spawn than other rebels. Have to check if this fucks something up.
+		modifier = {
+			factor = 1.001
+			religion = coptic
+		}
 	}
  
  	# This is checked for EACH province in the Area of Operations
@@ -3276,6 +3342,11 @@ monothelite_rebels = {
 		modifier = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
+		}
+		# This should make these heresies a higher factor to spawn than other rebels. Have to check if this fucks something up.
+		modifier = {
+			factor = 1.001
+			religion = coptic
 		}
 	}
  
@@ -3541,6 +3612,11 @@ iconoclast_rebels = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
 		}
+		# This should make these heresies a higher factor to spawn than other rebels. Have to check if this fucks something up.
+		modifier = {
+			factor = 1.001
+			religion = orthodox
+		}
 	}
  
  	# This is checked for EACH province in the Area of Operations
@@ -3804,6 +3880,11 @@ paulician_rebels = {
 		modifier = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
+		}
+		# This should make these heresies a higher factor to spawn than other rebels. Have to check if this fucks something up.
+		modifier = {
+			factor = 1.001
+			religion = orthodox
 		}
 	}
  
@@ -4069,6 +4150,11 @@ nestorian_rebels = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
 		}
+		# This should make these heresies a higher factor to spawn than other rebels. Have to check if this fucks something up.
+		modifier = {
+			factor = 1.001
+			religion = coptic
+		}
 	}
  
  	# This is checked for EACH province in the Area of Operations
@@ -4332,6 +4418,11 @@ messalian_rebels = {
 		modifier = {
 			factor = 2
 			NOT = { tolerance_to_this = -2 }
+		}
+		# This should make these heresies a higher factor to spawn than other rebels. Have to check if this fucks something up.
+		modifier = {
+			factor = 1.001
+			religion = catholic
 		}
 	}
  

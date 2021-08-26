@@ -1,10 +1,10 @@
-namespace = ZZZ_enhanced_religion
+namespace = ctr_religion_events
 
 #Fraticelli Events
 
 # Cardinal Across the Border
 country_event = {
-	id = ZZZ_enhanced_religion.9
+	id = ctr_religion_events.9
 	title = "aow_events.43.t"
 	desc = "aow_events.43.d"
 	picture = RELIGION_eventPicture
@@ -112,10 +112,9 @@ country_event = {
 	}
 }
 
-
 # Thoughts of Heresy
 province_event = {
-	id = ZZZ_enhanced_religion.10
+	id = ctr_religion_events.10
 	title = "aow_events.45.t"
 	desc = "aow_events.45.d"
 	picture = PRAYING_eventPicture
@@ -160,7 +159,7 @@ province_event = {
 
 # Pope Discovers Duplicity
 province_event = {
-	id = ZZZ_enhanced_religion.11
+	id = ctr_religion_events.11
 	title = "aow_events.46.t"
 	desc = "aow_events.46.d"
 	picture = POPE_PREACHING_eventPicture
@@ -186,7 +185,7 @@ province_event = {
 
 # Contacts in the Holy See
 country_event = {
-	id = ZZZ_enhanced_religion.12
+	id = ctr_religion_events.12
 	title = "aow_events.48.t"
 	desc = "aow_events.48.d"
 	picture = RELIGION_eventPicture
@@ -238,7 +237,7 @@ country_event = {
 
 # Cardinal Sins
 country_event = {
-	id = ZZZ_enhanced_religion.13
+	id = ctr_religion_events.13
 	title = "aow_events.51.t"
 	desc = "aow_events.51.d"
 	picture = SPY_eventPicture
@@ -293,7 +292,7 @@ country_event = {
 
 # Veneration of Relics
 country_event = {
-	id = ZZZ_enhanced_religion.14
+	id = ctr_religion_events.14
 	title = catholic_flavor.6.t
 	desc = catholic_flavor.6.d
 	picture = RELIGION_eventPicture
@@ -354,7 +353,7 @@ country_event = {
 
 # Veneration of the Virgin Mary 
 country_event = {
-	id = ZZZ_enhanced_religion.15
+	id = ctr_religion_events.15
 	title = catholic_flavor.7.t
 	desc = catholic_flavor.7.d
 	picture = RELIGION_eventPicture
@@ -390,7 +389,7 @@ country_event = {
 
 # The Doctrine of Particular Judgement
 country_event = {
-	id = ZZZ_enhanced_religion.16
+	id = ctr_religion_events.16
 	title = catholic_flavor.8.t
 	desc = catholic_flavor.8.d
 	picture = POPE_PREACHING_eventPicture
@@ -436,7 +435,7 @@ country_event = {
 
 # A new Confession of Faith
 country_event = {
-	id = ZZZ_enhanced_religion.17
+	id = ctr_religion_events.17
 	title = catholic_flavor.9.t
 	desc = catholic_flavor.9.d
 	picture = POPE_PREACHING_eventPicture
@@ -469,7 +468,7 @@ country_event = {
 
 #A Promise of Safe Passage?
 country_event = {
-	id = ZZZ_enhanced_religion.18
+	id = ctr_religion_events.18
 	title = catholic_flavor.10.t
 	desc = catholic_flavor.10.d
 	picture = RELIGION_eventPicture
@@ -498,5 +497,605 @@ country_event = {
 		add_reform_desire = 0.01
 		add_papal_influence = 10
 		add_devotion = 1
+	}
+}
+
+# End of Fraticelli Events
+
+# Heresy
+country_event = {
+	id = ctr_religion_events.400
+	title = "EVTNAME821"
+	desc = "EVTDESC821"
+	picture = RELIGION_eventPicture
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = religious_ideas
+		NOT = { has_reform = papacy_reform }
+		NOT = { has_reform = leading_clergy_reform }
+		any_owned_province = {
+			has_owner_religion = yes
+			is_reformation_center = no
+			NOT = { has_province_modifier = heresy }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					religion = catholic
+				}
+				random_list = {
+					20 = { set_country_flag = cathar_heresy }
+					20 = { set_country_flag = fraticelli_heresy }
+					20 = { set_country_flag = messalian_heresy }
+					20 = { set_country_flag = waldensian_heresy }
+					20 = { set_country_flag = lollard_heresy }
+				}
+			}
+			if = {
+				limit = {
+					religion = coptic
+				}
+				random_list = {
+					25 = { set_country_flag = nestorian_heresy }
+					25 = { set_country_flag = monophysite_heresy }
+					25 = { set_country_flag = bogomilist_heresy }
+					25 = { set_country_flag = monothelite_heresy }
+				}
+			}
+			if = {
+				limit = {
+					religion = orthodox
+				}
+				random_list = {
+					50 = { set_country_flag = iconoclast_heresy }
+					50 = { set_country_flag = paulician_heresy }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB821A"
+		# Christian
+		if = {
+			limit = {
+				has_country_flag = cathar_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = cathar
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = cathar_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = fraticelli_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = fraticelli
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = fraticelli_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = messalian_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = messalian
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = messalian_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = waldensian_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = waldensian
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = waldensian_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = lollard_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = lollard
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = lollard_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = nestorian_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = nestorian
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = nestorian_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = monophysite_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = monophysite
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = monophysite_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = bogomilist_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = bogomilist
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = bogomilist_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = monothelite_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = monothelite
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = monothelite_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = iconoclast_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = iconoclast
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = iconoclast_heresy
+		}
+		# Muslim
+		# if = {
+			# limit = {
+				# religion_group = muslim
+			# }
+			# add_piety = -0.15
+			# random_owned_province = {
+				# limit = {
+					# has_owner_religion = yes
+					# NOT = { has_province_modifier = heresy }
+				# }
+				# change_religion = heretic
+				# add_province_modifier = {
+					# name = "religious_zeal_at_conv"
+					# duration = 730
+				# }
+			# }
+		# }
+		# Zoroastrian
+		if = {
+			limit = {
+				religion_group = zoroastrian_group
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = heretic
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+		}
+		# Jewish
+		if = {
+			limit = {
+				religion_group = jewish_group
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = heretic
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+		}
+	}
+}
+
+# Freethinking Leads Away From God
+country_event = {
+	id = ctr_religion_events.1908
+	title = ideagroups.1908.t
+	desc = ideagroups.1908.d
+	picture = RELIGIOUS_TURMOIL_eventPicture
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_idea_group = humanist_ideas
+		NOT = { has_reform = papacy_reform }
+		NOT = { has_reform = leading_clergy_reform }
+		any_owned_province = {
+			has_owner_religion = yes
+			is_reformation_center = no
+			NOT = { has_province_modifier = heresy }
+		}
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					religion = catholic
+				}
+				random_list = {
+					20 = { set_country_flag = cathar_heresy }
+					20 = { set_country_flag = fraticelli_heresy }
+					20 = { set_country_flag = messalian_heresy }
+					20 = { set_country_flag = waldensian_heresy }
+					20 = { set_country_flag = lollard_heresy }
+				}
+			}
+			if = {
+				limit = {
+					religion = coptic
+				}
+				random_list = {
+					25 = { set_country_flag = nestorian_heresy }
+					25 = { set_country_flag = monophysite_heresy }
+					25 = { set_country_flag = bogomilist_heresy }
+					25 = { set_country_flag = monothelite_heresy }
+				}
+			}
+			if = {
+				limit = {
+					religion = orthodox
+				}
+				random_list = {
+					50 = { set_country_flag = iconoclast_heresy }
+					50 = { set_country_flag = paulician_heresy }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "ideagroups.1908.a"
+		# Christian
+		add_estate_dhimmi_loyalty_effect = yes
+		if = {
+			limit = {
+				has_country_flag = cathar_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = cathar
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = cathar_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = fraticelli_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = fraticelli
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = fraticelli_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = messalian_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = messalian
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = messalian_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = waldensian_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = waldensian
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = waldensian_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = lollard_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = lollard
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = lollard_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = nestorian_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = nestorian
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = nestorian_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = monophysite_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = monophysite
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = monophysite_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = bogomilist_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = bogomilist
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = bogomilist_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = monothelite_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = monothelite
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = monothelite_heresy
+		}
+		if = {
+			limit = {
+				has_country_flag = iconoclast_heresy
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					is_reformation_center = no
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = iconoclast
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+			clr_country_flag = iconoclast_heresy
+		}
+		# Muslim
+		# if = {
+			# limit = {
+				# religion_group = muslim
+			# }
+			# random_owned_province = {
+				# limit = {
+					# has_owner_religion = yes
+					# NOT = { has_province_modifier = heresy }
+				# }
+				# change_religion = heretic
+				# add_province_modifier = {
+					# name = "religious_zeal_at_conv"
+					# duration = 730
+				# }
+			# }
+		# }
+		# Zoroastrian
+		if = {
+			limit = {
+				religion_group = zoroastrian_group
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = heretic
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+		}
+		# Jewish
+		if = {
+			limit = {
+				religion_group = jewish_group
+			}
+			random_owned_province = {
+				limit = {
+					has_owner_religion = yes
+					NOT = { has_province_modifier = heresy }
+				}
+				change_religion = heretic
+				add_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 730
+				}
+			}
+		}
 	}
 }

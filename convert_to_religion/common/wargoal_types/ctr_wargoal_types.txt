@@ -15,7 +15,7 @@ take_holy_site = {
 					province_id = 118 # Roma
 					province_id = 146 # Athens
 					province_id = 358 # Alexandria
-					province_id = 148 # Thessaloniki
+					province_id = 4702 # Siroz
 					province_id = 2296 # Biga
 				}
 			}
@@ -24,11 +24,11 @@ take_holy_site = {
 					ROOT = { religion = zoroastrian }
 				}
 				OR = {
-					province_id = 4332 # Siraf
-					province_id = 4327 # Jask
-					province_id = 450 # Balkh
-					province_id = 2206 # Urmia
-					province_id = 2236 # Bojnord
+					province_id = 2223 # Larestan
+					province_id = 4430 # Daman
+					province_id = 441 # Khiva
+					province_id = 421 # Shirvan
+					province_id = 2235 # Sabzevar
 				}
 			}
 			if = {
@@ -62,7 +62,7 @@ take_holy_site = {
 				OR = {
 					province_id = 804 # Puno
 					province_id = 806 # Nazca
-					province_id = 808 # Cuzco
+					province_id = 807 # Abancay
 					province_id = 809 # Lima
 					province_id = 812 # Chanchan
 				}
@@ -73,7 +73,7 @@ take_holy_site = {
 				}
 				OR = {
 					province_id = 38 # Riga
-					province_id = 47 # Stralsund
+					province_id = 4745 # Rügen
 					province_id = 269 # Podlasia
 					province_id = 4244 # Trubchevsk (Pochep)
 					province_id = 1859 # Chelmno (Culm, Torun)
@@ -84,7 +84,7 @@ take_holy_site = {
 					ROOT = { religion = slavic_pagan_reformed }
 				}
 				OR = {
-					province_id = 47 # Stralsund
+					province_id = 4745 # Rügen
 					province_id = 256 # Plock
 					province_id = 268 # Moldavia
 					province_id = 280 # Kiev
@@ -171,7 +171,7 @@ take_holy_site = {
 					province_id = 358 # Alexandria
 					province_id = 379 # Jerusalem
 					province_id = 1227 # Tigre (Aksum)
-					province_id = 2322 # Wadi Halfa
+					province_id = 1234 # Qasr Ibrim
 					province_id = 2313 # Antioch
 				}
 			}
@@ -391,8 +391,8 @@ take_holy_site = {
 					ROOT = { religion = yazidi }
 				}
 				OR = {
-					province_id = 2236 # Bojnord
-					province_id = 4332 # Siraf
+					province_id = 2235 # Sabzevar
+					province_id = 2223 # Larestan
 					province_id = 411 # Mosul
 					province_id = 385 # Mecca
 					province_id = 379 # Jerusalem

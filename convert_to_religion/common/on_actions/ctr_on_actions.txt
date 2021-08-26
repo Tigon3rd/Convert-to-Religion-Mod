@@ -95,7 +95,12 @@ on_startup = {
 		}
 	}
 	# MODDED
-	add_holy_site_modifiers_to_provinces = yes
+	if = {
+		limit = {
+			NOT = { has_global_flag = holy_sites_added }
+		}
+		add_holy_site_modifiers_to_provinces = yes
+	}
 }
 
 #Fraticelli Pope
@@ -147,10 +152,10 @@ on_five_year_pulse_4 = {
 		set_global_flag = counter_reformation
 	}
 	random_events = {
-		100 = ctr_events.400 # Heresy event (Religious Ideas) for converter religions
-		100 = ctr_events.1908 # Heresy event (Humanist Ideas) for converter religions
+		100 = ctr_religion_events.400 # Heresy event (Religious Ideas) for converter religions
+		100 = ctr_religion_events.1908 # Heresy event (Humanist Ideas) for converter religions
 		
-		1000 = 0
+		2000 = 0
 	}
 }
 
