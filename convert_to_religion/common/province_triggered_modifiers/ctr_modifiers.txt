@@ -1455,6 +1455,29 @@ holy_site_orthodox_antioch = { # Antioch
 	}
 }
 
+# Special Event to move the Sugla/Lebedos Holy Site to Moskva after the fall of Byzantium
+
+holy_site_orthodox_moskva = { # Moskva
+	picture = "province_orthodox"
+	potential = {
+	}
+	
+	trigger = {
+		religion = orthodox
+	}
+	
+	local_missionary_strength = -0.05	
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
 ###########################################
 # MONOPHYSITE
 ###########################################

@@ -1,0 +1,21 @@
+﻿l_english:
+ holding_abrahamic_holy_sites:0 "Pagans Holding Abrahamic Holy Sites"
+ controlling_all_norse_holy_sites:0 "Controlling All Norse Holy Sites"
+ controlling_all_hellenic_holy_sites:0 "Controlling All Hellenic Holy Sites"
+ controlling_all_mayan_holy_sites:0 "Controlling All Mayan Holy Sites"
+ controlling_all_nahuatl_holy_sites:0 "Controlling All Nahuatl Holy Sites"
+ controlling_all_inti_holy_sites:0 "Controlling All Inti Holy Sites"
+ controlling_all_romuva_holy_sites:0 "Controlling All Romuvan Holy Sites"
+ controlling_all_slavic_holy_sites:0 "Controlling All Slavic Holy Sites"
+ controlling_all_suomenusko_holy_sites:0 "Controlling All Suomenusko Holy Sites"
+ controlling_all_tengri_holy_sites:0 "Controlling All Tengri Holy Sites"
+ controlling_all_fetishist_holy_sites:0 "Controlling All Fetishist Holy Sites"
+ controlling_all_zunist_holy_sites:0 "Controlling All Zunist Holy Sites"
+ controlling_all_bon_holy_sites:0 "Controlling All Bön Holy Sites"
+ ## Beyond Typus
+ controlling_all_norse_holy_sites_bt:0 "Controlling All Norse Holy Sites"
+ controlling_all_hellenic_holy_sites_bt:0 "Controlling All Hellenic Holy Sites"
+ controlling_all_romuva_holy_sites_bt:0 "Controlling All Romuvan Holy Sites"
+ controlling_all_suomenusko_holy_sites_bt:0 "Controlling All Suomenusko Holy Sites"
+ controlling_all_fetishist_holy_sites_bt:0 "Controlling All Fetishist Holy Sites"
+ 

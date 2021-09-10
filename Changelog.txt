@@ -6,6 +6,7 @@ Updated to work with EU4 version 1.30
 
 ADDITIONS:
  Added Holy Site CBs.
+ Added Beyond Typus compatibility (Still WIP)
 [[[Added Holy Site Bonuses mechanic via events. Now if you hold a Holy Site you get events where you can choose between 5 bonuses.]]]
  Added Personal Deities to some pagan religions (Credit to qweytr of Extended Timeline).
  - Hellenic
@@ -18,9 +19,14 @@ ADDITIONS:
  Added 3 Hussite Holy Sites (Not yet implemented a decision to convert yet, also need events to get to 5 as to be in line with everything else.)
  Added a "Fraticelli Pope" (tag = FAP) to fix the fraticelli religion, as it uses papal mechanics, and was tied to the "tag = PAP" the papal state, which caused several problems with the papal mechanics, as the religions didn't match. Now if you are fraticelli and hold "Rome" you will be asked to release the fraticelli pope, works exactly the same as catholics. (All credits go to the mod team behind the CK2toEU4 converter mod.)
  Added some religions to some government reforms, especially the fraticelli pope being able to get the same reforms as the catholic pope.
+ Added Event to move the Orthodox Sugla(Lebedos) Holy Site to Moskva, if and when Byzantium and Constantinople falls.
+ Added Moskva as a possible orthodox holy site. See above for details.
+ Added triggered modifiers to most pagan religions, where they have to own and convert all 5 of their holy sites to get +1 missionary, +2% missionary strength, +1 yearly prestige.
+ Added a triggered modifier to the pagan religion group, where they have to own and convert all abrahamic religious sites (Rome, Mecca & Jerusalem) to get +1 missionary, +2% missionary strength, +1 yearly prestige.
 
 UPDATES:
  Updated the mod to add all holy sites from startup, instead of having to wait a day for an event to trigger which added them.
+ Updated the mod to move holy sites on subseqent startups if mod has been updated and some holy sites have been moved.
  Updated convert to religion decisions to have a cooldown timer of 10 years (subject to change, feedback welcome), so as to not allow switching through religions immediately after you've already switched.
  Updated convert to religion decisions to not allow defenders of the faith to convert to another religion.
  Updated Mayan religion holy site province from "2633 Mani" to "2651 Ah Canul" (to separate it from Chichen Itza).
@@ -34,6 +40,7 @@ UPDATES:
  Updated Hellenic, Romuva and Slavic to the new provinces introduced with Emperor.
  Updated some converted heresies to be in line with the vanilla game.
  Updated converted_rebel_types to be up to date with the rebel_types from the vanilla game.
+ Updated the decisions and several other places to use the province modifiers instead of the province id's to find which provinces is a holy site.
 
 BUGS & FIXES:
  Fixed holy site conversion zeal country modifier by adding 'religion = yes' so that it gets removed if you change religions. Done so you can't use my mod to get the modifier bonus and immediately change back to your previous religion using vanilla game or other mods that allow you to change religion.

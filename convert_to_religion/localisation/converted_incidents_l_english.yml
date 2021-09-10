@@ -15,7 +15,7 @@
  incident_pope.2.a:0 "The Pope will join the Empire"
  incident_pope.2.b:0 "The Holy See should remain independent."
  incident_pope.3.t:0 "An Unholy Empire"
- incident_pope.3.d:1 "The Imperial Diet of the Empire has settled on a terrible and intolerable edict: that the Empire will no longer follow the True Christian faith. All our efforts to restore the dignity of the Holy Mother Church have been for naught, and so we must give serious consideration to abandoning this tainted institution."
+ incident_pope.3.d:1 "The Imperial Diet of the Empire has settled on a terrible and intolerable edict; that the Empire will no longer follow the True Christian faith. All our efforts to restore the dignity of the Holy Mother Church have been for naught, and so we must give serious consideration to abandoning this tainted institution."
  incident_pope.3.a:0 "Let us depart this den of sin."
  incident_pope.3.b:0 "We must remain for the good of Christendom."
  

@@ -4,43 +4,49 @@
  
  secularization_of_christian_theocracy_FAP_title:0 "Secularization"
  secularization_of_christian_theocracy_FAP_desc:0 "[Root.Monarch.GetTitle] is a fine title but it is time we stood on our own legs and used the influence we have in this state to build something stronger. However pious our state may be we should seize these lands for our our own descendants rather than risk the appointment of an incompetent successor."
-  
+ 
  statue_in_restraint_of_appeals_FAP_title:0 "Declare Statute in Restraint of Appeals"
  statue_in_restraint_of_appeals_FAP_desc:0 "Officially demote the Pope and instead raise the king to be the final legal authority in all matters of religion."
-  
+ 
  revoke_restraint_of_appeals_FAP_title:0 "Revoke Restraint of Appeals"
  revoke_restraint_of_appeals_FAP_desc:0 "Revoke the law that was previously passed giving the king final, legal authority in all matters of religion and restore those rights to the Pope."
-  
+ 
  move_capital_to_rome_FAP_title:0 "Move Capital to Rome"
  move_capital_to_rome_FAP_desc:0 "The province and city of Rome has finally been returned to the Papal State. The time has come to restore the Holy See."
-  
+ 
  join_the_counter_reformation_FAP_title:0 "Embrace the Counter-Reformation"
  join_the_counter_reformation_FAP_desc:0 "His Holiness, the Pope, has called for a mighty effort to counter the Protestant movement. With the aid of the newly founded Jesuit order, we shall root out and purge these foul heresies. Apart from more - and more effective missionaries - Protestantism and the Reformed faith shall have a harder time spreading in our realm. (If we ever pick the national ideas '§YEcumenism§W' or '§YLiberté, égalité, fraternité§W' we will lose this bonus.)"
-  
+ 
  secularization_of_protestant_theocracy_EXTRA_title:0 "Secularization"
  secularization_of_protestant_theocracy_EXTRA_desc:0 "With the ties to Rome cut we no longer have a place in a bigger Christian hierarchy. Perhaps the faithful would be just as well served by a Monarch as they are by a [Root.Monarch.GetTitle]?"
-   
+ 
  test_act_EXTRA_title:0 "Pass Test Act"
  test_act_EXTRA_desc:0 "Exclude all non-members of the established church from holding any military or civil office, reserve that privilege for members that have received communion according to the proper rites of our national church."
-	
+ 
  dissolution_of_the_monasteries_EXTRA_title:0 "Pass Dissolution of the Monasteries Act"
  dissolution_of_the_monasteries_EXTRA_desc:0 "Increase the monarch's control and power by authorizing any ecclesiastical property with an annual income below a certain value to be confiscated."
-	
+ 
  popery_act_EXTRA_title:0 "Pass Popery Act"
  popery_act_EXTRA_desc:0 "Take measures to reduce Catholic influence by offering money to anyone willing to witness against a Catholic priest or bishop that has been apprehended performing religious services."
-	
+ 
  trade_propagation_convert_to_islam_EXTRA_title:0 "Adopt Islam as the State Religion"
  trade_propagation_convert_to_islam_EXTRA_desc:0 "Islam has increasingly grown to be the dominant religion both in government, among our subjects and our nobility. It is time we join the community of the faithful."
-  
+ 
  restrict_government_offices_EXTRA_title:0 "Encourage Conversion to Judaism"
  restrict_government_offices_EXTRA_desc:0 "Let us restrict all important offices in the administration of our central, local and military government to members of the true faith while also providing free education in the laws of the Talmud and the Shulkhan Arukh for all lower officials. This way we can encourage that there is both a will and a preparedness to convert."
  
  zoroastrian_rites_of_admission_EXTRA_title:0 "Rites of Admission"
  zoroastrian_rites_of_admission_EXTRA_desc:0 "Unlike some religions ours do not attempt to force itself upon unknowing children. A Zoroastrian initiation must be done by someone old enough to understand what it entails. Still much could be done to encourage those who do not see the value of our faith."
-  
+ 
  zoroastrian_royal_fires_EXTRA_title:0 "Rekindling the Royal Fires"
  zoroastrian_royal_fires_EXTRA_desc:0 "Of all the fire temples of our faith the legend of the three fires lit by Zoroaster himself are the most prestigious. They have, however, long been lost as our faith declined over the centuries and the locations of the old fires are now unknown. While a fire cannot be recreated we can attempt to find the site of these temples and start new fires to symbolize the rise of our Zoroastrian Empire."
  
  zoroastrian_diaspora_EXTRA_title:0 "Zoroastrian Diaspora"
  zoroastrian_diaspora_EXTRA_desc:0 "During the harsh years of oppression in Persia many left their ancestral homes to resettle abroad. The Qissa-i Sanjan tells us of those who took a long and arduous journey to settle in Gujarat and to lit new fires and start anew. Known for their industry these men and women have thrived in their new homeland. Our efforts to make Zoroastrianism the only majority religion within our borders will allow us to reunite with these foreign brothers and sisters."
+ 
+ capital_in_belgrade_EXTRA_title:0 "Move Capital to Belgrade"
+ capital_in_belgrade_EXTRA_desc:0 "Belgrade occupies a key defensive and economic point in the Balkans and has in the past served as the capital of Serbia. We should make this great city our capital once again and restore it to the glorious city it once was!"
+ 
+ steppe_horde_reform_EXTRA_title:0 "Reform the Government"
+ steppe_horde_reform_EXTRA_desc:0 "For many years now our more advanced neighbors have laughed at us for our backward form of government. Well, no longer - as of today our great leader is a King!"
  

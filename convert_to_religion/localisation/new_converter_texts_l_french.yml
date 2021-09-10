@@ -14,7 +14,7 @@
  ZZZ_beauty_in_simplicity:0 "Simplicité"
  ZZZ_beauty_in_simplicity_desc:0 "Nous ne perdons pas de temps avec des structures massives dominant le ciel, nous ne payons pas de sommes extravagantes pour la poterie, les vitraux ou les tapisseries. Les lieux de culte sont destinés à adorer la grandeur du Seigneur, pas la grandeur de l'Église. Nos bâtiments sont fonctionnels et peu coûteux, nous n'avons besoin d'impressionner personne."
  ZZZ_love_thy_neighbors:0 "Aime ton prochain"
- ZZZ_love_thy_neighbors:0 "Le Seigneur nous a ordonné de nous aimer les uns les autres. Nous ne devons pas perdre de temps à discuter de la meilleure façon de vivre. Tant que les hommes aiment le seigneur de tout leur cœur et de toute leur âme, peu importe comment ils vivent leur la vie de tous les jours."
+ ZZZ_love_thy_neighbors_desc:0 "Le Seigneur nous a ordonné de nous aimer les uns les autres. Nous ne devons pas perdre de temps à discuter de la meilleure façon de vivre. Tant que les hommes aiment le seigneur de tout leur cœur et de toute leur âme, peu importe comment ils vivent leur la vie de tous les jours."
  ZZZ_a_loving_hand:0 "Une main aimante"
  ZZZ_a_loving_hand_desc:0 "Nous traitons nos sujets aussi bien que possible, en leur faisant payer seulement ce qu'ils peuvent se permettre. D'autres nations peuvent nous regarder avec incrédulité, mais pourtant nous ne semblons jamais avoir les révoltes et les problèmes des autres nations. Peut-être ces incrédules les dirigeants pouvaient en apprendre davantage du roi des rois et moins de leurs trésoriers avides."
  ZZZ_spread_the_word:0 "Répandre la bonne nouvelle"
@@ -24,6 +24,7 @@
  desc_fraticelli_rome:1 "Occuper Rome en tant que Fraticelli, ne pouvait rien faire d'autre que susciter l'indignation générale."
  fraticelli_subjugation:0 "Assujettissement de la papauté"
  desc_fraticelli_subjugation:0 "Nous avons soumis les terres de la papauté. Cela nuit à notre position aux yeux des autres fidèles de Fraticelli."
+ flavor_fap.7.tt: "Une invitation à y participer est envoyée à tous les pays §Yfraticelli§!."
  
  israelite: "israélite"
  old_prussian: "vieille-prussienne"

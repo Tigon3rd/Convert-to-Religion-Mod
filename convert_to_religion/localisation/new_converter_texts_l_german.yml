@@ -14,7 +14,7 @@
  ZZZ_beauty_in_simplicity:0 "Simplicity"
  ZZZ_beauty_in_simplicity_desc:0 "Wir verschwenden keine Zeit mit massiven Strukturen, die den Himmel dominieren, wir zahlen keine extravaganten Summen für Keramik, Glasmalereien oder Wandteppiche. Kultstätten sind für die Anbetung der Größe des Herrn gedacht, nicht für die Größe der Kirche. Unsere Gebäude sind funktional und kostengünstig, wir müssen niemanden beeindrucken."
  ZZZ_love_thy_neighbor:0 "Liebe deinen Nachbarn"
- ZZZ_love_thy_neighbor:0 "Der Herr hat uns geboten, einander zu lieben. Wir sollten keine Zeit damit verschwenden, darüber zu streiten, welche Art zu leben am besten ist. Solange Männer den Herrn von ganzem Herzen und von ganzer Seele lieben, ist es nicht wichtig, wie sie leben Alltag."
+ ZZZ_love_thy_neighbor_desc:0 "Der Herr hat uns geboten, einander zu lieben. Wir sollten keine Zeit damit verschwenden, darüber zu streiten, welche Art zu leben am besten ist. Solange Männer den Herrn von ganzem Herzen und von ganzer Seele lieben, ist es nicht wichtig, wie sie leben Alltag."
  ZZZ_a_loving_hand:0 "Eine liebende Hand"
  ZZZ_a_loving_hand_desc:0 "Wir behandeln unsere Untertanen so gut wir können, indem sie uns nur das bezahlen, was sie sich leisten können. Andere Nationen mögen uns ungläubig ansehen, aber wir scheinen nie die Revolten und Probleme anderer Nationen zu haben. Vielleicht sind diese ungläubig Herrscher könnten mehr vom König der Könige und weniger von ihren gierigen Schatzmeistern lernen."
  ZZZ_spread_the_word:0 "Verbreite die gute Nachricht"
@@ -24,6 +24,7 @@
  desc_fraticelli_rome:1 "Rom als Fraticelli zu besetzen, konnte nichts anderes tun, als allgemeine Empörung hervorzurufen."
  fraticelli_subjugation:0 "Unterwerfung des Papsttums"
  desc_fraticelli_subjugation:0 "Wir haben die Länder des Papsttums unterworfen. Dies verletzt unser Ansehen in den Augen anderer Fraticelli Faithful."
+ flavor_fap.7.tt: "Eine Einladung wird an alle §YFraticelli§! Nationen gesendet werden."
  
  israelite: "Israelit"
  old_prussian: "Preußisch"

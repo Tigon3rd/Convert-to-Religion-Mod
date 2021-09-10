@@ -14,7 +14,7 @@ l_spanish:
  ZZZ_beauty_in_simplicity:0 "Simplicidad"
  ZZZ_beauty_in_simplicity_desc:0 "No perdemos el tiempo con estructuras masivas que dominan el cielo, no pagamos sumas extravagantes por cerámica, vidrieras o tapices. Los lugares de culto están destinados a adorar la Grandeza del Señor, no la grandeza de la Iglesia. Nuestros edificios son funcionales y económicos, no necesitamos impresionar a nadie."
  ZZZ_love_thy_neighbor:0 "Ama a tu prójimo"
- ZZZ_love_thy_neighbor:0 "El Señor nos ordenó amarnos los unos a los otros. No debemos perder el tiempo discutiendo sobre la mejor forma de vivir. Mientras los hombres amen al Señor con todo su corazón y toda su alma, no importa cómo vivan su vida. la vida cotidiana."
+ ZZZ_love_thy_neighbor_desc:0 "El Señor nos ordenó amarnos los unos a los otros. No debemos perder el tiempo discutiendo sobre la mejor forma de vivir. Mientras los hombres amen al Señor con todo su corazón y toda su alma, no importa cómo vivan su vida. la vida cotidiana."
  ZZZ_a_loving_hand:0 "Una mano amorosa"
  ZZZ_a_loving_hand_desc:0 "Tratamos a nuestros súbditos lo mejor que podemos, haciendo que nos paguen solo lo que pueden pagar. Otras naciones pueden mirarnos con incredulidad, pero nunca parece que tengamos las revueltas y los problemas de otras naciones. Quizás estos incrédulos los gobernantes podían aprender más del Rey de reyes y menos de sus codiciosos tesoreros."
  ZZZ_spread_the_word:0 "Difunde las buenas noticias"
@@ -24,6 +24,7 @@ l_spanish:
  desc_fraticelli_rome:1 "Ocupar Roma como un Fraticelli no podía hacer otra cosa que provocar la indignación general."
  fraticelli_subjugation:0 "Subyugación del Papado"
  desc_fraticelli_subjugation:0 "Hemos subyugado las tierras del papado. Esto hiere nuestra posición a los ojos de otros Fraticelli Fieles."
+ flavor_fap.7.tt: "Se enviará una invitación a todos los países §fraticelli§!."
  
  israelite: "Israelita"
  old_prussian: "de la antigua Prusia"

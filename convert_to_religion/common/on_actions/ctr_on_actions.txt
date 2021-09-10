@@ -97,6 +97,12 @@ on_startup = {
 	# MODDED
 	if = {
 		limit = {
+			has_global_flag = holy_sites_added
+		}
+		check_holy_site_modifiers_to_provinces = yes
+	}
+	if = {
+		limit = {
 			NOT = { has_global_flag = holy_sites_added }
 		}
 		add_holy_site_modifiers_to_provinces = yes

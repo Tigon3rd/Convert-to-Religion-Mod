@@ -1,34 +1,34 @@
 ﻿l_french:
  institute_the_societas_jesu_FAP_title:0 "Instituer la Compagnie de Jésus"
  institute_the_societas_jesu_FAP_desc:0 "Sa Sainteté a approuvé un nouvel ordre de missionnaires appelé « Compagnie de Jésus ». Mais sans soutien royal, elle ne pourra se développer. Devons-nous soutenir ces jésuites ?"
-  
+ 
  secularization_of_christian_theocracy_FAP_title:0 "Séculariser le pays"
  secularization_of_christian_theocracy_FAP_desc:0 "C'est un bien beau titre que celui de [Root.Monarch.GetTitle], mais le temps est venu de grandir et de faire bon usage de l'influence dont nous disposons dans le pays pour construire quelque chose de plus solide. Tout aussi pieux que soit le peuple, mieux vaut nous emparer des territoires au profit de nos descendants plutôt que risquer la nomination d'un incompétent pour nous succéder."
-  
+ 
  statue_in_restraint_of_appeals_FAP_title:0 "Proclamer le statut des appels"
  statue_in_restraint_of_appeals_FAP_desc:0 "Destituerait officiellement [PAP.GetLeLaLDir] [PAP.Monarch.GetTitle] pour faire [Root.GetDuDelaDir] [Root.Monarch.GetTitle] l'autorité légale ultime en matière religieuse."
-  
+ 
  revoke_restraint_of_appeals_FAP_title:0 "Révoquer la restriction sur les appels"
  revoke_restraint_of_appeals_FAP_desc:0 "Révoquerait la loi précédemment promulguée, faisant du roi l'autorité légale ultime en matière religieuse, pour rétablir les prérogative du pape."
-  
+ 
  move_capital_to_rome_FAP_title:0 "Transférer la capitale à Rome"
  move_capital_to_rome_FAP_desc:0 "La province et la ville de Rome sont enfin revenues aux États pontificaux. Le temps est venu de restaurer le Saint-Siège."
-  
+ 
  join_the_counter_reformation_FAP_title:0 "Embrasser la Contre-Réforme"
  join_the_counter_reformation_FAP_desc:0 "Sa Sainteté le pape appelle à un effort important pour contrer le mouvement protestant. Avec l'aide du nouvel ordre des jésuites, nous devrions pouvoir trouver et éliminer ces hérétiques infâmes. Grâce à des missionnaires plus nombreux et efficaces, le protestantisme et la foi réformée devraient rencontrer plus de difficultés à se propager sur nos terres. (Ces avantages seront toutefois perdus si nous adoptons les doctrines nationales §YŒcuménisme§! ou §YLiberté, égalité, fraternité§!)."
-  
+ 
  secularization_of_protestant_theocracy_EXTRA_title:0 "Séculariser le pays"
  secularization_of_protestant_theocracy_EXTRA_desc:0 "Tout lien avec Rome ayant été coupé, nous n'avons plus notre place au sein de l'Église catholique. Sans doute les fidèles seraient-ils aussi bien servis par un souverain qu'ils l'ont été par leurs [Root.Monarch.GetTitle]s ?"
-  
+ 
  test_act_EXTRA_title:0 "Adopter la loi sur les preuves"
  test_act_EXTRA_desc:0 "Exclurait de tout office civil ou militaire quiconque n'est pas un fidèle de l'Église établie. Ces privilèges seraient donc réservés aux croyants ayant reçu la communion selon les rites de notre Église nationale."
-	
+ 
  dissolution_of_the_monasteries_EXTRA_title:0 "Adopter la loi sur la dissolution des monastères"
  dissolution_of_the_monasteries_EXTRA_desc:0 "Accroîtrait le contrôle et le pouvoir de l'État en autorisant la confiscation de toute propriété ecclésiastique disposant d'un revenu annuel inférieur à une valeur prédéfinie."
  
  popery_act_EXTRA_title:0 "Adopter la loi sur le papisme"
  popery_act_EXTRA_desc:0 "Définirait des mesures destinées à réduire l'influence catholique, en offrant une récompense à quiconque témoignerait contre un prêtre ou un évêque catholique appréhendé en plein service religieux."
-	
+ 
  trade_propagation_convert_to_islam_EXTRA_title:0 "Faire de l'islam la religion officielle"
  trade_propagation_convert_to_islam_EXTRA_desc:0 "L'islam s'est considérablement répandu, devenant dans les faits la religion majoritaire au gouvernement, au sein de la noblesse et dans le peuple. Il est temps d'intégrer la communauté des fidèles."
  
@@ -37,10 +37,16 @@
  
  zoroastrian_rites_of_admission_EXTRA_title:0 "Promouvoir les rites d'initiation"
  zoroastrian_rites_of_admission_EXTRA_desc:0 "Au contraire de certaines religions, la nôtre ne tente pas de s'imposer à des enfants ignorants. L'initiation au zoroastrisme doit être pratiquée par des personnes suffisamment âgées pour comprendre ce qu'elle implique. Pourtant, on pourrait encore faire beaucoup pour encourager ceux qui ne voient pas encore la valeur de notre foi."
-
+ 
  zoroastrian_royal_fires_EXTRA_title:0 "Raviver les feux royaux"
  zoroastrian_royal_fires_EXTRA_desc:0 "De tous les temples du feu que compte notre foi, les trois feux de la légende, allumés par Zoroastre lui-même, sont les plus prestigieux. Cela fait pourtant longtemps qu'ils sont perdus, car notre foi a décliné avec le temps, et leur localisation est inconnue. Mais même si aucun feu ne pourra jamais être rallumé, nous pouvons toujours tenter de retrouver ces temples pour en allumer de nouveaux, symboles de l'expansion de notre empire zoroastrien."
-
+ 
  zoroastrian_diaspora_EXTRA_title:0 "Réunifier la diaspora zoroastrienne"
  zoroastrian_diaspora_EXTRA_desc:0 "Durant les pires années d'oppression, en Perse, nombreux sont nos ancêtres qui ont quitté leurs foyers ancestraux pour s'établir à l'étranger. Le Qissâ-i Sanjân raconte comment certains d'entre eux entreprirent un voyage long et difficile jusqu'au Gujarât, où ils s'établirent, allumèrent de nouveaux feux et recommencèrent à partir de rien. Reconnus pour leur caractère industrieux, ces hommes et femmes ont prospéré dans leur nouvelle patrie. Nos tentatives pour faire du zoroastrisme la religion dominante de notre pays permettront à ces frères et sœurs étrangers de s'unir à nous."
+ 
+ capital_in_belgrade_EXTRA_title:0 "Transférer la capitale à Belgrade"
+ capital_in_belgrade_EXTRA_desc:0 "Belgrade est un site clef des Balkans, aussi bien au niveau stratégique qu'économique, et a autrefois été la capitale de la Serbie. Elle devrait retrouver cette fonction, et être rénovée pour redevenir cette ville magnifique qu'elle était autrefois."
+ 
+ steppe_horde_reform_EXTRA_title:0 "Réformer notre régime politique"
+ steppe_horde_reform_EXTRA_desc:0 "Cela fait des années que nos voisins plus avancés se moquent de l'archaïsme de notre régime politique. Mais c'est terminé : à partir d'aujourd'hui, notre chef sera roi !"
  

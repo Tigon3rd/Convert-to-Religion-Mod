@@ -8,4 +8,5 @@
  take_holy_site_desc: "War goal is to take a Holy Site."
  
  HOLY_SITES: "Holy Sites"
- HOLY_SITE_WAR_NAME:0 "$ORDER$$FIRST$ $FIRST_RELIGION$ War for the Holy Site of $PROVINCE$"
+ HOLY_SITE_WAR_NAME: "$ORDER$$FIRST$ $FIRST_RELIGION$ War for the Holy Site of $PROVINCE$"
+ 

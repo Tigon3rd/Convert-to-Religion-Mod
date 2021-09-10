@@ -5,6 +5,7 @@
 # Credit CK2 province conversion table and CK2 province temple info, from CK2's EU4 converter files.
 # Credit to Refumee from Steam and his mod Holy Sites
 
+# I would like to not use province IDs in these, but if I don't the tooltip is going to look weird, so I would actually also like to find a way via the "custom_tooltip" option to relay all the nessesary info.
 
 country_decisions = {
 	
@@ -70,12 +71,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 118
-								province_id = 146
-								province_id = 358
-								province_id = 4702
-								province_id = 2296
+							custom_trigger_tooltip = {
+								tooltip = holy_site_hellenic_tt
+								OR = {
+									has_province_modifier = holy_site_hellenic_rome
+									has_province_modifier = holy_site_hellenic_athens
+									has_province_modifier = holy_site_hellenic_alexandria
+									has_province_modifier = holy_site_hellenic_edessa
+									has_province_modifier = holy_site_hellenic_abydos
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -89,12 +93,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 118
-								province_id = 146
-								province_id = 358
-								province_id = 4702
-								province_id = 2296
+							custom_trigger_tooltip = {
+								tooltip = holy_site_hellenic_tt
+								OR = {
+									has_province_modifier = holy_site_hellenic_rome
+									has_province_modifier = holy_site_hellenic_athens
+									has_province_modifier = holy_site_hellenic_alexandria
+									has_province_modifier = holy_site_hellenic_edessa
+									has_province_modifier = holy_site_hellenic_abydos
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -119,11 +126,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 118
-						province_id = 146
-						province_id = 358
-						province_id = 4702
-						province_id = 2296
+						has_province_modifier = holy_site_hellenic_rome
+						has_province_modifier = holy_site_hellenic_athens
+						has_province_modifier = holy_site_hellenic_alexandria
+						has_province_modifier = holy_site_hellenic_edessa
+						has_province_modifier = holy_site_hellenic_abydos
 					}
 					OR = {
 						has_building = temple
@@ -151,13 +158,11 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					NOT = {
-						tag = ROM # Roman Empire
-						tag = BYZ # Byzantine Empire
-						tag = GRE # Greece
-						culture_group = byzantine
-						culture_group = latin
-					}
+					NOT = { tag = ROM } # Roman Empire
+					NOT = { tag = BYZ } # Byzantine Empire
+					NOT = { tag = GRE } # Greece
+					NOT = { culture_group = byzantine }
+					NOT = { culture_group = latin }
 				}
 				add_stability = -4
 			}
@@ -165,6 +170,8 @@ country_decisions = {
 				name = holy_site_conversion_zeal
 				duration = 3650
 			}
+			# maybe add a custom_tooltip to show/tell that you can't take the decisions for 10 years after you've taken one. Something like "Unable to use Convert to Religion decisions for the next 10 years." or "Unable to use Holy Sites to convert religion for the next 10 years."
+			custom_tooltip = ctr_convert_timer_tt
 			set_country_flag = ctr_hellenic_decision
 			hidden_effect = {
 				add_country_modifier = {
@@ -177,6 +184,44 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = { tag = ROM } # Roman Empire
+				# NOT = { tag = BYZ } # Byzantine Empire
+				# NOT = { tag = GRE } # Greece
+				# NOT = { culture_group = byzantine }
+				# NOT = { culture_group = latin }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = hellenic_pagan }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = hellenic_pagan
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_hellenic_decision
+					# had_country_flag = ctr_hellenic_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -241,12 +286,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 2223
-								province_id = 4430
-								province_id = 441
-								province_id = 421
-								province_id = 2235
+							custom_trigger_tooltip = {
+								tooltip = holy_site_zoroastrian_tt
+								OR = {
+									has_province_modifier = holy_site_zoroastrian_larestan
+									has_province_modifier = holy_site_zoroastrian_daman
+									has_province_modifier = holy_site_zoroastrian_khiva
+									has_province_modifier = holy_site_zoroastrian_shirvan
+									has_province_modifier = holy_site_zoroastrian_sabzevar
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -260,12 +308,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 2223
-								province_id = 4430
-								province_id = 441
-								province_id = 421
-								province_id = 2235
+							custom_trigger_tooltip = {
+								tooltip = holy_site_zoroastrian_tt
+								OR = {
+									has_province_modifier = holy_site_zoroastrian_larestan
+									has_province_modifier = holy_site_zoroastrian_daman
+									has_province_modifier = holy_site_zoroastrian_khiva
+									has_province_modifier = holy_site_zoroastrian_shirvan
+									has_province_modifier = holy_site_zoroastrian_sabzevar
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -290,11 +341,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 2223
-						province_id = 4430
-						province_id = 441
-						province_id = 421
-						province_id = 2235
+						has_province_modifier = holy_site_zoroastrian_larestan
+						has_province_modifier = holy_site_zoroastrian_daman
+						has_province_modifier = holy_site_zoroastrian_khiva
+						has_province_modifier = holy_site_zoroastrian_shirvan
+						has_province_modifier = holy_site_zoroastrian_sabzevar
 					}
 					OR = {
 						has_building = temple
@@ -323,14 +374,12 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					NOT = {
-						tag = PER # Persia
-						tag = KHO # Khorasan
-						tag = BAL # Baluchistan
-						tag = AFG # Afghanistan
-						tag = TIM # Timurid
-						culture_group = iranian
-					}
+					NOT = { tag = PER } # Persia
+					NOT = { tag = KHO } # Khorasan
+					NOT = { tag = BAL } # Baluchistan
+					NOT = { tag = AFG } # Afghanistan
+					NOT = { tag = TIM } # Timurid
+					NOT = { culture_group = iranian }
 				}
 				add_stability = -4
 			}
@@ -350,6 +399,45 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = { tag = PER } # Persia
+				# NOT = { tag = KHO } # Khorasan
+				# NOT = { tag = BAL } # Baluchistan
+				# NOT = { tag = AFG } # Afghanistan
+				# NOT = { tag = TIM } # Timurid
+				# NOT = { culture_group = iranian }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = zoroastrian }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = zoroastrian
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_zoroastrian_decision
+					# had_country_flag = ctr_zoroastrian_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -615,12 +703,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 842
-								province_id = 843
-								province_id = 846
-								province_id = 2632
-								province_id = 2651
+							custom_trigger_tooltip = {
+								tooltip = holy_site_mayan_tt
+								OR = {
+									has_province_modifier = holy_site_mayan_tikal
+									has_province_modifier = holy_site_mayan_caracol
+									has_province_modifier = holy_site_mayan_chichenitza
+									has_province_modifier = holy_site_mayan_palenque
+									has_province_modifier = holy_site_mayan_uxmal
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -634,12 +725,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 842
-								province_id = 843
-								province_id = 846
-								province_id = 2632
-								province_id = 2651
+							custom_trigger_tooltip = {
+								tooltip = holy_site_mayan_tt
+								OR = {
+									has_province_modifier = holy_site_mayan_tikal
+									has_province_modifier = holy_site_mayan_caracol
+									has_province_modifier = holy_site_mayan_chichenitza
+									has_province_modifier = holy_site_mayan_palenque
+									has_province_modifier = holy_site_mayan_uxmal
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -664,11 +758,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 842
-						province_id = 843
-						province_id = 846
-						province_id = 2632
-						province_id = 2651
+						has_province_modifier = holy_site_mayan_tikal
+						has_province_modifier = holy_site_mayan_caracol
+						has_province_modifier = holy_site_mayan_chichenitza
+						has_province_modifier = holy_site_mayan_palenque
+						has_province_modifier = holy_site_mayan_uxmal
 					}
 					OR = {
 						has_building = temple
@@ -697,14 +791,12 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					NOT = {
-						tag = XIU # Xiu
-						tag = ITZ # Itza
-						tag = MAY # Maya
-						tag = COC # Cocomes
-						tag = KIC # Kiche
-						culture_group = maya
-					}
+					NOT = { tag = XIU } # Xiu
+					NOT = { tag = ITZ } # Itza
+					NOT = { tag = MAY } # Maya
+					NOT = { tag = COC } # Cocomes
+					NOT = { tag = KIC } # Kiche
+					NOT = { culture_group = maya }
 				}
 				add_stability = -4
 			}
@@ -724,6 +816,45 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = { tag = XIU } # Xiu
+				# NOT = { tag = ITZ } # Itza
+				# NOT = { tag = MAY } # Maya
+				# NOT = { tag = COC } # Cocomes
+				# NOT = { tag = KIC } # Kiche
+				# NOT = { culture_group = maya }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = mesoamerican_religion }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = mesoamerican_religion
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_mayan_decision
+					# had_country_flag = ctr_mayan_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -807,12 +938,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 852
-								province_id = 854
-								province_id = 2626
-								province_id = 2644
-								province_id = 2647
+							custom_trigger_tooltip = {
+								tooltip = holy_site_nahuatl_tt
+								OR = {
+									has_province_modifier = holy_site_nahuatl_tenochtitlan
+									has_province_modifier = holy_site_nahuatl_sayultecas
+									has_province_modifier = holy_site_nahuatl_calixtlahuaca
+									has_province_modifier = holy_site_nahuatl_cholula
+									has_province_modifier = holy_site_nahuatl_coatepec
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -826,12 +960,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 852
-								province_id = 854
-								province_id = 2626
-								province_id = 2644
-								province_id = 2647
+							custom_trigger_tooltip = {
+								tooltip = holy_site_nahuatl_tt
+								OR = {
+									has_province_modifier = holy_site_nahuatl_tenochtitlan
+									has_province_modifier = holy_site_nahuatl_sayultecas
+									has_province_modifier = holy_site_nahuatl_calixtlahuaca
+									has_province_modifier = holy_site_nahuatl_cholula
+									has_province_modifier = holy_site_nahuatl_coatepec
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -856,11 +993,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 852
-						province_id = 854
-						province_id = 2626
-						province_id = 2644
-						province_id = 2647
+						has_province_modifier = holy_site_nahuatl_tenochtitlan
+						has_province_modifier = holy_site_nahuatl_sayultecas
+						has_province_modifier = holy_site_nahuatl_calixtlahuaca
+						has_province_modifier = holy_site_nahuatl_cholula
+						has_province_modifier = holy_site_nahuatl_coatepec
 					}
 					OR = {
 						has_building = temple
@@ -920,6 +1057,49 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = AZT # Aztec
+					# tag = TAR # Tarascan
+					# tag = TOT # Totonac
+					# tag = ZAP # Zapotec
+					# tag = MIX # Mixtec
+					# tag = TLA # Tlapanec
+					# culture_group = central_american
+					# culture_group = otomanguean
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = nahuatl }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = nahuatl
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_nahuatl_decision
+					# had_country_flag = ctr_nahuatl_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -1011,12 +1191,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 804
-								province_id = 806
-								province_id = 807
-								province_id = 809
-								province_id = 812
+							custom_trigger_tooltip = {
+								tooltip = holy_site_inti_tt
+								OR = {
+									has_province_modifier = holy_site_inti_titicaca
+									has_province_modifier = holy_site_inti_nazca
+									has_province_modifier = holy_site_inti_machupicchu
+									has_province_modifier = holy_site_inti_pachacamac
+									has_province_modifier = holy_site_inti_chanchan
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -1030,12 +1213,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 804
-								province_id = 806
-								province_id = 807
-								province_id = 809
-								province_id = 812
+							custom_trigger_tooltip = {
+								tooltip = holy_site_inti_tt
+								OR = {
+									has_province_modifier = holy_site_inti_titicaca
+									has_province_modifier = holy_site_inti_nazca
+									has_province_modifier = holy_site_inti_machupicchu
+									has_province_modifier = holy_site_inti_pachacamac
+									has_province_modifier = holy_site_inti_chanchan
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -1060,11 +1246,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 804
-						province_id = 806
-						province_id = 807
-						province_id = 809
-						province_id = 812
+						has_province_modifier = holy_site_inti_titicaca
+						has_province_modifier = holy_site_inti_nazca
+						has_province_modifier = holy_site_inti_machupicchu
+						has_province_modifier = holy_site_inti_pachacamac
+						has_province_modifier = holy_site_inti_chanchan
 					}
 					OR = {
 						has_building = temple
@@ -1140,6 +1326,57 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = CSU # Cusco
+					# tag = CRA # Charca
+					# tag = CCQ # Calchaqui
+					# tag = CHM # Chimu
+					# tag = CLA # Colla
+					# tag = PCJ # Pacajes
+					# tag = WKA # Wanka
+					# tag = ICM # Ichma
+					# tag = HJA # Huyla
+					# tag = CJA # Cajamarca
+					# tag = MCA # Muisca
+					# tag = QTO # Quito
+					# tag = CYA # Chachapoya
+					# culture_group = andean_group
+					# culture_group = chibchan
+					# culture_group = maranon
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = inti }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = inti
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_inti_decision
+					# had_country_flag = ctr_inti_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -1204,12 +1441,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 38
-								province_id = 4745
-								province_id = 269
-								province_id = 4244
-								province_id = 1859
+							custom_trigger_tooltip = {
+								tooltip = holy_site_romuva_tt
+								OR = {
+									has_province_modifier = holy_site_romuva_riga
+									has_province_modifier = holy_site_romuva_rugen
+									has_province_modifier = holy_site_romuva_podlasie
+									has_province_modifier = holy_site_romuva_pochep
+									has_province_modifier = holy_site_romuva_chelminskie
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -1223,12 +1463,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 38
-								province_id = 4745
-								province_id = 269
-								province_id = 4244
-								province_id = 1859
+							custom_trigger_tooltip = {
+								tooltip = holy_site_romuva_tt
+								OR = {
+									has_province_modifier = holy_site_romuva_riga
+									has_province_modifier = holy_site_romuva_rugen
+									has_province_modifier = holy_site_romuva_podlasie
+									has_province_modifier = holy_site_romuva_pochep
+									has_province_modifier = holy_site_romuva_chelminskie
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -1253,11 +1496,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 38
-						province_id = 4745
-						province_id = 269
-						province_id = 4244
-						province_id = 1859
+						has_province_modifier = holy_site_romuva_riga
+						has_province_modifier = holy_site_romuva_rugen
+						has_province_modifier = holy_site_romuva_podlasie
+						has_province_modifier = holy_site_romuva_pochep
+						has_province_modifier = holy_site_romuva_chelminskie
 					}
 					OR = {
 						has_building = temple
@@ -1313,6 +1556,47 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = EST # Estonia
+					# tag = LVA # Livonia
+					# tag = LIT # Lithuania
+					# tag = PRU # Prussia
+					# primary_culture = prussian
+					# culture_group = baltic
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = baltic_pagan_reformed }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = baltic_pagan_reformed
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_romuva_decision
+					# had_country_flag = ctr_romuva_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -1384,12 +1668,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 4745
-								province_id = 256
-								province_id = 268
-								province_id = 280
-								province_id = 2749
+							custom_trigger_tooltip = {
+								tooltip = holy_site_slavic_tt
+								OR = {
+									has_province_modifier = holy_site_slavic_rugen
+									has_province_modifier = holy_site_slavic_plock
+									has_province_modifier = holy_site_slavic_husi
+									has_province_modifier = holy_site_slavic_kiev
+									has_province_modifier = holy_site_slavic_tikhvin
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -1403,12 +1690,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 4745
-								province_id = 256
-								province_id = 268
-								province_id = 280
-								province_id = 2749
+							custom_trigger_tooltip = {
+								tooltip = holy_site_slavic_tt
+								OR = {
+									has_province_modifier = holy_site_slavic_rugen
+									has_province_modifier = holy_site_slavic_plock
+									has_province_modifier = holy_site_slavic_husi
+									has_province_modifier = holy_site_slavic_kiev
+									has_province_modifier = holy_site_slavic_tikhvin
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -1433,11 +1723,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 4745
-						province_id = 256
-						province_id = 268
-						province_id = 280
-						province_id = 2749
+						has_province_modifier = holy_site_slavic_rugen
+						has_province_modifier = holy_site_slavic_plock
+						has_province_modifier = holy_site_slavic_husi
+						has_province_modifier = holy_site_slavic_kiev
+						has_province_modifier = holy_site_slavic_tikhvin
 					}
 					OR = {
 						has_building = temple
@@ -1507,6 +1797,54 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = BOH # Bohemia
+					# tag = POL # Poland
+					# tag = SIL # Silesia
+					# tag = MOS # Muscowy
+					# tag = RUS # Russia
+					# tag = NOV # Novgorod
+					# tag = RYA # Ryazan
+					# tag = PLT # Polotsk
+					# tag = KIE # Kiev
+					# tag = SLO # Slovakia
+					# culture_group = west_slavic
+					# culture_group = east_slavic
+					# primary_culture = slovak
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = slavic_pagan_reformed }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = slavic_pagan_reformed
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_slavic_decision
+					# had_country_flag = ctr_slavic_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -1574,12 +1912,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 30
-								province_id = 35
-								province_id = 301
-								province_id = 305
-								province_id = 2749
+							custom_trigger_tooltip = {
+								tooltip = holy_site_suomenusko_tt
+								OR = {
+									has_province_modifier = holy_site_suomenusko_raivola
+									has_province_modifier = holy_site_suomenusko_hiiumaa
+									has_province_modifier = holy_site_suomenusko_ryazan
+									has_province_modifier = holy_site_suomenusko_perm
+									has_province_modifier = holy_site_suomenusko_tikhvin
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -1593,12 +1934,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 30
-								province_id = 35
-								province_id = 301
-								province_id = 305
-								province_id = 2749
+							custom_trigger_tooltip = {
+								tooltip = holy_site_suomenusko_tt
+								OR = {
+									has_province_modifier = holy_site_suomenusko_raivola
+									has_province_modifier = holy_site_suomenusko_hiiumaa
+									has_province_modifier = holy_site_suomenusko_ryazan
+									has_province_modifier = holy_site_suomenusko_perm
+									has_province_modifier = holy_site_suomenusko_tikhvin
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -1623,11 +1967,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 30
-						province_id = 35
-						province_id = 301
-						province_id = 305
-						province_id = 2749
+						has_province_modifier = holy_site_suomenusko_raivola
+						has_province_modifier = holy_site_suomenusko_hiiumaa
+						has_province_modifier = holy_site_suomenusko_ryazan
+						has_province_modifier = holy_site_suomenusko_perm
+						has_province_modifier = holy_site_suomenusko_tikhvin
 					}
 					OR = {
 						has_building = temple
@@ -1689,6 +2033,50 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = FIN # Finland
+					# tag = SMI # Sami
+					# tag = PRM # Perm
+					# tag = KRL # Karelia
+					# tag = EST # Estonia
+					# tag = LVA # Livonia
+					# primary_culture = finnish
+					# primary_culture = sapmi
+					# culture_group = finno_ugric
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = finnish_pagan_reformed }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = finnish_pagan_reformed
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_suomenusko_decision
+					# had_country_flag = ctr_suomenusko_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -1751,16 +2139,20 @@ country_decisions = {
 						primary_culture = danish
 						primary_culture = swedish
 						primary_culture = norwegian
+						primary_culture = icelandic
 						amount = 1
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 1
-								province_id = 12
-								province_id = 20
-								province_id = 96
-								province_id = 2972
+							custom_trigger_tooltip = {
+								tooltip = holy_site_norse_tt
+								OR = {
+									has_province_modifier = holy_site_norse_uppland
+									has_province_modifier = holy_site_norse_lejre
+									has_province_modifier = holy_site_norse_maere
+									has_province_modifier = holy_site_norse_tholen
+									has_province_modifier = holy_site_norse_paderborn
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -1774,12 +2166,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 1
-								province_id = 12
-								province_id = 20
-								province_id = 96
-								province_id = 2972
+							custom_trigger_tooltip = {
+								tooltip = holy_site_norse_tt
+								OR = {
+									has_province_modifier = holy_site_norse_uppland
+									has_province_modifier = holy_site_norse_lejre
+									has_province_modifier = holy_site_norse_maere
+									has_province_modifier = holy_site_norse_tholen
+									has_province_modifier = holy_site_norse_paderborn
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -1804,11 +2199,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 1
-						province_id = 12
-						province_id = 20
-						province_id = 96
-						province_id = 2972
+						has_province_modifier = holy_site_norse_uppland
+						has_province_modifier = holy_site_norse_lejre
+						has_province_modifier = holy_site_norse_maere
+						has_province_modifier = holy_site_norse_tholen
+						has_province_modifier = holy_site_norse_paderborn
 					}
 					OR = {
 						has_building = temple
@@ -1833,6 +2228,7 @@ country_decisions = {
 						primary_culture = danish
 						primary_culture = swedish
 						primary_culture = norwegian
+						primary_culture = icelandic
 					}
 				}
 				add_stability = -2
@@ -1848,6 +2244,7 @@ country_decisions = {
 						primary_culture = danish
 						primary_culture = swedish
 						primary_culture = norwegian
+						primary_culture = icelandic
 					}
 				}
 				add_stability = -4
@@ -1868,6 +2265,50 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = DAN # Denmark
+					# tag = SWE # Sweden
+					# tag = NOR # Norway
+					# tag = ICE # Iceland
+					# tag = SCA # Scandinavia
+					# primary_culture = danish
+					# primary_culture = swedish
+					# primary_culture = norwegian
+					# primary_culture = icelandic
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = norse_pagan_reformed }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = norse_pagan_reformed
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_norse_decision
+					# had_country_flag = ctr_norse_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -1955,12 +2396,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 284
-								province_id = 464
-								province_id = 716
-								province_id = 1076
-								province_id = 1970
+							custom_trigger_tooltip = {
+								tooltip = holy_site_tengri_tt
+								OR = {
+									has_province_modifier = holy_site_tengri_crimea
+									has_province_modifier = holy_site_tengri_itil
+									has_province_modifier = holy_site_tengri_otuken
+									has_province_modifier = holy_site_tengri_tobol
+									has_province_modifier = holy_site_tengri_syganak
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -1974,12 +2418,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 284
-								province_id = 464
-								province_id = 716
-								province_id = 1076
-								province_id = 1970
+							custom_trigger_tooltip = {
+								tooltip = holy_site_tengri_tt
+								OR = {
+									has_province_modifier = holy_site_tengri_crimea
+									has_province_modifier = holy_site_tengri_itil
+									has_province_modifier = holy_site_tengri_otuken
+									has_province_modifier = holy_site_tengri_tobol
+									has_province_modifier = holy_site_tengri_syganak
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -2004,11 +2451,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 284
-						province_id = 464
-						province_id = 716
-						province_id = 1076
-						province_id = 1970
+						has_province_modifier = holy_site_tengri_crimea
+						has_province_modifier = holy_site_tengri_itil
+						has_province_modifier = holy_site_tengri_otuken
+						has_province_modifier = holy_site_tengri_tobol
+						has_province_modifier = holy_site_tengri_syganak
 					}
 					OR = {
 						has_building = temple
@@ -2110,6 +2557,70 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = KHA # Mongolia
+					# tag = CHH # Chahar
+					# tag = KLK # Khalkha
+					# tag = ZUN # Zunghar
+					# tag = SHY # Uzbek
+					# tag = KHI # Khiva
+					# tag = KAS # Yarkand
+					# tag = KZH # Kazakh
+					# tag = CHG # Chagatai
+					# tag = AST # Astrakhan
+					# tag = BSH # Bashkiria
+					# tag = CRI # Crimea
+					# tag = KAZ # Kazan
+					# tag = GOL # Great Horde
+					# tag = GLH # Golden Horde
+					# tag = NOG # Nogai
+					# tag = QAS # Qasim
+					# tag = SIB # Sibir
+					# tag = HOD # Hodyntsy
+					# tag = BRT # Buryatia
+					# tag = KMC # Kamchadals
+					# tag = CHV # Chavchuveny
+					# tag = CHU # Chukchi
+					# tag = MCH # Manchu
+					# culture_group = altaic
+					# culture_group = tartar
+					# culture_group = evenks
+					# primary_culture = kamchatkan
+					# primary_culture = manchu
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = tengri_pagan_reformed }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = tengri_pagan_reformed
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_tengri_decision
+					# had_country_flag = ctr_tengri_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -2209,12 +2720,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 344
-								province_id = 1132
-								province_id = 2249
-								province_id = 2454
-								province_id = 2463
+							custom_trigger_tooltip = {
+								tooltip = holy_site_fetishist_tt
+								OR = {
+									has_province_modifier = holy_site_fetishist_marrakech
+									has_province_modifier = holy_site_fetishist_timbuktu
+									has_province_modifier = holy_site_fetishist_bamako
+									has_province_modifier = holy_site_fetishist_medjerda
+									has_province_modifier = holy_site_fetishist_atlas
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -2228,12 +2742,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 344
-								province_id = 1132
-								province_id = 2249
-								province_id = 2454
-								province_id = 2463
+							custom_trigger_tooltip = {
+								tooltip = holy_site_fetishist_tt
+								OR = {
+									has_province_modifier = holy_site_fetishist_marrakech
+									has_province_modifier = holy_site_fetishist_timbuktu
+									has_province_modifier = holy_site_fetishist_bamako
+									has_province_modifier = holy_site_fetishist_medjerda
+									has_province_modifier = holy_site_fetishist_atlas
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -2258,11 +2775,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 344
-						province_id = 1132
-						province_id = 2249
-						province_id = 2454
-						province_id = 2463
+						has_province_modifier = holy_site_fetishist_marrakech
+						has_province_modifier = holy_site_fetishist_timbuktu
+						has_province_modifier = holy_site_fetishist_bamako
+						has_province_modifier = holy_site_fetishist_medjerda
+						has_province_modifier = holy_site_fetishist_atlas
 					}
 					OR = {
 						has_building = temple
@@ -2322,6 +2839,49 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# culture_group = maghrebi
+					# culture_group = sahelian
+					# culture_group = west_african
+					# culture_group = mande
+					# culture_group = kongo_group
+					# culture_group = great_lakes_group
+					# culture_group = african
+					# culture_group = southern_african
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = shamanism }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = shamanism
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_fetishist_decision
+					# had_country_flag = ctr_fetishist_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -2565,12 +3125,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 85
-								province_id = 118
-								province_id = 206
-								province_id = 235
-								province_id = 379
+							custom_trigger_tooltip = {
+								tooltip = holy_site_catholic_tt
+								OR = {
+									has_province_modifier = holy_site_catholic_koln
+									has_province_modifier = holy_site_catholic_rome
+									has_province_modifier = holy_site_catholic_santiago
+									has_province_modifier = holy_site_catholic_kent
+									has_province_modifier = holy_site_catholic_jerusalem
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -2584,12 +3147,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 85
-								province_id = 118
-								province_id = 206
-								province_id = 235
-								province_id = 379
+							custom_trigger_tooltip = {
+								tooltip = holy_site_catholic_tt
+								OR = {
+									has_province_modifier = holy_site_catholic_koln
+									has_province_modifier = holy_site_catholic_rome
+									has_province_modifier = holy_site_catholic_santiago
+									has_province_modifier = holy_site_catholic_kent
+									has_province_modifier = holy_site_catholic_jerusalem
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -2614,11 +3180,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 85
-						province_id = 118
-						province_id = 206
-						province_id = 235
-						province_id = 379
+						has_province_modifier = holy_site_catholic_koln
+						has_province_modifier = holy_site_catholic_rome
+						has_province_modifier = holy_site_catholic_santiago
+						has_province_modifier = holy_site_catholic_kent
+						has_province_modifier = holy_site_catholic_jerusalem
 					}
 					OR = {
 						has_building = temple
@@ -2682,6 +3248,50 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = PAP # The Papal State
+					# tag = HLR # Holy Roman Empire
+					# tag = KNI # The Knights
+					# tag = LIV # The Livonian Order
+					# tag = TEU # The Teutonic Order
+					# culture_group = latin
+					# culture_group = iberian
+					# culture_group = french
+					# culture_group = germanic
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = catholic }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = catholic
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_catholic_decision
+					# had_country_flag = ctr_catholic_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -2705,6 +3315,7 @@ country_decisions = {
 					has_province_modifier = holy_site_orthodox_lebedos
 					has_province_modifier = holy_site_orthodox_jerusalem
 					has_province_modifier = holy_site_orthodox_antioch
+					has_province_modifier = holy_site_orthodox_moskva
 					religion = orthodox
 				}
 			}
@@ -2726,6 +3337,7 @@ country_decisions = {
 				has_province_modifier = holy_site_orthodox_lebedos
 				has_province_modifier = holy_site_orthodox_jerusalem
 				has_province_modifier = holy_site_orthodox_antioch
+				has_province_modifier = holy_site_orthodox_moskva
 			}
 		}
 		allow =  {
@@ -2762,12 +3374,16 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 148
-								province_id = 151
-								province_id = 318
-								province_id = 379
-								province_id = 2313
+							custom_trigger_tooltip = {
+								tooltip = holy_site_orthodox_tt
+								OR = {
+									has_province_modifier = holy_site_orthodox_athos
+									has_province_modifier = holy_site_orthodox_hagiasophia
+									has_province_modifier = holy_site_orthodox_lebedos
+									has_province_modifier = holy_site_orthodox_jerusalem
+									has_province_modifier = holy_site_orthodox_antioch
+									has_province_modifier = holy_site_orthodox_moskva
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -2781,12 +3397,16 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 148
-								province_id = 151
-								province_id = 318
-								province_id = 379
-								province_id = 2313
+							custom_trigger_tooltip = {
+								tooltip = holy_site_orthodox_tt
+								OR = {
+									has_province_modifier = holy_site_orthodox_athos
+									has_province_modifier = holy_site_orthodox_hagiasophia
+									has_province_modifier = holy_site_orthodox_lebedos
+									has_province_modifier = holy_site_orthodox_jerusalem
+									has_province_modifier = holy_site_orthodox_antioch
+									has_province_modifier = holy_site_orthodox_moskva
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -2811,11 +3431,12 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 148
-						province_id = 151
-						province_id = 318
-						province_id = 379
-						province_id = 2313
+						has_province_modifier = holy_site_orthodox_athos
+						has_province_modifier = holy_site_orthodox_hagiasophia
+						has_province_modifier = holy_site_orthodox_lebedos
+						has_province_modifier = holy_site_orthodox_jerusalem
+						has_province_modifier = holy_site_orthodox_antioch
+						has_province_modifier = holy_site_orthodox_moskva
 					}
 					OR = {
 						has_building = temple
@@ -2905,6 +3526,64 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = GEO # Georgia
+					# tag = CIR # Circassia
+					# tag = ARM # Armenia
+					# tag = BYZ # Byzantine Empire
+					# tag = GRE # Greece
+					# tag = CRT # Crete
+					# tag = TRE # Trebizond
+					# tag = FEO # Theodoro
+					# tag = SER # Serbia
+					# tag = BUL # Bulgaria
+					# tag = TRA # Transylvania
+					# tag = WAL # Wallachia
+					# tag = MOS # Muscowy
+					# tag = RUS # Russia
+					# tag = NOV # Novgorod
+					# tag = RYA # Ryazan
+					# tag = PLT # Polotsk
+					# tag = KIE # Kiev
+					# culture_group = caucasian
+					# culture_group = byzantine
+					# culture_group = south_slavic
+					# culture_group = carpathian
+					# culture_group = east_slavic
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = orthodox }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = orthodox
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_orthodox_decision
+					# had_country_flag = ctr_orthodox_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -2977,12 +3656,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 358
-								province_id = 379
-								province_id = 1227
-								province_id = 1234
-								province_id = 2313
+							custom_trigger_tooltip = {
+								tooltip = holy_site_monophysite_tt
+								OR = {
+									has_province_modifier = holy_site_monophysite_alexandria
+									has_province_modifier = holy_site_monophysite_jerusalem
+									has_province_modifier = holy_site_monophysite_aksum
+									has_province_modifier = holy_site_monophysite_napata
+									has_province_modifier = holy_site_monophysite_antioch
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -2996,12 +3678,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 358
-								province_id = 379
-								province_id = 1227
-								province_id = 1234
-								province_id = 2313
+							custom_trigger_tooltip = {
+								tooltip = holy_site_monophysite_tt
+								OR = {
+									has_province_modifier = holy_site_monophysite_alexandria
+									has_province_modifier = holy_site_monophysite_jerusalem
+									has_province_modifier = holy_site_monophysite_aksum
+									has_province_modifier = holy_site_monophysite_napata
+									has_province_modifier = holy_site_monophysite_antioch
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -3026,11 +3711,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 358
-						province_id = 379
-						province_id = 1227
-						province_id = 1234
-						province_id = 2313
+						has_province_modifier = holy_site_monophysite_alexandria
+						has_province_modifier = holy_site_monophysite_jerusalem
+						has_province_modifier = holy_site_monophysite_aksum
+						has_province_modifier = holy_site_monophysite_napata
+						has_province_modifier = holy_site_monophysite_antioch
 					}
 					OR = {
 						has_building = temple
@@ -3100,6 +3785,54 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = ALO # Alodia
+					# tag = MAK # Makuria
+					# tag = MED # Medri Bahri
+					# tag = ENA # Eneara
+					# tag = KAF # Kaffa
+					# tag = DAM # Damot
+					# tag = ETH # Ethiopia
+					# tag = ARM # Armenia
+					# primary_culture = nubian
+					# primary_culture = tigray
+					# primary_culture = sidamo
+					# primary_culture = amhara
+					# primary_culture = armenian
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = monophysite }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = monophysite
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_monophysite_decision
+					# had_country_flag = ctr_monophysite_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -3172,12 +3905,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 358
-								province_id = 419
-								province_id = 1227
-								province_id = 1234
-								province_id = 2313
+							custom_trigger_tooltip = {
+								tooltip = holy_site_coptic_tt
+								OR = {
+									has_province_modifier = holy_site_coptic_alexandria
+									has_province_modifier = holy_site_coptic_yerevan
+									has_province_modifier = holy_site_coptic_aksum
+									has_province_modifier = holy_site_coptic_qasribrim
+									has_province_modifier = holy_site_coptic_antioch
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -3191,12 +3927,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 358
-								province_id = 419
-								province_id = 1227
-								province_id = 1234
-								province_id = 2313
+							custom_trigger_tooltip = {
+								tooltip = holy_site_coptic_tt
+								OR = {
+									has_province_modifier = holy_site_coptic_alexandria
+									has_province_modifier = holy_site_coptic_yerevan
+									has_province_modifier = holy_site_coptic_aksum
+									has_province_modifier = holy_site_coptic_qasribrim
+									has_province_modifier = holy_site_coptic_antioch
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -3221,11 +3960,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 358
-						province_id = 419
-						province_id = 1227
-						province_id = 1234
-						province_id = 2313
+						has_province_modifier = holy_site_coptic_alexandria
+						has_province_modifier = holy_site_coptic_yerevan
+						has_province_modifier = holy_site_coptic_aksum
+						has_province_modifier = holy_site_coptic_qasribrim
+						has_province_modifier = holy_site_coptic_antioch
 					}
 					OR = {
 						has_building = temple
@@ -3295,6 +4034,54 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = ALO # Alodia
+					# tag = MAK # Makuria
+					# tag = MED # Medri Bahri
+					# tag = ENA # Eneara
+					# tag = KAF # Kaffa
+					# tag = DAM # Damot
+					# tag = ETH # Ethiopia
+					# tag = ARM # Armenia
+					# primary_culture = nubian
+					# primary_culture = tigray
+					# primary_culture = sidamo
+					# primary_culture = amhara
+					# primary_culture = armenian
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = coptic }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = coptic
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_coptic_decision
+					# had_country_flag = ctr_coptic_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -3375,12 +4162,15 @@ country_decisions = {
 				# AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 535
-								province_id = 379
-								province_id = 410
-								province_id = 428
-								province_id = 2308
+							custom_trigger_tooltip = {
+								tooltip = holy_site_nestorian_tt
+								OR = {
+									has_province_modifier = holy_site_nestorian_kochin
+									has_province_modifier = holy_site_nestorian_jerusalem
+									has_province_modifier = holy_site_nestorian_baghdad
+									has_province_modifier = holy_site_nestorian_rayy
+									has_province_modifier = holy_site_nestorian_edessa
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -3405,11 +4195,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 535
-						province_id = 379
-						province_id = 410
-						province_id = 428
-						province_id = 2308
+						has_province_modifier = holy_site_nestorian_kochin
+						has_province_modifier = holy_site_nestorian_jerusalem
+						has_province_modifier = holy_site_nestorian_baghdad
+						has_province_modifier = holy_site_nestorian_rayy
+						has_province_modifier = holy_site_nestorian_edessa
 					}
 					OR = {
 						has_building = temple
@@ -3528,18 +4318,14 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 118
-								province_id = 379
-								has_province_modifier = protestant_CoR_province
+							custom_trigger_tooltip = {
+								tooltip = holy_site_protestant_tt
+								OR = {
+									has_province_modifier = holy_site_protestant_rome
+									has_province_modifier = holy_site_protestant_jerusalem
+									has_province_modifier = protestant_CoR_province
+								}
 							}
-							# OR = {
-								# province_id = 1
-								# province_id = 12
-								# province_id = 59
-								# province_id = 236
-								# province_id = 266
-							# }
 							is_core = ROOT
 							OR = {
 								has_building = temple
@@ -3552,18 +4338,14 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 118
-								province_id = 379
-								has_province_modifier = protestant_CoR_province
+							custom_trigger_tooltip = {
+								tooltip = holy_site_protestant_tt
+								OR = {
+									has_province_modifier = holy_site_protestant_rome
+									has_province_modifier = holy_site_protestant_jerusalem
+									has_province_modifier = protestant_CoR_province
+								}
 							}
-							# OR = {
-								# province_id = 1
-								# province_id = 12
-								# province_id = 59
-								# province_id = 236
-								# province_id = 266
-							# }
 							is_core = ROOT
 							OR = {
 								has_building = temple
@@ -3587,17 +4369,10 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 118
-						province_id = 379
+						has_province_modifier = holy_site_protestant_rome
+						has_province_modifier = holy_site_protestant_jerusalem
 						has_province_modifier = protestant_CoR_province
 					}
-					# OR = {
-						# province_id = 1
-						# province_id = 12
-						# province_id = 59
-						# province_id = 236
-						# province_id = 266
-					# }
 					OR = {
 						has_building = temple
 						has_building = cathedral
@@ -3660,6 +4435,51 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = SWE # Sweden
+					# tag = DAN # Denmark
+					# tag = SAX # Saxony
+					# tag = ENG # England
+					# tag = BOH # Bohemia
+					# accepted_culture = swedish
+					# accepted_culture = danish
+					# accepted_culture = saxon
+					# accepted_culture = english
+					# accepted_culture = czech
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = protestant }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = protestant
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_protestant_decision
+					# had_country_flag = ctr_protestant_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -3731,18 +4551,14 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 118
-								province_id = 379
-								has_province_modifier = reformed_CoR_province
+							custom_trigger_tooltip = {
+								tooltip = holy_site_reformed_tt
+								OR = {
+									has_province_modifier = holy_site_reformed_rome
+									has_province_modifier = holy_site_reformed_jerusalem
+									has_province_modifier = reformed_CoR_province
+								}
 							}
-							# OR = {
-								# province_id = 77
-								# province_id = 100
-								# province_id = 248
-								# province_id = 1867
-								# province_id = 1951
-							# }
 							is_core = ROOT
 							OR = {
 								has_building = temple
@@ -3755,18 +4571,14 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 118
-								province_id = 379
-								has_province_modifier = reformed_CoR_province
+							custom_trigger_tooltip = {
+								tooltip = holy_site_reformed_tt
+								OR = {
+									has_province_modifier = holy_site_reformed_rome
+									has_province_modifier = holy_site_reformed_jerusalem
+									has_province_modifier = reformed_CoR_province
+								}
 							}
-							# OR = {
-								# province_id = 77
-								# province_id = 100
-								# province_id = 248
-								# province_id = 1867
-								# province_id = 1951
-							# }
 							is_core = ROOT
 							OR = {
 								has_building = temple
@@ -3790,17 +4602,10 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 118
-						province_id = 379
+						has_province_modifier = holy_site_reformed_rome
+						has_province_modifier = holy_site_reformed_jerusalem
 						has_province_modifier = reformed_CoR_province
 					}
-					# OR = {
-						# province_id = 77
-						# province_id = 100
-						# province_id = 248
-						# province_id = 1867
-						# province_id = 1951
-					# }
 					OR = {
 						has_building = temple
 						has_building = cathedral
@@ -3863,6 +4668,51 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = PAL # The Palatinate
+					# tag = FRI # Friesland
+					# tag = SCO # Scotland
+					# tag = SAV # Savoy
+					# tag = HUN # Hungary
+					# accepted_culture = hessian
+					# accepted_culture = dutch
+					# accepted_culture = scottish
+					# accepted_culture = swiss
+					# accepted_culture = hungarian
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = reformed }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = reformed
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_reformed_decision
+					# had_country_flag = ctr_reformed_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -3939,12 +4789,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 225
-								province_id = 379
-								province_id = 384
-								province_id = 385
-								province_id = 410
+							custom_trigger_tooltip = {
+								tooltip = holy_site_sunni_tt
+								OR = {
+									has_province_modifier = holy_site_sunni_cordoba
+									has_province_modifier = holy_site_sunni_jerusalem
+									has_province_modifier = holy_site_sunni_medina
+									has_province_modifier = holy_site_sunni_mecca
+									has_province_modifier = holy_site_sunni_baghdad
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -3958,12 +4811,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 225
-								province_id = 379
-								province_id = 384
-								province_id = 385
-								province_id = 410
+							custom_trigger_tooltip = {
+								tooltip = holy_site_sunni_tt
+								OR = {
+									has_province_modifier = holy_site_sunni_cordoba
+									has_province_modifier = holy_site_sunni_jerusalem
+									has_province_modifier = holy_site_sunni_medina
+									has_province_modifier = holy_site_sunni_mecca
+									has_province_modifier = holy_site_sunni_baghdad
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -3988,11 +4844,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 225
-						province_id = 379
-						province_id = 384
-						province_id = 385
-						province_id = 410
+						has_province_modifier = holy_site_sunni_cordoba
+						has_province_modifier = holy_site_sunni_jerusalem
+						has_province_modifier = holy_site_sunni_medina
+						has_province_modifier = holy_site_sunni_mecca
+						has_province_modifier = holy_site_sunni_baghdad
 					}
 					OR = {
 						has_building = temple
@@ -4068,6 +4924,57 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = TUR # Ottomans
+					# tag = MAM # Burgi (Mamluks)
+					# tag = SYR # Syria
+					# tag = NAJ # Najd
+					# tag = ADE # Yemen
+					# tag = KHO # Khorasan
+					# tag = BAL # Baluchistan
+					# tag = AFG # Afghanistan
+					# tag = ARD # Ardalan
+					# tag = MOR # Morocco
+					# tag = TUN # Tunisia
+					# tag = ALG # Algiers
+					# tag = TLC # Tlemcen
+					# culture_group = turko_semitic
+					# culture_group = iranian
+					# culture_group = maghrebi
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = sunni }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = sunni
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_sunni_decision
+					# had_country_flag = ctr_sunni_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -4138,12 +5045,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 379
-								province_id = 382
-								province_id = 384
-								province_id = 385
-								province_id = 2311
+							custom_trigger_tooltip = {
+								tooltip = holy_site_shia_tt
+								OR = {
+									has_province_modifier = holy_site_shia_jerusalem
+									has_province_modifier = holy_site_shia_damascus
+									has_province_modifier = holy_site_shia_medina
+									has_province_modifier = holy_site_shia_mecca
+									has_province_modifier = holy_site_shia_nadjaf
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -4157,12 +5067,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 379
-								province_id = 382
-								province_id = 384
-								province_id = 385
-								province_id = 2311
+							custom_trigger_tooltip = {
+								tooltip = holy_site_shia_tt
+								OR = {
+									has_province_modifier = holy_site_shia_jerusalem
+									has_province_modifier = holy_site_shia_damascus
+									has_province_modifier = holy_site_shia_medina
+									has_province_modifier = holy_site_shia_mecca
+									has_province_modifier = holy_site_shia_nadjaf
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -4187,11 +5100,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 379
-						province_id = 382
-						province_id = 384
-						province_id = 385
-						province_id = 2311
+						has_province_modifier = holy_site_shia_jerusalem
+						has_province_modifier = holy_site_shia_damascus
+						has_province_modifier = holy_site_shia_medina
+						has_province_modifier = holy_site_shia_mecca
+						has_province_modifier = holy_site_shia_nadjaf
 					}
 					OR = {
 						has_building = temple
@@ -4253,6 +5166,50 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = IRQ # Iraq
+					# tag = ALH # Haasa
+					# tag = PER # Persia
+					# tag = SRV # Shirvanshah
+					# tag = TAB # Tabarestan
+					# tag = ABB # Dongola
+					# culture_group = turko_semitic
+					# culture_group = iranian
+					# culture_group = maghrebi
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = shiite }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = shiite
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_shia_decision
+					# had_country_flag = ctr_shia_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -4318,12 +5275,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 379
-								province_id = 384
-								province_id = 385
-								province_id = 403
-								province_id = 2463
+							custom_trigger_tooltip = {
+								tooltip = holy_site_ibadi_tt
+								OR = {
+									has_province_modifier = holy_site_ibadi_jerusalem
+									has_province_modifier = holy_site_ibadi_medina
+									has_province_modifier = holy_site_ibadi_mecca
+									has_province_modifier = holy_site_ibadi_nizwa
+									has_province_modifier = holy_site_ibadi_atlas
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -4337,12 +5297,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 379
-								province_id = 384
-								province_id = 385
-								province_id = 403
-								province_id = 2463
+							custom_trigger_tooltip = {
+								tooltip = holy_site_ibadi_tt
+								OR = {
+									has_province_modifier = holy_site_ibadi_jerusalem
+									has_province_modifier = holy_site_ibadi_medina
+									has_province_modifier = holy_site_ibadi_mecca
+									has_province_modifier = holy_site_ibadi_nizwa
+									has_province_modifier = holy_site_ibadi_atlas
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -4367,11 +5330,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 379
-						province_id = 384
-						province_id = 385
-						province_id = 403
-						province_id = 2463
+						has_province_modifier = holy_site_ibadi_jerusalem
+						has_province_modifier = holy_site_ibadi_medina
+						has_province_modifier = holy_site_ibadi_mecca
+						has_province_modifier = holy_site_ibadi_nizwa
+						has_province_modifier = holy_site_ibadi_atlas
 					}
 					OR = {
 						has_building = temple
@@ -4425,6 +5388,46 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = MZB # Mzab
+					# tag = OMA # Oman
+					# culture_group = turko_semitic
+					# culture_group = iranian
+					# culture_group = maghrebi
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = ibadi }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = ibadi
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_ibadi_decision
+					# had_country_flag = ctr_ibadi_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -4481,6 +5484,7 @@ country_decisions = {
 			OR = {
 				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
 					calc_true_if = {
+						# maybe use custom localisation to check whether ISR is a tag or not.
 						tag = ISR # Israel
 						# culture_group = none
 						primary_culture = hebrew
@@ -4488,12 +5492,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 365
-								province_id = 379
-								province_id = 382
-								province_id = 401
-								province_id = 414
+							custom_trigger_tooltip = {
+								tooltip = holy_site_jewish_tt
+								OR = {
+									has_province_modifier = holy_site_jewish_sinai
+									has_province_modifier = holy_site_jewish_jerusalem
+									has_province_modifier = holy_site_jewish_damascus
+									has_province_modifier = holy_site_jewish_dhofar
+									has_province_modifier = holy_site_jewish_hamadan
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -4507,12 +5514,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 365
-								province_id = 379
-								province_id = 382
-								province_id = 401
-								province_id = 414
+							custom_trigger_tooltip = {
+								tooltip = holy_site_jewish_tt
+								OR = {
+									has_province_modifier = holy_site_jewish_sinai
+									has_province_modifier = holy_site_jewish_jerusalem
+									has_province_modifier = holy_site_jewish_damascus
+									has_province_modifier = holy_site_jewish_dhofar
+									has_province_modifier = holy_site_jewish_hamadan
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -4537,11 +5547,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 365
-						province_id = 379
-						province_id = 382
-						province_id = 401
-						province_id = 414
+						has_province_modifier = holy_site_jewish_sinai
+						has_province_modifier = holy_site_jewish_jerusalem
+						has_province_modifier = holy_site_jewish_damascus
+						has_province_modifier = holy_site_jewish_dhofar
+						has_province_modifier = holy_site_jewish_hamadan
 					}
 					OR = {
 						has_building = temple
@@ -4591,6 +5601,43 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = ISR # Israel
+					# primary_culture = hebrew
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = jewish }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = jewish
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_jewish_decision
+					# had_country_flag = ctr_jewish_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -4658,12 +5705,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 558
-								province_id = 613
-								province_id = 1836
-								province_id = 740
-								province_id = 2077
+							custom_trigger_tooltip = {
+								tooltip = holy_site_mahayana_tt
+								OR = {
+									has_province_modifier = holy_site_mahayana_bodhgaya
+									has_province_modifier = holy_site_mahayana_dongkinh
+									has_province_modifier = holy_site_mahayana_luoyang
+									has_province_modifier = holy_site_mahayana_sanchi
+									has_province_modifier = holy_site_mahayana_oddiyana
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -4677,12 +5727,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 558
-								province_id = 613
-								province_id = 1836
-								province_id = 740
-								province_id = 2077
+							custom_trigger_tooltip = {
+								tooltip = holy_site_mahayana_tt
+								OR = {
+									has_province_modifier = holy_site_mahayana_bodhgaya
+									has_province_modifier = holy_site_mahayana_dongkinh
+									has_province_modifier = holy_site_mahayana_luoyang
+									has_province_modifier = holy_site_mahayana_sanchi
+									has_province_modifier = holy_site_mahayana_oddiyana
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -4707,11 +5760,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 558
-						province_id = 613
-						province_id = 1836
-						province_id = 740
-						province_id = 2077
+						has_province_modifier = holy_site_mahayana_bodhgaya
+						has_province_modifier = holy_site_mahayana_dongkinh
+						has_province_modifier = holy_site_mahayana_luoyang
+						has_province_modifier = holy_site_mahayana_sanchi
+						has_province_modifier = holy_site_mahayana_oddiyana
 					}
 					OR = {
 						has_building = temple
@@ -4763,6 +5816,45 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = DAI
+					# tag = TOK
+					# tag = PGS
+					# culture_group = mon_khmer
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = mahayana }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = mahayana
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_mahayana_decision
+					# had_country_flag = ctr_mahayana_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -4846,12 +5938,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 558
-								province_id = 609
-								province_id = 740
-								province_id = 2077
-								province_id = 2099
+							custom_trigger_tooltip = {
+								tooltip = holy_site_theravada_tt
+								OR = {
+									has_province_modifier = holy_site_theravada_bodhgaya
+									has_province_modifier = holy_site_theravada_angkorwat
+									has_province_modifier = holy_site_theravada_sanchi
+									has_province_modifier = holy_site_theravada_oddiyana
+									has_province_modifier = holy_site_theravada_lankantemples
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -4865,12 +5960,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 558
-								province_id = 609
-								province_id = 740
-								province_id = 2077
-								province_id = 2099
+							custom_trigger_tooltip = {
+								tooltip = holy_site_theravada_tt
+								OR = {
+									has_province_modifier = holy_site_theravada_bodhgaya
+									has_province_modifier = holy_site_theravada_angkorwat
+									has_province_modifier = holy_site_theravada_sanchi
+									has_province_modifier = holy_site_theravada_oddiyana
+									has_province_modifier = holy_site_theravada_lankantemples
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -4895,11 +5993,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 558
-						province_id = 609
-						province_id = 740
-						province_id = 2077
-						province_id = 2099
+						has_province_modifier = holy_site_theravada_bodhgaya
+						has_province_modifier = holy_site_theravada_angkorwat
+						has_province_modifier = holy_site_theravada_sanchi
+						has_province_modifier = holy_site_theravada_oddiyana
+						has_province_modifier = holy_site_theravada_lankantemples
 					}
 					OR = {
 						has_building = temple
@@ -4983,6 +6081,61 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = SST
+					# tag = ARK
+					# tag = AVA
+					# tag = HSE
+					# tag = LNA
+					# tag = MYA
+					# tag = PEG
+					# tag = TAU
+					# tag = AYU
+					# tag = KHM
+					# tag = LXA
+					# tag = LUA
+					# tag = MPH
+					# tag = SUK
+					# tag = PGR
+					# tag = CEY
+					# tag = CDL
+					# culture_group = burman
+					# culture_group = thai
+					# culture_group = mon_khmer
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = buddhism }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = buddhism
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_theravada_decision
+					# had_country_flag = ctr_theravada_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -5057,12 +6210,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 558
-								province_id = 677
-								province_id = 740
-								province_id = 2077
-								province_id = 2133
+							custom_trigger_tooltip = {
+								tooltip = holy_site_vajrayana_tt
+								OR = {
+									has_province_modifier = holy_site_vajrayana_bodhgaya
+									has_province_modifier = holy_site_vajrayana_lhasa
+									has_province_modifier = holy_site_vajrayana_sanchi
+									has_province_modifier = holy_site_vajrayana_oddiyana
+									has_province_modifier = holy_site_vajrayana_dege
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -5076,12 +6232,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 558
-								province_id = 677
-								province_id = 740
-								province_id = 2077
-								province_id = 2133
+							custom_trigger_tooltip = {
+								tooltip = holy_site_vajrayana_tt
+								OR = {
+									has_province_modifier = holy_site_vajrayana_bodhgaya
+									has_province_modifier = holy_site_vajrayana_lhasa
+									has_province_modifier = holy_site_vajrayana_sanchi
+									has_province_modifier = holy_site_vajrayana_oddiyana
+									has_province_modifier = holy_site_vajrayana_dege
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -5106,11 +6265,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 558
-						province_id = 677
-						province_id = 740
-						province_id = 2077
-						province_id = 2133
+						has_province_modifier = holy_site_vajrayana_bodhgaya
+						has_province_modifier = holy_site_vajrayana_lhasa
+						has_province_modifier = holy_site_vajrayana_sanchi
+						has_province_modifier = holy_site_vajrayana_oddiyana
+						has_province_modifier = holy_site_vajrayana_dege
 					}
 					OR = {
 						has_building = temple
@@ -5172,6 +6331,50 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = TIB
+					# tag = BHU
+					# tag = GUG
+					# tag = KAM
+					# tag = UTS
+					# tag = KLK
+					# tag = ZUN
+					# tag = LDK
+					# primary_culture = tibetan
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = vajrayana }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = vajrayana
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_vajrayana_decision
+					# had_country_flag = ctr_vajrayana_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -5241,12 +6444,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 740
-								province_id = 523
-								province_id = 524
-								province_id = 2052
-								province_id = 2095
+							custom_trigger_tooltip = {
+								tooltip = holy_site_hindu_tt
+								OR = {
+									has_province_modifier = holy_site_hinduism_mahakaleshwar
+									has_province_modifier = holy_site_hinduism_janmabhoomi
+									has_province_modifier = holy_site_hinduism_krishnajanmabhoomi
+									has_province_modifier = holy_site_hinduism_dwarakadheesh
+									has_province_modifier = holy_site_hinduism_varanasi
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -5260,12 +6466,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 740
-								province_id = 523
-								province_id = 524
-								province_id = 2052
-								province_id = 2095
+							custom_trigger_tooltip = {
+								tooltip = holy_site_hindu_tt
+								OR = {
+									has_province_modifier = holy_site_hinduism_mahakaleshwar
+									has_province_modifier = holy_site_hinduism_janmabhoomi
+									has_province_modifier = holy_site_hinduism_krishnajanmabhoomi
+									has_province_modifier = holy_site_hinduism_dwarakadheesh
+									has_province_modifier = holy_site_hinduism_varanasi
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -5290,11 +6499,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 740
-						province_id = 523
-						province_id = 524
-						province_id = 2052
-						province_id = 2095
+						has_province_modifier = holy_site_hinduism_mahakaleshwar
+						has_province_modifier = holy_site_hinduism_janmabhoomi
+						has_province_modifier = holy_site_hinduism_krishnajanmabhoomi
+						has_province_modifier = holy_site_hinduism_dwarakadheesh
+						has_province_modifier = holy_site_hinduism_varanasi
 					}
 					OR = {
 						has_building = temple
@@ -5350,6 +6559,46 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# culture_group = dravidian
+					# culture_group = central_indic
+					# culture_group = eastern_aryan
+					# culture_group = hindusthani
+					# culture_group = western_aryan
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = hinduism }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = hinduism
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_hindu_decision
+					# had_country_flag = ctr_hindu_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -5357,6 +6606,9 @@ country_decisions = {
 	############################################################
 	
 	# Provinces mostly taken from Refumee's mod 'Holy Sites'.
+	# province_id = 507
+	# province_id = 2062
+	
 	# Triggered Modifier = The Conquest of Amritsar (2075)
 	
 	# Country_tag(s)
@@ -5416,13 +6668,14 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 2075
-								province_id = 558
-								province_id = 1948
-								has_province_modifier = holy_site_sikh
-								# province_id = 507
-								# province_id = 2062
+							custom_trigger_tooltip = {
+								tooltip = holy_site_sikh_tt
+								OR = {
+									has_province_modifier = holy_site_sikh_amritsar
+									has_province_modifier = holy_site_sikh_bodhgaya
+									has_province_modifier = holy_site_sikh_bidar
+									has_province_modifier = holy_site_sikh
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -5436,13 +6689,14 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 2075
-								province_id = 558
-								province_id = 1948
-								has_province_modifier = holy_site_sikh
-								# province_id = 507
-								# province_id = 2062
+							custom_trigger_tooltip = {
+								tooltip = holy_site_sikh_tt
+								OR = {
+									has_province_modifier = holy_site_sikh_amritsar
+									has_province_modifier = holy_site_sikh_bodhgaya
+									has_province_modifier = holy_site_sikh_bidar
+									has_province_modifier = holy_site_sikh
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -5467,12 +6721,10 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 2075
-						province_id = 558
-						province_id = 1948
+						has_province_modifier = holy_site_sikh_amritsar
+						has_province_modifier = holy_site_sikh_bodhgaya
+						has_province_modifier = holy_site_sikh_bidar
 						has_province_modifier = holy_site_sikh
-						# province_id = 507
-						# province_id = 2062
 					}
 					OR = {
 						has_building = temple
@@ -5528,6 +6780,46 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# culture_group = dravidian
+					# culture_group = central_indic
+					# culture_group = eastern_aryan
+					# culture_group = hindusthani
+					# culture_group = western_aryan
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = sikhism }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = sikhism
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_sikh_decision
+					# had_country_flag = ctr_sikh_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -5597,12 +6889,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 515
-								province_id = 533
-								province_id = 2053
-								province_id = 2067
-								province_id = 2096
+							custom_trigger_tooltip = {
+								tooltip = holy_site_jain_tt
+								OR = {
+									has_province_modifier = holy_site_jain_girnar
+									has_province_modifier = holy_site_jain_shravanabelagola
+									has_province_modifier = holy_site_jain_vadnagar
+									has_province_modifier = holy_site_jain_bhillamala
+									has_province_modifier = holy_site_jain_rajrappa
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -5616,12 +6911,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 515
-								province_id = 533
-								province_id = 2053
-								province_id = 2067
-								province_id = 2096
+							custom_trigger_tooltip = {
+								tooltip = holy_site_jain_tt
+								OR = {
+									has_province_modifier = holy_site_jain_girnar
+									has_province_modifier = holy_site_jain_shravanabelagola
+									has_province_modifier = holy_site_jain_vadnagar
+									has_province_modifier = holy_site_jain_bhillamala
+									has_province_modifier = holy_site_jain_rajrappa
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -5646,11 +6944,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 515
-						province_id = 533
-						province_id = 2053
-						province_id = 2067
-						province_id = 2096
+						has_province_modifier = holy_site_jain_girnar
+						has_province_modifier = holy_site_jain_shravanabelagola
+						has_province_modifier = holy_site_jain_vadnagar
+						has_province_modifier = holy_site_jain_bhillamala
+						has_province_modifier = holy_site_jain_rajrappa
 					}
 					OR = {
 						has_building = temple
@@ -5706,6 +7004,46 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# culture_group = dravidian
+					# culture_group = central_indic
+					# culture_group = eastern_aryan
+					# culture_group = hindusthani
+					# culture_group = western_aryan
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = jain }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = jain
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_jain_decision
+					# had_country_flag = ctr_jain_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -5737,7 +7075,7 @@ country_decisions = {
 			}
 			# OR = {
 				# owns = 361 # Cairo
-				# owns = 2236 # Bojnord
+				# owns = 2235 # Sabzevar
 				# owns = 447 # Kandahar
 				# owns = 451 # Kabulistan
 				# owns = 506 # Multan
@@ -5771,12 +7109,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 361
-								province_id = 2236
-								province_id = 447
-								province_id = 451
-								province_id = 506
+							custom_trigger_tooltip = {
+								tooltip = holy_site_zunist_tt
+								OR = {
+									has_province_modifier = holy_site_zunist_cairo
+									has_province_modifier = holy_site_zunist_sabzevar
+									has_province_modifier = holy_site_zunist_kandahar
+									has_province_modifier = holy_site_zunist_kabul
+									has_province_modifier = holy_site_zunist_multan
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -5790,12 +7131,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 361
-								province_id = 2236
-								province_id = 447
-								province_id = 451
-								province_id = 506
+							custom_trigger_tooltip = {
+								tooltip = holy_site_zunist_tt
+								OR = {
+									has_province_modifier = holy_site_zunist_cairo
+									has_province_modifier = holy_site_zunist_sabzevar
+									has_province_modifier = holy_site_zunist_kandahar
+									has_province_modifier = holy_site_zunist_kabul
+									has_province_modifier = holy_site_zunist_multan
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -5820,11 +7164,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 361
-						province_id = 2236
-						province_id = 447
-						province_id = 451
-						province_id = 506
+						has_province_modifier = holy_site_zunist_cairo
+						has_province_modifier = holy_site_zunist_sabzevar
+						has_province_modifier = holy_site_zunist_kandahar
+						has_province_modifier = holy_site_zunist_kabul
+						has_province_modifier = holy_site_zunist_multan
 					}
 					OR = {
 						has_building = temple
@@ -5872,6 +7216,42 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# primary_culture = afghani
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = zun_pagan_reformed }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = zun_pagan_reformed
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_zunist_decision
+					# had_country_flag = ctr_zunist_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -5939,12 +7319,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 667
-								province_id = 679
-								province_id = 691
-								province_id = 700
-								province_id = 1816
+							custom_trigger_tooltip = {
+								tooltip = holy_site_confucian_tt
+								OR = {
+									has_province_modifier = holy_site_confucian_canton
+									has_province_modifier = holy_site_confucian_chengdu
+									has_province_modifier = holy_site_confucian_jinan
+									has_province_modifier = holy_site_confucian_xian
+									has_province_modifier = holy_site_confucian_beijing
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -5958,12 +7341,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 667
-								province_id = 679
-								province_id = 691
-								province_id = 700
-								province_id = 1816
+							custom_trigger_tooltip = {
+								tooltip = holy_site_confucian_tt
+								OR = {
+									has_province_modifier = holy_site_confucian_canton
+									has_province_modifier = holy_site_confucian_chengdu
+									has_province_modifier = holy_site_confucian_jinan
+									has_province_modifier = holy_site_confucian_xian
+									has_province_modifier = holy_site_confucian_beijing
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -5988,11 +7374,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 667
-						province_id = 679
-						province_id = 691
-						province_id = 700
-						province_id = 1816
+						has_province_modifier = holy_site_confucian_canton
+						has_province_modifier = holy_site_confucian_chengdu
+						has_province_modifier = holy_site_confucian_jinan
+						has_province_modifier = holy_site_confucian_xian
+						has_province_modifier = holy_site_confucian_beijing
 					}
 					OR = {
 						has_building = temple
@@ -6042,6 +7428,44 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = MNG
+					# culture_group = east_asian
+					# culture_group = korean_g
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = confucianism }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = confucianism
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_confucian_decision
+					# had_country_flag = ctr_confucian_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################
@@ -6109,12 +7533,15 @@ country_decisions = {
 					}
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 1018
-								province_id = 1020
-								province_id = 1025
-								province_id = 4359
-								province_id = 1839
+							custom_trigger_tooltip = {
+								tooltip = holy_site_shinto_tt
+								OR = {
+									has_province_modifier = holy_site_shinto_izumo
+									has_province_modifier = holy_site_shinto_kyoto
+									has_province_modifier = holy_site_shinto_dewa
+									has_province_modifier = holy_site_shinto_ise
+									has_province_modifier = holy_site_shinto_mtfuji
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -6128,12 +7555,15 @@ country_decisions = {
 				AND = { # Else you need all 5 Holy Sites
 					calc_true_if = {
 						all_owned_province = {
-							OR = {
-								province_id = 1018
-								province_id = 1020
-								province_id = 1025
-								province_id = 4359
-								province_id = 1839
+							custom_trigger_tooltip = {
+								tooltip = holy_site_shinto_tt
+								OR = {
+									has_province_modifier = holy_site_shinto_izumo
+									has_province_modifier = holy_site_shinto_kyoto
+									has_province_modifier = holy_site_shinto_dewa
+									has_province_modifier = holy_site_shinto_ise
+									has_province_modifier = holy_site_shinto_mtfuji
+								}
 							}
 							is_core = ROOT
 							OR = {
@@ -6158,11 +7588,11 @@ country_decisions = {
 			every_owned_province = {
 				limit = {
 					OR = {
-						province_id = 1018
-						province_id = 1020
-						province_id = 1025
-						province_id = 4359
-						province_id = 1839
+						has_province_modifier = holy_site_shinto_izumo
+						has_province_modifier = holy_site_shinto_kyoto
+						has_province_modifier = holy_site_shinto_dewa
+						has_province_modifier = holy_site_shinto_ise
+						has_province_modifier = holy_site_shinto_mtfuji
 					}
 					OR = {
 						has_building = temple
@@ -6210,6 +7640,43 @@ country_decisions = {
 		ai_will_do = {
 			factor = 0
 		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = JAP
+					# culture_group = japanese_g
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = shinto }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = shinto
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_shinto_decision
+					# had_country_flag = ctr_shinto_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
 	}
 	
 	############################################################

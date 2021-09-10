@@ -10,11 +10,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 118 # Roma
-							province_id = 146 # Athens
-							province_id = 358 # Alexandria
-							province_id = 4702 # Siroz
-							province_id = 2296 # Biga
+							has_province_modifier = holy_site_hellenic_rome
+							has_province_modifier = holy_site_hellenic_athens
+							has_province_modifier = holy_site_hellenic_alexandria
+							has_province_modifier = holy_site_hellenic_edessa
+							has_province_modifier = holy_site_hellenic_abydos
 						}
 					}
 				}
@@ -24,11 +24,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 2223 # Larestan
-							province_id = 4430 # Daman
-							province_id = 441 # Khiva
-							province_id = 421 # Shirvan
-							province_id = 2235 # Sabzevar
+							has_province_modifier = holy_site_zoroastrian_larestan
+							has_province_modifier = holy_site_zoroastrian_daman
+							has_province_modifier = holy_site_zoroastrian_khiva
+							has_province_modifier = holy_site_zoroastrian_shirvan
+							has_province_modifier = holy_site_zoroastrian_sabzevar
 						}
 					}
 				}
@@ -38,11 +38,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 842 # Peten
-							province_id = 843 # Belize
-							province_id = 846 # Yucatan
-							province_id = 2632 # Xicallanco
-							province_id = 2633 # Mani
+							has_province_modifier = holy_site_mayan_tikal
+							has_province_modifier = holy_site_mayan_caracol
+							has_province_modifier = holy_site_mayan_chichenitza
+							has_province_modifier = holy_site_mayan_palenque
+							has_province_modifier = holy_site_mayan_uxmal
 						}
 					}
 				}
@@ -52,11 +52,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 852 # Mexico
-							province_id = 854 # Sayultecas
-							province_id = 2626 # Tulucan
-							province_id = 2644 # Cholula
-							province_id = 2647 # Cuetlaxtlan
+							has_province_modifier = holy_site_nahuatl_tenochtitlan
+							has_province_modifier = holy_site_nahuatl_sayultecas
+							has_province_modifier = holy_site_nahuatl_calixtlahuaca
+							has_province_modifier = holy_site_nahuatl_cholula
+							has_province_modifier = holy_site_nahuatl_coatepec
 						}
 					}
 				}
@@ -66,11 +66,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 804 # Puno
-							province_id = 806 # Nazca
-							province_id = 807 # Abancay
-							province_id = 809 # Lima
-							province_id = 812 # Chanchan
+							has_province_modifier = holy_site_inti_titicaca
+							has_province_modifier = holy_site_inti_nazca
+							has_province_modifier = holy_site_inti_machupicchu
+							has_province_modifier = holy_site_inti_pachacamac
+							has_province_modifier = holy_site_inti_chanchan
 						}
 					}
 				}
@@ -80,11 +80,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 38 # Riga
-							province_id = 4745 # Rügen
-							province_id = 269 # Podlasia
-							province_id = 4244 # Trubchevsk (Pochep)
-							province_id = 1859 # Chelmno (Culm, Torun)
+							has_province_modifier = holy_site_romuva_riga
+							has_province_modifier = holy_site_romuva_rugen
+							has_province_modifier = holy_site_romuva_podlasie
+							has_province_modifier = holy_site_romuva_pochep
+							has_province_modifier = holy_site_romuva_chelminskie
 						}
 					}
 				}
@@ -94,11 +94,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 4745 # Rügen
-							province_id = 256 # Plock
-							province_id = 268 # Moldavia
-							province_id = 280 # Kiev
-							province_id = 2749 # Tikhvin
+							has_province_modifier = holy_site_slavic_rugen
+							has_province_modifier = holy_site_slavic_plock
+							has_province_modifier = holy_site_slavic_husi
+							has_province_modifier = holy_site_slavic_kiev
+							has_province_modifier = holy_site_slavic_tikhvin
 						}
 					}
 				}
@@ -108,11 +108,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 30 # Viborg
-							province_id = 35 # Ösel
-							province_id = 301 # Ryazan
-							province_id = 305 # Perm
-							province_id = 2749 # Tikhvin
+							has_province_modifier = holy_site_suomenusko_raivola
+							has_province_modifier = holy_site_suomenusko_hiiumaa
+							has_province_modifier = holy_site_suomenusko_ryazan
+							has_province_modifier = holy_site_suomenusko_perm
+							has_province_modifier = holy_site_suomenusko_tikhvin
 						}
 					}
 				}
@@ -122,11 +122,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 1 # Uppland
-							province_id = 12 # Sjaelland
-							province_id = 20 # Trondelag
-							province_id = 96 # Zeeland
-							province_id = 2972 # Paderborn
+							has_province_modifier = holy_site_norse_uppland
+							has_province_modifier = holy_site_norse_lejre
+							has_province_modifier = holy_site_norse_maere
+							has_province_modifier = holy_site_norse_tholen
+							has_province_modifier = holy_site_norse_paderborn
 						}
 					}
 				}
@@ -136,11 +136,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 284 # Crimea
-							province_id = 464 # Astrakhan
-							province_id = 716 # Tannu Uriankhai
-							province_id = 1076 # Kurgan
-							province_id = 1970 # Syghnak
+							has_province_modifier = holy_site_tengri_crimea
+							has_province_modifier = holy_site_tengri_itil
+							has_province_modifier = holy_site_tengri_otuken
+							has_province_modifier = holy_site_tengri_tobol
+							has_province_modifier = holy_site_tengri_syganak
 						}
 					}
 				}
@@ -150,11 +150,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 344 # Marrakech
-							province_id = 1132 # Timbuktu
-							province_id = 2249 # Sibiridugu
-							province_id = 2454 # Kairouan (El Kef)
-							province_id = 2463 # Maaskar
+							has_province_modifier = holy_site_fetishist_marrakech
+							has_province_modifier = holy_site_fetishist_timbuktu
+							has_province_modifier = holy_site_fetishist_bamako
+							has_province_modifier = holy_site_fetishist_medjerda
+							has_province_modifier = holy_site_fetishist_atlas
 						}
 					}
 				}
@@ -164,11 +164,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 85 # Köln
-							province_id = 118 # Roma
-							province_id = 206 # Galicia
-							province_id = 235 # Kent
-							province_id = 379 # Jerusalem
+							has_province_modifier = holy_site_catholic_koln
+							has_province_modifier = holy_site_catholic_rome
+							has_province_modifier = holy_site_catholic_santiago
+							has_province_modifier = holy_site_catholic_kent
+							has_province_modifier = holy_site_catholic_jerusalem
 						}
 					}
 				}
@@ -178,11 +178,12 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 148 # Thessaloniki (Mount Athos)
-							province_id = 151 # Constantinople
-							province_id = 318 # Sugla
-							province_id = 379 # Jerusalem
-							province_id = 2313 # Antioch
+							has_province_modifier = holy_site_orthodox_athos
+							has_province_modifier = holy_site_orthodox_hagiasophia
+							has_province_modifier = holy_site_orthodox_lebedos
+							has_province_modifier = holy_site_orthodox_jerusalem
+							has_province_modifier = holy_site_orthodox_antioch
+							has_province_modifier = holy_site_orthodox_moskva
 						}
 					}
 				}
@@ -192,11 +193,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 358 # Alexandria
-							province_id = 379 # Jerusalem
-							province_id = 1227 # Tigre (Aksum)
-							province_id = 1234 # Qasr Ibrim
-							province_id = 2313 # Antioch
+							has_province_modifier = holy_site_monophysite_alexandria
+							has_province_modifier = holy_site_monophysite_jerusalem
+							has_province_modifier = holy_site_monophysite_aksum
+							has_province_modifier = holy_site_monophysite_napata
+							has_province_modifier = holy_site_monophysite_antioch
 						}
 					}
 				}
@@ -206,11 +207,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 358 # Alexandria
-							province_id = 419 # Yerevan (Armenia)
-							province_id = 1227 # Tigre (Aksum)
-							province_id = 1234 # Qasr Ibrim
-							province_id = 2313 # Antioch
+							has_province_modifier = holy_site_coptic_alexandria
+							has_province_modifier = holy_site_coptic_yerevan
+							has_province_modifier = holy_site_coptic_aksum
+							has_province_modifier = holy_site_coptic_qasribrim
+							has_province_modifier = holy_site_coptic_antioch
 						}
 					}
 				}
@@ -220,11 +221,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 535 # Kochin
-							province_id = 379 # Jerusalem
-							province_id = 410 # Baghdad (Iraq-i-Arab)
-							province_id = 428 # Rey
-							province_id = 2308 # Urfa
+							has_province_modifier = holy_site_nestorian_kochin
+							has_province_modifier = holy_site_nestorian_jerusalem
+							has_province_modifier = holy_site_nestorian_baghdad
+							has_province_modifier = holy_site_nestorian_rayy
+							has_province_modifier = holy_site_nestorian_edessa
 						}
 					}
 				}
@@ -234,8 +235,8 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 118
-							province_id = 379
+							has_province_modifier = holy_site_protestant_rome
+							has_province_modifier = holy_site_protestant_jerusalem
 							has_province_modifier = protestant_CoR_province
 						}
 					}
@@ -246,8 +247,8 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 118
-							province_id = 379
+							has_province_modifier = holy_site_reformed_rome
+							has_province_modifier = holy_site_reformed_jerusalem
 							has_province_modifier = reformed_CoR_province
 						}
 					}
@@ -258,11 +259,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 225 # Cordoba
-							province_id = 379 # Jerusalem
-							province_id = 384 # Medina
-							province_id = 385 # Mecca
-							province_id = 410 # Baghdad (Iraq-i-Arab)
+							has_province_modifier = holy_site_sunni_cordoba
+							has_province_modifier = holy_site_sunni_jerusalem
+							has_province_modifier = holy_site_sunni_medina
+							has_province_modifier = holy_site_sunni_mecca
+							has_province_modifier = holy_site_sunni_baghdad
 						}
 					}
 				}
@@ -272,11 +273,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 379 # Jerusalem
-							province_id = 382 # Damascus
-							province_id = 384 # Medina
-							province_id = 385 # Mecca
-							province_id = 2311 # Samawah
+							has_province_modifier = holy_site_shia_jerusalem
+							has_province_modifier = holy_site_shia_damascus
+							has_province_modifier = holy_site_shia_medina
+							has_province_modifier = holy_site_shia_mecca
+							has_province_modifier = holy_site_shia_nadjaf
 						}
 					}
 				}
@@ -286,11 +287,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 379 # Jerusalem
-							province_id = 384 # Medina
-							province_id = 385 # Mecca
-							province_id = 403 # Nizwa
-							province_id = 2463 # Maaskar
+							has_province_modifier = holy_site_ibadi_jerusalem
+							has_province_modifier = holy_site_ibadi_medina
+							has_province_modifier = holy_site_ibadi_mecca
+							has_province_modifier = holy_site_ibadi_nizwa
+							has_province_modifier = holy_site_ibadi_atlas
 						}
 					}
 				}
@@ -300,11 +301,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 365 # Sinai
-							province_id = 379 # Jerusalem
-							province_id = 382 # Damascus
-							province_id = 401 # Dhofar
-							province_id = 414 # Hamadan
+							has_province_modifier = holy_site_jewish_sinai
+							has_province_modifier = holy_site_jewish_jerusalem
+							has_province_modifier = holy_site_jewish_damascus
+							has_province_modifier = holy_site_jewish_dhofar
+							has_province_modifier = holy_site_jewish_hamadan
 						}
 					}
 				}
@@ -314,11 +315,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 558 # Patna
-							province_id = 613 # Dong Kinh
-							province_id = 1836 # Luoyang
-							province_id = 740 # Malwa
-							province_id = 2077 # Margalla
+							has_province_modifier = holy_site_mahayana_bodhgaya
+							has_province_modifier = holy_site_mahayana_dongkinh
+							has_province_modifier = holy_site_mahayana_luoyang
+							has_province_modifier = holy_site_mahayana_sanchi
+							has_province_modifier = holy_site_mahayana_oddiyana
 						}
 					}
 				}
@@ -328,11 +329,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 558 # Patna
-							province_id = 609 # Angkor
-							province_id = 740 # Malwa
-							province_id = 2077 # Margalla
-							province_id = 2099 # Kandy
+							has_province_modifier = holy_site_theravada_bodhgaya
+							has_province_modifier = holy_site_theravada_angkorwat
+							has_province_modifier = holy_site_theravada_sanchi
+							has_province_modifier = holy_site_theravada_oddiyana
+							has_province_modifier = holy_site_theravada_lankantemples
 						}
 					}
 				}
@@ -342,11 +343,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 558 # Patna
-							province_id = 677 # Lhasa
-							province_id = 740 # Malwa
-							province_id = 2077 # Margalla
-							province_id = 2133 # Dege
+							has_province_modifier = holy_site_vajrayana_bodhgaya
+							has_province_modifier = holy_site_vajrayana_lhasa
+							has_province_modifier = holy_site_vajrayana_sanchi
+							has_province_modifier = holy_site_vajrayana_oddiyana
+							has_province_modifier = holy_site_vajrayana_dege
 						}
 					}
 				}
@@ -356,11 +357,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 740 # Malwa
-							province_id = 523 # Oudh
-							province_id = 524 # Central Doab
-							province_id = 2052 # Navanagar
-							province_id = 2095 # Varanasi
+							has_province_modifier = holy_site_hinduism_mahakaleshwar
+							has_province_modifier = holy_site_hinduism_janmabhoomi
+							has_province_modifier = holy_site_hinduism_krishnajanmabhoomi
+							has_province_modifier = holy_site_hinduism_dwarakadheesh
+							has_province_modifier = holy_site_hinduism_varanasi
 						}
 					}
 				}
@@ -370,9 +371,9 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 2075 # Doaba
-							province_id = 558 # Patna
-							province_id = 1948 # Bidar
+							has_province_modifier = holy_site_sikh_amritsar
+							has_province_modifier = holy_site_sikh_bodhgaya
+							has_province_modifier = holy_site_sikh_bidar
 							has_province_modifier = holy_site_sikh
 						}
 					}
@@ -383,11 +384,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 515 # Girnar
-							province_id = 533 # Mysore
-							province_id = 2053 # Patan
-							province_id = 2067 # Gorwar
-							province_id = 2096 # Damin
+							has_province_modifier = holy_site_jain_girnar
+							has_province_modifier = holy_site_jain_shravanabelagola
+							has_province_modifier = holy_site_jain_vadnagar
+							has_province_modifier = holy_site_jain_bhillamala
+							has_province_modifier = holy_site_jain_rajrappa
 						}
 					}
 				}
@@ -397,11 +398,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 361 # Cairo
-							province_id = 2235 # Sabzevar
-							province_id = 447 # Kandahar
-							province_id = 451 # Kabulistan
-							province_id = 506 # Multan
+							has_province_modifier = holy_site_zunist_cairo
+							has_province_modifier = holy_site_zunist_sabzevar
+							has_province_modifier = holy_site_zunist_kandahar
+							has_province_modifier = holy_site_zunist_kabul
+							has_province_modifier = holy_site_zunist_multan
 						}
 					}
 				}
@@ -411,11 +412,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 667 # Canton
-							province_id = 679 # Chengdu
-							province_id = 691 # Jinan [Mount Tai]
-							province_id = 700 # Xi'an
-							province_id = 1816 # Beijing
+							has_province_modifier = holy_site_confucian_canton
+							has_province_modifier = holy_site_confucian_chengdu
+							has_province_modifier = holy_site_confucian_jinan
+							has_province_modifier = holy_site_confucian_xian
+							has_province_modifier = holy_site_confucian_beijing
 						}
 					}
 				}
@@ -425,11 +426,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 1018 # Izumo
-							province_id = 1020 # Yamashiro/Kyoto
-							province_id = 1025 # Dewa
-							province_id = 4359 # Ise
-							province_id = 1839 # Suruga
+							has_province_modifier = holy_site_shinto_izumo
+							has_province_modifier = holy_site_shinto_kyoto
+							has_province_modifier = holy_site_shinto_dewa
+							has_province_modifier = holy_site_shinto_ise
+							has_province_modifier = holy_site_shinto_mtfuji
 						}
 					}
 				}
@@ -439,11 +440,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 450 # Balkh
-							province_id = 508 # Kashmir
-							province_id = 677 # Lhasa
-							province_id = 676 # Shigatse
-							province_id = 710 # Hotan
+							has_province_modifier = holy_site_bon_balkh
+							has_province_modifier = holy_site_bon_kashmir
+							has_province_modifier = holy_site_bon_lhasa
+							has_province_modifier = holy_site_bon_yungdrungling
+							has_province_modifier = holy_site_bon_hotan
 						}
 					}
 				}
@@ -453,11 +454,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 2235 # Sabzevar
-							province_id = 2223 # Larestan
-							province_id = 411 # Mosul
-							province_id = 385 # Mecca
-							province_id = 379 # Jerusalem
+							has_province_modifier = holy_site_yazidi_sabzevar
+							has_province_modifier = holy_site_yazidi_larestan
+							has_province_modifier = holy_site_yazidi_mosul
+							has_province_modifier = holy_site_yazidi_mecca
+							has_province_modifier = holy_site_yazidi_jerusalem
 						}
 					}
 				}
@@ -467,11 +468,11 @@ cb_holy_site = {
 				FROM = {
 					any_owned_province = {
 						OR = {
-							province_id = 412 # Khuzestan
-							province_id = 454 # Samarkand
-							province_id = 410 # Baghdad
-							province_id = 379 # Jerusalem
-							province_id = 2077 # Margalla
+							has_province_modifier = holy_site_manichean_khuzestan
+							has_province_modifier = holy_site_manichean_samarkand
+							has_province_modifier = holy_site_manichean_baghdad
+							has_province_modifier = holy_site_manichean_jerusalem
+							has_province_modifier = holy_site_manichean_margalla
 						}
 					}
 				}

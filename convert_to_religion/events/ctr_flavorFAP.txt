@@ -27,6 +27,17 @@ country_event = {
 	option = {
 		name = "flavor_pap.EVTOPTA1"
 		add_ruler_modifier = { name = pap_saint_peters_basilica }
+		if = {
+			limit = {
+				has_dlc = "Leviathan"
+			}
+			118 = {
+				add_great_project_tier = {
+					type = stpeters_cathedral
+					tier = 1
+				}
+			}
+		}
 	}
 	option = {
 		name = "flavor_pap.EVTOPTB1"
@@ -267,7 +278,7 @@ country_event = {
 			limit = {
 				corruption = 0.01
 			}
-			add_corruption = -2
+			add_corruption = -1
 		}
 		if = {
 			limit = {
@@ -330,6 +341,7 @@ country_event = {
 		FAP = {
 			add_opinion = {
 				who = ROOT
+				modifier = opinion_trent
 			}
 		}
 	}
@@ -822,7 +834,7 @@ country_event = {
 	}
 	
 	option = {
-		name = flavor_fap.16.a
+		name = flavor_pap.16.a
 		add_reform_desire = 0.025
 		set_global_flag = borgia_pope_global
 		custom_tooltip = borgia_pope_tt
@@ -864,7 +876,7 @@ country_event = {
 	}
 	
 	option = {
-		name = flavor_fap.17.a
+		name = flavor_pap.17.a
 		add_reform_desire = 0.01
 		add_army_tradition = 10
 		define_general = {
@@ -911,7 +923,7 @@ country_event = {
 	}
 	
 	option = {
-		name = flavor_fap.18.a
+		name = flavor_pap.18.a
 		add_stability = -1
 		add_ruler_modifier = { # lose diprep
 			name = "scandalized_papacy"
@@ -919,7 +931,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = flavor_fap.18.b
+		name = flavor_pap.18.b
 		trigger = {
 			DIP = 5
 		}
@@ -974,7 +986,7 @@ country_event = {
 	}
 	
 	option = {
-		name = flavor_fap.19.a
+		name = flavor_pap.19.a
 		if = {
 			limit = {
 				NOT = { is_religion_enabled = protestant }
@@ -1016,7 +1028,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = flavor_fap.20.a
+		name = flavor_pap.20.a
 		define_general = {
 			name = "Cesare Borgia"
 			shock = 5
@@ -1100,7 +1112,7 @@ country_event = {
 	}
 	
 	option = {
-		name = flavor_fap.21.a
+		name = flavor_pap.21.a
 		finish_council = yes
 	}
 }

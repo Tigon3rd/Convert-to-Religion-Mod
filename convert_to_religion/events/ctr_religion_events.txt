@@ -502,6 +502,119 @@ country_event = {
 
 # End of Fraticelli Events
 
+# Fall of Byzantium and Constantinople
+country_event = {
+	id = ctr_religion_events.100
+	title = ctr_religion_events.100.t
+	desc = ctr_religion_events.100.d
+	picture = {
+		trigger = { has_dlc = "Third Rome" }
+		picture = ICONS_IN_CHURCH_eventPicture
+	}
+	picture = {
+		trigger = { NOT = { has_dlc = "Third Rome" } }
+		picture = RELIGION_eventPicture
+	}
+	
+	major = yes
+	major_trigger = {
+		religion = orthodox
+	}
+
+	fire_only_once = yes
+	
+	trigger = {
+		owns = 295 # Moskva
+		295 = { religion = orthodox }
+		religion = orthodox
+		NOT = { exists = BYZ }
+		151 = { NOT = { religion = orthodox } }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		hidden_effect = {
+			random_province = {
+				limit = {
+					has_province_modifier = holy_site_orthodox_lebedos
+				}
+				save_event_target_as = ctr_remove_orthodox_holy_site
+			}
+		}
+	}
+	
+	option = {
+		name = "ctr_religion_events.100.a"
+		ai_chance = { factor = 75 }
+		custom_tooltip = ctr_moskva_holy_site_tt
+		hidden_effect = {
+			295 = { 
+				add_province_triggered_modifier = holy_site_orthodox_moskva
+				if = {
+					limit = {
+						NOT = { has_building = temple }
+					}
+					add_building = temple
+				}
+			}
+			event_target:ctr_remove_orthodox_holy_site = { remove_province_triggered_modifier = holy_site_orthodox_lebedos }
+			# every_country = {
+			# 	limit = {
+			# 		religion = orthodox
+			# 	}
+			# 	country_event = {
+			# 		id = ctr_religion_events.101
+			# 	}
+			# }
+		}
+		add_prestige = 10
+		set_global_flag = ctr_orthodox_hs_moskva
+	}
+	
+	option = {
+		name = "ctr_religion_events.100.b"
+		ai_chance = { factor = 25 }
+		custom_tooltip = ctr_moskva_no_holy_site_tt
+		add_prestige = -15
+	}
+}
+
+# Orthodox countries told of new Holy Site
+# country_event = {
+	# id = ctr_religion_events.101
+	# title = ctr_religion_events.101.t
+	# desc = ctr_religion_events.101.d
+	# picture = {
+		# trigger = { has_dlc = "Third Rome" }
+		# picture = ICONS_IN_CHURCH_eventPicture
+	# }
+	# picture = {
+		# trigger = { NOT = { has_dlc = "Third Rome" } }
+		# picture = RELIGION_eventPicture
+	# }
+
+	# is_triggered_only = yes
+
+	# immediate = {
+		# hidden_effect = {
+			# random_province = {
+				# limit = {
+					# has_province_modifier = holy_site_orthodox_moskva
+				# }
+				# save_event_target_as = ctr_new_orthodox_holy_site
+			# }
+		# }
+	# }
+
+	# option = {
+		# name = ctr_religion_events.101.a
+		# goto = event_target:ctr_new_orthodox_holy_site
+	# }
+# }
+
 # Heresy
 country_event = {
 	id = ctr_religion_events.400
