@@ -1,31 +1,44 @@
 namespace = ctr_events
 
-# country_event = { # Deprecated, as I have moved it to a scripted_effects which fired with the on_startup action, so that the province modifiers are added on startup instead of after a day of waiting.
-	# id = ctr_events.1
-	# title = "ctr_events.1.title"
-	# desc = "ctr_events.1.desc"
-	# picture = RELIGIOUS_CONVERSION_eventPicture
+country_event = { # This is here if another mod has a on_actions file, which overrides my on_startup where I add all the Holy Site province modifiers, then this will pop and add them.
+	id = ctr_events.1
+	title = "ctr_events.1.title"
+	desc = "ctr_events.1.desc"
+	picture = RELIGIOUS_CONVERSION_eventPicture
 	
-	# # fire_only_once = yes
-	# hidden = yes
+	# fire_only_once = yes
+	hidden = yes
 	
-	# trigger = {
-		# always = yes
-		# NOT = { has_global_flag = holy_sites_added }
-	# }
+	trigger = {
+		always = yes
+		NOT = { has_global_flag = ctr_on_startup_executed }
+		NOT = { has_global_flag = startup_event_triggered }
+	}
 	
 	# mean_time_to_happen = {
 		# days = 1
 	# }
 	
-	# immediate = {
-	# }
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = holy_sites_added
+			}
+			check_holy_site_modifiers_to_provinces = yes
+		}
+		if = {
+			limit = {
+				NOT = { has_global_flag = holy_sites_added }
+			}
+			add_holy_site_modifiers_to_provinces = yes
+		}
+		set_global_flag = startup_event_triggered
+	}
 	
-	# option = {
-		# name = "ctr_events.1.OPTA"
-		# ai_chance = { factor = 100 }
-	# }
-# }
+	option = {
+		name = "ctr_events.1.OPTA"
+	}
+}
 
 country_event = { # Separate Sikh event, as it only needs to trigger when Sikh is enabled
 	id = ctr_events.2
@@ -88,7 +101,7 @@ country_event = { # Separate Sikh event, as it only needs to trigger when Sikh i
 	}
 }
 
-country_event = { # Randomly select 2 Sikh provinces as holy sites when Sikh is enabled
+country_event = { # Selects the province that Sikh spawns in on as a holy site when Sikh is enabled
 	id = ctr_events.7
 	title = "ctr_events.7.title"
 	desc = "ctr_events.7.desc"
@@ -111,7 +124,7 @@ country_event = { # Randomly select 2 Sikh provinces as holy sites when Sikh is 
 		name = "ctr_events.7.OPTA"
 		ai_chance = { factor = 25 }
 		
-		trigger = {
+		trigger = { # Still need to make sure if Sikh spawns in a neighboring province, but doesn't convert one of these, this would make the holy sites neighbor eachother.
 			2075 = { NOT = { religion = sikhism } }
 			558 = { NOT = { religion = sikhism } }
 			1948 = { NOT = { religion = sikhism } }
@@ -125,18 +138,17 @@ country_event = { # Randomly select 2 Sikh provinces as holy sites when Sikh is 
 			add_province_triggered_modifier = holy_site_sikh
 			set_province_flag = holy_site_sikh_1_primary
 			remove_province_triggered_modifier = religious_center
-			set_province_flag = religious_center_removed_1
 		}
-		random_province = {
-			limit = {
-				religion = sikhism
-				NOT = { has_province_modifier = holy_site_sikh }
-				# NOT = { has_province_flag = holy_site_sikh_1_primary }
-			}
-			add_province_triggered_modifier = holy_site_sikh
-			set_province_flag = holy_site_sikh_1_secondary
-			set_province_flag = NO_religious_center
-		}
+		# random_province = {
+			# limit = {
+				# religion = sikhism
+				# NOT = { has_province_modifier = holy_site_sikh }
+				# # NOT = { has_province_flag = holy_site_sikh_1_primary }
+			# }
+			# add_province_triggered_modifier = holy_site_sikh
+			# set_province_flag = holy_site_sikh_1_secondary
+			# set_province_flag = NO_religious_center
+		# }
 	}
 	option = {
 		name = "ctr_events.7.OPTB"
@@ -154,23 +166,102 @@ country_event = { # Randomly select 2 Sikh provinces as holy sites when Sikh is 
 			limit = {
 				religion = sikhism
 			}
-			if = {
+			if = { # After looking at the SikhEvents code where it spawns in Sikh, this IF should actually never be able to fulfill, but the else_if and else should be fine.
+				limit = { # Not one of the holy sites and also not a neighboring province.
+					NOT = { province_id = 2075 }
+					NOT = { province_id = 558 }
+					NOT = { province_id = 1948 }
+					has_active_triggered_province_modifier = religious_center
+					NOT = {
+						any_neighbor_province = {
+							OR = {
+								province_id = 2075
+								province_id = 558
+								province_id = 1948
+							}
+						}
+					}
+				}
+				remove_province_triggered_modifier = religious_center
+				add_province_triggered_modifier = holy_site_sikh
+				set_province_flag = holy_site_sikh_NOT_neighbor_to_the_3
+			}
+			else_if = {
+				limit = { # If Sikh spawns on a province neighboring 1 of the 3 standard holy sites, this means that it adds a holy site modifier right next to another.
+					NOT = { province_id = 2075 }
+					NOT = { province_id = 558 }
+					NOT = { province_id = 1948 }
+					has_active_triggered_province_modifier = religious_center
+					any_neighbor_province = {
+						OR = {
+							province_id = 2075
+							province_id = 558
+							province_id = 1948
+						}
+					}
+				}
+				remove_province_triggered_modifier = religious_center
+				add_province_triggered_modifier = holy_site_sikh
+				set_province_flag = holy_site_sikh_IS_neighbor_to_the_3
+			}
+			else = { # If Sikh spawns on 1 of the 3 standard holy sites, then it shouldn't get another modifier, because it already has one.
 				limit = {
 					has_active_triggered_province_modifier = religious_center
 				}
 				remove_province_triggered_modifier = religious_center
-				# set_province_flag = religious_center_removed_2
-			}
-			if = {
-				limit = {
-					NOT = { province_id = 2075 }
-					NOT = { province_id = 558 }
-					NOT = { province_id = 1948 }
-				}
-				add_province_triggered_modifier = holy_site_sikh
-				# set_province_flag = holy_site_sikh_2_primary_and_secondary
+				set_province_flag = already_1_of_3_holy_sites
 			}
 		}
+	}
+}
+
+province_event = { # Selects a province that is Sikh and the owner is also Sikh as a holy site
+	id = ctr_events.11
+	title = "ctr_events.11.title"
+	desc = "ctr_events.11.desc"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		NOT = { # It limits the holy_site_sikh modifiers to only 2 existing ever.
+			calc_true_if = {
+				all_province = {
+					has_province_modifier = holy_site_sikh
+				}
+				amount = 2
+			}
+		}
+		NOT = { has_province_modifier = holy_site_sikh_amritsar }
+		NOT = { has_province_modifier = holy_site_sikh_bodhgaya }
+		NOT = { has_province_modifier = holy_site_sikh_bidar }
+		NOT = { has_province_modifier = holy_site_sikh }
+		NOT = {
+			any_neighbor_province = {
+				OR = {
+					has_province_modifier = holy_site_sikh_amritsar
+					has_province_modifier = holy_site_sikh_bodhgaya
+					has_province_modifier = holy_site_sikh_bidar
+					has_province_modifier = holy_site_sikh
+				}
+			}
+		}
+		religion = sikhism
+		owner = { religion = sikhism }
+	}
+	
+	immediate = {
+		add_province_triggered_modifier = holy_site_sikh
+		set_province_flag = missing_sikh_holy_site
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "ctr_events.11.OPTA"
+		ai_chance = { factor = 100 }
 	}
 }
 
@@ -186,6 +277,14 @@ province_event = { # Protestant Center of Reformation gets Holy Site
 		religion = protestant
 		is_reformation_center = yes
 		NOT = { has_province_flag = protestant_CoR_flag }
+		NOT = { # It limits the protestant_CoR_province modifiers to only 3 existing ever.
+			calc_true_if = {
+				all_province = {
+					has_province_modifier = protestant_CoR_province
+				}
+				amount = 3
+			}
+		}
 	}
 	
 	immediate = {
@@ -217,6 +316,14 @@ province_event = { # Reformed Center of Reformation gets Holy Site
 		religion = reformed
 		is_reformation_center = yes
 		NOT = { has_province_flag = reformed_CoR_flag }
+		NOT = { # It limits the reformed_CoR_province modifiers to only 3 existing ever.
+			calc_true_if = {
+				all_province = {
+					has_province_modifier = reformed_CoR_province
+				}
+				amount = 3
+			}
+		}
 	}
 	
 	immediate = {
@@ -437,10 +544,9 @@ province_event = { # Makes sure Anglican gets up to 3 Holy Sites besides Rome & 
 	
 	trigger = {
 		religion = anglican
-		# Not sure if this 'calc_true_if' works as I imagine
 		NOT = {
 			calc_true_if = {
-				any_province = {
+				all_province = {
 					has_province_modifier = anglican_CoR_province
 				}
 				amount = 3
@@ -459,7 +565,7 @@ province_event = { # Makes sure Anglican gets up to 3 Holy Sites besides Rome & 
 	}
 	
 	mean_time_to_happen = {
-		days = 1
+		months = 240
 	}
 	
 	option = {

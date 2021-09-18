@@ -55,7 +55,7 @@
  flavor_fap.7.tt: "An invitation will be sent out to all §YFraticelli§! countries."
  
  
- ## Religious Descriptions
+ # Religious Descriptions
  baltic_pagan_reformed_religion_desc:0 "The reformed Baltic faith has a Holy Book with a creation myth, chapters on the gods and a book of prophesies. The church also has a standardized liturgy and a formal church hierarchy led by the High Priest of Dievs."
  finnish_pagan_reformed_religion_desc:0 "The reformed Finnish faith has a Holy Book with a creation myth, chapters on the gods and a book of spells and mysteries. The church also has a standardized liturgy and a formal church hierarchy led by the High Priest of Ukko."
  slavic_pagan_reformed_religion_desc:0 "The reformed Slavic faith has a Holy Book with a creation myth, chapters on the gods and a book of prophesies. The church also has a standardized liturgy and a formal church hierarchy led by the High Priest of Perun."
@@ -85,7 +85,7 @@
  manichean_religion_desc:0 "Manichaeism is a Gnostic religion which incorporates elements of Christianity, Zoroastrianism, Buddhism and Gnosticism."
  bon_religion_desc:0 "Bön is the ancient indigenous pre-Buddhist religion of Tibet. It is shamanistic and animistic in nature with multiple deities. After the introduction of Buddhism to Tibet, Bön adopted many of its elements."
  
- ## Religious Rebels
+ # Religious Rebels
  jain_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
  jain_rebels_demand:0 "Convert $COUNTRYNAME$"
  jain_rebels_demand_desc:0 "The religious rebels fight for the $RELIGION$ religion. They demand that we recognize its supremacy or at the very least cease our efforts to convert them and let them worship in peace."
@@ -214,7 +214,28 @@
  finnish_pagan_reformed_rebels_desc: "Religious fanatics tend to rise up in provinces controlled by nations of a different faith. They seek to spread their faith and smite all unbelievers."
  finnish_pagan_reformed_rebels_army: "$RELIGION$ Army" 
  
- ## Religious Blessings and Icons
+ # Province Triggered Modifiers
+ ctr_zoroastrian_mecca:0 "The Conquest of Mecca"
+ desc_ctr_zoroastrian_mecca:0 "We were driven out of our lands by the Muslim invader. Our ancient temples were desecrated and the eternal fires of Zoroaster extinguished, but now we have our revenge. [Root.GetCapitalName], holy city of Islam, lies under our control."
+ ctr_hellenic_rome:0 "The Reconquest of Rome"
+ desc_ctr_hellenic_rome:0 "Long ago the Christian heathens drove us nearly to the brink of extinction, but we have persevered and with the aid of the gods we have retaken Rome and avenged the death of the Empire."
+ 
+ # Heretic centers to spread religion
+ cathar_CoR_decision_title: "Establish a center to spread our religion"
+ cathar_CoR_decision_desc: "We shall be zealous in our pursuit to convert others to our religion."
+ waldensian_CoR_decision_title: "Establish a center to spread our religion"
+ waldensian_CoR_decision_desc: "We shall be zealous in our pursuit to convert others to our religion."
+ lollard_CoR_decision_title: "Establish a center to spread our religion"
+ lollard_CoR_decision_desc: "We shall be zealous in our pursuit to convert others to our religion."
+ cathar_center_of_reformation: "Religious Center"
+ waldensian_center_of_reformation: "Religious Center"
+ lollard_center_of_reformation: "Religious Center"
+ heresy_CoR_trigger_tt: "§Y[Root.Religion.GetName]§! does NOT already have a Religious Center."
+ heresy_CoR_capital_tt: "Establish a §Y[Root.Religion.GetName]§! Religious Center in §Y[Root.Capital.GetName]§!"
+ heresy_CoR_random_tt: "Establish a §Y[Root.Religion.GetName]§! Religious Center in a random province"
+ capital_CoR_trigger_tt: "Capital:\nOR"
+ 
+ # Religious Blessings and Icons
  monophysite_blessings:1 "Patriarchal Blessings"
  pick_monophysite_blessing:0 "Pick Blessing"
  icon_1:0 "As you can't hide Icons"
@@ -236,3 +257,17 @@
  desc_icon_shimnail:0 ""
  icon_nurail:0 "Icon of the Archangel Nura’il"
  desc_icon_nurail:0 ""
+ 
+ # Other
+ check_holy_site_provinces_decision_title: "Run Check on Holy Site Provinces"
+ check_holy_site_provinces_decision_desc: "Only needed if the mod has updated/moved some provinces.\nShould only be available if another mod interferes with my (on_startup) file, such as Beyond Typus."
+ gotland_norse_pirate_decision_title: "Norse Pirates, aye!"
+ gotland_norse_pirate_decision_desc: ""
+ iceland_norse_decision_title: "Adopt our old religious ways"
+ iceland_norse_decision_desc: ""
+ rugen_slavic_pirate_decision_title: "Slavic Pirates, aye!"
+ rugen_slavic_pirate_decision_desc: ""
+ rugen_romuvan_pirate_decision_title: "Romuvan Pirates, aye!"
+ rugen_romuvan_pirate_decision_desc: ""
+ capital_is_slavic_hs_trigger_tt: "Capital is §YSlavic Holy Site of Rügen§!"
+ capital_is_romuva_hs_trigger_tt: "Capital is §YRomuvan Holy Site of Rügen§!"

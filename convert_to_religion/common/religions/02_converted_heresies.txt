@@ -3,6 +3,14 @@ christian = {
 	cathar = { # Protestant mechanics
 		color = { 0.5 0.5 0.9 }
 		icon = 34
+		allow_female_defenders_of_the_faith = yes
+		allowed_center_conversion = {
+			catholic
+			fraticelli
+			messalian
+			waldensian
+			lollard
+		}
 		allowed_conversion = {
 			reformed
 			protestant
@@ -371,6 +379,13 @@ christian = {
 	waldensian = { # Reformed mechanics
 		color = { 0.4 0.4 0.7 }
 		icon = 36
+		allowed_center_conversion = {
+			catholic
+			fraticelli
+			messalian
+			cathar
+			lollard
+		}
 		allowed_conversion = {
 			reformed
 			protestant
@@ -407,6 +422,13 @@ christian = {
 	lollard = { # Reformed mechanics
 		color = { 0.5 0.8 0.8 }
 		icon = 37
+		allowed_center_conversion = {
+			catholic
+			fraticelli
+			messalian
+			cathar
+			waldensian
+		}
 		allowed_conversion = {
 			reformed
 			protestant
@@ -470,6 +492,7 @@ christian = {
 			will_of_the_martyrs
 		}
 	}
+	# Orthodox heresies
 	bogomilist = { # Protestant mechanics
 		color = { 0.7 0 0.2 }
 		icon = 39
@@ -636,7 +659,6 @@ christian = {
 			}
 		}
 	}
-	# Orthodox heresies
 	iconoclast = { # Orthodox mechanics without icons
 		color = { 0.5 0.2 0.4 }
 		icon = 41
@@ -828,6 +850,7 @@ muslim = {
 		
 		has_patriarchs = yes		# Uses patriarch authority
 		
+		# Comments made on the first default icons are me trying to come up with suggestions on how to fix orthodox icons, so that they are more easily moddable, because as it is now you have to include the first default 5 icons no matter what.
 		orthodox_icons = {
 			icon_1 = {
 				

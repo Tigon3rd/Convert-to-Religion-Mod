@@ -527,7 +527,11 @@ country_event = {
 		owns = 295 # Moskva
 		295 = { religion = orthodox }
 		religion = orthodox
-		NOT = { exists = BYZ }
+		OR = {
+			BYZ = { NOT = { religion = orthodox } }
+			BYZ = { is_subject = yes }
+			NOT = { exists = BYZ }
+		}
 		151 = { NOT = { religion = orthodox } }
 	}
 	
@@ -658,10 +662,8 @@ country_event = {
 					religion = coptic
 				}
 				random_list = {
-					25 = { set_country_flag = nestorian_heresy }
-					25 = { set_country_flag = monophysite_heresy }
-					25 = { set_country_flag = bogomilist_heresy }
-					25 = { set_country_flag = monothelite_heresy }
+					50 = { set_country_flag = nestorian_heresy }
+					50 = { set_country_flag = monophysite_heresy }
 				}
 			}
 			if = {
@@ -669,8 +671,10 @@ country_event = {
 					religion = orthodox
 				}
 				random_list = {
-					50 = { set_country_flag = iconoclast_heresy }
-					50 = { set_country_flag = paulician_heresy }
+					25 = { set_country_flag = iconoclast_heresy }
+					25 = { set_country_flag = bogomilist_heresy }
+					25 = { set_country_flag = monothelite_heresy }
+					25 = { set_country_flag = paulician_heresy }
 				}
 			}
 		}
@@ -957,10 +961,8 @@ country_event = {
 					religion = coptic
 				}
 				random_list = {
-					25 = { set_country_flag = nestorian_heresy }
-					25 = { set_country_flag = monophysite_heresy }
-					25 = { set_country_flag = bogomilist_heresy }
-					25 = { set_country_flag = monothelite_heresy }
+					50 = { set_country_flag = nestorian_heresy }
+					50 = { set_country_flag = monophysite_heresy }
 				}
 			}
 			if = {
@@ -968,8 +970,10 @@ country_event = {
 					religion = orthodox
 				}
 				random_list = {
-					50 = { set_country_flag = iconoclast_heresy }
-					50 = { set_country_flag = paulician_heresy }
+					25 = { set_country_flag = iconoclast_heresy }
+					25 = { set_country_flag = bogomilist_heresy }
+					25 = { set_country_flag = monothelite_heresy }
+					25 = { set_country_flag = paulician_heresy }
 				}
 			}
 		}

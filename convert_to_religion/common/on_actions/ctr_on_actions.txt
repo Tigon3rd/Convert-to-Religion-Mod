@@ -100,12 +100,24 @@ on_startup = {
 			has_global_flag = holy_sites_added
 		}
 		check_holy_site_modifiers_to_provinces = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = ctr_on_startup_executed }
+			}
+			set_global_flag = ctr_on_startup_executed
+		}
 	}
 	if = {
 		limit = {
 			NOT = { has_global_flag = holy_sites_added }
 		}
 		add_holy_site_modifiers_to_provinces = yes
+		if = {
+			limit = {
+				NOT = { has_global_flag = ctr_on_startup_executed }
+			}
+			set_global_flag = ctr_on_startup_executed
+		}
 	}
 }
 

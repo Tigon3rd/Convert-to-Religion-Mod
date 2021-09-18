@@ -12,16 +12,16 @@ holding_abrahamic_holy_sites = {
 	}
 
 	trigger = {
-		ROOT = { owns = 118 }
+		owns = 118
+		owns = 379
+		owns = 385
 		118 = { religion = ROOT }
-		ROOT = { owns = 379 }
 		379 = { religion = ROOT }
-		ROOT = { owns = 385 }
 		385 = { religion = ROOT }
 	}
 
 	missionaries = 1
-	global_missionary_strength = 0.02
+	tolerance_own = 2
 	prestige = 1
 }
 ###########################################
@@ -41,21 +41,21 @@ controlling_all_norse_holy_sites = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 1 }
+		owns = 1 
+		owns = 12
+		owns = 20
+		owns = 96
+		owns = 2972
 		1 = { religion = ROOT }
-		ROOT = { owns = 12 }
 		12 = { religion = ROOT }
-		ROOT = { owns = 20 }
 		20 = { religion = ROOT }
-		ROOT = { owns = 96 }
 		96 = { religion = ROOT }
-		ROOT = { owns = 2972 }
 		2972 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
 }
 
 controlling_all_hellenic_holy_sites = {
@@ -72,21 +72,21 @@ controlling_all_hellenic_holy_sites = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 118 }
+		owns = 118
+		owns = 146
+		owns = 358
+		owns = 4702
+		owns = 2296
 		118 = { religion = ROOT }
-		ROOT = { owns = 146 }
 		146 = { religion = ROOT }
-		ROOT = { owns = 358 }
 		358 = { religion = ROOT }
-		ROOT = { owns = 4702 }
 		4702 = { religion = ROOT }
-		ROOT = { owns = 2296 }
 		2296 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
 }
 
 controlling_all_mayan_holy_sites = {
@@ -102,21 +102,21 @@ controlling_all_mayan_holy_sites = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 842 }
+		owns = 842
+		owns = 843
+		owns = 846
+		owns = 2632
+		owns = 2651
 		842 = { religion = ROOT }
-		ROOT = { owns = 843 }
 		843 = { religion = ROOT }
-		ROOT = { owns = 846 }
 		846 = { religion = ROOT }
-		ROOT = { owns = 2632 }
 		2632 = { religion = ROOT }
-		ROOT = { owns = 2651 }
 		2651 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
 }
 
 controlling_all_nahuatl_holy_sites = {
@@ -132,21 +132,21 @@ controlling_all_nahuatl_holy_sites = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 852 }
+		owns = 852
+		owns = 854
+		owns = 2626
+		owns = 2644
+		owns = 2647
 		852 = { religion = ROOT }
-		ROOT = { owns = 854 }
 		854 = { religion = ROOT }
-		ROOT = { owns = 2626 }
 		2626 = { religion = ROOT }
-		ROOT = { owns = 2644 }
 		2644 = { religion = ROOT }
-		ROOT = { owns = 2647 }
 		2647 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
 }
 
 controlling_all_inti_holy_sites = {
@@ -162,21 +162,21 @@ controlling_all_inti_holy_sites = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 804 }
+		owns = 804
+		owns = 806
+		owns = 807
+		owns = 809
+		owns = 812
 		804 = { religion = ROOT }
-		ROOT = { owns = 806 }
 		806 = { religion = ROOT }
-		ROOT = { owns = 807 }
 		807 = { religion = ROOT }
-		ROOT = { owns = 809 }
 		809 = { religion = ROOT }
-		ROOT = { owns = 812 }
 		812 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
 }
 
 controlling_all_romuva_holy_sites = {
@@ -193,21 +193,21 @@ controlling_all_romuva_holy_sites = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 38 }
+		owns = 38
+		owns = 4745
+		owns = 269
+		owns = 4244
+		owns = 1859
 		38 = { religion = ROOT }
-		ROOT = { owns = 4745 }
 		4745 = { religion = ROOT }
-		ROOT = { owns = 269 }
 		269 = { religion = ROOT }
-		ROOT = { owns = 4244 }
 		4244 = { religion = ROOT }
-		ROOT = { owns = 1859 }
 		1859 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
 }
 
 controlling_all_slavic_holy_sites = {
@@ -223,21 +223,21 @@ controlling_all_slavic_holy_sites = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 4745 }
+		owns = 4745
+		owns = 256
+		owns = 268
+		owns = 280
+		owns = 2749
 		4745 = { religion = ROOT }
-		ROOT = { owns = 256 }
 		256 = { religion = ROOT }
-		ROOT = { owns = 268 }
 		268 = { religion = ROOT }
-		ROOT = { owns = 280 }
 		280 = { religion = ROOT }
-		ROOT = { owns = 2749 }
 		2749 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
 }
 
 controlling_all_suomenusko_holy_sites = {
@@ -254,21 +254,21 @@ controlling_all_suomenusko_holy_sites = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 30 }
+		owns = 30
+		owns = 35
+		owns = 301
+		owns = 305
+		owns = 2749
 		30 = { religion = ROOT }
-		ROOT = { owns = 35 }
 		35 = { religion = ROOT }
-		ROOT = { owns = 301 }
 		301 = { religion = ROOT }
-		ROOT = { owns = 305 }
 		305 = { religion = ROOT }
-		ROOT = { owns = 2749 }
 		2749 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
 }
 
 controlling_all_tengri_holy_sites = {
@@ -284,21 +284,21 @@ controlling_all_tengri_holy_sites = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 284 }
+		owns = 284
+		owns = 464
+		owns = 716
+		owns = 1076
+		owns = 1970
 		284 = { religion = ROOT }
-		ROOT = { owns = 464 }
 		464 = { religion = ROOT }
-		ROOT = { owns = 716 }
 		716 = { religion = ROOT }
-		ROOT = { owns = 1076 }
 		1076 = { religion = ROOT }
-		ROOT = { owns = 1970 }
 		1970 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
 }
 
 controlling_all_fetishist_holy_sites = {
@@ -315,21 +315,21 @@ controlling_all_fetishist_holy_sites = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 344 }
+		owns = 344
+		owns = 1132
+		owns = 2249
+		owns = 2454
+		owns = 2463
 		344 = { religion = ROOT }
-		ROOT = { owns = 1132 }
 		1132 = { religion = ROOT }
-		ROOT = { owns = 2249 }
 		2249 = { religion = ROOT }
-		ROOT = { owns = 2454 }
 		2454 = { religion = ROOT }
-		ROOT = { owns = 2463 }
 		2463 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
 }
 
 controlling_all_zunist_holy_sites = {
@@ -345,21 +345,21 @@ controlling_all_zunist_holy_sites = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 361 }
+		owns = 361
+		owns = 2236
+		owns = 447
+		owns = 451
+		owns = 506
 		361 = { religion = ROOT }
-		ROOT = { owns = 2236 }
 		2236 = { religion = ROOT }
-		ROOT = { owns = 447 }
 		447 = { religion = ROOT }
-		ROOT = { owns = 451 }
 		451 = { religion = ROOT }
-		ROOT = { owns = 506 }
 		506 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
 }
 
 controlling_all_bon_holy_sites = {
@@ -375,21 +375,21 @@ controlling_all_bon_holy_sites = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 450 }
+		owns = 450
+		owns = 677
+		owns = 508
+		owns = 676
+		owns = 710
 		450 = { religion = ROOT }
-		ROOT = { owns = 677 }
 		677 = { religion = ROOT }
-		ROOT = { owns = 508 }
 		508 = { religion = ROOT }
-		ROOT = { owns = 676 }
 		676 = { religion = ROOT }
-		ROOT = { owns = 710 }
 		710 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
 }
 
 #######################
@@ -410,21 +410,21 @@ controlling_all_norse_holy_sites_bt = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 3123 }
+		owns = 3123
+		owns = 7767
+		owns = 20
+		owns = 96
+		owns = 2972
 		3123 = { religion = ROOT }
-		ROOT = { owns = 7767 }
 		7767 = { religion = ROOT }
-		ROOT = { owns = 20 }
 		20 = { religion = ROOT }
-		ROOT = { owns = 96 }
 		96 = { religion = ROOT }
-		ROOT = { owns = 2972 }
 		2972 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
 }
 
 controlling_all_hellenic_holy_sites_bt = {
@@ -441,21 +441,21 @@ controlling_all_hellenic_holy_sites_bt = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 118 }
+		owns = 118
+		owns = 146
+		owns = 358
+		owns = 7123
+		owns = 2296
 		118 = { religion = ROOT }
-		ROOT = { owns = 146 }
 		146 = { religion = ROOT }
-		ROOT = { owns = 358 }
 		358 = { religion = ROOT }
-		ROOT = { owns = 7123 }
 		7123 = { religion = ROOT }
-		ROOT = { owns = 2296 }
 		2296 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
 }
 
 controlling_all_romuva_holy_sites_bt = {
@@ -472,21 +472,21 @@ controlling_all_romuva_holy_sites_bt = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 38 }
+		owns = 38
+		owns = 4745
+		owns = 269
+		owns = 7882
+		owns = 1859
 		38 = { religion = ROOT }
-		ROOT = { owns = 4745 }
 		4745 = { religion = ROOT }
-		ROOT = { owns = 269 }
 		269 = { religion = ROOT }
-		ROOT = { owns = 7882 }
 		7882 = { religion = ROOT }
-		ROOT = { owns = 1859 }
 		1859 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
 }
 
 controlling_all_suomenusko_holy_sites_bt = {
@@ -503,21 +503,52 @@ controlling_all_suomenusko_holy_sites_bt = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 30 }
+		owns = 30
+		owns = 3231
+		owns = 301
+		owns = 305
+		owns = 2749
 		30 = { religion = ROOT }
-		ROOT = { owns = 3231 }
 		3231 = { religion = ROOT }
-		ROOT = { owns = 301 }
 		301 = { religion = ROOT }
-		ROOT = { owns = 305 }
 		305 = { religion = ROOT }
-		ROOT = { owns = 2749 }
 		2749 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
+}
+
+controlling_all_tengri_holy_sites_bt = {
+	potential = {
+		has_global_flag = beyond_typus_mod_enabled
+		religion = tengri_pagan_reformed
+		OR = {
+			has_discovered = 7191 # Crimea
+			has_discovered = 464 # Astrakhan
+			has_discovered = 716 # Tannu Uriankhai
+			has_discovered = 1076 # Kurgan
+			has_discovered = 1970 # Syghnak
+		}
+	}
+	
+	trigger = {
+		owns = 7191
+		owns = 464
+		owns = 716
+		owns = 1076
+		owns = 1970
+		7191 = { religion = ROOT }
+		464 = { religion = ROOT }
+		716 = { religion = ROOT }
+		1076 = { religion = ROOT }
+		1970 = { religion = ROOT }
+	}
+	
+	missionaries = 1
+	global_missionary_strength = 0.02
+	prestige = 0.5
 }
 
 controlling_all_fetishist_holy_sites_bt = {
@@ -534,19 +565,19 @@ controlling_all_fetishist_holy_sites_bt = {
 	}
 	
 	trigger = {
-		ROOT = { owns = 344 }
+		owns = 344
+		owns = 1132
+		owns = 2249
+		owns = 5315
+		owns = 2463
 		344 = { religion = ROOT }
-		ROOT = { owns = 1132 }
 		1132 = { religion = ROOT }
-		ROOT = { owns = 2249 }
 		2249 = { religion = ROOT }
-		ROOT = { owns = 5315 }
 		5315 = { religion = ROOT }
-		ROOT = { owns = 2463 }
 		2463 = { religion = ROOT }
 	}
 	
 	missionaries = 1
 	global_missionary_strength = 0.02
-	prestige = 1
+	prestige = 0.5
 }

@@ -185,6 +185,17 @@
  generic_rebels_name: "$RELIGION$-Fanatiker"
  generic_rebels_desc: "Religiöse Fanatiker neigen dazu, sich in Provinzen zu erheben, die von Nationen eines anderen Glaubens kontrolliert werden. Sie versuchen, ihren Glauben zu verbreiten und alle Ungläubigen zu quälen."
  generic_rebels_army: "$RELIGION$-Armee"
+ 
+ cathar_center_of_reformation: "Reformationszentrum"
+ waldensian_center_of_reformation: "Reformationszentrum"
+ lollard_center_of_reformation: "Reformationszentrum"
+ 
  monophysite_blessings:1 "Patriarchale Segen"
  pick_monophysite_blessing:0 "Segen auswählen"
+ 
+ # Province Triggered Modifiers
+ ctr_zoroastrian_mecca:0 "Die Eroberung von Mekka"
+ desc_ctr_zoroastrian_mecca:0 "Wir wurden vom muslimischen Eindringling aus unserem Land vertrieben. Unsere alten Tempel wurden entweiht und die ewigen Feuer von Zoroaster gelöscht, aber jetzt haben wir unsere Rache. [Root.GetCapitalName], die heilige Stadt des Islam, liegt unter unserer Kontrolle."
+ ctr_hellenic_rome:0 "Die Rückeroberung Roms"
+ desc_ctr_hellenic_rome:0 "Vor langer Zeit haben uns die christlichen Heiden fast an den Rand des Aussterbens getrieben, aber wir haben durchgehalten und mit Hilfe der Götter Rom zurückerobert und den Tod des Reiches gerächt."
  

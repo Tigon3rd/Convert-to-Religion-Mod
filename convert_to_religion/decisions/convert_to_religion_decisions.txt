@@ -633,15 +633,15 @@ country_decisions = {
 	# province_id = 2644 # Cholula [Aztec] (Great Pyramid of Cholula)
 	
 	### For 5 Holy Sites with 2 (of the above sites) being from the other religions ###
-	# province_id = 842 # Peten (Tikal)
+	# province_id = 2651 # Ah Canul (Uxmal)
 	# province_id = 2632 # Xicallanco (Palenque)
 	
 	### For 5 Holy Sites with all being in the mayan religion area ### (these 2 with Yucatan means that 3 provences is right besides eachother, would probably be too much)
-	# province_id = 2652 # Ecab (Coba) (maybe switch with BELIZE)
-	# province_id = 2651 # Ah Canul (Uxmal)
+	# province_id = 842 # Peten (Tikal)
+	# province_id = 843 # Belize (Caracol)
 	
 	### This didn't seem to fit, but could be used to maybe spread out the sites a little ###
-	# province_id = 843 # Belize (Caracol) (maybe switch with ECAB)
+	# province_id = 2652 # Ecab (Coba)
 	# province_id = 2636 # Chacujal (Copán)
 	
 	convert_to_mayan_decision = {
@@ -1112,7 +1112,7 @@ country_decisions = {
 	# province_id = 2644 # Cholula [Aztec] (Great Pyramid of Cholula)
 	
 	### For 5 Holy Sites with 2 (of the above sites) being from the other religions ###
-	# province_id = 808 # Cuzco (Coricancha and/or Machu Picchu)
+	# province_id = 807 # Abancay (Machu Picchu)
 	# province_id = 804 # Puno (Isla del Sol - Lake Titicaca)
 	
 	### For 5 Holy Sites with all being in the inti religion area ###

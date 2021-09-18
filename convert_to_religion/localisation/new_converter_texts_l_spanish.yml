@@ -185,5 +185,17 @@ l_spanish:
  generic_rebels_name: "Fanáticos de $RELIGION$"
  generic_rebels_desc: "Los fanáticos religiosos suelen aparecer en provincias controladas por naciones que practican una creencia diferente. Buscan propagar su fe y sofocar a todos los infieles."
  generic_rebels_army: "Ejército $RELIGION$"
+ 
+ cathar_center_of_reformation: "Centro de reforma"
+ waldensian_center_of_reformation: "Centro de reforma"
+ lollard_center_of_reformation: "Centro de reforma"
+ 
  monophysite_blessings:0 "Bendiciones patriarcales"
  pick_monophysite_blessing:0 "Elegir bendición"
+ 
+ # Province Triggered Modifiers
+ ctr_zoroastrian_mecca:0 "La conquista de la Meca"
+ desc_ctr_zoroastrian_mecca:0 "Fuimos expulsados de nuestras tierras por el invasor musulmán. Nuestros antiguos templos fueron profanados y los fuegos eternos de Zoroastro se extinguieron, pero ahora tenemos nuestra venganza. [Root.GetCapitalName], ciudad santa del Islam, se encuentra bajo nuestro control."
+ ctr_hellenic_rome:0 "La Reconquista de Roma"
+ desc_ctr_hellenic_rome:0 "Hace mucho tiempo, los paganos cristianos nos llevaron casi al borde de la extinción, pero hemos perseverado y con la ayuda de los dioses hemos retomado Roma y vengado la muerte del Imperio."
+ 

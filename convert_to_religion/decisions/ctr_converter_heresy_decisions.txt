@@ -1,0 +1,380 @@
+country_decisions = {
+	
+	# Heretic centers to spread religion
+	cathar_CoR_decision = {
+		potential = {
+			religion = cathar
+			NOT = { has_global_flag = cathar_CoR_flag }
+			NOT = {
+				any_owned_province = {
+					continent = europe
+				}
+			}
+		}
+		
+		allow = {
+			treasury = 500
+			adm_power = 150
+			custom_trigger_tooltip = {
+				tooltip = heresy_CoR_trigger_tt
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = capital_CoR_trigger_tt
+					capital_scope = {
+						can_have_religious_center_heresy_ctr = {
+							RELIGION = cathar
+						}
+					}
+				}
+				any_owned_province = {
+					can_have_religious_center_heresy_ctr = {
+						RELIGION = cathar
+					}
+				}
+			}
+		}
+		
+		effect = {
+			add_treasury = -500
+			add_adm_power = -150
+			if = {
+				limit = {
+					capital_scope = {
+						can_have_religious_center_heresy_ctr = {
+							RELIGION = cathar
+						}
+					}
+				}
+				custom_tooltip = heresy_CoR_capital_tt
+				capital_scope = {
+					add_reform_center = cathar
+				}
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						can_have_religious_center_heresy_ctr = {
+							RELIGION = cathar
+						}
+					}
+					add_reform_center = cathar
+				}
+				custom_tooltip = heresy_CoR_random_tt
+			}
+			set_global_flag = cathar_CoR_flag
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	waldensian_CoR_decision = {
+		potential = {
+			religion = waldensian
+			NOT = { has_global_flag = waldensian_CoR_flag }
+			NOT = {
+				any_owned_province = {
+					continent = europe
+				}
+			}
+		}
+		
+		allow = {
+			treasury = 500
+			adm_power = 150
+			custom_trigger_tooltip = {
+				tooltip = heresy_CoR_trigger_tt
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = capital_CoR_trigger_tt
+					capital_scope = {
+						can_have_religious_center_heresy_ctr = {
+							RELIGION = waldensian
+						}
+					}
+				}
+				any_owned_province = {
+					can_have_religious_center_heresy_ctr = {
+						RELIGION = waldensian
+					}
+				}
+			}
+		}
+		
+		effect = {
+			add_treasury = -500
+			add_adm_power = -150
+			if = {
+				limit = {
+					capital_scope = {
+						can_have_religious_center_heresy_ctr = {
+							RELIGION = waldensian
+						}
+					}
+				}
+				custom_tooltip = heresy_CoR_capital_tt
+				capital_scope = {
+					add_reform_center = waldensian
+				}
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						can_have_religious_center_heresy_ctr = {
+							RELIGION = waldensian
+						}
+					}
+					add_reform_center = waldensian
+				}
+				custom_tooltip = heresy_CoR_random_tt
+			}
+			set_global_flag = waldensian_CoR_flag
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	lollard_CoR_decision = {
+		potential = {
+			religion = lollard
+			NOT = { has_global_flag = lollard_CoR_flag }
+			NOT = {
+				any_owned_province = {
+					continent = europe
+				}
+			}
+		}
+		
+		allow = {
+			treasury = 500
+			adm_power = 150
+			custom_trigger_tooltip = {
+				tooltip = heresy_CoR_trigger_tt
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = capital_CoR_trigger_tt
+					capital_scope = {
+						can_have_religious_center_heresy_ctr = {
+							RELIGION = lollard
+						}
+					}
+				}
+				any_owned_province = {
+					can_have_religious_center_heresy_ctr = {
+						RELIGION = lollard
+					}
+				}
+			}
+		}
+		
+		effect = {
+			add_treasury = -500
+			add_adm_power = -150
+			if = {
+				limit = {
+					capital_scope = {
+						can_have_religious_center_heresy_ctr = {
+							RELIGION = lollard
+						}
+					}
+				}
+				custom_tooltip = heresy_CoR_capital_tt
+				capital_scope = {
+					add_reform_center = lollard
+				}
+			}
+			else = {
+				random_owned_province = {
+					limit = {
+						can_have_religious_center_heresy_ctr = {
+							RELIGION = lollard
+						}
+					}
+					add_reform_center = lollard
+				}
+				custom_tooltip = heresy_CoR_random_tt
+			}
+			set_global_flag = lollard_CoR_flag
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	# Old religion decisions
+	gotland_norse_pirate_decision = {
+		potential = {
+			tag = GOT
+			has_reform = pirate_republic_reform
+			NOT = { num_of_cities = 3 }
+			NOT = { religion = norse_pagan_reformed }
+		}
+		
+		allow = {
+			tag = GOT
+			has_reform = pirate_republic_reform
+			NOT = { num_of_cities = 3 }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			stability = 1
+		}
+		
+		effect = {
+			add_stability = -2
+			change_religion = norse_pagan_reformed
+			capital_scope = {
+				change_religion = norse_pagan_reformed
+				add_permanent_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 10950
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	iceland_norse_decision = {
+		potential = {
+			tag = ICE
+			num_of_cities = 2
+			NOT = { religion = norse_pagan_reformed }
+		}
+		
+		allow = {
+			tag = ICE
+			num_of_cities = 2
+			NOT = { num_of_cities = 5 }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			stability = 1
+		}
+		
+		effect = {
+			add_stability = -2
+			change_religion = norse_pagan_reformed
+			capital_scope = {
+				change_religion = norse_pagan_reformed
+				add_permanent_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 10950
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	rugen_slavic_pirate_decision = {
+		potential = {
+			tag = RUG
+			has_reform = pirate_republic_reform
+			NOT = { num_of_cities = 4 }
+			NOT = { religion = slavic_pagan_reformed }
+		}
+		
+		allow = {
+			tag = RUG
+			has_reform = pirate_republic_reform
+			NOT = { num_of_cities = 4 }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			stability = 1
+			custom_trigger_tooltip = {
+				tooltip = capital_is_slavic_hs_trigger_tt
+				capital_scope = {
+					has_province_modifier = holy_site_slavic_rugen
+				}
+			}
+		}
+		
+		effect = {
+			add_stability = -2
+			change_religion = slavic_pagan_reformed
+			capital_scope = {
+				change_religion = slavic_pagan_reformed
+				add_permanent_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 10950
+				}
+			}
+			
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	rugen_romuvan_pirate_decision = {
+		potential = {
+			tag = RUG
+			has_reform = pirate_republic_reform
+			NOT = { num_of_cities = 4 }
+			NOT = { religion = baltic_pagan_reformed }
+		}
+		
+		allow = {
+			tag = RUG
+			has_reform = pirate_republic_reform
+			NOT = { num_of_cities = 4 }
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			stability = 1
+			custom_trigger_tooltip = {
+				tooltip = capital_is_romuva_hs_trigger_tt
+				capital_scope = {
+					has_province_modifier = holy_site_slavic_rugen
+				}
+			}
+		}
+		
+		effect = {
+			add_stability = -2
+			change_religion = baltic_pagan_reformed
+			capital_scope = {
+				change_religion = baltic_pagan_reformed
+				add_permanent_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 10950
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	# Decision to make the event fire again to run a check on holy site provinces after update/change to locations.
+	check_holy_site_provinces_decision = {
+		potential = {
+			has_global_flag = startup_event_triggered
+			NOT = { has_global_flag = ctr_update_1_1 }
+		}
+		
+		allow = {
+			always = yes
+		}
+		
+		effect = {
+			clr_global_flag = startup_event_triggered
+			set_global_flag = ctr_update_1_1
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

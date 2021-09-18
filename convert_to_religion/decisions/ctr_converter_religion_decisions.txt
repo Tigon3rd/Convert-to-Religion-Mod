@@ -304,7 +304,7 @@ country_decisions = {
 		}
 	}
 	
-	#Protestants
+	# Protestants
 	secularization_of_protestant_theocracy_EXTRA = {
 		major = yes
 		potential = {
@@ -501,7 +501,7 @@ country_decisions = {
 		}
 	}
 	
-	#Other
+	# Other
 	restrict_government_offices_EXTRA = {
 		potential = {
 			NOT = { has_country_modifier = restricted_offices }
@@ -637,4 +637,5 @@ country_decisions = {
 			}
 		}
 	}
+	
 }

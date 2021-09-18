@@ -185,5 +185,17 @@
  generic_rebels_name: "Fanatiques $RELIGION$s"
  generic_rebels_desc: "Ces fanatiques religieux ont tendance à se soulever dans les provinces contrôlées par des nations de confession différente. Ils cherchent à répandre leur foi et s'en prennent à tous les infidèles."
  generic_rebels_army: "Armée $RELIGION$"
+ 
+ cathar_center_of_reformation: "Foyer de la Réforme"
+ waldensian_center_of_reformation: "Foyer de la Réforme"
+ lollard_center_of_reformation: "Foyer de la Réforme"
+ 
  monophysite_blessings:1 "Bénédictions patriarcales"
  pick_monophysite_blessing:0 "Choix d'une bénédiction"
+ 
+ # Province Triggered Modifiers
+ ctr_zoroastrian_mecca:0 "La Conquête de la Mecque"
+ desc_ctr_zoroastrian_mecca:0 "Nous avons été chassés de nos terres par l'envahisseur musulman. Nos anciens temples ont été profanés et les feux éternels de Zoroastre éteints, mais maintenant nous avons notre revanche. [Root.GetCapitalName], ville sainte de l'Islam, est sous notre contrôle."
+ ctr_hellenic_rome:0 "La Reconquête de Rome"
+ desc_ctr_hellenic_rome:0 "Il y a longtemps, les païens chrétiens nous ont menés presque au bord de l'extinction, mais nous avons persévéré et avec l'aide des dieux, nous avons repris Rome et vengé la mort de l'Empire."
+ 

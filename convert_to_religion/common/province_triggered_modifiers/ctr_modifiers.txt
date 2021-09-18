@@ -1456,7 +1456,6 @@ holy_site_orthodox_antioch = { # Antioch
 }
 
 # Special Event to move the Sugla/Lebedos Holy Site to Moskva after the fall of Byzantium
-
 holy_site_orthodox_moskva = { # Moskva
 	picture = "province_orthodox"
 	potential = {
@@ -2765,7 +2764,7 @@ holy_site_sikh = { # Random province
 	}
 }
 
-# holy_site_sikh_0507 = { # Lahore
+# holy_site_sikh_0507 = { # Lahore #deprecated
 	# picture = "province_sikh"
 	# potential = {
 	# }
@@ -2780,7 +2779,7 @@ holy_site_sikh = { # Random province
 	# }
 # }
 
-# holy_site_sikh_2062 = { # Panipat
+# holy_site_sikh_2062 = { # Panipat #deprecated
 	# picture = "province_sikh"
 	# potential = {
 	# }
@@ -3763,7 +3762,7 @@ holy_site_anglican_jerusalem = { # Jerusalem
 # Hussite
 ###########################################
 
-holy_site_hussite_prague = {
+holy_site_hussite_prague = { # Praha/Prague
 	picture = "province_hussite"
 	potential = {
 	}
@@ -3826,7 +3825,7 @@ holy_site_hussite_jerusalem = { # Jerusalem
 	}
 }
 
-#Fraticelli Pope
+# Fraticelli Pope
 adm_vatican_library = {
 	potential = {
 		normal_or_historical_nations = yes
@@ -3973,3 +3972,78 @@ pap_sistinechapel_decorated = {
 	global_missionary_strength = 0.01
 }
 
+# Hellenic Rome
+ctr_hellenic_rome = {
+	potential = {
+	}
+	
+	trigger = {
+		owner = { religion = hellenic_pagan }
+	}
+	
+	missionaries = 1
+	tolerance_own = 1
+	prestige = 0.5
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	on_deactivation = {
+	
+	}
+}
+
+# Zoroastrian Mecca
+ctr_zoroastrian_mecca = {
+	potential = {
+	}
+	
+	trigger = {
+		owner = { religion_group = zoroastrian_group }
+	}
+	
+	missionaries = 1
+	tolerance_own = 1
+	prestige = 0.5
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+}
+
+# Adding Monophysite to Coptic Alexandria
+coptic_alexandria = {
+	potential = {
+		normal_or_historical_nations = yes
+	}
+	
+	# viewer = {
+	# }
+	
+	trigger = {
+		owner = {
+			religion = coptic
+			religion = monophysite
+		}
+	}
+	
+	prestige = 0.5
+	missionaries = 1
+	tolerance_own = 1
+	
+	#Province scope
+	on_activation = {
+	
+	}
+	
+	on_deactivation = {
+	
+	}
+	
+}
