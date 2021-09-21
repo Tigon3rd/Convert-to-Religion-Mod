@@ -24,6 +24,7 @@ holding_abrahamic_holy_sites = {
 	tolerance_own = 2
 	prestige = 1
 }
+
 ###########################################
 # Pagans Holding All of their Religious Holy Sites
 ###########################################
@@ -395,7 +396,6 @@ controlling_all_bon_holy_sites = {
 #######################
 # Beyond Typus
 #######################
-
 controlling_all_norse_holy_sites_bt = {
 	potential = {
 		has_global_flag = beyond_typus_mod_enabled

@@ -1,5 +1,6 @@
 namespace = ctr_events
 
+# Startup 1-19
 country_event = { # This is here if another mod has a on_actions file, which overrides my on_startup where I add all the Holy Site province modifiers, then this will pop and add them.
 	id = ctr_events.1
 	title = "ctr_events.1.title"
@@ -40,10 +41,11 @@ country_event = { # This is here if another mod has a on_actions file, which ove
 	}
 }
 
+# Sikh 20-29
 country_event = { # Separate Sikh event, as it only needs to trigger when Sikh is enabled
-	id = ctr_events.2
-	title = "ctr_events.2.title"
-	desc = "ctr_events.2.desc"
+	id = ctr_events.20
+	title = "ctr_events.20.title"
+	desc = "ctr_events.20.desc"
 	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	# fire_only_once = yes
@@ -59,13 +61,6 @@ country_event = { # Separate Sikh event, as it only needs to trigger when Sikh i
 	}
 	
 	immediate = {
-		set_global_flag = sikh_holy_sites_added
-	}
-	
-	option = {
-		name = "ctr_events.2.OPTA"
-		ai_chance = { factor = 100 }
-		
 		every_province = {
 			if = {
 				limit = { # Doaba
@@ -98,13 +93,19 @@ country_event = { # Separate Sikh event, as it only needs to trigger when Sikh i
 				# add_province_triggered_modifier = holy_site_sikh_2062
 			# }
 		}
+		set_global_flag = sikh_holy_sites_added
+	}
+	
+	option = {
+		name = "ctr_events.20.OPTA"
+		ai_chance = { factor = 100 }
 	}
 }
 
 country_event = { # Selects the province that Sikh spawns in on as a holy site when Sikh is enabled
-	id = ctr_events.7
-	title = "ctr_events.7.title"
-	desc = "ctr_events.7.desc"
+	id = ctr_events.21
+	title = "ctr_events.21.title"
+	desc = "ctr_events.21.desc"
 	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	# I think I want to change this so that it only adds the 1 province modifier on the 1 province which Sikh spawns in on and which gets the religious_center modifier. Then I would make another event to add the last (and 5th) province modifier, when either a nation converts to Sikh and has at least 1 Sikh province (that's NOT adjecent to another Sikh province with a Sikh province modifier), this should put automatically because of the Guru's going around flipping provinces and nations to Sikh, and it would add yet more variety/randomness to each playthroughs.
@@ -121,7 +122,7 @@ country_event = { # Selects the province that Sikh spawns in on as a holy site w
 	}
 	
 	option = {
-		name = "ctr_events.7.OPTA"
+		name = "ctr_events.21.OPTA"
 		ai_chance = { factor = 25 }
 		
 		trigger = { # Still need to make sure if Sikh spawns in a neighboring province, but doesn't convert one of these, this would make the holy sites neighbor eachother.
@@ -130,14 +131,43 @@ country_event = { # Selects the province that Sikh spawns in on as a holy site w
 			1948 = { NOT = { religion = sikhism } }
 		}
 		set_global_flag = sikh_option_1
-		random_province = {
+		every_province = {
 			limit = { # Locate the province where Sikh spawned
 				religion = sikhism
-				has_active_triggered_province_modifier = religious_center
 			}
-			add_province_triggered_modifier = holy_site_sikh
-			set_province_flag = holy_site_sikh_1_primary
-			remove_province_triggered_modifier = religious_center
+			if = {
+				limit = {
+					has_active_triggered_province_modifier = religious_center
+					NOT = {
+						any_neighbor_province = {
+							OR = {
+								province_id = 2075
+								province_id = 558
+								province_id = 1948
+							}
+						}
+					}
+				}
+				add_province_triggered_modifier = holy_site_sikh
+				set_province_flag = holy_site_sikh_1_primary
+				remove_province_triggered_modifier = religious_center
+			}
+			else = {
+				limit = {
+					has_active_triggered_province_modifier = religious_center
+					any_neighbor_province = {
+						OR = {
+							province_id = 2075
+							province_id = 558
+							province_id = 1948
+						}
+					}
+				}
+				add_province_triggered_modifier = holy_site_sikh
+				set_province_flag = holy_site_sikh_IS_neighbor_to_the_3
+				set_province_flag = removed_religious_center_mod_sikh
+				remove_province_triggered_modifier = religious_center
+			}
 		}
 		# random_province = {
 			# limit = {
@@ -151,7 +181,7 @@ country_event = { # Selects the province that Sikh spawns in on as a holy site w
 		# }
 	}
 	option = {
-		name = "ctr_events.7.OPTB"
+		name = "ctr_events.21.OPTB"
 		ai_chance = { factor = 75 }
 		
 		trigger = {
@@ -216,9 +246,9 @@ country_event = { # Selects the province that Sikh spawns in on as a holy site w
 }
 
 province_event = { # Selects a province that is Sikh and the owner is also Sikh as a holy site
-	id = ctr_events.11
-	title = "ctr_events.11.title"
-	desc = "ctr_events.11.desc"
+	id = ctr_events.22
+	title = "ctr_events.22.title"
+	desc = "ctr_events.22.desc"
 	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	hidden = yes
@@ -260,15 +290,58 @@ province_event = { # Selects a province that is Sikh and the owner is also Sikh 
 	}
 	
 	option = {
-		name = "ctr_events.11.OPTA"
+		name = "ctr_events.22.OPTA"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Protestant 30-39
+country_event = { # Separate Protestant event, as it only needs to trigger when Protestant is enabled
+	id = ctr_events.30
+	title = "ctr_events.30.title"
+	desc = "ctr_events.30.desc"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	# fire_only_once = yes
+	hidden = yes
+	
+	trigger = {
+		is_religion_enabled = protestant
+		NOT = { has_global_flag = protestant_holy_sites_added }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		every_province = {
+			if = {
+				limit = { # Roma
+					province_id = 118
+				}
+				add_province_triggered_modifier = holy_site_protestant_rome
+			}
+			if = {
+				limit = { # Jerusalem
+					province_id = 379
+				}
+				add_province_triggered_modifier = holy_site_protestant_jerusalem
+			}
+		}
+		set_global_flag = protestant_holy_sites_added
+	}
+	
+	option = {
+		name = "ctr_events.30.OPTA"
 		ai_chance = { factor = 100 }
 	}
 }
 
 province_event = { # Protestant Center of Reformation gets Holy Site
-	id = ctr_events.3
-	title = "ctr_events.3.title"
-	desc = "ctr_events.3.desc"
+	id = ctr_events.31
+	title = "ctr_events.31.title"
+	desc = "ctr_events.31.desc"
 	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	hidden = yes
@@ -288,6 +361,8 @@ province_event = { # Protestant Center of Reformation gets Holy Site
 	}
 	
 	immediate = {
+		add_province_triggered_modifier = protestant_CoR_province
+		remove_province_modifier = religious_center
 		set_province_flag = protestant_CoR_flag
 	}
 	
@@ -296,18 +371,58 @@ province_event = { # Protestant Center of Reformation gets Holy Site
 	}
 	
 	option = {
-		name = "ctr_events.3.OPTA"
+		name = "ctr_events.31.OPTA"
 		ai_chance = { factor = 100 }
-		
-		add_province_triggered_modifier = protestant_CoR_province
-		remove_province_modifier = religious_center
+	}
+}
+
+# Reformed 40-49
+country_event = { # Separate Reformed event, as it only needs to trigger when Reformed is enabled
+	id = ctr_events.40
+	title = "ctr_events.40.title"
+	desc = "ctr_events.40.desc"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	# fire_only_once = yes
+	hidden = yes
+	
+	trigger = {
+		is_religion_enabled = reformed
+		NOT = { has_global_flag = reformed_holy_sites_added }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		every_province = {
+			if = {
+				limit = { # Roma
+					province_id = 118
+				}
+				add_province_triggered_modifier = holy_site_reformed_rome
+			}
+			if = {
+				limit = { # Jerusalem
+					province_id = 379
+				}
+				add_province_triggered_modifier = holy_site_reformed_jerusalem
+			}
+		}
+		set_global_flag = reformed_holy_sites_added
+	}
+	
+	option = {
+		name = "ctr_events.40.OPTA"
+		ai_chance = { factor = 100 }
 	}
 }
 
 province_event = { # Reformed Center of Reformation gets Holy Site
-	id = ctr_events.4
-	title = "ctr_events.4.title"
-	desc = "ctr_events.4.desc"
+	id = ctr_events.41
+	title = "ctr_events.41.title"
+	desc = "ctr_events.41.desc"
 	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	hidden = yes
@@ -327,6 +442,8 @@ province_event = { # Reformed Center of Reformation gets Holy Site
 	}
 	
 	immediate = {
+		add_province_triggered_modifier = reformed_CoR_province
+		remove_province_modifier = religious_center
 		set_province_flag = reformed_CoR_flag
 	}
 	
@@ -335,104 +452,16 @@ province_event = { # Reformed Center of Reformation gets Holy Site
 	}
 	
 	option = {
-		name = "ctr_events.4.OPTA"
+		name = "ctr_events.41.OPTA"
 		ai_chance = { factor = 100 }
-		
-		add_province_triggered_modifier = reformed_CoR_province
-		remove_province_modifier = religious_center
 	}
 }
 
-country_event = { # Separate Protestant event, as it only needs to trigger when Protestant is enabled
-	id = ctr_events.5
-	title = "ctr_events.5.title"
-	desc = "ctr_events.5.desc"
-	picture = RELIGIOUS_CONVERSION_eventPicture
-	
-	# fire_only_once = yes
-	hidden = yes
-	
-	trigger = {
-		is_religion_enabled = protestant
-		NOT = { has_global_flag = protestant_holy_sites_added }
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		set_global_flag = protestant_holy_sites_added
-	}
-	
-	option = {
-		name = "ctr_events.5.OPTA"
-		ai_chance = { factor = 100 }
-		
-		every_province = {
-			if = {
-				limit = { # Roma
-					province_id = 118
-				}
-				add_province_triggered_modifier = holy_site_protestant_rome
-			}
-			if = {
-				limit = { # Jerusalem
-					province_id = 379
-				}
-				add_province_triggered_modifier = holy_site_protestant_jerusalem
-			}
-		}
-	}
-}
-
-country_event = { # Separate Reformed event, as it only needs to trigger when Reformed is enabled
-	id = ctr_events.6
-	title = "ctr_events.6.title"
-	desc = "ctr_events.6.desc"
-	picture = RELIGIOUS_CONVERSION_eventPicture
-	
-	# fire_only_once = yes
-	hidden = yes
-	
-	trigger = {
-		is_religion_enabled = reformed
-		NOT = { has_global_flag = reformed_holy_sites_added }
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		set_global_flag = reformed_holy_sites_added
-	}
-	
-	option = {
-		name = "ctr_events.6.OPTA"
-		ai_chance = { factor = 100 }
-		
-		every_province = {
-			if = {
-				limit = { # Roma
-					province_id = 118
-				}
-				add_province_triggered_modifier = holy_site_reformed_rome
-			}
-			if = {
-				limit = { # Jerusalem
-					province_id = 379
-				}
-				add_province_triggered_modifier = holy_site_reformed_jerusalem
-			}
-		}
-	}
-}
-
+# Anglican 50-59
 country_event = { # Separate Anglican event, as it only needs to trigger when Anglican is enabled
-	id = ctr_events.8
-	title = "ctr_events.8.title"
-	desc = "ctr_events.8.desc"
+	id = ctr_events.50
+	title = "ctr_events.50.title"
+	desc = "ctr_events.50.desc"
 	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	# fire_only_once = yes
@@ -440,7 +469,11 @@ country_event = { # Separate Anglican event, as it only needs to trigger when An
 	
 	trigger = {
 		is_religion_enabled = anglican
+		religion = anglican
 		NOT = { has_global_flag = anglican_holy_sites_added }
+		any_province = {
+			religion = anglican
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -448,13 +481,6 @@ country_event = { # Separate Anglican event, as it only needs to trigger when An
 	}
 	
 	immediate = {
-		set_global_flag = anglican_holy_sites_added
-	}
-	
-	option = {
-		name = "ctr_events.8.OPTA"
-		ai_chance = { factor = 100 }
-		
 		every_province = {
 			if = {
 				limit = { # Roma
@@ -469,13 +495,19 @@ country_event = { # Separate Anglican event, as it only needs to trigger when An
 				add_province_triggered_modifier = holy_site_anglican_jerusalem
 			}
 		}
+		set_global_flag = anglican_holy_sites_added
+	}
+	
+	option = {
+		name = "ctr_events.50.OPTA"
+		ai_chance = { factor = 100 }
 	}
 }
 
 country_event = { # Makes the first Anglican spawned provinces into Holy Sites
-	id = ctr_events.9
-	title = "ctr_events.9.title"
-	desc = "ctr_events.9.desc"
+	id = ctr_events.51
+	title = "ctr_events.51.title"
+	desc = "ctr_events.51.desc"
 	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	fire_only_once = yes
@@ -490,10 +522,7 @@ country_event = { # Makes the first Anglican spawned provinces into Holy Sites
 		days = 1
 	}
 	
-	option = {
-		name = "ctr_events.9.OPTA"
-		ai_chance = { factor = 100 }
-		
+	immediate = {
 		capital_scope = {
 			add_province_triggered_modifier = anglican_CoR_province
 		}
@@ -532,12 +561,17 @@ country_event = { # Makes the first Anglican spawned provinces into Holy Sites
 			add_province_triggered_modifier = anglican_CoR_province
 		}
 	}
+	
+	option = {
+		name = "ctr_events.51.OPTA"
+		ai_chance = { factor = 100 }
+	}
 }
 
 province_event = { # Makes sure Anglican gets up to 3 Holy Sites besides Rome & Jerusalem
-	id = ctr_events.10
-	title = "ctr_events.10.title"
-	desc = "ctr_events.10.desc"
+	id = ctr_events.52
+	title = "ctr_events.52.title"
+	desc = "ctr_events.52.desc"
 	picture = RELIGIOUS_CONVERSION_eventPicture
 	
 	hidden = yes
@@ -569,7 +603,250 @@ province_event = { # Makes sure Anglican gets up to 3 Holy Sites besides Rome & 
 	}
 	
 	option = {
-		name = "ctr_events.10.OPTA"
+		name = "ctr_events.52.OPTA"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Hussite 60-69
+province_event = { # Hussite has gained a Reformation center
+	id = ctr_events.60
+	title = "ctr_events.60.title"
+	desc = "ctr_events.60.desc"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	# fire_only_once = yes
+	hidden = yes
+	
+	trigger = {
+		religion = hussite
+		is_reformation_center = yes
+		has_province_modifier = religious_center
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		remove_province_modifier = religious_center
+	}
+	
+	option = {
+		name = "ctr_events.60.OPTA"
+		ai_chance = { factor = 100 }
+	}
+}
+
+province_event = { # Selects a province that is Hussite and the owner is also Hussite as a holy site (added Center of Reformation aswell)
+	id = ctr_events.61
+	title = "ctr_events.61.title"
+	desc = "ctr_events.61.desc"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		NOT = { # It limits the holy_site_hussite modifiers to only 2 existing ever.
+			calc_true_if = {
+				all_province = {
+					has_province_modifier = holy_site_hussite
+				}
+				amount = 2
+			}
+		}
+		NOT = { has_province_modifier = holy_site_hussite_prague }
+		NOT = { has_province_modifier = holy_site_hussite_rome }
+		NOT = { has_province_modifier = holy_site_hussite_jerusalem }
+		NOT = { has_province_modifier = holy_site_hussite }
+		NOT = {
+			any_neighbor_province = {
+				OR = {
+					has_province_modifier = holy_site_hussite_prague
+					has_province_modifier = holy_site_hussite_rome
+					has_province_modifier = holy_site_hussite_jerusalem
+					has_province_modifier = holy_site_hussite
+				}
+			}
+		}
+		religion = hussite
+		owner = { religion = hussite }
+		is_in_capital_area = yes
+		is_island = no
+		development = 10
+		continent = europe
+		NOT = { province_id = 118 }
+		owner = { NOT = { tag = BOH } }
+		NOT = { current_age = age_of_absolutism }
+		NOT = { current_age = age_of_revolutions }
+		BOH = { mission_completed = emp_boh_hussite_one }
+	}
+	
+	immediate = {
+		add_province_triggered_modifier = holy_site_hussite
+		set_province_flag = missing_hussite_holy_site
+		# Test to see if spawning multiple Hussite CoR is possible
+		# if = {
+			# limit = {
+				# can_have_center_of_reformation_trigger = {
+					# RELIGION = hussite
+				# }
+			# }
+			custom_tooltip = hussite_reform_center_tt
+			add_reform_center = hussite
+			hidden_effect = {
+				ROOT = {
+					province_event = {
+						id = ctr_events.63
+						days = 36500
+					}
+				}
+			}
+		# }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "ctr_events.61.OPTA"
+		ai_chance = { factor = 100 }
+	}
+}
+
+province_event = { # Remove Hussite Center of Reformation (in case it doesn't get removed automatically when the age of absolutism begins)
+	id = ctr_events.62
+	title = "ctr_events.62.title"
+	desc = "ctr_events.62.desc"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	hidden = yes
+	# is_triggered_only = yes
+	
+	trigger = {
+		religion = hussite
+		is_reformation_center = yes
+		# has_friendly_reformation_center = yes # don't know if this is a province scope, but I would assume so.
+		NOT = { current_age = age_of_discovery }
+		NOT = { current_age = age_of_reformation }
+	}
+	
+	immediate = {
+		remove_reform_center = hussite
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "ctr_events.62.OPTA"
+		ai_chance = { factor = 100 }
+	}
+}
+
+province_event = { # Remove Hussite Center of Reformation triggered only after 100 years
+	id = ctr_events.63
+	title = "ctr_events.63.title"
+	desc = "ctr_events.63.desc"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	hidden = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_reform_center = hussite
+	}
+	
+	option = {
+		name = "ctr_events.63.OPTA"
+		ai_chance = { factor = 100 }
+	}
+}
+
+# Converter Heresies 80-89
+province_event = { # Remove Cathar Religious Center after 100 years
+	id = ctr_events.81
+	title = "ctr_events.81.title"
+	desc = "ctr_events.81.desc"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		religion = cathar
+		is_reformation_center = yes
+		had_global_flag = { flag = cathar_CoR_flag days = 36500 }
+		# has_friendly_reformation_center = yes # don't know if this is a province scope, but I would assume so. And I would believe it would check against if the reformation center is of the province religion (or maybe it's tags religion), aka matching (friendly) religion.
+	}
+	
+	immediate = {
+		remove_reform_center = cathar
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "ctr_events.81.OPTA"
+		ai_chance = { factor = 100 }
+	}
+}
+
+province_event = { # Remove Waldensian Religious Center after 100 years
+	id = ctr_events.82
+	title = "ctr_events.82.title"
+	desc = "ctr_events.82.desc"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		religion = waldensian
+		is_reformation_center = yes
+		had_global_flag = { flag = waldensian_CoR_flag days = 36500 }
+	}
+	
+	immediate = {
+		remove_reform_center = waldensian
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "ctr_events.82.OPTA"
+		ai_chance = { factor = 100 }
+	}
+}
+
+province_event = { # Remove Lollard Religious Center after 100 years
+	id = ctr_events.83
+	title = "ctr_events.83.title"
+	desc = "ctr_events.83.desc"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	
+	hidden = yes
+	
+	trigger = {
+		religion = lollard
+		is_reformation_center = yes
+		had_global_flag = { flag = lollard_CoR_flag days = 36500 }
+	}
+	
+	immediate = {
+		remove_reform_center = lollard
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "ctr_events.83.OPTA"
 		ai_chance = { factor = 100 }
 	}
 }

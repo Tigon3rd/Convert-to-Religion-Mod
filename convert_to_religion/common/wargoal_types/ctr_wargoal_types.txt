@@ -411,6 +411,27 @@ take_holy_site = {
 					has_province_modifier = holy_site_manichean_margalla
 				}
 			}
+			if = {
+				limit = {
+					ROOT = { religion = anglican }
+				}
+				OR = {
+					has_province_modifier = holy_site_anglican_rome
+					has_province_modifier = holy_site_anglican_jerusalem
+					has_province_modifier = anglican_CoR_province
+				}
+			}
+			if = {
+				limit = {
+					ROOT = { religion = hussite }
+				}
+				OR = {
+					has_province_modifier = holy_site_hussite_prague
+					has_province_modifier = holy_site_hussite_rome
+					has_province_modifier = holy_site_hussite_jerusalem
+					has_province_modifier = holy_site_hussite
+				}
+			}
 		}
 		
 		peace_options = {

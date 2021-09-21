@@ -122,16 +122,7 @@ holy_site_zoroastrian_larestan = { # Larestan
 		religion = zoroastrian
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_zoroastrian_daman = { # Daman
@@ -143,16 +134,7 @@ holy_site_zoroastrian_daman = { # Daman
 		religion = zoroastrian
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_zoroastrian_khiva = { # Khiva
@@ -164,16 +146,7 @@ holy_site_zoroastrian_khiva = { # Khiva
 		religion = zoroastrian
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_zoroastrian_shirvan = { # Shirvan
@@ -185,16 +158,7 @@ holy_site_zoroastrian_shirvan = { # Shirvan
 		religion = zoroastrian
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_zoroastrian_sabzevar = { # Sabzevar
@@ -206,16 +170,7 @@ holy_site_zoroastrian_sabzevar = { # Sabzevar
 		religion = zoroastrian
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -230,11 +185,6 @@ holy_site_zoroastrian_sabzevar = { # Sabzevar
 		# religion = totemism
 	# }
 	# local_missionary_strength = -0.05
-	# # Province scope
-	# on_activation = {
-	# }
-	# on_deactivation = {
-	# }
 # }
 
 ###########################################
@@ -250,16 +200,7 @@ holy_site_mayan_tikal = { # Peten
 		religion = mesoamerican_religion
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_mayan_caracol = { # Belize
@@ -271,16 +212,7 @@ holy_site_mayan_caracol = { # Belize
 		religion = mesoamerican_religion
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_mayan_chichenitza = { # Yucatan
@@ -292,16 +224,7 @@ holy_site_mayan_chichenitza = { # Yucatan
 		religion = mesoamerican_religion
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_mayan_palenque = { # Xicallanco
@@ -313,16 +236,7 @@ holy_site_mayan_palenque = { # Xicallanco
 		religion = mesoamerican_religion
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_mayan_uxmal = { # Ah Canul
@@ -334,16 +248,7 @@ holy_site_mayan_uxmal = { # Ah Canul
 		religion = mesoamerican_religion
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -359,16 +264,7 @@ holy_site_nahuatl_tenochtitlan = { # Mexico
 		religion = nahuatl
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_nahuatl_sayultecas = { # Sayultecas
@@ -380,16 +276,7 @@ holy_site_nahuatl_sayultecas = { # Sayultecas
 		religion = nahuatl
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_nahuatl_calixtlahuaca = { # Tulucan
@@ -401,16 +288,7 @@ holy_site_nahuatl_calixtlahuaca = { # Tulucan
 		religion = nahuatl
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_nahuatl_cholula = { # Cholula
@@ -422,16 +300,7 @@ holy_site_nahuatl_cholula = { # Cholula
 		religion = nahuatl
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_nahuatl_coatepec = { # Cuetlaxtlan
@@ -443,16 +312,7 @@ holy_site_nahuatl_coatepec = { # Cuetlaxtlan
 		religion = nahuatl
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -468,16 +328,7 @@ holy_site_inti_titicaca = { # Puno
 		religion = inti
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_inti_nazca = { # Nazca
@@ -489,16 +340,7 @@ holy_site_inti_nazca = { # Nazca
 		religion = inti
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_inti_machupicchu = { # Abancay
@@ -510,16 +352,7 @@ holy_site_inti_machupicchu = { # Abancay
 		religion = inti
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_inti_pachacamac = { # Lima
@@ -531,16 +364,7 @@ holy_site_inti_pachacamac = { # Lima
 		religion = inti
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_inti_chanchan = { # Chanchan
@@ -552,16 +376,7 @@ holy_site_inti_chanchan = { # Chanchan
 		religion = inti
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -577,16 +392,7 @@ holy_site_romuva_riga = { # Riga
 		religion = baltic_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_romuva_rugen = { # Rügen
@@ -598,16 +404,7 @@ holy_site_romuva_rugen = { # Rügen
 		religion = baltic_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_romuva_podlasie = { # Podlasia
@@ -619,16 +416,7 @@ holy_site_romuva_podlasie = { # Podlasia
 		religion = baltic_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_romuva_pochep = { # Trubchevsk (Pochep)
@@ -640,16 +428,7 @@ holy_site_romuva_pochep = { # Trubchevsk (Pochep)
 		religion = baltic_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_romuva_chelminskie = { # Chelmno (Culm, Torun)
@@ -661,16 +440,7 @@ holy_site_romuva_chelminskie = { # Chelmno (Culm, Torun)
 		religion = baltic_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -686,16 +456,7 @@ holy_site_slavic_rugen = { # Rügen
 		religion = slavic_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_slavic_plock = { # Plock
@@ -707,16 +468,7 @@ holy_site_slavic_plock = { # Plock
 		religion = slavic_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_slavic_husi = { # Moldavia
@@ -728,16 +480,7 @@ holy_site_slavic_husi = { # Moldavia
 		religion = slavic_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_slavic_kiev = { # Kiev
@@ -749,16 +492,7 @@ holy_site_slavic_kiev = { # Kiev
 		religion = slavic_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_slavic_tikhvin = { # Tikhvin
@@ -770,16 +504,7 @@ holy_site_slavic_tikhvin = { # Tikhvin
 		religion = slavic_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -795,16 +520,7 @@ holy_site_suomenusko_raivola = { # Viborg
 		religion = finnish_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_suomenusko_hiiumaa = { # Ösel
@@ -816,16 +532,7 @@ holy_site_suomenusko_hiiumaa = { # Ösel
 		religion = finnish_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_suomenusko_ryazan = { # Ryazan
@@ -837,16 +544,7 @@ holy_site_suomenusko_ryazan = { # Ryazan
 		religion = finnish_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_suomenusko_perm = { # Perm
@@ -858,16 +556,7 @@ holy_site_suomenusko_perm = { # Perm
 		religion = finnish_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_suomenusko_tikhvin = { # Tikhvin
@@ -879,16 +568,7 @@ holy_site_suomenusko_tikhvin = { # Tikhvin
 		religion = finnish_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -904,16 +584,7 @@ holy_site_norse_uppland = { # Uppland
 		religion = norse_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_norse_lejre = { # Sjaelland
@@ -925,16 +596,7 @@ holy_site_norse_lejre = { # Sjaelland
 		religion = norse_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_norse_maere = { # Trondelag
@@ -946,16 +608,7 @@ holy_site_norse_maere = { # Trondelag
 		religion = norse_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_norse_tholen = { # Zeeland
@@ -967,16 +620,7 @@ holy_site_norse_tholen = { # Zeeland
 		religion = norse_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_norse_paderborn = { # Paderborn
@@ -988,16 +632,7 @@ holy_site_norse_paderborn = { # Paderborn
 		religion = norse_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -1013,16 +648,7 @@ holy_site_tengri_crimea = { # Crimea
 		religion = tengri_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_tengri_itil = { # Astrakhan
@@ -1034,16 +660,7 @@ holy_site_tengri_itil = { # Astrakhan
 		religion = tengri_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_tengri_otuken = { # Tannu Uriankhai
@@ -1055,16 +672,7 @@ holy_site_tengri_otuken = { # Tannu Uriankhai
 		religion = tengri_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_tengri_tobol = { # Kurgan
@@ -1076,16 +684,7 @@ holy_site_tengri_tobol = { # Kurgan
 		religion = tengri_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_tengri_syganak = { # Syghnak
@@ -1097,16 +696,7 @@ holy_site_tengri_syganak = { # Syghnak
 		religion = tengri_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -1122,16 +712,7 @@ holy_site_fetishist_marrakech = { # Marrakech
 		religion = shamanism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_fetishist_timbuktu = { # Timbuktu
@@ -1143,16 +724,7 @@ holy_site_fetishist_timbuktu = { # Timbuktu
 		religion = shamanism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_fetishist_bamako = { # Sibiridugu
@@ -1164,16 +736,7 @@ holy_site_fetishist_bamako = { # Sibiridugu
 		religion = shamanism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_fetishist_medjerda = { # Kairouan (El Kef)
@@ -1185,16 +748,7 @@ holy_site_fetishist_medjerda = { # Kairouan (El Kef)
 		religion = shamanism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_fetishist_atlas = { # Maaskar
@@ -1206,16 +760,7 @@ holy_site_fetishist_atlas = { # Maaskar
 		religion = shamanism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -1229,12 +774,7 @@ holy_site_fetishist_atlas = { # Maaskar
 	# trigger = {
 		# religion = animism
 	# }
-	# local_missionary_strength = -0.05	
-	# #Province scope
-	# on_activation = {
-	# }
-	# on_deactivation = {
-	# }
+	# local_missionary_strength = -0.05
 # }
 
 ###########################################
@@ -1250,16 +790,7 @@ holy_site_catholic_koln = { # Köln
 		religion = catholic
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_catholic_rome = { # Roma
@@ -1271,16 +802,7 @@ holy_site_catholic_rome = { # Roma
 		religion = catholic
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_catholic_santiago = { # Galicia
@@ -1292,16 +814,7 @@ holy_site_catholic_santiago = { # Galicia
 		religion = catholic
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_catholic_kent = { # Kent
@@ -1313,16 +826,7 @@ holy_site_catholic_kent = { # Kent
 		religion = catholic
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_catholic_jerusalem = { # Jerusalem
@@ -1334,16 +838,7 @@ holy_site_catholic_jerusalem = { # Jerusalem
 		religion = catholic
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -1359,16 +854,7 @@ holy_site_orthodox_athos = { # Thessaloniki (Mount Athos)
 		religion = orthodox
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_orthodox_hagiasophia = { # Constantinople
@@ -1380,16 +866,7 @@ holy_site_orthodox_hagiasophia = { # Constantinople
 		religion = orthodox
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_orthodox_lebedos = { # Sugla
@@ -1401,16 +878,7 @@ holy_site_orthodox_lebedos = { # Sugla
 		religion = orthodox
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_orthodox_jerusalem = { # Jerusalem
@@ -1422,16 +890,7 @@ holy_site_orthodox_jerusalem = { # Jerusalem
 		religion = orthodox
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_orthodox_antioch = { # Antioch
@@ -1443,16 +902,7 @@ holy_site_orthodox_antioch = { # Antioch
 		religion = orthodox
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 # Special Event to move the Sugla/Lebedos Holy Site to Moskva after the fall of Byzantium
@@ -1465,16 +915,7 @@ holy_site_orthodox_moskva = { # Moskva
 		religion = orthodox
 	}
 	
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -1490,16 +931,7 @@ holy_site_monophysite_alexandria = { # Alexandria
 		religion = monophysite
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_monophysite_jerusalem = { # Jerusalem
@@ -1511,16 +943,7 @@ holy_site_monophysite_jerusalem = { # Jerusalem
 		religion = monophysite
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_monophysite_aksum = { # Tigre (Aksum)
@@ -1532,16 +955,7 @@ holy_site_monophysite_aksum = { # Tigre (Aksum)
 		religion = monophysite
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_monophysite_napata = { # Qasr Ibrim
@@ -1553,16 +967,7 @@ holy_site_monophysite_napata = { # Qasr Ibrim
 		religion = monophysite
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_monophysite_antioch = { # Antioch
@@ -1574,16 +979,7 @@ holy_site_monophysite_antioch = { # Antioch
 		religion = monophysite
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -1599,16 +995,7 @@ holy_site_coptic_alexandria = { # Alexandria
 		religion = coptic
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_coptic_yerevan = { # Yerevan (Armenia)
@@ -1620,16 +1007,7 @@ holy_site_coptic_yerevan = { # Yerevan (Armenia)
 		religion = coptic
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_coptic_aksum = { # Tigre (Aksum)
@@ -1641,16 +1019,7 @@ holy_site_coptic_aksum = { # Tigre (Aksum)
 		religion = coptic
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_coptic_qasribrim = { # Qasr Ibrim
@@ -1662,16 +1031,7 @@ holy_site_coptic_qasribrim = { # Qasr Ibrim
 		religion = coptic
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_coptic_antioch = { # Antioch
@@ -1683,16 +1043,7 @@ holy_site_coptic_antioch = { # Antioch
 		religion = coptic
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -1708,16 +1059,7 @@ holy_site_nestorian_kochin = { # Kochin
 		religion = nestorian
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_nestorian_jerusalem = { # Jerusalem
@@ -1729,16 +1071,7 @@ holy_site_nestorian_jerusalem = { # Jerusalem
 		religion = nestorian
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_nestorian_baghdad = { # Baghdad (Iraq-i-Arab)
@@ -1750,16 +1083,7 @@ holy_site_nestorian_baghdad = { # Baghdad (Iraq-i-Arab)
 		religion = nestorian
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_nestorian_rayy = { # Rey
@@ -1771,16 +1095,7 @@ holy_site_nestorian_rayy = { # Rey
 		religion = nestorian
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_nestorian_edessa = { # Urfa
@@ -1792,16 +1107,7 @@ holy_site_nestorian_edessa = { # Urfa
 		religion = nestorian
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -1817,16 +1123,7 @@ holy_site_sunni_cordoba = { # Cordoba
 		religion = sunni
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_sunni_jerusalem = { # Jerusalem
@@ -1838,16 +1135,7 @@ holy_site_sunni_jerusalem = { # Jerusalem
 		religion = sunni
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_sunni_medina = { # Medina
@@ -1859,16 +1147,7 @@ holy_site_sunni_medina = { # Medina
 		religion = sunni
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_sunni_mecca = { # Mecca
@@ -1880,16 +1159,7 @@ holy_site_sunni_mecca = { # Mecca
 		religion = sunni
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_sunni_baghdad = { # Baghdad (Iraq-i-Arab)
@@ -1901,16 +1171,7 @@ holy_site_sunni_baghdad = { # Baghdad (Iraq-i-Arab)
 		religion = sunni
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -1926,16 +1187,7 @@ holy_site_shia_jerusalem = { # Jerusalem
 		religion = shiite
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_shia_damascus = { # Damascus
@@ -1947,16 +1199,7 @@ holy_site_shia_damascus = { # Damascus
 		religion = shiite
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_shia_medina = { # Medina
@@ -1968,16 +1211,7 @@ holy_site_shia_medina = { # Medina
 		religion = shiite
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_shia_mecca = { # Mecca
@@ -1989,16 +1223,7 @@ holy_site_shia_mecca = { # Mecca
 		religion = shiite
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_shia_nadjaf = { # Samawah
@@ -2010,16 +1235,7 @@ holy_site_shia_nadjaf = { # Samawah
 		religion = shiite
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -2035,16 +1251,7 @@ holy_site_ibadi_jerusalem = { # Jerusalem
 		religion = ibadi
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_ibadi_medina = { # Medina
@@ -2056,16 +1263,7 @@ holy_site_ibadi_medina = { # Medina
 		religion = ibadi
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_ibadi_mecca = { # Mecca
@@ -2077,16 +1275,7 @@ holy_site_ibadi_mecca = { # Mecca
 		religion = ibadi
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_ibadi_nizwa = { # Nizwa
@@ -2098,16 +1287,7 @@ holy_site_ibadi_nizwa = { # Nizwa
 		religion = ibadi
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_ibadi_atlas = { # Maaskar
@@ -2119,16 +1299,7 @@ holy_site_ibadi_atlas = { # Maaskar
 		religion = ibadi
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -2144,16 +1315,7 @@ holy_site_jewish_sinai = { # Sinai
 		religion = jewish
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_jewish_jerusalem = { # Jerusalem
@@ -2165,16 +1327,7 @@ holy_site_jewish_jerusalem = { # Jerusalem
 		religion = jewish
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_jewish_damascus = { # Damascus
@@ -2186,16 +1339,7 @@ holy_site_jewish_damascus = { # Damascus
 		religion = jewish
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_jewish_dhofar = { # Dhofar
@@ -2207,16 +1351,7 @@ holy_site_jewish_dhofar = { # Dhofar
 		religion = jewish
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_jewish_hamadan = { # Hamadan
@@ -2228,16 +1363,7 @@ holy_site_jewish_hamadan = { # Hamadan
 		religion = jewish
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -2253,16 +1379,7 @@ holy_site_mahayana_bodhgaya = { # Patna
 		religion = mahayana
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_mahayana_dongkinh = { # Dong Kinh
@@ -2274,16 +1391,7 @@ holy_site_mahayana_dongkinh = { # Dong Kinh
 		religion = mahayana
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_mahayana_luoyang = { # Luoyang
@@ -2295,16 +1403,7 @@ holy_site_mahayana_luoyang = { # Luoyang
 		religion = mahayana
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_mahayana_sanchi = { # Malwa
@@ -2316,16 +1415,7 @@ holy_site_mahayana_sanchi = { # Malwa
 		religion = mahayana
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_mahayana_oddiyana = { # Margalla
@@ -2337,16 +1427,7 @@ holy_site_mahayana_oddiyana = { # Margalla
 		religion = mahayana
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -2362,16 +1443,7 @@ holy_site_theravada_bodhgaya = { # Patna
 		religion = buddhism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_theravada_angkorwat = { # Angkor
@@ -2383,16 +1455,7 @@ holy_site_theravada_angkorwat = { # Angkor
 		religion = buddhism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_theravada_sanchi = { # Malwa
@@ -2404,16 +1467,7 @@ holy_site_theravada_sanchi = { # Malwa
 		religion = buddhism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_theravada_oddiyana = { # Margalla
@@ -2425,16 +1479,7 @@ holy_site_theravada_oddiyana = { # Margalla
 		religion = buddhism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_theravada_lankantemples = { # Kandy
@@ -2446,16 +1491,7 @@ holy_site_theravada_lankantemples = { # Kandy
 		religion = buddhism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -2471,16 +1507,7 @@ holy_site_vajrayana_bodhgaya = { # Patna
 		religion = vajrayana
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_vajrayana_lhasa = { # Lhasa
@@ -2492,16 +1519,7 @@ holy_site_vajrayana_lhasa = { # Lhasa
 		religion = vajrayana
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_vajrayana_sanchi = { # Malwa
@@ -2513,16 +1531,7 @@ holy_site_vajrayana_sanchi = { # Malwa
 		religion = vajrayana
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_vajrayana_oddiyana = { # Margalla
@@ -2534,16 +1543,7 @@ holy_site_vajrayana_oddiyana = { # Margalla
 		religion = vajrayana
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_vajrayana_dege = { # Dege
@@ -2555,16 +1555,7 @@ holy_site_vajrayana_dege = { # Dege
 		religion = vajrayana
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -2580,16 +1571,7 @@ holy_site_hinduism_mahakaleshwar = { # Malwa
 		religion = hinduism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_hinduism_janmabhoomi = { # Oudh
@@ -2601,16 +1583,7 @@ holy_site_hinduism_janmabhoomi = { # Oudh
 		religion = hinduism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_hinduism_krishnajanmabhoomi = { # Central Doab
@@ -2622,16 +1595,7 @@ holy_site_hinduism_krishnajanmabhoomi = { # Central Doab
 		religion = hinduism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_hinduism_dwarakadheesh = { # Navanagar
@@ -2643,16 +1607,7 @@ holy_site_hinduism_dwarakadheesh = { # Navanagar
 		religion = hinduism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_hinduism_varanasi = { # Varanasi
@@ -2664,16 +1619,7 @@ holy_site_hinduism_varanasi = { # Varanasi
 		religion = hinduism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -2689,16 +1635,7 @@ holy_site_sikh_amritsar = { # Doaba
 		religion = sikhism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_sikh_bodhgaya = { # Patna
@@ -2710,16 +1647,7 @@ holy_site_sikh_bodhgaya = { # Patna
 		religion = sikhism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_sikh_bidar = { # Bidar
@@ -2731,16 +1659,7 @@ holy_site_sikh_bidar = { # Bidar
 		religion = sikhism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_sikh = { # Random province
@@ -2752,16 +1671,7 @@ holy_site_sikh = { # Random province
 		religion = sikhism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 # holy_site_sikh_0507 = { # Lahore #deprecated
@@ -2771,12 +1681,7 @@ holy_site_sikh = { # Random province
 	# trigger = {
 		# religion = sikhism
 	# }
-	# local_missionary_strength = -0.05	
-	# #Province scope
-	# on_activation = {
-	# }
-	# on_deactivation = {
-	# }
+	# local_missionary_strength = -0.05
 # }
 
 # holy_site_sikh_2062 = { # Panipat #deprecated
@@ -2787,11 +1692,6 @@ holy_site_sikh = { # Random province
 		# religion = sikhism
 	# }
 	# local_missionary_strength = -0.05	
-	# #Province scope
-	# on_activation = {
-	# }
-	# on_deactivation = {
-	# }
 # }
 
 ###########################################
@@ -2807,16 +1707,7 @@ holy_site_jain_girnar = { # Girnar
 		religion = jain
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_jain_shravanabelagola = { # Mysore
@@ -2828,16 +1719,7 @@ holy_site_jain_shravanabelagola = { # Mysore
 		religion = jain
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_jain_vadnagar = { # Patan
@@ -2849,16 +1731,7 @@ holy_site_jain_vadnagar = { # Patan
 		religion = jain
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_jain_bhillamala = { # Gorwar
@@ -2870,16 +1743,7 @@ holy_site_jain_bhillamala = { # Gorwar
 		religion = jain
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_jain_rajrappa = { # Damin
@@ -2891,16 +1755,7 @@ holy_site_jain_rajrappa = { # Damin
 		religion = jain
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -2916,16 +1771,7 @@ holy_site_zunist_cairo = { # Cairo
 		religion = zun_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_zunist_sabzevar = { # Sabzevar
@@ -2937,16 +1783,7 @@ holy_site_zunist_sabzevar = { # Sabzevar
 		religion = zun_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_zunist_kandahar = { # Kandahar
@@ -2958,16 +1795,7 @@ holy_site_zunist_kandahar = { # Kandahar
 		religion = zun_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_zunist_kabul = { # Kabulistan
@@ -2979,16 +1807,7 @@ holy_site_zunist_kabul = { # Kabulistan
 		religion = zun_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_zunist_multan = { # Multan
@@ -3000,16 +1819,7 @@ holy_site_zunist_multan = { # Multan
 		religion = zun_pagan_reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -3025,16 +1835,7 @@ holy_site_confucian_canton = { # Canton
 		religion = confucianism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_confucian_chengdu = { # Chengdu
@@ -3046,16 +1847,7 @@ holy_site_confucian_chengdu = { # Chengdu
 		religion = confucianism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_confucian_jinan = { # Jinan [Mount Tai]
@@ -3067,16 +1859,7 @@ holy_site_confucian_jinan = { # Jinan [Mount Tai]
 		religion = confucianism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_confucian_xian = { # Xi'an
@@ -3088,16 +1871,7 @@ holy_site_confucian_xian = { # Xi'an
 		religion = confucianism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_confucian_beijing = { # Beijing
@@ -3109,16 +1883,7 @@ holy_site_confucian_beijing = { # Beijing
 		religion = confucianism
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -3134,16 +1899,7 @@ holy_site_shinto_izumo = { # Izumo
 		religion = shinto
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_shinto_kyoto = { # Yamashiro/Kyoto
@@ -3155,16 +1911,7 @@ holy_site_shinto_kyoto = { # Yamashiro/Kyoto
 		religion = shinto
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_shinto_dewa = { # Dewa
@@ -3176,16 +1923,7 @@ holy_site_shinto_dewa = { # Dewa
 		religion = shinto
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_shinto_ise = { # Ise
@@ -3197,16 +1935,7 @@ holy_site_shinto_ise = { # Ise
 		religion = shinto
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_shinto_mtfuji = { # Suruga
@@ -3218,16 +1947,7 @@ holy_site_shinto_mtfuji = { # Suruga
 		religion = shinto
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -3243,16 +1963,7 @@ protestant_CoR_province = {
 		religion = protestant
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_protestant_rome = { # Roma
@@ -3264,16 +1975,7 @@ holy_site_protestant_rome = { # Roma
 		religion = protestant
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_protestant_jerusalem = { # Jerusalem
@@ -3285,16 +1987,7 @@ holy_site_protestant_jerusalem = { # Jerusalem
 		religion = protestant
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -3310,16 +2003,7 @@ reformed_CoR_province = {
 		religion = reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_reformed_rome = { # Roma
@@ -3331,16 +2015,7 @@ holy_site_reformed_rome = { # Roma
 		religion = reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_reformed_jerusalem = { # Jerusalem
@@ -3352,16 +2027,7 @@ holy_site_reformed_jerusalem = { # Jerusalem
 		religion = reformed
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -3377,16 +2043,7 @@ holy_site_bon_balkh = { # Balkh
 		religion = bon
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_bon_kashmir = { # Kashmir
@@ -3398,16 +2055,7 @@ holy_site_bon_kashmir = { # Kashmir
 		religion = bon
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_bon_lhasa = { # Lhasa
@@ -3419,16 +2067,7 @@ holy_site_bon_lhasa = { # Lhasa
 		religion = bon
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_bon_yungdrungling = { # Shigatse
@@ -3440,16 +2079,7 @@ holy_site_bon_yungdrungling = { # Shigatse
 		religion = bon
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_bon_hotan = { # Hotan
@@ -3461,16 +2091,7 @@ holy_site_bon_hotan = { # Hotan
 		religion = bon
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -3486,16 +2107,7 @@ holy_site_yazidi_sabzevar = { # Sabzevar
 		religion = yazidi
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_yazidi_larestan = { # Larestan
@@ -3507,16 +2119,7 @@ holy_site_yazidi_larestan = { # Larestan
 		religion = yazidi
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_yazidi_mosul = { # Mosul
@@ -3528,16 +2131,7 @@ holy_site_yazidi_mosul = { # Mosul
 		religion = yazidi
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_yazidi_mecca = { # Mecca
@@ -3549,16 +2143,7 @@ holy_site_yazidi_mecca = { # Mecca
 		religion = yazidi
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_yazidi_jerusalem = { # Jerusalem
@@ -3570,16 +2155,7 @@ holy_site_yazidi_jerusalem = { # Jerusalem
 		religion = yazidi
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -3595,16 +2171,7 @@ holy_site_manichean_khuzestan = { # Khuzestan
 		religion = manichean
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_manichean_samarkand = { # Samarkand
@@ -3616,16 +2183,7 @@ holy_site_manichean_samarkand = { # Samarkand
 		religion = manichean
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_manichean_baghdad = { # Baghdad
@@ -3637,16 +2195,7 @@ holy_site_manichean_baghdad = { # Baghdad
 		religion = manichean
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_manichean_jerusalem = { # Jerusalem
@@ -3658,16 +2207,7 @@ holy_site_manichean_jerusalem = { # Jerusalem
 		religion = manichean
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_manichean_margalla = { # Margalla
@@ -3679,16 +2219,7 @@ holy_site_manichean_margalla = { # Margalla
 		religion = manichean
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -3704,16 +2235,7 @@ anglican_CoR_province = {
 		religion = anglican
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_anglican_rome = { # Roma
@@ -3725,16 +2247,7 @@ holy_site_anglican_rome = { # Roma
 		religion = anglican
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_anglican_jerusalem = { # Jerusalem
@@ -3746,16 +2259,7 @@ holy_site_anglican_jerusalem = { # Jerusalem
 		religion = anglican
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 ###########################################
@@ -3771,16 +2275,7 @@ holy_site_hussite_prague = { # Praha/Prague
 		religion = hussite
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_hussite_rome = { # Roma
@@ -3792,16 +2287,7 @@ holy_site_hussite_rome = { # Roma
 		religion = hussite
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
 
 holy_site_hussite_jerusalem = { # Jerusalem
@@ -3813,17 +2299,24 @@ holy_site_hussite_jerusalem = { # Jerusalem
 		religion = hussite
 	}
 
-	local_missionary_strength = -0.05	
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
+	local_missionary_strength = -0.05
 }
+
+holy_site_hussite = {
+	picture = "province_hussite"
+	potential = {
+	}
+
+	trigger = {
+		religion = hussite
+	}
+
+	local_missionary_strength = -0.05
+}
+
+###########################################
+# Other Stuff
+###########################################
 
 # Fraticelli Pope
 adm_vatican_library = {
@@ -3984,14 +2477,6 @@ ctr_hellenic_rome = {
 	missionaries = 1
 	tolerance_own = 1
 	prestige = 0.5
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	on_deactivation = {
-	
-	}
 }
 
 # Zoroastrian Mecca
@@ -4006,15 +2491,6 @@ ctr_zoroastrian_mecca = {
 	missionaries = 1
 	tolerance_own = 1
 	prestige = 0.5
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
 }
 
 # Adding Monophysite to Coptic Alexandria
@@ -4036,14 +2512,4 @@ coptic_alexandria = {
 	prestige = 0.5
 	missionaries = 1
 	tolerance_own = 1
-	
-	#Province scope
-	on_activation = {
-	
-	}
-	
-	on_deactivation = {
-	
-	}
-	
 }

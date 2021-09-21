@@ -306,6 +306,13 @@ is_religious_center_province = {
 		has_province_modifier = holy_site_manichean_baghdad
 		has_province_modifier = holy_site_manichean_jerusalem
 		has_province_modifier = holy_site_manichean_margalla
+		has_province_modifier = holy_site_anglican_rome
+		has_province_modifier = holy_site_anglican_jerusalem
+		has_province_modifier = anglican_CoR_province
+		has_province_modifier = holy_site_hussite_prague
+		has_province_modifier = holy_site_hussite_rome
+		has_province_modifier = holy_site_hussite_jerusalem
+		has_province_modifier = holy_site_hussite
 		# province_id = 146 # Athens
 		# province_id = 358 # Alexandria
 		# province_id = 4702 # Siroz
@@ -418,7 +425,5 @@ is_religious_center_province = {
 		# province_id = 454 # Samarkand
 		# province_id = 266 # Prague
 		# province_id = 1948 # Bidar
-		has_province_modifier = anglican_CoR_province
-		# has_province_modifier = holy_site_hussite
 	}
 }

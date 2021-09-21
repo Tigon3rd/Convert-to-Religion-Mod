@@ -5,10 +5,8 @@ country_decisions = {
 		potential = {
 			religion = cathar
 			NOT = { has_global_flag = cathar_CoR_flag }
-			NOT = {
-				any_owned_province = {
-					continent = europe
-				}
+			capital_scope = {
+				continent = europe
 			}
 		}
 		
@@ -49,6 +47,24 @@ country_decisions = {
 				custom_tooltip = heresy_CoR_capital_tt
 				capital_scope = {
 					add_reform_center = cathar
+					if = {
+						limit = {
+							has_building = temple
+							NOT = { has_building = cathedral }
+						}
+						hidden_effect = {
+							remove_building = temple
+						}
+						add_building = cathedral
+					}
+					else_if = {
+						limit = {
+							NOT = { has_building = temple }
+							NOT = { has_building = cathedral }
+						}
+						add_building = temple
+					}
+					else = { }
 				}
 			}
 			else = {
@@ -58,9 +74,27 @@ country_decisions = {
 							RELIGION = cathar
 						}
 					}
+					custom_tooltip = heresy_CoR_random_tt
 					add_reform_center = cathar
+					if = {
+						limit = {
+							has_building = temple
+							NOT = { has_building = cathedral }
+						}
+						hidden_effect = {
+							remove_building = temple
+						}
+						add_building = cathedral
+					}
+					else_if = {
+						limit = {
+							NOT = { has_building = temple }
+							NOT = { has_building = cathedral }
+						}
+						add_building = temple
+					}
+					else = { }
 				}
-				custom_tooltip = heresy_CoR_random_tt
 			}
 			set_global_flag = cathar_CoR_flag
 		}
@@ -74,10 +108,8 @@ country_decisions = {
 		potential = {
 			religion = waldensian
 			NOT = { has_global_flag = waldensian_CoR_flag }
-			NOT = {
-				any_owned_province = {
-					continent = europe
-				}
+			capital_scope = {
+				continent = europe
 			}
 		}
 		
@@ -118,6 +150,24 @@ country_decisions = {
 				custom_tooltip = heresy_CoR_capital_tt
 				capital_scope = {
 					add_reform_center = waldensian
+					if = {
+						limit = {
+							has_building = temple
+							NOT = { has_building = cathedral }
+						}
+						hidden_effect = {
+							remove_building = temple
+						}
+						add_building = cathedral
+					}
+					else_if = {
+						limit = {
+							NOT = { has_building = temple }
+							NOT = { has_building = cathedral }
+						}
+						add_building = temple
+					}
+					else = { }
 				}
 			}
 			else = {
@@ -127,9 +177,27 @@ country_decisions = {
 							RELIGION = waldensian
 						}
 					}
+					custom_tooltip = heresy_CoR_random_tt
 					add_reform_center = waldensian
+					if = {
+						limit = {
+							has_building = temple
+							NOT = { has_building = cathedral }
+						}
+						hidden_effect = {
+							remove_building = temple
+						}
+						add_building = cathedral
+					}
+					else_if = {
+						limit = {
+							NOT = { has_building = temple }
+							NOT = { has_building = cathedral }
+						}
+						add_building = temple
+					}
+					else = { }
 				}
-				custom_tooltip = heresy_CoR_random_tt
 			}
 			set_global_flag = waldensian_CoR_flag
 		}
@@ -143,10 +211,8 @@ country_decisions = {
 		potential = {
 			religion = lollard
 			NOT = { has_global_flag = lollard_CoR_flag }
-			NOT = {
-				any_owned_province = {
-					continent = europe
-				}
+			capital_scope = {
+				continent = europe
 			}
 		}
 		
@@ -187,6 +253,24 @@ country_decisions = {
 				custom_tooltip = heresy_CoR_capital_tt
 				capital_scope = {
 					add_reform_center = lollard
+					if = {
+						limit = {
+							has_building = temple
+							NOT = { has_building = cathedral }
+						}
+						hidden_effect = {
+							remove_building = temple
+						}
+						add_building = cathedral
+					}
+					else_if = {
+						limit = {
+							NOT = { has_building = temple }
+							NOT = { has_building = cathedral }
+						}
+						add_building = temple
+					}
+					else = { }
 				}
 			}
 			else = {
@@ -196,9 +280,27 @@ country_decisions = {
 							RELIGION = lollard
 						}
 					}
+					custom_tooltip = heresy_CoR_random_tt
 					add_reform_center = lollard
+					if = {
+						limit = {
+							has_building = temple
+							NOT = { has_building = cathedral }
+						}
+						hidden_effect = {
+							remove_building = temple
+						}
+						add_building = cathedral
+					}
+					else_if = {
+						limit = {
+							NOT = { has_building = temple }
+							NOT = { has_building = cathedral }
+						}
+						add_building = temple
+					}
+					else = { }
 				}
-				custom_tooltip = heresy_CoR_random_tt
 			}
 			set_global_flag = lollard_CoR_flag
 		}
@@ -358,23 +460,23 @@ country_decisions = {
 	}
 	
 	# Decision to make the event fire again to run a check on holy site provinces after update/change to locations.
-	check_holy_site_provinces_decision = {
-		potential = {
-			has_global_flag = startup_event_triggered
-			NOT = { has_global_flag = ctr_update_1_1 }
-		}
+	# check_holy_site_provinces_decision = {
+		# potential = {
+			# has_global_flag = startup_event_triggered
+			# NOT = { has_global_flag = ctr_update_??? }
+		# }
 		
-		allow = {
-			always = yes
-		}
+		# allow = {
+			# always = yes
+		# }
 		
-		effect = {
-			clr_global_flag = startup_event_triggered
-			set_global_flag = ctr_update_1_1
-		}
+		# effect = {
+			# clr_global_flag = startup_event_triggered
+			# set_global_flag = ctr_update_???
+		# }
 		
-		ai_will_do = {
-			factor = 0
-		}
-	}
+		# ai_will_do = {
+			# factor = 0
+		# }
+	# }
 }

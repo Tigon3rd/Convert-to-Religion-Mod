@@ -4255,6 +4255,7 @@ country_decisions = {
 	
 	# Not any countries or cultures to connect to, going by the default Vanilla game, since it has to "spawn" first.
 	# Made an event that puts my "protestant_CoR_province" modifier on provinces where Centers of Reformations spawns, because they are random in each game.
+	# Starting a game after the reformation has begun sets the Centers of Reformations to provinces = 1 # Stockholm/Uppland, 59 # Wittenberg, 236 # London
 	
 	convert_to_protestant_decision = {
 		major = yes
@@ -4488,6 +4489,7 @@ country_decisions = {
 	
 	# Not any countries or cultures to connect to, going by the default Vanilla game, since it has to "spawn" first.
 	# Made an event that puts my "reformed_CoR_province" modifier on provinces where Centers of Reformations spawns, because they are random in each game.
+	# Starting a game after the reformation has begun sets the Centers of Reformations to provinces = 100 # Friesland, 248 # Lothian, 1869 # Zürich
 	
 	convert_to_reformed_decision = {
 		major = yes
@@ -7687,9 +7689,222 @@ country_decisions = {
 	###############            YAZIDI            ###############
 	############################################################
 	
+	convert_to_yazidi_decision = {
+		major = yes
+		potential = {
+			OR = {
+				ai = yes
+				AND = {
+					ai = no
+					has_country_flag = ctr_religious_debate
+				}
+			}
+			any_owned_province = {
+				OR = {
+					has_province_modifier = holy_site_yazidi_larestan
+					has_province_modifier = holy_site_yazidi_sabzevar
+					has_province_modifier = holy_site_yazidi_jerusalem
+					has_province_modifier = holy_site_yazidi_mecca
+					has_province_modifier = holy_site_yazidi_mosul
+					religion = yazidi
+				}
+			}
+			# OR = {
+				# owns = 2223 # Larestan
+				# owns = 2235 # Sabzevar
+				# owns = 379 # Jerusalem
+				# owns = 385 # Mecca
+				# owns = 411 # Mosul
+			# }
+			NOT = { religion = yazidi }
+			NOT = { tag = PAP } # The Papal State
+			NOT = { tag = FAP } # The Fraticelli Pope
+			NOT = { tag = HLR } # Holy Roman Empire
+			is_defender_of_faith = no
+			NOT = { has_country_modifier = has_recently_converted_ctr_timer }
+		}
+		provinces_to_highlight = {
+			OR = {
+				has_province_modifier = holy_site_yazidi_larestan
+				has_province_modifier = holy_site_yazidi_sabzevar
+				has_province_modifier = holy_site_yazidi_jerusalem
+				has_province_modifier = holy_site_yazidi_mecca
+				has_province_modifier = holy_site_yazidi_mosul
+			}
+		}
+		allow =  {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			stability = 1
+			OR = {
+				AND = { # If any of these countries or culture, only need to hold 3 Holy Sites
+					calc_true_if = {
+						# tag = 
+						culture = kurdish
+						amount = 1
+					}
+					calc_true_if = {
+						all_owned_province = {
+							custom_trigger_tooltip = {
+								tooltip = holy_site_yazidi_tt
+								OR = {
+									has_province_modifier = holy_site_yazidi_larestan
+									has_province_modifier = holy_site_yazidi_sabzevar
+									has_province_modifier = holy_site_yazidi_jerusalem
+									has_province_modifier = holy_site_yazidi_mecca
+									has_province_modifier = holy_site_yazidi_mosul
+								}
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 3
+					}
+				}
+				AND = { # Else you need all 5 Holy Sites
+					calc_true_if = {
+						all_owned_province = {
+							custom_trigger_tooltip = {
+								tooltip = holy_site_yazidi_tt
+								OR = {
+									has_province_modifier = holy_site_yazidi_larestan
+									has_province_modifier = holy_site_yazidi_sabzevar
+									has_province_modifier = holy_site_yazidi_jerusalem
+									has_province_modifier = holy_site_yazidi_mecca
+									has_province_modifier = holy_site_yazidi_mosul
+								}
+							}
+							is_core = ROOT
+							OR = {
+								has_building = temple
+								has_building = cathedral
+							}
+						}
+						amount = 5
+					}
+				}
+			}
+		}
+		effect = {
+			change_religion = yazidi
+			capital_scope = { 
+				change_religion = yazidi
+				add_permanent_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 4500
+				}
+			}
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_province_modifier = holy_site_yazidi_larestan
+						has_province_modifier = holy_site_yazidi_sabzevar
+						has_province_modifier = holy_site_yazidi_jerusalem
+						has_province_modifier = holy_site_yazidi_mecca
+						has_province_modifier = holy_site_yazidi_mosul
+					}
+					OR = {
+						has_building = temple
+						has_building = cathedral
+					}
+					NOT = { is_capital = yes }
+				}
+				change_religion = yazidi
+				add_permanent_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 4500
+				}
+			}
+			if = {
+				limit = {
+					# OR = {
+						# tag = 
+						culture = kurdish
+					# }
+				}
+				add_stability = -2
+			}
+			if = {
+				limit = {
+					NOT = {
+						# tag = 
+						culture = kurdish
+					}
+				}
+				add_stability = -4
+			}
+			add_country_modifier = {
+				name = holy_site_conversion_zeal
+				duration = 3650
+			}
+			set_country_flag = ctr_yazidi_decision
+			hidden_effect = {
+				add_country_modifier = {
+					name = has_recently_converted_ctr_timer
+					duration = 3650
+					hidden = yes
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		# ai_will_do = {
+			# factor = 1
+			# modifier = {
+				# factor = 0
+				# NOT = {
+					# tag = JAP
+					# culture_group = japanese_g
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { stability = 3 }
+			# }
+			# modifier = {
+				# factor = 1
+				# stability = 3
+			# }
+			# modifier = {
+				# factor = 0
+				# NOT = { dominant_religion = shinto }
+			# }
+			# modifier = {
+				# factor = 1
+				# dominant_religion = shinto
+			# }
+			# modifier = {
+				# factor = 0
+				# OR = {
+					# has_country_flag = ctr_shinto_decision
+					# had_country_flag = ctr_shinto_decision
+				# }
+			# }
+			# modifier = {
+				# factor = 0
+				# has_country_flag = force_converted
+			# }
+		# }
+	}
+	
 	############################################################
 	###############          MANICHEAN           ###############
 	############################################################
+	
+	############################################################
+	###############          ANGLICAN            ###############
+	############################################################
+	
+	############################################################
+	###############           HUSSITE            ###############
+	############################################################
+	
+	# tag = BOH
+	# culture = czech
 	
 	############################################################
 	###############     SHOW/HIDE DECISIONS      ###############

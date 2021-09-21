@@ -98,8 +98,10 @@ on_startup = {
 	if = {
 		limit = {
 			has_global_flag = holy_sites_added
+			is_year = 1445
 		}
 		check_holy_site_modifiers_to_provinces = yes
+		set_global_flag = ctr_startup_check_executed
 		if = {
 			limit = {
 				NOT = { has_global_flag = ctr_on_startup_executed }

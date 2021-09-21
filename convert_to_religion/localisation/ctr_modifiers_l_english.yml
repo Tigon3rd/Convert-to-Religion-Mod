@@ -384,6 +384,8 @@
  desc_holy_site_hussite_rome:1 "The importance of this province as a Religious Holy Site will make it very difficult to convert."
  holy_site_hussite_jerusalem:0 "Hussite Holy Site of Jerusalem"
  desc_holy_site_hussite_jerusalem:1 "The importance of this province as a Religious Holy Site will make it very difficult to convert."
+ holy_site_hussite:0 "Hussite Holy Site"
+ desc_holy_site_hussite:1 "The importance of this province as a Religious Holy Site will make it very difficult to convert."
  
  ## Country Modifiers
  holy_site_conversion_zeal:0 "Religious Holy Site Zeal"
